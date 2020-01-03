@@ -19,27 +19,32 @@ class ParagraphButton extends StatelessWidget {
             alignment: Alignment.center,
             children: [
               Container(
+                padding: EdgeInsets.all(5.0),
                 decoration: BoxDecoration(
-                  border: Border.all(
-                    color: Colors.black,
-                    width: 1.7,
-                    ),
+                  // border: Border.all(
+                  //   color: Colors.black,
+                  //   width: 1.7,
+                  //   ),
                 ),
                 constraints: BoxConstraints.expand(height: 120.0,),
-                child: Image.asset(_assetPath, fit: BoxFit.cover, alignment: Alignment.center,),
-              ),
-              SizedBox(
-              height: 120.0,
-              child: Container(
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: Colors.black,
-                    width: 1.2,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(30.0),
+                  child:
+                  Image.asset(_assetPath, fit: BoxFit.cover, alignment: Alignment.center)
                   ),
-                  color: Colors.teal.withOpacity(0.35),
-                ),
               ),
-            ),
+            //   SizedBox(
+            //   height: 120.0,
+            //   child: Container(
+            //     decoration: BoxDecoration(
+            //       border: Border.all(
+            //         color: Colors.black,
+            //         width: 1.2,
+            //       ),
+            //       color: Colors.teal.withOpacity(0.35),
+            //     ),
+            //   ),
+            // ),
               Center(
                 child: Text(
                   _buttonText,
@@ -50,8 +55,8 @@ class ParagraphButton extends StatelessWidget {
                     shadows: <Shadow>[
                       Shadow(
                         color: Color.fromARGB(255, 0, 0, 0),
-                        blurRadius: 2.0,
-                        offset: Offset(3.5, 1.5),
+                        blurRadius: 3.0,
+                        offset: Offset(2, 2),
                         ),
                     ]
                   )

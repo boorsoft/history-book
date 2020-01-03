@@ -5,6 +5,7 @@ class Paragraphs extends StatelessWidget {
   @override 
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black87,
       appBar: AppBar(title: Text('Параграфы'),),
       body: SingleChildScrollView(
         child: Column(

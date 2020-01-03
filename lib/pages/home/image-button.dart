@@ -20,29 +20,21 @@ class ImageButton extends StatelessWidget {
           alignment: Alignment.center,
           children: [
         Container(
+          padding: EdgeInsets.all(5.0),
           decoration: BoxDecoration(
-            border: Border.all(
-              color: Colors.black,
-              width: 1.2,
-            ),
+            borderRadius: BorderRadius.circular(30.0),
+            // border: Border.all(
+            //   color: Colors.black,
+            //   width: 1.2,
+            // ),
           ),
           constraints: BoxConstraints.expand(height: 160.0,),
-          child: Image.asset(_assetPath, fit: BoxFit.cover),
-        ), 
-        SizedBox(
-              height: 160.0,
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(30.0),
-                  border: Border.all(
-                    color: Colors.black,
-                    width: 1.2,
-                  ),
-                  color: Colors.teal.withOpacity(0.20),
-                ),
-              ),
-            ),
-        
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(30.0),
+            child:
+            Image.asset(_assetPath, fit: BoxFit.cover),
+          ),
+        ),
         Center(
           child:
         Text(
