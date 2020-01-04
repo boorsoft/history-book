@@ -10,18 +10,18 @@ class Paragraph1 extends StatelessWidget {
         title: Text('§1.История как наука'),
         ),
         body: 
-        SingleChildScrollView(
-          child:
-        Container(
-          padding: EdgeInsets.all(10.0),
-          child:
-          Column(
-            children: [
-              
-        ],
-          ),
-        ),
-        ),
+          StreamBuilder(
+            stream: Firestore.instance.collection('paragraphs').snapshots(),
+            builder: (context, snapshot) {
+            if(!snapshot.hasData) return Text('No data found, sorry...');
+            return Column(
+              children: <Widget>[
+                Text(snapshot.data.documents[0][0]),
+              ],
+            );
+            }
+              ),
+
     );
   }
 }
