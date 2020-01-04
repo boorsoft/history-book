@@ -12,6 +12,7 @@ class Paragraphs extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
+            SizedBox(height: 5.0),
             ParagraphButton("assets/images/article-pic1.jpg", "§1. ИСТОРИЯ КАК НАУКА", "/Paragraphs/Paragraph1"),
             ParagraphButton("assets/images/article-pic2.jpg", "§2. ЭПОС «МАНАС» – НЕИССЯКАЕМЫЙ ИСТОЧНИК ИСТОРИИ КЫРГЫЗСТАНА", "/Paragraphs/Paragraph2"),
             ParagraphButton("assets/images/article-pic3.jpg", "§3. КАМЕННЫЙ И БРОНЗОВЫЙ ВЕКА В КЫРГЫЗСТАНЕ", "/Paragraphs/Paragraph3"),
@@ -28,6 +29,7 @@ class Paragraphs extends StatelessWidget {
             ParagraphButton("assets/images/article-pic14.jpg", "§14. КЫРГЫЗСТАН В ГОДЫ ВЕЛИКОЙ ОТЕЧЕСТВЕННОЙ ВОЙНЫ ", "/Paragraphs/Paragraph14"),
             ParagraphButton("assets/images/article-pic15.jpg", "§15. КЫРГЫЗСТАН В ПЕРИОД «РАЗВИТОГО СОЦИАЛИЗМА» И «ПЕРЕСТРОЙКИ» (1964–1990 гг.) ", "/Paragraphs/Paragraph15"),
             ParagraphButton("assets/images/article-pic16.jpg", "§16. СУВЕРЕННАЯ КЫРГЫЗСКАЯ РЕСПУБЛИКА ", "/Paragraphs/Paragraph16"),
+            SizedBox(height: 5.0),
           ],
         )
       ),

@@ -33,7 +33,7 @@ class ParagraphButton extends StatelessWidget {
                     boxShadow: [
                       BoxShadow(
                       color: Colors.black.withOpacity(0.5),
-                      blurRadius: 4.0,
+                      blurRadius: 5.0,
                       spreadRadius: 1.5,
                       offset: Offset(0.5, 1.5)
                     ),
