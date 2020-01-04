@@ -8,7 +8,7 @@ class Paragraph1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('§1. История как наука'),
+        title: Text('§1.История как наука'),
         ),
         body: 
         SingleChildScrollView(
