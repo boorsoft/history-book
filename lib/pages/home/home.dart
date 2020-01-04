@@ -9,7 +9,7 @@ class Home extends StatelessWidget {
       appBar: AppBar(
         title: Text('История Кыргызстана'), 
         ),
-      backgroundColor: Colors.teal,
+      backgroundColor: Colors.white,
       body: SingleChildScrollView(child: 
         Column(
         mainAxisAlignment: MainAxisAlignment.start,

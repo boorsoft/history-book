@@ -28,7 +28,12 @@ class App extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Home(),
       theme: ThemeData(
-        primaryColor: Colors.teal,
+        primaryColor: Colors.green,
+        // primaryTextTheme: TextTheme(
+        //   title: TextStyle(
+        //     color: Colors.grey,
+        //   ),
+        // ),
         fontFamily: 'Blogger',
         ),
       routes: <String, WidgetBuilder> {

@@ -20,18 +20,31 @@ class ParagraphButton extends StatelessWidget {
             children: [
               Container(
                 padding: EdgeInsets.all(5.0),
-                decoration: BoxDecoration(
-                  // border: Border.all(
-                  //   color: Colors.black,
-                  //   width: 1.7,
-                  //   ),
-                ),
+                // decoration: BoxDecoration(
+                //   // border: Border.all(
+                //   //   color: Colors.black,
+                //   //   width: 1.7,
+                //   //   ),
+                // ),
                 constraints: BoxConstraints.expand(height: 120.0,),
-                child: ClipRRect(
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(30.0),
+                    boxShadow: [
+                      BoxShadow(
+                      color: Colors.black.withOpacity(0.5),
+                      blurRadius: 4.0,
+                      spreadRadius: 1.5,
+                      offset: Offset(0.5, 1.5)
+                    ),
+                    ]
+                  ),
+                  child: ClipRRect(
                   borderRadius: BorderRadius.circular(30.0),
                   child:
                   Image.asset(_assetPath, fit: BoxFit.cover, alignment: Alignment.center)
                   ),
+                ),
               ),
             //   SizedBox(
             //   height: 120.0,
@@ -45,13 +58,16 @@ class ParagraphButton extends StatelessWidget {
             //     ),
             //   ),
             // ),
+            Container(
+              padding: EdgeInsets.fromLTRB(6.0, 0.0, 6.0, 0.0),
+              child:
               Center(
                 child: Text(
                   _buttonText,
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 16.5,
+                    fontSize: 15.5,
                     shadows: <Shadow>[
                       Shadow(
                         color: Color.fromARGB(255, 0, 0, 0),
@@ -62,6 +78,7 @@ class ParagraphButton extends StatelessWidget {
                   )
                 ),
               ),
+            ),
             ],
             ),
           ),
