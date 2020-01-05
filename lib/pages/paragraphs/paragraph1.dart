@@ -1,27 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:historybook/data/moor_database.dart';
+import 'package:provider/provider.dart';
 import '../../style.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 
 class Paragraph1 extends StatelessWidget {
   @override 
   Widget build(BuildContext context) {
+    final database = Provider.of<AppDatabase>(context);
     return Scaffold(
       appBar: AppBar(
-        title: Text('§1.История как наука'),
+        title: Text(database.getAllParagraphs().toString()),
         ),
-        body: 
-          StreamBuilder(
-            stream: Firestore.instance.collection('paragraphs').snapshots(),
-            builder: (context, snapshot) {
-            if(!snapshot.hasData) return Text('No data found, sorry...');
-            return Column(
-              children: <Widget>[
-                Text(snapshot.data.documents[0][0]),
-              ],
-            );
-            }
-              ),
-
     );
   }
 }
