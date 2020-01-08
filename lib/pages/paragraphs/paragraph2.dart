@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_html/rich_text_parser.dart';
 import '../../style.dart';
 import 'package:flutter_html/flutter_html.dart';
-import 'package:flutter_web_browser/flutter_web_browser.dart';
 
 class Paragraph2 extends StatelessWidget {
   @override 
@@ -44,7 +42,7 @@ Html(
 • Это в 20 раз больше греческих  «Иллиады» и «Одиссея», вместе взятых. <br>
 • В два с половиной раза – индийской «Махабхараты»<br>
 • В пять раз больше персидского  «Шах-Наме»<br>
-<br>
+<br>`
 Еще в XIX в. такие всемирно известные ученые, как Ч. Валиханов,  В. Радлов, высказали мнение, что эпос является бесценным и уникальным источником для изучения и познания истории, философии, этнографии,  языка,  художественного  творчества,  психологии,  географии,  медицины, духовной культуры и разных сторон социальной жизни кыргызского народа – создателя этой драгоценной реликвии.
 <br>
 <center>
@@ -159,8 +157,8 @@ Row(
 Row(
   mainAxisAlignment: MainAxisAlignment.spaceAround,
   children: <Widget>[
-  Text('Сагымбай Орозбак уулу', style: paragraphTextStyle),
-  Text('Саякбай Карала уулу', style: paragraphTextStyle),
+  Text('Сагымбай Орозбак уулу', style: TextStyle(fontFamily: 'Georgia', fontSize: 14.5, color: Colors.black87)),
+  Text('Саякбай Карала уулу', style: TextStyle(fontFamily: 'Georgia', fontSize: 14.5, color: Colors.black87)),
 ],
 ),
 Html(data: """

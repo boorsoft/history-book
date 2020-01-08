@@ -16,7 +16,7 @@ class Paragraph1 extends StatelessWidget {
               padding: EdgeInsets.all(6.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
                 Center(child: Text('§1.История как наука', style: paragraphBoldTextStyle),),
                 SizedBox(height: 12.0,),
@@ -26,7 +26,7 @@ class Paragraph1 extends StatelessWidget {
 «Отцом истории» считается Геродот,  живший в Древней Греции в V в. до н. э.""",
                 defaultTextStyle: paragraphTextStyle,
                 useRichText: true,),
-                Image.asset("assets/images/paragraphs/Gerodot.JPG"),
+                Image.asset("assets/images/paragraphs/Gerodot.jpg"),
                 Html(data: """Геродот, древнегреческий историк, отец исторической науки.
 Геродот Галикарнасский (484 – 425 до н. э.) – древнегреческий историк, автор первого полномасштабного исторического трактата – «Истории», – описывающего греко-персидские войны и обычаи многих современных его автору народов. Труды Геродота имели огромное значение для античной культуры. Цицерон назвал его “отцом истории”. Его «История» – чрезвычайно важный источник сведений о Великой Скифии, включавший в себя информацию о жизни наших далёких предков.
 
