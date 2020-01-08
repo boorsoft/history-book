@@ -5,6 +5,16 @@ const paragraphTextStyle = TextStyle(
   fontSize: 16.5,
   color: Colors.black87,
   letterSpacing: 0.5,
+  height: 1.5,
+);
+
+const paragraphBoldTextStyle = TextStyle(
+  fontWeight: FontWeight.bold,
+  fontFamily: 'Georgia',
+  fontSize: 16.5,
+  color: Colors.black87,
+  letterSpacing: 0.5,
+  height: 1.5,
 );
 
 class FrameStyle extends StatelessWidget {
@@ -14,12 +24,14 @@ class FrameStyle extends StatelessWidget {
 
   @override 
   Widget build(BuildContext context) {
-    return Container(
+    return Center(
+      child: Container(
       padding: EdgeInsets.all(7.0),
       decoration: BoxDecoration(
         border: Border.all(width: 1.0, color: Colors.black87),
       ),
-      child: _frameChild,
+        child: _frameChild,
+      ),
     );
   }
 }
