@@ -150,7 +150,6 @@ class Paragraph8 extends StatelessWidget {
               useRichText: true,
               ),
               Image.asset("assets/images/paragraphs/kyrgyz-tribes.jpg"),
-              Text("Расселение кыргызских племён в XIX в.", style: paragraphTextStyle, textAlign: TextAlign.center,),
               Html(data: """
 <p><b>1.</b> Адыгине.<br>
 <b>2.</b> Багыш. <br>
