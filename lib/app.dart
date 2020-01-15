@@ -20,6 +20,7 @@ import 'pages/paragraphs/paragraph13.dart';
 import 'pages/paragraphs/paragraph14.dart';
 import 'pages/paragraphs/paragraph15.dart';
 import 'pages/paragraphs/paragraph16.dart';
+import 'pages/persons/Gerodot.dart';
 
 class App extends StatelessWidget {
   @override 
@@ -57,6 +58,7 @@ class App extends StatelessWidget {
         "/Paragraphs/Paragraph14": (BuildContext context) => Paragraph14(),
         "/Paragraphs/Paragraph15": (BuildContext context) => Paragraph15(),
         "/Paragraphs/Paragraph16": (BuildContext context) => Paragraph16(),
+        "/Persons/Gerodot": (BuildContext context) => Gerodot(),
       }
       );
   }
