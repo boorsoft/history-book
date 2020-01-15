@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../style.dart';
+import 'package:flutter_html/flutter_html.dart';
 
 class Paragraph14 extends StatelessWidget {
   @override 
@@ -16,7 +17,7 @@ class Paragraph14 extends StatelessWidget {
           child:
           Column(
             children: [
-              Text('lol'),
+              
             ],
           ),
         ),
