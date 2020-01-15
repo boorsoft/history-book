@@ -10,7 +10,7 @@ class Persons extends StatelessWidget {
         child: Column(
           children: <Widget>[
             PersonsButton("assets/images/paragraphs/Gerodot.jpg", "Геродот", "/Persons/Gerodot"),
-            PersonsButton("assets/images/persons/Barsbek.png", "Ыначу Алп Бильге (Барсбек)", "/Persons/Barsbek"),
+            PersonsButton("assets/images/paragraphs/Barsbek.jpg", "Ыначу Алп Бильге (Барсбек)", "/Persons/Barsbek"),
           ],
         ),
       ),
