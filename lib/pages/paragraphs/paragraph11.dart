@@ -83,7 +83,7 @@ class Paragraph11 extends StatelessWidget {
               useRichText: true,
               ),
               SizedBox(height: 12.0),
-              Image.asset("assets/images/paragraphs/sobiet-power-setup.jpg"),
+              Image.asset("assets/images/paragraphs/soviet-power-setup.jpg"),
               Text("Установление Советской власти в Кыргызстане (1917–1918 гг).", style: paragraphTextStyle, textAlign: TextAlign.center),
               SizedBox(height: 12.0),
               Image.asset("assets/images/paragraphs/Kyrgyzstan-civil-war.jpg"),
