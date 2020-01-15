@@ -18,7 +18,7 @@ class PersonsButton extends StatelessWidget {
           onTap: () => Navigator.of(context).pushNamed(_route),
           child: Container(
             padding: EdgeInsets.all(8.0),
-            constraints: BoxConstraints.expand(height: 270),
+            constraints: BoxConstraints.expand(height: 350),
             child: Container(
               decoration: BoxDecoration(
                 boxShadow: [
@@ -40,7 +40,7 @@ class PersonsButton extends StatelessWidget {
             Container(
             child: Text(_buttonText,
             style: TextStyle(
-              fontSize: 22.0,
+              fontSize: 30.0,
               color: Colors.white,
               shadows: [
                 Shadow(
