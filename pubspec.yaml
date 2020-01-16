@@ -64,6 +64,7 @@ flutter:
     - family: Blogger
       fonts:
         - asset: assets/fonts/BloggerSans-Bold.ttf
+        - weight: w100
     - family: Georgia
       fonts:
         - asset: assets/fonts/Georgia.ttf        

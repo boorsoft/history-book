@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:historybook/pages/persons/Barsbek.dart';
+import 'pages/splash-screen.dart';
 import 'pages/home/home.dart';
 import 'pages/paragraphs/paragraphs.dart';
 import 'pages/about.dart';
@@ -28,7 +29,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Home(),
+      home: SplashScreen(),
       theme: ThemeData(
         primaryColor: Colors.green,
         // primaryTextTheme: TextTheme(
