@@ -199,9 +199,6 @@ class Paragraph14 extends StatelessWidget {
               defaultTextStyle: paragraphTextStyle,
               useRichText: true,
               )
-
-
-
             ],
           ),
         ),
