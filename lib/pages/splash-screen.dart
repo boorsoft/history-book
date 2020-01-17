@@ -29,10 +29,12 @@ class _SplashScreenState extends State<SplashScreen> {
         child: Container(
           padding: EdgeInsets.all(20.0),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
           children: [
+            Expanded(
+              flex: 10,
+              child:
             Container( 
-              padding: EdgeInsets.fromLTRB(0, 0, 0, 300.0),
+              alignment: Alignment.center,
               child:
             Text('История Кыргызстана',
             textAlign: TextAlign.center, 
@@ -42,17 +44,25 @@ class _SplashScreenState extends State<SplashScreen> {
               )
               ),
             ),
+            ),
+            Expanded(
+              flex: 3,
+              child:
             Container(
+              alignment: Alignment.bottomCenter,
               child:
             Text(
           'Разработчики:',
           style: TextStyle(
-            fontWeight: FontWeight.w300,
             fontFamily: 'Blogger'
           ),
           textAlign: TextAlign.center,
             ),
             ),
+            ),
+            Expanded(
+              flex: 3,
+              child:
             Container(
               child: Align(
                 alignment: FractionalOffset.bottomCenter,
@@ -64,6 +74,7 @@ class _SplashScreenState extends State<SplashScreen> {
             textAlign: TextAlign.center,
             ),
               ),
+            ),
             ),
           ],
         ),
