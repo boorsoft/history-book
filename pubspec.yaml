@@ -64,10 +64,12 @@ flutter:
     - family: Blogger
       fonts:
         - asset: assets/fonts/BloggerSans-Bold.ttf
-        - weight: w100
     - family: Georgia
       fonts:
-        - asset: assets/fonts/Georgia.ttf        
+        - asset: assets/fonts/Georgia.ttf    
+    - family: Aqum
+      fonts:
+        - asset: assets/fonts/Aqum.ttf        
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
