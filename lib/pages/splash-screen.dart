@@ -34,7 +34,13 @@ class _SplashScreenState extends State<SplashScreen> {
             Container( 
               padding: EdgeInsets.fromLTRB(0, 0, 0, 300.0),
               child:
-            Text('История Кыргызстана', style: TextStyle(fontFamily: 'Aqum', fontSize: 23.0)),
+            Text('История Кыргызстана',
+            textAlign: TextAlign.center, 
+            style: TextStyle(
+              fontFamily: 'Aqum', 
+              fontSize: 23.0,
+              )
+              ),
             ),
             Container(
               child:
