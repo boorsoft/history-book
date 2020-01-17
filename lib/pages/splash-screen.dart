@@ -31,14 +31,14 @@ class _SplashScreenState extends State<SplashScreen> {
             Text(
           'Разработчики:',
           style: TextStyle(
-            fontWeight: FontWeight.w300,
+            
             fontFamily: 'Blogger'
           ),
           textAlign: TextAlign.center,
             ),
             Text('Акматов Азим\nДжумабек уулу Байдоолот\nДжолдошбеков Темирлан',
             style: TextStyle(
-              fontWeight: FontWeight.w100,
+            
               fontFamily: 'Blogger',
             ),
             textAlign: TextAlign.center,

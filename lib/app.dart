@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:historybook/pages/persons/Barsbek.dart';
 import 'pages/splash-screen.dart';
-import 'pages/home/home.dart';
 import 'pages/paragraphs/paragraphs.dart';
 import 'pages/about.dart';
 import 'pages/persons/persons.dart';
@@ -24,6 +23,10 @@ import 'pages/paragraphs/paragraph15.dart';
 import 'pages/paragraphs/paragraph16.dart';
 import 'pages/persons/Gerodot.dart';
 import 'pages/persons/Barsbek.dart';
+import 'pages/persons/TagaiBii.dart';
+import 'pages/persons/AtakeBaatyr.dart';
+import 'pages/persons/OrmonHan.dart';
+import 'pages/persons/BorombaiBii.dart';
 class App extends StatelessWidget {
   @override 
   Widget build(BuildContext context) {
@@ -67,6 +70,10 @@ class App extends StatelessWidget {
       "/Paragraphs/Paragraph16": (BuildContext context) => Paragraph16(),
       "/Persons/Gerodot": (BuildContext context) => Gerodot(),
       "/Persons/Barsbek": (BuildContext contex) => Barsbek(),
+      "/Persons/TagaiBii": (BuildContext contex) => TagaiBii(),
+      "/Persons/AtakeBaatyr": (BuildContext contex) => AtakeBaatyr(),
+      "/Persons/OrmonHan": (BuildContext contex) => OrmonHan(),
+      "/Persons/BorombaiBii": (BuildContext contex) => BorombaiBii(),
     };
   }
 }
