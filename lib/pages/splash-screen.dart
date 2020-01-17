@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:historybook/pages/home/home.dart';
 
@@ -25,61 +27,52 @@ class _SplashScreenState extends State<SplashScreen> {
   @override 
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+      Expanded(
+        flex: 10,
         child: Container(
-          padding: EdgeInsets.all(20.0),
-          child: Column(
-          children: [
-            Expanded(
-              flex: 10,
-              child:
-            Container( 
-              alignment: Alignment.center,
-              child:
-            Text('История Кыргызстана',
-            textAlign: TextAlign.center, 
-            style: TextStyle(
-              fontFamily: 'Aqum', 
-              fontSize: 23.0,
-              )
-              ),
-            ),
-            ),
-            Expanded(
-              flex: 3,
-              child:
-            Container(
-              alignment: Alignment.bottomCenter,
-              child:
-            Text(
-          'Разработчики:',
-          style: TextStyle(
-            fontFamily: 'Blogger'
-          ),
-          textAlign: TextAlign.center,
-            ),
-            ),
-            ),
-            Expanded(
-              flex: 3,
-              child:
-            Container(
-              child: Align(
-                alignment: FractionalOffset.bottomCenter,
-                child:
-            Text('Акматов Азим\nДжумабек уулу Байдоолот\nДжолдошбеков Темирлан',
-            style: TextStyle(
-              fontFamily: 'Helvetica',
-            ),
+          alignment: Alignment.center,
+          padding: EdgeInsets.only(top: 50.0),
+          child: Text(
+            "История Кыргызстана",
             textAlign: TextAlign.center,
+            style: TextStyle(
+              fontFamily: 'Aqum',
+              fontSize: 18.0,
             ),
-              ),
-            ),
-            ),
-          ],
+          ),
         ),
       ),
+      Expanded(
+        flex: 7,
+        child: Container(
+          alignment: Alignment.bottomCenter,
+          child: Text(
+            "Разработчики:",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontFamily: 'Blogger',
+              fontSize: 13.0,
+            ),
+          )
+        ),
       ),
+        Container(
+          padding: EdgeInsets.fromLTRB(0, 0, 0, 5.0),
+          alignment: Alignment.bottomCenter,
+          child: Text(
+            "Акматов Азим\nДжумабек уулу Байдоолот\nДжолдошбеков Темирлан",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontFamily: 'Helvetica',
+              fontSize: 13.0,
+            ),
+          )
+        ),
+    ],
+    ),
     );
   }
 }
