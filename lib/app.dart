@@ -27,6 +27,7 @@ import 'pages/persons/TagaiBii.dart';
 import 'pages/persons/AtakeBaatyr.dart';
 import 'pages/persons/OrmonHan.dart';
 import 'pages/persons/BorombaiBii.dart';
+
 class App extends StatelessWidget {
   @override 
   Widget build(BuildContext context) {
