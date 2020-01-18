@@ -51,7 +51,7 @@ class App extends StatelessWidget {
     return <String, WidgetBuilder> {
       "/Paragraphs": (BuildContext context) => Paragraphs(),
       "/About": (BuildContext context) => About(),
-      "/Quiz": (BuildContext context) => Quiz(),
+      "/Quiz": (BuildContext context) => Quiz(quizdata: GetJson(),),
       "/Persons": (BuildContext context) => Persons(),
       "/Paragraphs/Paragraph1": (BuildContext context) => Paragraph1(),
       "/Paragraphs/Paragraph2": (BuildContext context) => Paragraph2(),
