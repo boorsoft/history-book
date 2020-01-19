@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'results.dart';
 
 class Quiz extends StatefulWidget {
+  final _QuizState quizState = new _QuizState();
 
   @override 
   _QuizState createState() => _QuizState();
@@ -16,11 +17,15 @@ class _QuizState extends State<Quiz> {
   Color correct = Colors.lightBlue;
   Color wrong = Colors.red;
 
+  int correctAnswers = 0;
   int i = 1;
-  int timer = 30;
-  String showtimer;
+  Timer timer;
+  int startTime = 30;
+  String showtimer = "30";
+  var timerColor = Colors.green;
 
   bool _enabled = true;
+  bool canceltimer = false;
 
   Map<String, Color> buttonColor = {
     "a": Colors.green,
@@ -29,12 +34,55 @@ class _QuizState extends State<Quiz> {
     "d": Colors.green,
   };
 
+  _QuizState() {
+    correctAnswers = this.correctAnswers;
+  }
+
   @override
   void initState() {
+    startTimer();
     super.initState();
   }
-  
+
+  @override 
+  void setState(fn) {
+    if (mounted) {
+      super.setState(fn);
+    }
+  }
+
+   void startTimer() async {
+    const sec = const Duration(seconds: 1);
+    timer = new Timer.periodic(sec, 
+    (Timer t) {
+      setState(
+      () {
+        timerColor = Colors.green;
+        if (startTime < 1) {
+          t.cancel();
+          nextQuestion();
+        } else if (canceltimer == true) {
+          t.cancel();
+        } else {
+          startTime -= 1;
+        }
+        
+        if (startTime == 0) {
+          showtimer = "Время вышло!";
+        } else {
+          showtimer = startTime.toString();
+        }
+        if (startTime < 10) {
+          timerColor = Colors.red;
+        }
+      });
+      }
+      );
+  }
+
   void nextQuestion() {
+    canceltimer = false;
+    startTime = 30;
     setState(() {
       if (i < quizdata[0].length) {
         i++;
@@ -49,16 +97,19 @@ class _QuizState extends State<Quiz> {
       buttonColor["d"] = Colors.green;
       _enabled = true;
       });
+      startTimer();
   }
 
   void checkAnswer(String option) {
     if (quizdata[2][i.toString()] == quizdata[1][i.toString()][option]) {
       displayColor = correct;
+      correctAnswers += 1;
     } else {
       displayColor = wrong;
     }
     setState(() {
       buttonColor[option] = displayColor;
+      canceltimer = true;
       Future.delayed(
         Duration(milliseconds: 1300),
         () => nextQuestion()
@@ -111,8 +162,27 @@ class _QuizState extends State<Quiz> {
             if (snapshot.hasData) {
               return Container(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+              SizedBox(height: 10.0),
+              Container(
+                padding: EdgeInsets.only(left: 10.0),
+                alignment: Alignment.topLeft,
+                child: Text('Вопрос № ' + i.toString() + "\\" + quizdata[0].length.toString(),
+                style: TextStyle(
+                  fontFamily: 'Helvetica',
+                )
+                ),
+              ),
+              Container(
+                padding: EdgeInsets.only(left: 10.0),
+                alignment: Alignment.topLeft,
+                child: Text('Количество правильных ответов: ' + correctAnswers.toString(),
+                style: TextStyle(
+                  fontFamily: 'Helvetica',
+                )
+                ),
+              ),
+
               Expanded(
                 flex: 3,
                 child: Container(
@@ -145,9 +215,9 @@ class _QuizState extends State<Quiz> {
                 flex: 1,
                 child: Container(
                   child: Text(
-                    "30", 
+                    showtimer, 
                     style: TextStyle(
-                      color: Colors.green,
+                      color: timerColor,
                       fontFamily: 'Blogger',
                       fontSize: 20.0,
                     ),
