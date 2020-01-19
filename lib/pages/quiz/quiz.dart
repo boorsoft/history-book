@@ -2,56 +2,13 @@ import 'dart:async';
 import 'dart:convert';
 import 'package:flutter/material.dart';
 
-class GetJson extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return FutureBuilder(
-      future: DefaultAssetBundle.of(context).loadString('assets/quiz.json'),
-      builder: (context, snapshot) {
-        List quizdata = json.decode(snapshot.data.toString());
-        return Quiz(quizdata: quizdata);
-      }
-    );
-  }
-}
-
 class Quiz extends StatefulWidget {
-  var quizdata;
-
-  Quiz({Key key, @required this.quizdata}) : super(key: key);
 
   @override 
-  _QuizState createState() => _QuizState(quizdata);
+  _QuizState createState() => _QuizState();
 }
 
-Widget optionButton(String option) {
-  return Padding(
-    padding: EdgeInsets.symmetric(
-      vertical: 15.0,
-      horizontal: 20.0,
-    ),
-    child: MaterialButton(
-      onPressed: () {},
-      child: Text(
-        "Вариант 1",
-        style: TextStyle(
-          color: Colors.white,
-          fontFamily: 'Blogger',
-          fontSize: 16.0,
-        ),
-      ),
-      color: Colors.green,
-      splashColor: Colors.lightGreen,
-      highlightColor: Colors.green[700],
-      minWidth: 150.0, 
-      height: 38.0,
-    ),
-  );
-}
-
-class _QuizState extends State<Quiz> { 
-  var quizdata;
-  _QuizState(this.quizdata);
+class _QuizState extends State<Quiz> {
 
   Color displayColor = Colors.green;
   Color correct = Colors.lightBlue;
@@ -66,14 +23,14 @@ class _QuizState extends State<Quiz> {
     "b": Colors.green,
     "c": Colors.green,
     "d": Colors.green,
-  }; 
+  };
+
   
   void nextQuestion() {
     setState(() {
-      if (i < quizdata[0].length()) {
+      if (i < quizdata[0].length) {
         i++;
       } else {
-
       }
       buttonColor["a"] = Colors.green;
       buttonColor["b"] = Colors.green;
@@ -82,11 +39,67 @@ class _QuizState extends State<Quiz> {
       });
   }
 
+  void checkAnswer(String option) {
+    if (quizdata[2][i.toString()] == quizdata[1][i.toString()][option]) {
+      displayColor = correct;
+    } else {
+      displayColor = wrong;
+    }
+    setState(() {
+      buttonColor[option] = displayColor;
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
+  Widget optionButton(String option) {
+  return Padding(
+    padding: EdgeInsets.symmetric(
+      vertical: 15.0,
+      horizontal: 20.0,
+    ),
+    child: MaterialButton(
+      onPressed: () {checkAnswer(option);},
+      child: Text(
+        quizdata[1][i.toString()][option],
+        style: TextStyle(
+          color: Colors.white,
+          fontFamily: 'Blogger',
+          fontSize: 16.0,
+        ),
+      ),
+      color: buttonColor[option],
+      splashColor: Colors.lightGreen,
+      highlightColor: Colors.green[700],
+      minWidth: 150.0, 
+      height: 38.0,
+    ),
+  );
+}
+
+  List quizdata;
   @override 
   Widget build(BuildContext context) {
+    
+    _QuizState() {
+        quizdata = this.quizdata;
+    }
+
+    List getQuizData() {
+      return quizdata;
+    }
+
     return Scaffold(
         appBar: AppBar(title: Text('Тестирование')),
-        body: Container(
+        body: FutureBuilder(
+          future: DefaultAssetBundle.of(context).loadString('assets/quiz.json'),
+          builder: (context, snapshot) {
+            quizdata = json.decode(snapshot.data.toString());
+            if (snapshot.hasData) {
+              return Container(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
@@ -133,7 +146,12 @@ class _QuizState extends State<Quiz> {
               ),
           ],
           )
-        ),
+        );
+          } else {
+            return Text('Нет данных...');
+          }      
+          }    
+        )
       );
   }
 }

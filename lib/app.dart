@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:historybook/pages/persons/Barsbek.dart';
 import 'pages/splash-screen.dart';
@@ -51,7 +53,7 @@ class App extends StatelessWidget {
     return <String, WidgetBuilder> {
       "/Paragraphs": (BuildContext context) => Paragraphs(),
       "/About": (BuildContext context) => About(),
-      "/Quiz": (BuildContext context) => Quiz(quizdata: GetJson(),),
+      "/Quiz": (BuildContext context) => Quiz(),
       "/Persons": (BuildContext context) => Persons(),
       "/Paragraphs/Paragraph1": (BuildContext context) => Paragraph1(),
       "/Paragraphs/Paragraph2": (BuildContext context) => Paragraph2(),
