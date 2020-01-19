@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'results.dart';
 
 class Quiz extends StatefulWidget {
 
@@ -9,7 +10,8 @@ class Quiz extends StatefulWidget {
 }
 
 class _QuizState extends State<Quiz> {
-
+  List quizdata;
+  
   Color displayColor = Colors.green;
   Color correct = Colors.lightBlue;
   Color wrong = Colors.red;
@@ -18,6 +20,8 @@ class _QuizState extends State<Quiz> {
   int timer = 30;
   String showtimer;
 
+  bool _enabled = true;
+
   Map<String, Color> buttonColor = {
     "a": Colors.green,
     "b": Colors.green,
@@ -25,17 +29,25 @@ class _QuizState extends State<Quiz> {
     "d": Colors.green,
   };
 
+  @override
+  void initState() {
+    super.initState();
+  }
   
   void nextQuestion() {
     setState(() {
       if (i < quizdata[0].length) {
         i++;
       } else {
+        Navigator.of(context).pushReplacement(MaterialPageRoute(
+          builder: (context) => Results())
+        );
       }
       buttonColor["a"] = Colors.green;
       buttonColor["b"] = Colors.green;
       buttonColor["c"] = Colors.green;
       buttonColor["d"] = Colors.green;
+      _enabled = true;
       });
   }
 
@@ -47,22 +59,29 @@ class _QuizState extends State<Quiz> {
     }
     setState(() {
       buttonColor[option] = displayColor;
+      Future.delayed(
+        Duration(milliseconds: 1300),
+        () => nextQuestion()
+      );
     });
   }
-
-  @override
-  void initState() {
-    super.initState();
-  }
-
+  
   Widget optionButton(String option) {
+    var _onPressed;
+    if (_enabled) {
+      _onPressed = () {
+        checkAnswer(option);
+        _enabled = false;
+      };
+    }
   return Padding(
     padding: EdgeInsets.symmetric(
       vertical: 15.0,
       horizontal: 20.0,
     ),
     child: MaterialButton(
-      onPressed: () {checkAnswer(option);},
+      onPressed: _onPressed,
+      disabledColor: buttonColor[option],
       child: Text(
         quizdata[1][i.toString()][option],
         style: TextStyle(
@@ -80,18 +99,9 @@ class _QuizState extends State<Quiz> {
   );
 }
 
-  List quizdata;
+  
   @override 
   Widget build(BuildContext context) {
-    
-    _QuizState() {
-        quizdata = this.quizdata;
-    }
-
-    List getQuizData() {
-      return quizdata;
-    }
-
     return Scaffold(
         appBar: AppBar(title: Text('Тестирование')),
         body: FutureBuilder(
