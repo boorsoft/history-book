@@ -63,9 +63,6 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: Blogger
-      fonts:
-        - asset: assets/fonts/BloggerSans-Bold.ttf
     - family: Georgia
       fonts:
         - asset: assets/fonts/Georgia.ttf    
