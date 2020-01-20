@@ -68,6 +68,7 @@ class ParagraphButton extends StatelessWidget {
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 15.5,
+                    fontWeight: FontWeight.bold,
                     shadows: <Shadow>[
                       Shadow(
                         color: Color.fromARGB(255, 0, 0, 0),

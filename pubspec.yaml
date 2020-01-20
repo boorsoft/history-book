@@ -71,7 +71,10 @@ flutter:
         - asset: assets/fonts/Georgia.ttf    
     - family: Aqum
       fonts:
-        - asset: assets/fonts/Aqum.ttf        
+        - asset: assets/fonts/Aqum.ttf
+    - family: San-Francisco   
+      fonts:
+        - asset: assets/fonts/SFNSDisplay-Bold.ttf     
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

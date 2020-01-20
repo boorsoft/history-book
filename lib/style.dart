@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 const paragraphTextStyle = TextStyle(
-  fontFamily: 'Georgia',
+  fontFamily: 'San Francisco',
   fontSize: 16.5,
   color: Colors.black87,
   letterSpacing: 0.5,
@@ -10,7 +10,7 @@ const paragraphTextStyle = TextStyle(
 
 const paragraphBoldTextStyle = TextStyle(
   fontWeight: FontWeight.bold,
-  fontFamily: 'Georgia',
+  fontFamily: 'San Francisco',
   fontSize: 16.5,
   color: Colors.black87,
   letterSpacing: 0.5,

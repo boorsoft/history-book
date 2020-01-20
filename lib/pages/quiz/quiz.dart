@@ -142,7 +142,8 @@ class _QuizState extends State<Quiz> {
         quizdata[1][i.toString()][option],
         style: TextStyle(
           color: Colors.white,
-          fontFamily: 'Blogger',
+          fontFamily: 'San Francisco',
+          fontWeight: FontWeight.bold,
           fontSize: 16.0,
         ),
       ),
@@ -173,7 +174,7 @@ class _QuizState extends State<Quiz> {
                 alignment: Alignment.topLeft,
                 child: Text('Вопрос № ' + i.toString() + "\\" + quizdata[0].length.toString(),
                 style: TextStyle(
-                  fontFamily: 'Helvetica',
+                  fontFamily: 'San Francisco',
                 )
                 ),
               ),
@@ -182,7 +183,7 @@ class _QuizState extends State<Quiz> {
                 alignment: Alignment.topLeft,
                 child: Text('Количество правильных ответов: ' + correctAnswers.toString(),
                 style: TextStyle(
-                  fontFamily: 'Helvetica',
+                  fontFamily: 'San Francisco',
                 )
                 ),
               ),
@@ -196,7 +197,7 @@ class _QuizState extends State<Quiz> {
                     quizdata[0][i.toString()],
                     style: TextStyle(
                       fontSize: 16.5,
-                      fontFamily: 'Helvetica'
+                      fontFamily: 'San Francisco'
                     ),
                     ),
                 ),

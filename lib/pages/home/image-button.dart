@@ -64,6 +64,7 @@ class ImageButton extends StatelessWidget {
           style: TextStyle(
             color: Colors.white,
             fontSize: 22.0,
+            fontWeight: FontWeight.bold,
             shadows: <Shadow>[
               Shadow(
                 color: Color.fromARGB(255, 0, 0, 0),

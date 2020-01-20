@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:historybook/style.dart';
 import 'image-button.dart';
 
 class Home extends StatelessWidget {
@@ -7,8 +8,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('История Кыргызстана'), 
-        ),
+        title: Text('История Кыргызстана', style: TextStyle(fontWeight: FontWeight.bold))),
       backgroundColor: Colors.white,
       body: SingleChildScrollView(child: 
         Column(

@@ -1,5 +1,3 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:historybook/pages/persons/Barsbek.dart';
 import 'pages/splash-screen.dart';
@@ -45,7 +43,7 @@ class App extends StatelessWidget {
         //     color: Colors.grey,
         //   ),
         // ),
-        fontFamily: 'Blogger',
+        fontFamily: 'San Francisco',
         ),
       routes: routes()
       );
