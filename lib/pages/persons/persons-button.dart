@@ -10,17 +10,16 @@ class PersonsButton extends StatelessWidget {
   
   @override 
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.center,
-      children: <Widget>[
-        GestureDetector(
+    return Container(
+          child: GestureDetector(
           onTap: () => Navigator.of(context).pushNamed(_route),
           child: Container(
+            width: 170.0,
+            height: 220.0,
             padding: EdgeInsets.all(8.0),
-            constraints: BoxConstraints.expand(height: 350),
             child: Container(
               decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(30.0),
                 boxShadow: [
                   BoxShadow(
                   color: Colors.black87,
@@ -30,30 +29,16 @@ class PersonsButton extends StatelessWidget {
                 ],
               ),
               child: Container(
-                child: Image.asset(_imagePath, fit: BoxFit.cover),
+                width: 170.0,
+                height: 220.0,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(30.0),
+                  child: Image.asset(_imagePath, fit: BoxFit.cover),
+                  )
               ),
             ),
           ),
         ),
-        Center(
-          child:  
-            Container(
-            child: Text(_buttonText,
-            style: TextStyle(
-              fontSize: 30.0,
-              color: Colors.white,
-              shadows: [
-                Shadow(
-                  color: Colors.black87,
-                  blurRadius: 2.0,
-                  offset: Offset(2.0, 2.0),
-                ),
-              ],
-            ),
-            ),
-          ),
-        ),
-      ],
     );
   }
 }

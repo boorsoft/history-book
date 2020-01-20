@@ -10,7 +10,9 @@ class OrmonHan extends StatelessWidget {
         title: Text("Ормон Хан"),
       ),
       body: SingleChildScrollView(
-        child: Column(
+        child: Container(
+          padding: EdgeInsets.all(10.0),
+          child: Column(
           children: <Widget>[
             Html(
               data:
@@ -26,6 +28,7 @@ class OrmonHan extends StatelessWidget {
           ],
         ),
       ),
+      )
     );
   }
 }

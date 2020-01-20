@@ -10,7 +10,9 @@ class Shabdan extends StatelessWidget {
         title: Text("Шабдан Баатыр"),
       ),
       body: SingleChildScrollView(
-        child: Column(
+        child: Container(
+          padding: EdgeInsets.all(10.0),
+          child: Column(
           children: <Widget>[
             Html(
               data:
@@ -26,6 +28,7 @@ class Shabdan extends StatelessWidget {
             ),
           ],
         ),
+      ),
       ),
     );
   }

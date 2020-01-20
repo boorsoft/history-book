@@ -195,6 +195,7 @@ class _QuizState extends State<Quiz> {
                   alignment: Alignment.bottomCenter,
                   child: Text(
                     quizdata[0][i.toString()],
+                    textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 16.5,
                       fontFamily: 'San Francisco'

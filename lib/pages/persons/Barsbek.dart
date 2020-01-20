@@ -10,7 +10,9 @@ class Barsbek extends StatelessWidget {
         title: Text("Ыначу Алп Бильге (Барсбек)"),
       ),
       body: SingleChildScrollView(
-        child: Column(
+        child: Container(
+          padding: EdgeInsets.all(10.0),
+          child: Column(
           children: <Widget>[
             Html(
               data:
@@ -26,6 +28,7 @@ class Barsbek extends StatelessWidget {
           ],
         ),
       ),
+      )
     );
   }
 }

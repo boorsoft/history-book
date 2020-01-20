@@ -10,7 +10,9 @@ class TagaiBii extends StatelessWidget {
         title: Text("Муххамед Кыргыз (Тагай Бий)"),
       ),
       body: SingleChildScrollView(
-        child: Column(
+        child: Container(
+          padding: EdgeInsets.all(10.0),
+          child: Column(
           children: <Widget>[
             Html(
               data:
@@ -28,6 +30,7 @@ class TagaiBii extends StatelessWidget {
           ],
         ),
       ),
+      )
     );
   }
 }

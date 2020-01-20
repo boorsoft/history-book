@@ -10,7 +10,9 @@ class BorombaiBii extends StatelessWidget {
         title: Text("Боромбай Бий"),
       ),
       body: SingleChildScrollView(
-        child: Column(
+        child: Container(
+          padding: EdgeInsets.all(10.0),
+          child: Column(
           children: <Widget>[
             Html(
               data:
@@ -25,6 +27,7 @@ class BorombaiBii extends StatelessWidget {
           ],
         ),
       ),
+      )
     );
   }
 }

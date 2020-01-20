@@ -10,7 +10,9 @@ class Alymbek extends StatelessWidget {
         title: Text("Алымбек Датка"),
       ),
       body: SingleChildScrollView(
-        child: Column(
+        child: Container(
+          padding: EdgeInsets.all(10.0),
+          child: Column(
           children: <Widget>[
             Html(
               data:
@@ -26,6 +28,7 @@ class Alymbek extends StatelessWidget {
             ),
           ],
         ),
+      ),
       ),
     );
   }

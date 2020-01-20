@@ -9,7 +9,10 @@ class Persons extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text('Исторические личности')),
       body: SingleChildScrollView(
-        child: Column(
+        child: Container(
+          alignment: Alignment.center,
+          child: Wrap(
+            spacing: 7.0,
           children: <Widget>[
             PersonsButton("assets/images/paragraphs/Gerodot.jpg", "Геродот", "/Persons/Gerodot"),
             PersonsButton("assets/images/paragraphs/Barsbek.jpg", "Ыначу Алп Бильге (Барсбек)", "/Persons/Barsbek"),
@@ -19,10 +22,11 @@ class Persons extends StatelessWidget {
             PersonsButton("assets/images/persons/BorombaiBii.jpg", "Боромбай Бий", "/Persons/BorombaiBii"),
             PersonsButton("assets/images/persons/BaitykBaatyr.jpg", "Байтик Баатыр", "/Persons/BaitykBaatyr"),
             PersonsButton("assets/images/persons/Shabdan.jpg", "Шабдан Баатыр", "/Persons/Shabdan"),
-            PersonsButton("assets/images/persons/Alymbek.jpg", "Алымьек Датка", "/Persons/Alymbek"),
+            PersonsButton("assets/images/persons/Alymbek.jpg", "Алымбек Датка", "/Persons/Alymbek"),
             
           ],
         ),
+      ),
       ),
     );
   }

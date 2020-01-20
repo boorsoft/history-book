@@ -10,7 +10,9 @@ class BaitykBaatyr extends StatelessWidget {
         title: Text("Байтик Баатыр"),
       ),
       body: SingleChildScrollView(
-        child: Column(
+        child: Container(
+          padding: EdgeInsets.all(10.0),
+          child: Column(
           children: <Widget>[
             Html(
               data:
@@ -29,6 +31,7 @@ class BaitykBaatyr extends StatelessWidget {
             ),
           ],
         ),
+      ),
       ),
     );
   }
