@@ -4,7 +4,12 @@ import 'package:flutter/material.dart';
 import 'results.dart';
 
 class Quiz extends StatefulWidget {
-  final _QuizState quizState = new _QuizState();
+
+  _QuizState quizState = new _QuizState();
+
+  int getCorrectAnswers() {
+    return quizState.correctAnswers;
+  }
 
   @override 
   _QuizState createState() => _QuizState();
@@ -149,7 +154,6 @@ class _QuizState extends State<Quiz> {
     ),
   );
 }
-
   
   @override 
   Widget build(BuildContext context) {
@@ -232,6 +236,8 @@ class _QuizState extends State<Quiz> {
           }      
           }    
         )
+      
       );
+      
   }
 }
