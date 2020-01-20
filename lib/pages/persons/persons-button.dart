@@ -11,7 +11,6 @@ class PersonsButton extends StatelessWidget {
   @override 
   Widget build(BuildContext context) {
     return Container(
-          padding: EdgeInsets.all(10.0),
           child: GestureDetector(
           onTap: () => Navigator.of(context).pushNamed(_route),
           child: Column(

@@ -53,8 +53,9 @@ class _SplashScreenState extends State<SplashScreen> {
             "Разработчики:",
             textAlign: TextAlign.center,
             style: TextStyle(
-              fontFamily: 'Blogger',
+              fontFamily: 'San Francisco',
               fontSize: 13.0,
+              fontWeight: FontWeight.bold,
             ),
           )
         ),
