@@ -37,7 +37,7 @@ class App extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: SplashScreen(),
       theme: ThemeData(
-        primaryColor: Colors.green,
+        primaryColor: Color.fromRGBO(80, 88, 97, 1),
         // primaryTextTheme: TextTheme(
         //   title: TextStyle(
         //     color: Colors.grey,

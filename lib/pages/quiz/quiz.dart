@@ -18,7 +18,7 @@ class Quiz extends StatefulWidget {
 class _QuizState extends State<Quiz> {
   List quizdata;
   
-  Color displayColor = Colors.green;
+  Color displayColor = Color.fromRGBO(80, 88, 97, 1);
   Color correct = Colors.lightBlue;
   Color wrong = Colors.red;
 
@@ -27,16 +27,16 @@ class _QuizState extends State<Quiz> {
   Timer timer;
   int startTime = 30;
   String showtimer = "30";
-  var timerColor = Colors.green;
+  var timerColor = Color.fromRGBO(80, 88, 97, 1);
 
   bool _enabled = true;
   bool canceltimer = false;
 
   Map<String, Color> buttonColor = {
-    "a": Colors.green,
-    "b": Colors.green,
-    "c": Colors.green,
-    "d": Colors.green,
+    "a": Color.fromRGBO(80, 88, 97, 1),
+    "b": Color.fromRGBO(80, 88, 97, 1),
+    "c": Color.fromRGBO(80, 88, 97, 1),
+    "d": Color.fromRGBO(80, 88, 97, 1),
   };
 
   _QuizState() {
@@ -62,7 +62,7 @@ class _QuizState extends State<Quiz> {
     (Timer t) {
       setState(
       () {
-        timerColor = Colors.green;
+        timerColor = Colors.black87;
         if (startTime < 1) {
           t.cancel();
           nextQuestion();
@@ -96,10 +96,10 @@ class _QuizState extends State<Quiz> {
           builder: (context) => Results())
         );
       }
-      buttonColor["a"] = Colors.green;
-      buttonColor["b"] = Colors.green;
-      buttonColor["c"] = Colors.green;
-      buttonColor["d"] = Colors.green;
+      buttonColor["a"] = Color.fromRGBO(80, 88, 97, 1);
+      buttonColor["b"] = Color.fromRGBO(80, 88, 97, 1);
+      buttonColor["c"] = Color.fromRGBO(80, 88, 97, 1);
+      buttonColor["d"] = Color.fromRGBO(80, 88, 97, 1);
       _enabled = true;
       });
       startTimer();
@@ -149,7 +149,7 @@ class _QuizState extends State<Quiz> {
       ),
       color: buttonColor[option],
       splashColor: Colors.lightGreen,
-      highlightColor: Colors.green[700],
+      highlightColor: Color.fromRGBO(124, 134, 145, 1),
       minWidth: 150.0, 
       height: 38.0,
     ),

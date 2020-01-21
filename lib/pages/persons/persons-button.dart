@@ -57,7 +57,7 @@ class PersonsButton extends StatelessWidget {
                     bottomLeft: Radius.circular(30.0), 
                     bottomRight: Radius.circular(30.0),
                   ),
-              color: Colors.green,
+              color: Color.fromRGBO(80, 88, 97, 1),
               boxShadow: [
                   BoxShadow(
                   color: Colors.black87.withOpacity(0.6),

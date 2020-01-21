@@ -42,7 +42,7 @@ class ParagraphButton extends StatelessWidget {
                   child: ClipRRect(
                   borderRadius: BorderRadius.circular(30.0),
                   child:
-                  Image.asset(_assetPath, fit: BoxFit.cover, alignment: Alignment.center)
+                  Image.asset(_assetPath, fit: BoxFit.cover, alignment: Alignment.center,)
                   ),
                 ),
               ),
@@ -71,9 +71,9 @@ class ParagraphButton extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     shadows: <Shadow>[
                       Shadow(
-                        color: Color.fromARGB(255, 0, 0, 0),
-                        blurRadius: 3.0,
-                        offset: Offset(2, 2),
+                        color: Colors.black,
+                        blurRadius: 8.0,
+                        offset: Offset(0, 0),
                         ),
                     ]
                   )
