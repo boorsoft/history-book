@@ -64,7 +64,7 @@ class _SplashScreenState extends State<SplashScreen> {
           padding: EdgeInsets.fromLTRB(0, 0, 0, 5.0),
           alignment: Alignment.bottomCenter,
           child: Text(
-            "Акматов Азим\nДжумабек уулу Байдоолот\nДжолдошбеков Темирлан",
+            "Акматов Азим\nЖумабек уулу Байдоолот\nДжолдошбеков Темирлан",
             textAlign: TextAlign.center,
             style: TextStyle(
               fontFamily: 'Helvetica',

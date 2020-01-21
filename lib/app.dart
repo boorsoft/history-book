@@ -31,6 +31,7 @@ import 'pages/persons/BorombaiBii.dart';
 import 'pages/persons/BaitykBaatyr.dart';
 import 'pages/persons/Shabdan.dart';
 import 'pages/persons/Alymbek.dart';
+import 'pages/persons/Kurmandjan.dart';
 class App extends StatelessWidget {
   @override 
   Widget build(BuildContext context) {
@@ -82,6 +83,8 @@ class App extends StatelessWidget {
       "/Persons/BaitykBaatyr": (BuildContext contex) => BaitykBaatyr(),
       "/Persons/Shabdan": (BuildContext contex) => Shabdan(),
       "/Persons/Alymbek": (BuildContext contex) => Alymbek(),
+      "/Persons/Kurmanjan": (BuildContext contex) => Kurmanjan(),
+      
     };
   }
 }
