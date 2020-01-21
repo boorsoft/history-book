@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'results.dart';
+import 'package:historybook/pages/home/home.dart';
 
 class Quiz extends StatefulWidget {
 
@@ -92,9 +92,7 @@ class _QuizState extends State<Quiz> {
       if (i < quizdata[0].length) {
         i++;
       } else {
-        Navigator.of(context).pushReplacement(MaterialPageRoute(
-          builder: (context) => Results())
-        );
+        _showDialog();
       }
       buttonColor["a"] = Color.fromRGBO(80, 88, 97, 1);
       buttonColor["b"] = Color.fromRGBO(80, 88, 97, 1);
@@ -155,6 +153,36 @@ class _QuizState extends State<Quiz> {
     ),
   );
 }
+
+void _showDialog() {
+  showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      return AlertDialog(
+          title: Text('Завершение',
+          style: TextStyle(color: Colors.white)),
+          backgroundColor: Color.fromRGBO(80, 88, 97, 1),
+          content: SingleChildScrollView(
+            child: ListBody(
+              children: <Widget>[
+                Text('Поздравляем! Количество правильных ответов: ' + correctAnswers.toString(),
+                style: TextStyle(color: Colors.white))
+              ],
+            ),
+          ),
+          actions: <Widget>[
+            FlatButton(child: Text(
+              'ОК',
+            ),
+            onPressed: () {
+              Navigator.of(context).popUntil((route) => route.isFirst);
+            }
+            )
+          ],
+        );
+    }
+  );
+}
   
   @override 
   Widget build(BuildContext context) {
@@ -187,7 +215,6 @@ class _QuizState extends State<Quiz> {
                 )
                 ),
               ),
-
               Expanded(
                 flex: 3,
                 child: Container(

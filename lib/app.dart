@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:historybook/pages/persons/Barsbek.dart';
 import 'pages/splash-screen.dart';
+import 'pages/home/home.dart';
 import 'pages/paragraphs/paragraphs.dart';
 import 'pages/about.dart';
 import 'pages/persons/persons.dart';
@@ -51,6 +52,7 @@ class App extends StatelessWidget {
 
   Map<String, WidgetBuilder> routes() {
     return <String, WidgetBuilder> {
+      "/Home": (BuildContext context) => Home(),
       "/Paragraphs": (BuildContext context) => Paragraphs(),
       "/About": (BuildContext context) => About(),
       "/Quiz": (BuildContext context) => Quiz(),
