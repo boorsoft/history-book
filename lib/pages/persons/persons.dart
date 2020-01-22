@@ -14,8 +14,9 @@ class Persons extends StatelessWidget {
           child: Wrap(
             spacing: 7.0,
           children: <Widget>[
-            PersonsButton("assets/images/paragraphs/Gerodot.jpg", "Геродот", "/Persons/Gerodot"),
             PersonsButton("assets/images/paragraphs/Barsbek.jpg", "Ыначу Алп Бильге (Барсбек)", "/Persons/Barsbek"),
+            PersonsButton("assets/images/persons/Djusup.jpg", "Жусуп Баласагын", "/Persons/DjusupBalasagyn"),
+            PersonsButton("assets/images/persons/Mahmud.jpg", "Махмуд Кашгари", "/Persons/Mahmud"),
             PersonsButton("assets/images/persons/TagaiBii.jpg", "Муххамед Кыргыз (Тагай Бий)", "/Persons/TagaiBii"),
             PersonsButton("assets/images/persons/AtakeBaatyr.jpg", "Атаке Баатыр", "/Persons/AtakeBaatyr"),
             PersonsButton("assets/images/persons/OrmonHan.jpg", "Ормон Хан", "/Persons/OrmonHan"),
@@ -24,7 +25,7 @@ class Persons extends StatelessWidget {
             PersonsButton("assets/images/persons/Shabdan.jpg", "Шабдан Баатыр", "/Persons/Shabdan"),
             PersonsButton("assets/images/persons/Alymbek.jpg", "Алымбек Датка", "/Persons/Alymbek"),
             PersonsButton("assets/images/persons/Kurmandjan.jpg", "Курманжан Датка", "/Persons/Kurmanjan"),
-
+            
           ],
         ),
       ),

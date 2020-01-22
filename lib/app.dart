@@ -22,7 +22,6 @@ import 'pages/paragraphs/paragraph13.dart';
 import 'pages/paragraphs/paragraph14.dart';
 import 'pages/paragraphs/paragraph15.dart';
 import 'pages/paragraphs/paragraph16.dart';
-import 'pages/persons/Gerodot.dart';
 import 'pages/persons/Barsbek.dart';
 import 'pages/persons/TagaiBii.dart';
 import 'pages/persons/AtakeBaatyr.dart';
@@ -32,6 +31,8 @@ import 'pages/persons/BaitykBaatyr.dart';
 import 'pages/persons/Shabdan.dart';
 import 'pages/persons/Alymbek.dart';
 import 'pages/persons/Kurmandjan.dart';
+import 'pages/persons/DjusupBalasagyn.dart';
+import 'pages/persons/Mahmud.dart';
 class App extends StatelessWidget {
   @override 
   Widget build(BuildContext context) {
@@ -74,8 +75,9 @@ class App extends StatelessWidget {
       "/Paragraphs/Paragraph14": (BuildContext context) => Paragraph14(),
       "/Paragraphs/Paragraph15": (BuildContext context) => Paragraph15(),
       "/Paragraphs/Paragraph16": (BuildContext context) => Paragraph16(),
-      "/Persons/Gerodot": (BuildContext context) => Gerodot(),
       "/Persons/Barsbek": (BuildContext contex) => Barsbek(),
+      "/Persons/DjusupBalasagyn": (BuildContext contex) => Djusup(),
+      "/Persons/Mahmud": (BuildContext contex) => Mahmud(),
       "/Persons/TagaiBii": (BuildContext contex) => TagaiBii(),
       "/Persons/AtakeBaatyr": (BuildContext contex) => AtakeBaatyr(),
       "/Persons/OrmonHan": (BuildContext contex) => OrmonHan(),
