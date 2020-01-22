@@ -31,29 +31,32 @@ import 'pages/persons/BaitykBaatyr.dart';
 import 'pages/persons/Shabdan.dart';
 import 'pages/persons/Alymbek.dart';
 import 'pages/persons/Kurmandjan.dart';
+<<<<<<< HEAD
 import 'pages/persons/DjusupBalasagyn.dart';
 import 'pages/persons/Mahmud.dart';
+=======
+
+>>>>>>> 98e152c21cacff7d7e88d4b1bd761f3502575f7b
 class App extends StatelessWidget {
-  @override 
+  @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: SplashScreen(),
-      theme: ThemeData(
-        primaryColor: Color.fromRGBO(80, 88, 97, 1),
-        // primaryTextTheme: TextTheme(
-        //   title: TextStyle(
-        //     color: Colors.grey,
-        //   ),
-        // ),
-        fontFamily: 'San Francisco',
+        debugShowCheckedModeBanner: false,
+        home: SplashScreen(),
+        theme: ThemeData(
+          primaryColor: Color.fromRGBO(127, 156, 163, 1),
+          // primaryTextTheme: TextTheme(
+          //   title: TextStyle(
+          //     color: Colors.grey,
+          //   ),
+          // ),
+          fontFamily: 'San Francisco',
         ),
-      routes: routes()
-      );
+        routes: routes());
   }
 
   Map<String, WidgetBuilder> routes() {
-    return <String, WidgetBuilder> {
+    return <String, WidgetBuilder>{
       "/Home": (BuildContext context) => Home(),
       "/Paragraphs": (BuildContext context) => Paragraphs(),
       "/About": (BuildContext context) => About(),
@@ -86,7 +89,6 @@ class App extends StatelessWidget {
       "/Persons/Shabdan": (BuildContext contex) => Shabdan(),
       "/Persons/Alymbek": (BuildContext contex) => Alymbek(),
       "/Persons/Kurmanjan": (BuildContext contex) => Kurmanjan(),
-      
     };
   }
 }
