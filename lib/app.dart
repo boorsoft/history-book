@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:historybook/pages/persons/Barsbek.dart';
+import 'pages/persons/DjusupBalasagyn.dart';
+import 'pages/persons/Mahmud.dart';
 import 'pages/splash-screen.dart';
 import 'pages/home/home.dart';
 import 'pages/paragraphs/paragraphs.dart';
@@ -31,12 +33,7 @@ import 'pages/persons/BaitykBaatyr.dart';
 import 'pages/persons/Shabdan.dart';
 import 'pages/persons/Alymbek.dart';
 import 'pages/persons/Kurmandjan.dart';
-<<<<<<< HEAD
-import 'pages/persons/DjusupBalasagyn.dart';
-import 'pages/persons/Mahmud.dart';
-=======
 
->>>>>>> 98e152c21cacff7d7e88d4b1bd761f3502575f7b
 class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
