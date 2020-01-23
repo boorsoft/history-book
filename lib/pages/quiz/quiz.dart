@@ -104,12 +104,13 @@ class _QuizState extends State<Quiz> {
       correctAnswers += 1;
     } else {
       displayColor = wrong;
+
+      setState(() {
+        buttonColor[option] = displayColor;
+        canceltimer = true;
+        Future.delayed(Duration(milliseconds: 1300), () => nextQuestion());
+      });
     }
-    setState(() {
-      buttonColor[option] = displayColor;
-      canceltimer = true;
-      Future.delayed(Duration(milliseconds: 1300), () => nextQuestion());
-    });
   }
 
   Widget optionButton(String option) {
@@ -138,7 +139,7 @@ class _QuizState extends State<Quiz> {
           ),
         ),
         color: buttonColor[option],
-        splashColor: Colors.lightGreen,
+        splashColor: Colors.grey[300],
         highlightColor: Color.fromRGBO(124, 134, 145, 1),
         minWidth: 150.0,
         height: 38.0,
