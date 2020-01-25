@@ -3,20 +3,19 @@ import 'package:flutter_html/flutter_html.dart';
 import 'package:historybook/style.dart';
 
 class Kasym extends StatelessWidget {
-  @override 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Касым Тыныстанов"),
-      ),
-      body: SingleChildScrollView(
-        child: Container(
-          padding: EdgeInsets.all(10.0),
-          child: Column(
-          children: <Widget>[
-            Html(
-              data:
-              """
+        appBar: AppBar(
+          title: Text("Касым Тыныстанов"),
+        ),
+        body: SingleChildScrollView(
+          child: Container(
+            padding: EdgeInsets.all(10.0),
+            child: Column(
+              children: <Widget>[
+                Html(
+                  data: """
 <center><b>Касым Тыныстанов</b></center>
 <p>
 Созвездие ярких личностей, заложивших после революции основу нашей государственности, было бы неполным без фигуры Касыма Тыныстанова. Родившись в 1901 году, он прожил всего лишь 37 лет. В таком же возрасте ушел из жизни А. С. Пушкин.
@@ -31,13 +30,12 @@ class Kasym extends StatelessWidget {
 
 </p>
               """,
-            defaultTextStyle: paragraphTextStyle,
-            useRichText: true,
+                  defaultTextStyle: paragraphTextStyle,
+                  useRichText: true,
+                ),
+              ],
             ),
-          ],
-        ),
-      ),
-      )
-    );
+          ),
+        ));
   }
 }
