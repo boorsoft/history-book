@@ -19,6 +19,7 @@ class About extends StatelessWidget {
             style: TextStyle(
               fontWeight: FontWeight.bold,
             )),
+        SizedBox(height: 4.0),
         Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
           Icon(
             Icons.email,
@@ -27,6 +28,7 @@ class About extends StatelessWidget {
           ),
           Text(_email)
         ]),
+        SizedBox(height: 4.0),
         Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
           Icon(
             Icons.message,
@@ -49,6 +51,20 @@ class About extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
+                    Image(
+                      image: AssetImage("assets/historybook-logo.png"),
+                      height: 250.0,
+                      width: 250.0,
+                      alignment: Alignment.center,
+                    ),
+                    SizedBox(height: 20.0),
+                    Text(
+                      'Версия: 1.0.0',
+                      style: TextStyle(
+                        fontSize: 15.0,
+                      ),
+                    ),
+                    SizedBox(height: 20.0),
                     Html(
                       data: """
 Добро пожаловать в приложение по истории Кыргызстана!
