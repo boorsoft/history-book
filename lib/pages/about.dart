@@ -3,7 +3,7 @@ import 'package:flutter_html/flutter_html.dart';
 import 'package:historybook/style.dart';
 
 class About extends StatelessWidget {
-  Widget ContactBox(String _developer, String _email) {
+  Widget ContactBox(String _developer, String _email, String _whatsApp) {
     return Container(
       width: 250.0,
       height: 70.0,
@@ -27,6 +27,14 @@ class About extends StatelessWidget {
           ),
           Text(_email)
         ]),
+        Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
+          Icon(
+            Icons.message,
+            color: Color.fromRGBO(80, 88, 97, 1),
+            size: 17.0,
+          ),
+          Text(_whatsApp)
+        ]),
       ]),
     );
   }
@@ -47,7 +55,7 @@ class About extends StatelessWidget {
 <p>Данное приложение является электронным вариантом книги О.Дж.Осмонова, все параграфы из книги были перенесены в это приложение, надеемся, в удобном для вас формате. </p>  
 <p><b>Чем такой формат удобнее чем нормальная книга или PDF-файл?</b></p>
 <p>• В нашем приложении вы можете удобно переключаться из параграфа в параграф, они все разделены, чтобы перейти из одного параграфа в другой, достаточно выйти из страницы с параграфом, и переключиться на другой нажатием на картинку с номером и названием параграфа, чего вы не сможете сделать в PDF. В нём вам придется скроллить до нужной вам страницы </p>
-<p>• Наше приложение не занимает место в вашей портфели (скорее всего), но, к сожалению придется пожертвовать "немного" места на смартфоне. За то не придется тащить с собой тяжелую книгу и видеть в коридорах листки с вашей фамилией, где написано о том, что вы не сдали книгу в библиотеку.</p>  
+<p>• Наше приложение не занимает место в вашей портфели (скорее всего), но вам придется пожертвовать совсем немного места на смартфоне. За то не придется тащить с собой тяжелую книгу и видеть в коридорах листки с вашей фамилией, где написано о том, что вы не сдали книгу в библиотеку.</p>  
 <p>• Приложение также имеет отдельную страницу с историческими личностями, что тоже может быть удобным для нахождения информации о какой-либо конкретной исторической личности</p>  
 <p>• Также наш продукт включает в себя тестирование по параграфам, благодаря этому вы сможете проверить свои знания.</p>  
 
@@ -60,9 +68,11 @@ class About extends StatelessWidget {
                       defaultTextStyle: paragraphTextStyle,
                       useRichText: true,
                     ),
-                    ContactBox('Байчик', '  zhumabek_uulu_b@iuca.kg'),
-                    ContactBox('Азим', '  akmatov_az@iuca.kg'),
-                    ContactBox('Тима', '  dzholdoshbekov_t@iuca.kg'),
+                    ContactBox(
+                        'Байчик', '  zhumabek_uulu_b@iuca.kg', '0551 552 894'),
+                    ContactBox('Азим', '  akmatov_az@iuca.kg', '0778 955 551'),
+                    ContactBox(
+                        'Тима', '  dzholdoshbekov_t@iuca.kg', '0509 555 514'),
                     Html(
                       data: """
 <center>Приложение разработано по заказу <b>Марат агая</b>.</center>
