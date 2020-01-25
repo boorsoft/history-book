@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:historybook/pages/persons/Barsbek.dart';
+import 'package:historybook/pages/persons/Ishak.dart';
+import 'package:historybook/pages/persons/Sagynbai.dart';
+import 'package:historybook/pages/persons/Torokul.dart';
 import 'pages/persons/DjusupBalasagyn.dart';
 import 'pages/persons/Mahmud.dart';
 import 'pages/splash-screen.dart';
@@ -33,6 +36,12 @@ import 'pages/persons/BaitykBaatyr.dart';
 import 'pages/persons/Shabdan.dart';
 import 'pages/persons/Alymbek.dart';
 import 'pages/persons/Kurmandjan.dart';
+import 'pages/persons/Chokon.dart';
+import 'pages/persons/Sagynbai.dart';
+import 'pages/persons/Karalaev.dart';
+import 'pages/persons/Ishak.dart';
+import 'pages/persons/Kasym.dart';
+import 'pages/persons/Torokul.dart';
 
 class App extends StatelessWidget {
   @override
@@ -86,6 +95,12 @@ class App extends StatelessWidget {
       "/Persons/Shabdan": (BuildContext contex) => Shabdan(),
       "/Persons/Alymbek": (BuildContext contex) => Alymbek(),
       "/Persons/Kurmanjan": (BuildContext contex) => Kurmanjan(),
+      "/Persons/Chokon": (BuildContext contex) => Chokon(),
+      "/Persons/Sagynbai": (BuildContext contex) => Sagynbai(),
+      "/Persons/Karalaev": (BuildContext contex) => Karalaev(),
+      "/Persons/Kasym": (BuildContext contex) => Kasym(),
+      "/Persons/Torokul": (BuildContext contex) => Torokul(),
+      "/Persons/Ishak": (BuildContext contex) => Ishak(),
     };
   }
 }
