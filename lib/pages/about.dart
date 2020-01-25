@@ -68,11 +68,12 @@ class About extends StatelessWidget {
                       defaultTextStyle: paragraphTextStyle,
                       useRichText: true,
                     ),
+                    ContactBox('Байчик', '  zhumabek_uulu_b@iuca.kg',
+                        '  0551 552 894'),
                     ContactBox(
-                        'Байчик', '  zhumabek_uulu_b@iuca.kg', '0551 552 894'),
-                    ContactBox('Азим', '  akmatov_az@iuca.kg', '0778 955 551'),
+                        'Азим', '  akmatov_az@iuca.kg', '  0778 955 551'),
                     ContactBox(
-                        'Тима', '  dzholdoshbekov_t@iuca.kg', '0509 555 514'),
+                        'Тима', '  dzholdoshbekov_t@iuca.kg', ' 0509 555 514'),
                     Html(
                       data: """
 <center>Приложение разработано по заказу <b>Марат агая</b>.</center>
