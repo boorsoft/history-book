@@ -104,13 +104,26 @@ class _QuizState extends State<Quiz> {
       correctAnswers += 1;
     } else {
       displayColor = wrong;
-
       setState(() {
-        buttonColor[option] = displayColor;
-        canceltimer = true;
-        Future.delayed(Duration(milliseconds: 1300), () => nextQuestion());
+        if (quizdata[1][i.toString()]['a'] == quizdata[2][i.toString()]) {
+          buttonColor['a'] = correct;
+        } else if (quizdata[1][i.toString()]['b'] ==
+            quizdata[2][i.toString()]) {
+          buttonColor['b'] = correct;
+        } else if (quizdata[1][i.toString()]['c'] ==
+            quizdata[2][i.toString()]) {
+          buttonColor['c'] = correct;
+        } else if (quizdata[1][i.toString()]['d'] ==
+            quizdata[2][i.toString()]) {
+          buttonColor['d'] = correct;
+        }
       });
     }
+    setState(() {
+      buttonColor[option] = displayColor;
+      canceltimer = true;
+      Future.delayed(Duration(milliseconds: 1300), () => nextQuestion());
+    });
   }
 
   Widget optionButton(String option) {
