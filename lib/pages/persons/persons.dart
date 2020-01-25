@@ -46,7 +46,7 @@ class Persons extends StatelessWidget {
               PersonsButton("assets/images/persons/Torokul.jpg",
                   "Торекул Айтматов", "/Persons/Torokul"),
               PersonsButton("assets/images/persons/Ishak.jpg",
-                  "Раззаков Исхак Раззакович", "Persons/Ishak"),
+                  "Раззаков Исхак Раззакович", "/Persons/Ishak"),
             ],
           ),
         ),
