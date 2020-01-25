@@ -269,7 +269,13 @@ class _QuizState extends State<Quiz> {
                   ],
                 ));
               } else {
-                return Text('Нет данных...');
+                return Center(
+                  child:
+                  Text('Идёт загрузка данных...', style: TextStyle(
+                    fontSize: 18.0,
+                    fontWeight: FontWeight.bold,
+                  ))
+                  );
               }
             }));
   }
