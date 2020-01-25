@@ -117,6 +117,12 @@ class Paragraph11 extends StatelessWidget {
               """,
                 defaultTextStyle: paragraphTextStyle,
                 useRichText: true,
+              ),
+              Image.asset("assets/images/paragraphs/Obelisk.jpg"),
+              Text(
+                'Обелиск на братской могиле красногвардейцев в г. Бишкек',
+                style: paragraphTextStyle,
+                textAlign: TextAlign.center,
               )
             ],
           ),
