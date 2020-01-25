@@ -22,14 +22,14 @@ class FrameStyle extends StatelessWidget {
 
   FrameStyle(this._frameChild);
 
-  @override 
+  @override
   Widget build(BuildContext context) {
     return Center(
       child: Container(
-      padding: EdgeInsets.all(7.0),
-      decoration: BoxDecoration(
-        border: Border.all(width: 1.0, color: Colors.black87),
-      ),
+        padding: EdgeInsets.all(7.0),
+        decoration: BoxDecoration(
+          border: Border.all(width: 1.0, color: Colors.black87),
+        ),
         child: _frameChild,
       ),
     );
