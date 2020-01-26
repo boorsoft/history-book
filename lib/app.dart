@@ -42,7 +42,9 @@ import 'pages/persons/Karalaev.dart';
 import 'pages/persons/Ishak.dart';
 import 'pages/persons/Kasym.dart';
 import 'pages/persons/Torokul.dart';
-
+import 'pages/persons/Isa.dart';
+import 'pages/persons/Alykul.dart';
+import 'pages/persons/Chika.dart';
 class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -101,6 +103,9 @@ class App extends StatelessWidget {
       "/Persons/Kasym": (BuildContext contex) => Kasym(),
       "/Persons/Torokul": (BuildContext contex) => Torokul(),
       "/Persons/Ishak": (BuildContext contex) => Ishak(),
+      "/Persons/Isa": (BuildContext contex) => Isa(),
+      "/Persons/Alykul": (BuildContext contex) => Alykul(),
+      "/Persons/Chika": (BuildContext contex) => Chika(),
     };
   }
 }
