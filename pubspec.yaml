@@ -71,9 +71,6 @@ flutter:
     - family: Georgia
       fonts:
         - asset: assets/fonts/Georgia.ttf    
-    - family: Aqum
-      fonts:
-        - asset: assets/fonts/Aqum.ttf
     - family: San-Francisco   
       fonts:
         - asset: assets/fonts/SFNSDisplay-Bold.ttf     

@@ -3,7 +3,7 @@ import 'package:flutter_html/flutter_html.dart';
 import 'package:historybook/style.dart';
 
 class About extends StatelessWidget {
-  Widget ContactBox(String _developer, String _email, String _whatsApp) {
+  Widget ContactBox(String _developer, String _email) {
     return Container(
       width: 250.0,
       height: 70.0,
@@ -29,14 +29,6 @@ class About extends StatelessWidget {
           Text(_email)
         ]),
         SizedBox(height: 4.0),
-        Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
-          Icon(
-            Icons.message,
-            color: Color.fromRGBO(80, 88, 97, 1),
-            size: 17.0,
-          ),
-          Text(_whatsApp)
-        ]),
       ]),
     );
   }
@@ -84,12 +76,12 @@ class About extends StatelessWidget {
                       defaultTextStyle: paragraphTextStyle,
                       useRichText: true,
                     ),
-                    ContactBox('Байчик', '  zhumabek_uulu_b@iuca.kg',
-                        '  0551 552 894'),
                     ContactBox(
-                        'Азим', '  akmatov_az@iuca.kg', '  0778 955 551'),
-                    ContactBox(
-                        'Тима', '  dzholdoshbekov_t@iuca.kg', ' 0509 555 514'),
+                      'Байчик',
+                      '  zhumabek_uulu_b@iuca.kg',
+                    ),
+                    ContactBox('Азим', '  akmatov_az@iuca.kg'),
+                    ContactBox('Тима', '  dzholdoshbekov_t@iuca.kg'),
                     Html(
                       data: """
 <center>Приложение разработано по заказу <b>Марат агая</b>.</center>
