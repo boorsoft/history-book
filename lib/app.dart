@@ -12,6 +12,7 @@ import 'pages/paragraphs/paragraphs.dart';
 import 'pages/about.dart';
 import 'pages/persons/persons.dart';
 import 'pages/quiz/quiz.dart';
+import 'pages/quiz/quiz-starter.dart';
 import 'pages/paragraphs/paragraph1.dart';
 import 'pages/paragraphs/paragraph2.dart';
 import 'pages/paragraphs/paragraph3.dart';
@@ -71,6 +72,7 @@ class App extends StatelessWidget {
       "/Paragraphs": (BuildContext context) => Paragraphs(),
       "/About": (BuildContext context) => About(),
       "/Quiz": (BuildContext context) => Quiz(),
+      "/QuizStarter": (BuildContext context) => QuizStarter(),
       "/Persons": (BuildContext context) => Persons(),
       "/Paragraphs/Paragraph1": (BuildContext context) => Paragraph1(),
       "/Paragraphs/Paragraph2": (BuildContext context) => Paragraph2(),
