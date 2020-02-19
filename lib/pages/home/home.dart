@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'image-button.dart';
+import 'package:open_iconic_flutter/open_iconic_flutter.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:historybook/style.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -11,9 +14,23 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+          backgroundColor: appBarColor,
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(
+                OpenIconicIcons.moon,
+                color: Colors.white,
+              ),
+              onPressed: () {
+                setState(() {
+                  switchTheme();
+                });
+              },
+            )
+          ],
           title: Text('История Кыргызстана',
               style: TextStyle(fontWeight: FontWeight.bold))),
-      backgroundColor: Colors.white,
+      backgroundColor: bgColor,
       body: SingleChildScrollView(
           child: Column(
         mainAxisAlignment: MainAxisAlignment.start,

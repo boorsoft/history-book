@@ -6,7 +6,9 @@ class Ishak extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: bgColor,
         appBar: AppBar(
+          backgroundColor: appBarColor,
           title: Text("Раззаков Исхак Раззакович"),
         ),
         body: SingleChildScrollView(

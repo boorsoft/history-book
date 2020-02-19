@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:historybook/style.dart';
 
 class Quiz extends StatefulWidget {
   _QuizState quizState = new _QuizState();
@@ -193,6 +194,7 @@ class _QuizState extends State<Quiz> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: bgColor,
         appBar: AppBar(title: Text('Тестирование')),
         body: FutureBuilder(
             future:
@@ -270,12 +272,11 @@ class _QuizState extends State<Quiz> {
                 ));
               } else {
                 return Center(
-                  child:
-                  Text('Идёт загрузка данных...', style: TextStyle(
-                    fontSize: 18.0,
-                    fontWeight: FontWeight.bold,
-                  ))
-                  );
+                    child: Text('Идёт загрузка данных...',
+                        style: TextStyle(
+                          fontSize: 18.0,
+                          fontWeight: FontWeight.bold,
+                        )));
               }
             }));
   }

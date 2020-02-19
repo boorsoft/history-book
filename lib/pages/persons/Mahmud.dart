@@ -6,7 +6,9 @@ class Mahmud extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: bgColor,
       appBar: AppBar(
+        backgroundColor: appBarColor,
         title: Text("Махмуд Кашгари"),
       ),
       body: SingleChildScrollView(

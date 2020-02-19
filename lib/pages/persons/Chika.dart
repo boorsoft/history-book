@@ -3,20 +3,21 @@ import 'package:flutter_html/flutter_html.dart';
 import 'package:historybook/style.dart';
 
 class Chika extends StatelessWidget {
-  @override 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Чингиз Айтматов"),
-      ),
-      body: SingleChildScrollView(
-        child: Container(
-          padding: EdgeInsets.all(10.0),
-          child: Column(
-          children: <Widget>[
-            Html(
-              data:
-              """
+        backgroundColor: bgColor,
+        appBar: AppBar(
+          backgroundColor: appBarColor,
+          title: Text("Чингиз Айтматов"),
+        ),
+        body: SingleChildScrollView(
+          child: Container(
+            padding: EdgeInsets.all(10.0),
+            child: Column(
+              children: <Widget>[
+                Html(
+                  data: """
 <center><b>Чингиз Айтматов</b></center>
 <p>
 Чингиз Торекулович Айтматов родился 12 декабря 1928 года в семье коммунистов Торекула Айтматова и Нагимы Хамзиевны Айтматовой (в девичестве Абдувалиевой) в селе Шекер Кара-Бууринского (Киpовского) района Таласского кантона Киргизской АССР. После рождения Чингиза семья переехала в город, поскольку отец пошел на повышение: с 1929 года карьера Торекула Айтматова стремительно идет вверх.
@@ -36,13 +37,12 @@ class Chika extends StatelessWidget {
 
 </p>
               """,
-            defaultTextStyle: paragraphTextStyle,
-            useRichText: true,
+                  defaultTextStyle: paragraphTextStyle,
+                  useRichText: true,
+                ),
+              ],
             ),
-          ],
-        ),
-      ),
-      )
-    );
+          ),
+        ));
   }
 }

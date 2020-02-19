@@ -6,7 +6,9 @@ class Paragraph8 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: bgColor,
       appBar: AppBar(
+        backgroundColor: appBarColor,
         title: Text(
             '§8.Завершение процесса формирования кыргызской народности и его взаимоотношения с сопредельными народами'),
       ),

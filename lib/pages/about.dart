@@ -8,7 +8,7 @@ class About extends StatelessWidget {
       width: 250.0,
       height: 70.0,
       margin: EdgeInsets.all(5.0),
-      decoration: BoxDecoration(color: Colors.white, boxShadow: [
+      decoration: BoxDecoration(color: appBarColor, boxShadow: [
         BoxShadow(
             color: Colors.black.withOpacity(0.5),
             blurRadius: 3.5,
@@ -16,9 +16,7 @@ class About extends StatelessWidget {
       ]),
       child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
         Text(_developer,
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-            )),
+            style: TextStyle(fontWeight: FontWeight.bold, color: textColor)),
         SizedBox(height: 4.0),
         Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
           Icon(
@@ -26,7 +24,7 @@ class About extends StatelessWidget {
             color: Color.fromRGBO(80, 88, 97, 1),
             size: 17.0,
           ),
-          Text(_email)
+          Text(_email, style: TextStyle(color: textColor))
         ]),
         SizedBox(height: 4.0),
       ]),
@@ -36,7 +34,11 @@ class About extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('О Приложении')),
+        backgroundColor: bgColor,
+        appBar: AppBar(
+          title: Text('О Приложении'),
+          backgroundColor: appBarColor,
+        ),
         body: SingleChildScrollView(
             child: Container(
                 padding: EdgeInsets.all(10.0),
@@ -52,9 +54,7 @@ class About extends StatelessWidget {
                     SizedBox(height: 20.0),
                     Text(
                       'Версия: 1.0.0',
-                      style: TextStyle(
-                        fontSize: 15.0,
-                      ),
+                      style: TextStyle(fontSize: 15.0, color: textColor),
                     ),
                     SizedBox(height: 20.0),
                     Html(

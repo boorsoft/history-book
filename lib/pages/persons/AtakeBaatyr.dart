@@ -3,20 +3,21 @@ import 'package:flutter_html/flutter_html.dart';
 import 'package:historybook/style.dart';
 
 class AtakeBaatyr extends StatelessWidget {
-  @override 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Атаке Баатыр"),
-      ),
-      body: SingleChildScrollView(
-        child: Container(
-          padding: EdgeInsets.all(10.0),
-          child: Column(
-          children: <Widget>[
-            Html(
-              data:
-              """
+        backgroundColor: bgColor,
+        appBar: AppBar(
+          backgroundColor: appBarColor,
+          title: Text("Атаке Баатыр"),
+        ),
+        body: SingleChildScrollView(
+          child: Container(
+            padding: EdgeInsets.all(10.0),
+            child: Column(
+              children: <Widget>[
+                Html(
+                  data: """
 <center><b>Атаке Баатыр</b></center>
 <p><b>Атаке Баатыр</b> - Жил между XVIII - XIX вв. Это была знаковая личность, ставшая незаурядным образцом в деле служения своему народу.
 
@@ -24,13 +25,12 @@ class AtakeBaatyr extends StatelessWidget {
 
 Проявляя прозорливость по укреплению дружеских отношений с Российским государством, он в 1785 году отправил своих послов в эту страну. Это был первый шаг в сторону будущего развития и процветания кыргызского государства. Дипломатический жест Атаке баатыра был высоко оценен Екатериной-II и она одарила его памятным именным знаком. Редкое сочетание трезвого ума предводителя и бесстрашие баатыра было полностью отдано борьбе за свободу и независимость кыргызского народа. Нынешнее поколение не должно забывать заслуги Атаке баатыра. Это народный герой, вся жизнь которого является примером для всех поколений.</p>
               """,
-            defaultTextStyle: paragraphTextStyle,
-            useRichText: true,
+                  defaultTextStyle: paragraphTextStyle,
+                  useRichText: true,
+                ),
+              ],
             ),
-          ],
-        ),
-      ),
-      )
-    );
+          ),
+        ));
   }
 }

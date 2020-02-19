@@ -6,7 +6,9 @@ class Paragraph7 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: bgColor,
       appBar: AppBar(
+        backgroundColor: appBarColor,
         title: Text('§7.Кыргызстан на пути к государственности'),
       ),
       body: SingleChildScrollView(

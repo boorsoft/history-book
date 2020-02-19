@@ -3,22 +3,23 @@ import '../../style.dart';
 import 'package:flutter_html/flutter_html.dart';
 
 class Paragraph14 extends StatelessWidget {
-  @override 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: bgColor,
       appBar: AppBar(
+        backgroundColor: appBarColor,
         title: Text('§14.Кыргызстан в годы Великой Отечественной Войны'),
-        ),
-        body: 
-        SingleChildScrollView(
-          child:
-        Container(
+      ),
+      body: SingleChildScrollView(
+        child: Container(
           padding: EdgeInsets.all(10.0),
-          child:
-          Column(
+          child: Column(
             children: [
-              Text('§14.Кыргызстан в годы Великой Отечественной Войны', style: paragraphBoldTextStyle, textAlign: TextAlign.center),
-              Html(data: """
+              Text('§14.Кыргызстан в годы Великой Отечественной Войны',
+                  style: paragraphBoldTextStyle, textAlign: TextAlign.center),
+              Html(
+                data: """
 <p>• Вероломное  нападение 22 июня 1941 г. немецко-фашистских захватчиков  на СССР нарушило  мирную жизнь советского народа.  </p>
 <p>• Известие о начавшейся войне у многонационального советского народа  вызвало справедливое негодование. По всем городам и сёлам  Кыргызстана  проходили многотысячные собрания и митинги, на которых кыргызстанцы  выражали готовность не жалеть своих сил и жизни для защиты Родины.</p>
 <p>Поразительно, что народ, поднявший восстание в 1916 г., чтобы не отдавать даже на тыловые работы своих сыновей, в Великую Отечественную   войну отправил каждого четвёртого.</p>
@@ -30,19 +31,23 @@ class Paragraph14 extends StatelessWidget {
 <p>• В битве на подступах к Москве в ноябре 1941 г. воины дивизии противостояли четырёхкратно превосходящим силам врага. В течение месяца надёжно удерживая свои позиции, части дивизии, уничтожили 9 тыс. немецких солдат и офицеров, 80 танков и другую технику. </p>
 <p>• Среди легендарных 28 героев-панфиловцев, насмерть стоявших на рубежах под Москвой, были и наши  земляки: Д. Шопоков, Н. Ананьев, И. Маскаленко, Г. Конкин, Г. Петренко, Г. Шемякин и др.</p>
               """,
-              defaultTextStyle: paragraphTextStyle,
-              useRichText: true,
+                defaultTextStyle: paragraphTextStyle,
+                useRichText: true,
               ),
               SizedBox(height: 12.0),
               Image.asset("assets/images/paragraphs/Panfilov.jpg"),
-              Text("И. Панфилов.", style: paragraphTextStyle, textAlign: TextAlign.center),
+              Text("И. Панфилов.",
+                  style: paragraphTextStyle, textAlign: TextAlign.center),
               SizedBox(height: 12.0),
               Image.asset("assets/images/paragraphs/Shopokov.jpg"),
-              Text(" Д. Шопоков.", style: paragraphTextStyle, textAlign: TextAlign.center),
+              Text(" Д. Шопоков.",
+                  style: paragraphTextStyle, textAlign: TextAlign.center),
               SizedBox(height: 12.0),
               Image.asset("assets/images/paragraphs/Tuleberdiev.jpg"),
-              Text("Ч. Тулебердиев", style: paragraphTextStyle, textAlign: TextAlign.center),
-              Html(data: """
+              Text("Ч. Тулебердиев",
+                  style: paragraphTextStyle, textAlign: TextAlign.center),
+              Html(
+                data: """
 <p>• В боях на берегах Дона 6 августа 1942 г. совершил свой легендарный подвиг Чолпонбай Тулебердиев. Он закрыл грудью амбразуру немецкого дзота. 4 февраля 1943 г. ему было присвоено звание Героя Советского Союза. </p>
 <p>• В декабре 1942 г. в одном из боёв за Кавказ командир отделения Акун Садырбаев  успел поймать и бросить обратно 16 гранат, летевших со стороны  врага. Он погиб от взорвавшейся у него на руке 17-й гранаты. За этот подвиг А. Садырбаев награжден орденом Красного Знамени. </p>
 <p>• На Сталинградском фронте героически сражался  артиллерист – наводчик  Д. Асанов, в бою под Харьковым 6 января 1943 г.  он уничтожил 8 танков  и свыше 40 фашистов. </p>
@@ -113,28 +118,30 @@ class Paragraph14 extends StatelessWidget {
 <p>• В ходе соревнования были показаны образцы доблестного труда. В эти годы за успехи  в производстве звеньевая колхоза Калинина Сокулукского  района Зууракан Кайназарова и звеньевой колхоза  «Коммунизм» Араванского района Ошской области  Алля Анаров были удостоены высокого звания Героя  Социалистического Труда. </p>
 
               """,
-              defaultTextStyle: paragraphTextStyle,
-              useRichText: true,
+                defaultTextStyle: paragraphTextStyle,
+                useRichText: true,
               ),
               SizedBox(height: 12.0),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-              Image.asset("assets/images/paragraphs/Kaynazarova.jpg"),
-              
-              SizedBox(height: 12.0),
-              Image.asset("assets/images/paragraphs/Anarov.jpg"),
+                  Image.asset("assets/images/paragraphs/Kaynazarova.jpg"),
+                  SizedBox(height: 12.0),
+                  Image.asset("assets/images/paragraphs/Anarov.jpg"),
                 ],
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
-                Text("З. Кайназарова", style: paragraphTextStyle, textAlign: TextAlign.center),
-                Text("А. Анаров", style: paragraphTextStyle, textAlign: TextAlign.center),
-              ],
+                  Text("З. Кайназарова",
+                      style: paragraphTextStyle, textAlign: TextAlign.center),
+                  Text("А. Анаров",
+                      style: paragraphTextStyle, textAlign: TextAlign.center),
+                ],
               ),
               SizedBox(height: 12.0),
-              Html(data: """
+              Html(
+                data: """
 <p>В итоге провёденных мероприятий по восстановлению сельского хозяйства эта  отрасль народного хозяйства Кыргызстана по многим показателям достигла в  1950 г. уровня 1940 г.: <br> 
 – Были восстановлены пахотные площади  <br> 
 – количество тракторов увеличилось на 0,6 %;  <br>
@@ -151,13 +158,15 @@ class Paragraph14 extends StatelessWidget {
 <p>• В претворение в жизнь демократических принципов партийного руководства в республике большой вклад  внёс Исхак Раззаков, руководивший  в 50-х годах Центральным Комитетом компартии  Кыргызстана.  </p>
 
               """,
-              defaultTextStyle: paragraphTextStyle,
-              useRichText: true,
+                defaultTextStyle: paragraphTextStyle,
+                useRichText: true,
               ),
               SizedBox(height: 12.0),
               Image.asset("assets/images/paragraphs/Razzakov.jpg"),
-              Text("И. Раззаков", style: paragraphTextStyle, textAlign: TextAlign.center),
-              Html(data: """
+              Text("И. Раззаков",
+                  style: paragraphTextStyle, textAlign: TextAlign.center),
+              Html(
+                data: """
 <center><b>В результате провёденных в 50-е годы реформ:  </b></center>
 – Кыргызстан получил право самостоятельно планировать и распределять производство промышленных товаров;  <br>
 – были расширены права республики и по вопросам исполнения бюджета;  <br>
@@ -175,13 +184,15 @@ class Paragraph14 extends StatelessWidget {
 <p>• В целом, курс на реформы «сверху» утратил в середине 60-х годов динамизм и былую притягательную силу. Это стало главной причиной устранения Н. С. Хрущева с поста Первого Секретаря ЦК КПСС и Председателя  Совета Министров СССР в 1964 г.  </p>
 
               """,
-              defaultTextStyle: paragraphTextStyle,
-              useRichText: true,
+                defaultTextStyle: paragraphTextStyle,
+                useRichText: true,
               ),
               SizedBox(height: 12.0),
               Image.asset("assets/images/paragraphs/Kyrgyzstan-1960.jpg"),
-              Text("Кыргызстан в 1960-е годы.", style: paragraphTextStyle, textAlign: TextAlign.center),
-              Html(data: """
+              Text("Кыргызстан в 1960-е годы.",
+                  style: paragraphTextStyle, textAlign: TextAlign.center),
+              Html(
+                data: """
 <center><b>Экономика Кыргызстана</b></center>
 <p>•  Реформы 50-х гг. оказали на экономику Кыргызстана положительное влияние.  В 1951–1960 гг. на развитие экономики республики было выделено 9,5 млрд.  рублей капитальных вложений. </p>
 <p>В 1950-х годах в Кыргызстане было введено в строй 59 новых промышленных  предприятий, 46 цехов и отделов. По сравнению с 1950 г. валовая продукция промышленности в 1960 г. увеличилась на 29%. В этот  период Кыргызстан по снижению себестоимости промышленной продукции и по выполнению плана вышел на передовые позиции.  Промышленная продукция республики начала экспортироваться в 30 стран мира.</p>
@@ -196,13 +207,13 @@ class Paragraph14 extends StatelessWidget {
 
               
               """,
-              defaultTextStyle: paragraphTextStyle,
-              useRichText: true,
+                defaultTextStyle: paragraphTextStyle,
+                useRichText: true,
               )
             ],
           ),
         ),
-        ),
+      ),
     );
   }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:historybook/style.dart';
 
 class PersonsButton extends StatelessWidget {
   final String _imagePath;
@@ -26,7 +27,7 @@ class PersonsButton extends StatelessWidget {
                 ),
                 boxShadow: [
                   BoxShadow(
-                      color: Colors.black87.withOpacity(0.6),
+                      color: shadowColor,
                       blurRadius: 4.0,
                       offset: Offset(2.0, 2.0)),
                 ],
@@ -54,10 +55,10 @@ class PersonsButton extends StatelessWidget {
                 bottomLeft: Radius.circular(30.0),
                 bottomRight: Radius.circular(30.0),
               ),
-              color: Color.fromRGBO(127, 156, 163, 1),
+              color: appBarColor,
               boxShadow: [
                 BoxShadow(
-                    color: Colors.black87.withOpacity(0.6),
+                    color: shadowColor,
                     blurRadius: 4.0,
                     offset: Offset(2.0, 2.0)),
               ],

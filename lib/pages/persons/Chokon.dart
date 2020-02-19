@@ -3,20 +3,21 @@ import 'package:flutter_html/flutter_html.dart';
 import 'package:historybook/style.dart';
 
 class Chokon extends StatelessWidget {
-  @override 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: bgColor,
       appBar: AppBar(
+        backgroundColor: appBarColor,
         title: Text("Чокан Чингисович Валиханов"),
       ),
       body: SingleChildScrollView(
         child: Container(
           padding: EdgeInsets.all(10.0),
           child: Column(
-          children: <Widget>[
-            Html(
-              data:
-              """
+            children: <Widget>[
+              Html(
+                data: """
 <center><b>Чокан Чингисович Валиханов</b></center>
 <p>
 Чокан Чингисович Валиханов (1835-1865) – великий казахский ученый востоковед, историк, этнограф, географ, фольклорист, переводчик, журналист, путешественник родился в 1835 году в крепости Кушмурун недалеко от Кустаная. Детство Чокана прошло в родовом имении бабушки Айганым в Сырымбете.
@@ -38,12 +39,12 @@ class Chokon extends StatelessWidget {
 
 </p>
             """,
-            defaultTextStyle: paragraphTextStyle,
-            useRichText: true,
-            ),
-          ],
+                defaultTextStyle: paragraphTextStyle,
+                useRichText: true,
+              ),
+            ],
+          ),
         ),
-      ),
       ),
     );
   }

@@ -3,22 +3,27 @@ import '../../style.dart';
 import 'package:flutter_html/flutter_html.dart';
 
 class Paragraph2 extends StatelessWidget {
-  @override 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: bgColor,
       appBar: AppBar(
-        title: Text('§2.Эпос "Манас" - неиссякаемый источник истории Кыргызстана'),
-        ),
-        body: 
-        SingleChildScrollView(
-          child:
-        Container(
+        backgroundColor: appBarColor,
+        title:
+            Text('§2.Эпос "Манас" - неиссякаемый источник истории Кыргызстана'),
+      ),
+      body: SingleChildScrollView(
+        child: Container(
           padding: EdgeInsets.all(10.0),
-          child:
-          Column(
+          child: Column(
             children: [
-              Text('§2.Эпос "Манас" - неиссякаемый источник истории Кыргызстана', style: paragraphBoldTextStyle,),
-              SizedBox(height: 12.0,),
+              Text(
+                '§2.Эпос "Манас" - неиссякаемый источник истории Кыргызстана',
+                style: paragraphBoldTextStyle,
+              ),
+              SizedBox(
+                height: 12.0,
+              ),
               Image.asset("assets/images/paragraphs/Manas.JPG"),
               Html(
                 data: """            
@@ -29,12 +34,13 @@ class Paragraph2 extends StatelessWidget {
 • В пять раз больше персидского  «Шах-Наме» <br>
 Еще в XIX в. такие всемирно известные ученые, как Ч. Валиханов,  В. Радлов, высказали мнение, что эпос является бесценным и уникальным источником для изучения и познания истории, философии, этнографии,  языка,  художественного  творчества,  психологии,  географии,  медицины, духовной культуры и разных сторон социальной жизни кыргызского народа – создателя этой драгоценной реликвии.
 Манас Великодушный (Т. Герцен)
-""", defaultTextStyle: paragraphTextStyle,
-    useRichText: true,
-    // renderNewlines: true,
-),
-Html(
-  data: """
+""",
+                defaultTextStyle: paragraphTextStyle,
+                useRichText: true,
+                // renderNewlines: true,
+              ),
+              Html(
+                data: """
 
 По своему объему эпос «Манас»  превосходит все устно-поэтические  произведения мира.
 <p>
@@ -142,26 +148,34 @@ Html(
 • Объём тыс. стихотворных строк: 86
 </p>
 """,
-defaultTextStyle: paragraphTextStyle,
-useRichText: true,
-),
-Row(
-  mainAxisAlignment: MainAxisAlignment.spaceAround,
-  crossAxisAlignment: CrossAxisAlignment.center,
-  children: <Widget>[
-    Image.asset("assets/images/paragraphs/Sagymbay.JPG"),
-    Image.asset("assets/images/paragraphs/Sayakbay.JPG"),
-    
-  ],
-),
-Row(
-  mainAxisAlignment: MainAxisAlignment.spaceAround,
-  children: <Widget>[
-  Text('Сагымбай Орозбак уулу', style: TextStyle(fontFamily: 'Georgia', fontSize: 14.5, color: Colors.black87)),
-  Text('Саякбай Карала уулу', style: TextStyle(fontFamily: 'Georgia', fontSize: 14.5, color: Colors.black87)),
-],
-),
-Html(data: """
+                defaultTextStyle: paragraphTextStyle,
+                useRichText: true,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Image.asset("assets/images/paragraphs/Sagymbay.JPG"),
+                  Image.asset("assets/images/paragraphs/Sayakbay.JPG"),
+                ],
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: <Widget>[
+                  Text('Сагымбай Орозбак уулу',
+                      style: TextStyle(
+                          fontFamily: 'Georgia',
+                          fontSize: 14.5,
+                          color: Colors.black87)),
+                  Text('Саякбай Карала уулу',
+                      style: TextStyle(
+                          fontFamily: 'Georgia',
+                          fontSize: 14.5,
+                          color: Colors.black87)),
+                ],
+              ),
+              Html(
+                data: """
 <center><b>
 Все основные варианты первой части эпоса содержат следующие эпизоды:</b> </center>
 
@@ -185,11 +199,12 @@ Html(data: """
                 useRichText: true,
               ),
               Image.asset("assets/images/paragraphs/Gercen.JPG"),
-              Text("Иллюстрация к эпосу «Манас» Т. Герцен.", style: paragraphTextStyle),
+              Text("Иллюстрация к эпосу «Манас» Т. Герцен.",
+                  style: paragraphTextStyle),
             ],
           ),
         ),
-        ),
+      ),
     );
   }
 }

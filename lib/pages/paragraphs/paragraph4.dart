@@ -6,7 +6,9 @@ class Paragraph4 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: bgColor,
       appBar: AppBar(
+        backgroundColor: appBarColor,
         title: Text('§4.Племена саков и ранние государства'),
       ),
       body: SingleChildScrollView(

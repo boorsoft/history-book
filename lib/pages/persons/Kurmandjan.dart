@@ -3,20 +3,21 @@ import 'package:flutter_html/flutter_html.dart';
 import 'package:historybook/style.dart';
 
 class Kurmanjan extends StatelessWidget {
-  @override 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: bgColor,
       appBar: AppBar(
+        backgroundColor: appBarColor,
         title: Text("Курманжан Датка"),
       ),
       body: SingleChildScrollView(
         child: Container(
           padding: EdgeInsets.all(10.0),
           child: Column(
-          children: <Widget>[
-            Html(
-              data:
-              """
+            children: <Widget>[
+              Html(
+                data: """
 <center><b>Курманжан Датка</b></center>
 <p>
 Биография Курманджан (1811-1907 гг.) по-своему романтична. Ро­дилась она в семье простого кыргы-за-кочевника из рода монгуш на Алае. На восемнадцатом году ее вы­дали замуж за человека, которого она впервые увидела в день свадь­бы. Он ей не понравился, и она, во­преки традициям и религиозным канонам, осталась жить в юрте отца.
@@ -34,12 +35,12 @@ altПокойница лежала не на полу (как это было п
 Имя Курманджан стало леген­дарным, память о ней дошла до на­ших дней. Память, подкрепленная героическими делами ее потом­ков: Кадырбек Камчибеков и Джам-шибек Карабеков - внуки «алай-ской царицы» - стали членами большевистской партии, кавалера­ми боевых орденов Советской ре­спублики, а праправнук - Муса Мирзапаясович Адышев - видный ученый-геолог, был президентом Академии наук Кыргызской Рес­публики.
 </p>
             """,
-            defaultTextStyle: paragraphTextStyle,
-            useRichText: true,
-            ),
-          ],
+                defaultTextStyle: paragraphTextStyle,
+                useRichText: true,
+              ),
+            ],
+          ),
         ),
-      ),
       ),
     );
   }

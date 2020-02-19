@@ -3,20 +3,21 @@ import 'package:flutter_html/flutter_html.dart';
 import 'package:historybook/style.dart';
 
 class Isa extends StatelessWidget {
-  @override 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Иса Ахунбаев"),
-      ),
-      body: SingleChildScrollView(
-        child: Container(
-          padding: EdgeInsets.all(10.0),
-          child: Column(
-          children: <Widget>[
-            Html(
-              data:
-              """
+        backgroundColor: bgColor,
+        appBar: AppBar(
+          backgroundColor: appBarColor,
+          title: Text("Иса Ахунбаев"),
+        ),
+        body: SingleChildScrollView(
+          child: Container(
+            padding: EdgeInsets.all(10.0),
+            child: Column(
+              children: <Widget>[
+                Html(
+                  data: """
 <center><b>Иса Ахунбаев</b></center>
 <p>
 Иса Коноевич родился 25 сентября 1908 года в селе Тору-Айгыр, расположенном на берегу озера Иссык-Куль. В трагические дни 1916 года он с родителями бежал в Китай, и как все беженцы, будущий хирург прошел через суровые испытания испытания. В Китае Ахунбаев провел все свое детство.
@@ -29,13 +30,12 @@ class Isa extends StatelessWidget {
 
 </p>
               """,
-            defaultTextStyle: paragraphTextStyle,
-            useRichText: true,
+                  defaultTextStyle: paragraphTextStyle,
+                  useRichText: true,
+                ),
+              ],
             ),
-          ],
-        ),
-      ),
-      )
-    );
+          ),
+        ));
   }
 }

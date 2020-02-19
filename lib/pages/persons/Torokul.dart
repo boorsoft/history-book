@@ -3,20 +3,21 @@ import 'package:flutter_html/flutter_html.dart';
 import 'package:historybook/style.dart';
 
 class Torokul extends StatelessWidget {
-  @override 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Торекул Айтматов"),
-      ),
-      body: SingleChildScrollView(
-        child: Container(
-          padding: EdgeInsets.all(10.0),
-          child: Column(
-          children: <Widget>[
-            Html(
-              data:
-              """
+        backgroundColor: bgColor,
+        appBar: AppBar(
+          backgroundColor: appBarColor,
+          title: Text("Торекул Айтматов"),
+        ),
+        body: SingleChildScrollView(
+          child: Container(
+            padding: EdgeInsets.all(10.0),
+            child: Column(
+              children: <Widget>[
+                Html(
+                  data: """
 <center><b>Торекул Айтматов</b></center>
 <p>
 Киргизский партийный и государственный деятель, 2-й секретарь ЦК Коммунистической партии Киргизии, народный комиссар торговли Киргизской АССР.
@@ -25,13 +26,12 @@ class Torokul extends StatelessWidget {
 
 </p>
               """,
-            defaultTextStyle: paragraphTextStyle,
-            useRichText: true,
+                  defaultTextStyle: paragraphTextStyle,
+                  useRichText: true,
+                ),
+              ],
             ),
-          ],
-        ),
-      ),
-      )
-    );
+          ),
+        ));
   }
 }

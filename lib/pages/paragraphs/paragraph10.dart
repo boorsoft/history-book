@@ -6,7 +6,9 @@ class Paragraph10 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: bgColor,
       appBar: AppBar(
+        backgroundColor: appBarColor,
         title: Text(
             '§10.Присоединение Кыргызстана к России. Национально-освободительная борьба в Кыргызстане'),
       ),

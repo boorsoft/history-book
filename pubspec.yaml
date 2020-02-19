@@ -21,6 +21,8 @@ dependencies:
     sdk: flutter
   flutter_html: ^0.11.1
   flutter_launcher_icons: ^0.7.4
+  open_iconic_flutter: ^0.3.0
+  font_awesome_flutter: ^8.7.0
 
 flutter_icons:
   image_path: "assets/historybook-logo.png"

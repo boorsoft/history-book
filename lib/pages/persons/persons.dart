@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:historybook/pages/persons/persons-button.dart';
 import 'persons-button.dart';
+import 'package:historybook/style.dart';
 
 class Persons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: bgColor,
       appBar: AppBar(title: Text('Исторические личности')),
       body: SingleChildScrollView(
         child: Container(
@@ -47,9 +49,12 @@ class Persons extends StatelessWidget {
                   "Торекул Айтматов", "/Persons/Torokul"),
               PersonsButton("assets/images/persons/Ishak.jpg",
                   "Раззаков Исхак Раззакович", "/Persons/Ishak"),
-              PersonsButton("assets/images/persons/Isa.jpg", "Иса Ахунбаев", "/Persons/Isa"),
-              PersonsButton("assets/images/persons/Alykul.jpg", "Алыкул Осмонов", "/Persons/Alykul"),
-              PersonsButton("assets/images/persons/Chika.jpg", "Чингиз Айтматов", "/Persons/Chika"),
+              PersonsButton("assets/images/persons/Isa.jpg", "Иса Ахунбаев",
+                  "/Persons/Isa"),
+              PersonsButton("assets/images/persons/Alykul.jpg",
+                  "Алыкул Осмонов", "/Persons/Alykul"),
+              PersonsButton("assets/images/persons/Chika.jpg",
+                  "Чингиз Айтматов", "/Persons/Chika"),
             ],
           ),
         ),

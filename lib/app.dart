@@ -3,6 +3,7 @@ import 'package:historybook/pages/persons/Barsbek.dart';
 import 'package:historybook/pages/persons/Ishak.dart';
 import 'package:historybook/pages/persons/Sagynbai.dart';
 import 'package:historybook/pages/persons/Torokul.dart';
+import 'package:historybook/style.dart';
 import 'pages/persons/DjusupBalasagyn.dart';
 import 'pages/persons/Mahmud.dart';
 import 'pages/splash-screen.dart';
@@ -45,6 +46,7 @@ import 'pages/persons/Torokul.dart';
 import 'pages/persons/Isa.dart';
 import 'pages/persons/Alykul.dart';
 import 'pages/persons/Chika.dart';
+
 class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -52,7 +54,7 @@ class App extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         home: SplashScreen(),
         theme: ThemeData(
-          primaryColor: Color.fromRGBO(127, 156, 163, 1),
+          primaryColor: appBarColor,
           // primaryTextTheme: TextTheme(
           //   title: TextStyle(
           //     color: Colors.grey,

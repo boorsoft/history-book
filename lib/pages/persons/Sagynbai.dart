@@ -6,7 +6,9 @@ class Sagynbai extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: bgColor,
       appBar: AppBar(
+        backgroundColor: appBarColor,
         title: Text("Сагымбай Орозбак уулу"),
       ),
       body: SingleChildScrollView(
