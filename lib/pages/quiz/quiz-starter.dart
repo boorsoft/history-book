@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:historybook/style.dart';
-import 'package:historybook/pages/quiz/quiz.dart';
 
 class QuizStarter extends StatefulWidget {
   @override
@@ -18,8 +17,9 @@ class _QuizStarterState extends State<QuizStarter> {
         ),
         body: Container(
             child: Center(
-                child: FlatButton(
-                    child: Text('СТАРТ'),
+                child: MaterialButton(
+                    child: Text('СТАРТ', style: TextStyle(color: textColor)),
+                    color: appBarColor,
                     onPressed: () =>
                         Navigator.of(context).pushNamed("/Quiz")))));
   }

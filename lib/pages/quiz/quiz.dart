@@ -17,7 +17,7 @@ class Quiz extends StatefulWidget {
 class _QuizState extends State<Quiz> {
   List quizdata;
 
-  Color displayColor = Color.fromRGBO(127, 156, 163, 1);
+  Color displayColor = appBarColor;
   Color correct = Colors.lightBlue;
   Color wrong = Colors.red;
 
@@ -26,16 +26,16 @@ class _QuizState extends State<Quiz> {
   Timer timer;
   int startTime = 30;
   String showtimer = "30";
-  var timerColor = Color.fromRGBO(127, 156, 163, 1);
+  var timerColor = timeColor;
 
   bool _enabled = true;
   bool canceltimer = false;
 
   Map<String, Color> buttonColor = {
-    "a": Color.fromRGBO(127, 156, 163, 1),
-    "b": Color.fromRGBO(127, 156, 163, 1),
-    "c": Color.fromRGBO(127, 156, 163, 1),
-    "d": Color.fromRGBO(127, 156, 163, 1),
+    "a": appBarColor,
+    "b": appBarColor,
+    "c": appBarColor,
+    "d": appBarColor
   };
 
   _QuizState() {
@@ -59,7 +59,7 @@ class _QuizState extends State<Quiz> {
     const sec = const Duration(seconds: 1);
     timer = new Timer.periodic(sec, (Timer t) {
       setState(() {
-        timerColor = Colors.black87;
+        timerColor = timeColor;
         if (startTime < 1) {
           t.cancel();
           nextQuestion();
@@ -90,10 +90,10 @@ class _QuizState extends State<Quiz> {
       } else {
         _showDialog();
       }
-      buttonColor["a"] = Color.fromRGBO(127, 156, 163, 1);
-      buttonColor["b"] = Color.fromRGBO(127, 156, 163, 1);
-      buttonColor["c"] = Color.fromRGBO(127, 156, 163, 1);
-      buttonColor["d"] = Color.fromRGBO(127, 156, 163, 1);
+      buttonColor["a"] = appBarColor;
+      buttonColor["b"] = appBarColor;
+      buttonColor["c"] = appBarColor;
+      buttonColor["d"] = appBarColor;
       _enabled = true;
     });
     startTimer();
@@ -180,9 +180,7 @@ class _QuizState extends State<Quiz> {
             ),
             actions: <Widget>[
               FlatButton(
-                  child: Text(
-                    'ОК',
-                  ),
+                  child: Text('ОК', style: TextStyle(color: textColor)),
                   onPressed: () {
                     Navigator.of(context).popUntil((route) => route.isFirst);
                   })
@@ -195,7 +193,8 @@ class _QuizState extends State<Quiz> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: bgColor,
-        appBar: AppBar(title: Text('Тестирование')),
+        appBar:
+            AppBar(backgroundColor: appBarColor, title: Text('Тестирование')),
         body: FutureBuilder(
             future:
                 DefaultAssetBundle.of(context).loadString('assets/quiz.json'),
@@ -215,6 +214,7 @@ class _QuizState extends State<Quiz> {
                               "\\" +
                               quizdata[0].length.toString(),
                           style: TextStyle(
+                            color: textColor,
                             fontFamily: 'San Francisco',
                           )),
                     ),
@@ -225,8 +225,7 @@ class _QuizState extends State<Quiz> {
                           'Количество правильных ответов: ' +
                               correctAnswers.toString(),
                           style: TextStyle(
-                            fontFamily: 'San Francisco',
-                          )),
+                              fontFamily: 'San Francisco', color: textColor)),
                     ),
                     Expanded(
                       flex: 3,
@@ -237,7 +236,9 @@ class _QuizState extends State<Quiz> {
                           quizdata[0][i.toString()],
                           textAlign: TextAlign.center,
                           style: TextStyle(
-                              fontSize: 16.5, fontFamily: 'San Francisco'),
+                              fontSize: 16.5,
+                              fontFamily: 'San Francisco',
+                              color: textColor),
                         ),
                       ),
                     ),
@@ -274,9 +275,9 @@ class _QuizState extends State<Quiz> {
                 return Center(
                     child: Text('Идёт загрузка данных...',
                         style: TextStyle(
-                          fontSize: 18.0,
-                          fontWeight: FontWeight.bold,
-                        )));
+                            fontSize: 18.0,
+                            fontWeight: FontWeight.bold,
+                            color: textColor)));
               }
             }));
   }

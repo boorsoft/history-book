@@ -8,7 +8,10 @@ class Persons extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: bgColor,
-      appBar: AppBar(title: Text('Исторические личности')),
+      appBar: AppBar(
+        backgroundColor: appBarColor,
+        title: Text('Исторические личности'),
+      ),
       body: SingleChildScrollView(
         child: Container(
           alignment: Alignment.center,

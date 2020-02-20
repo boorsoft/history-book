@@ -8,6 +8,7 @@ class Paragraphs extends StatelessWidget {
     return Scaffold(
       backgroundColor: bgColor,
       appBar: AppBar(
+        backgroundColor: appBarColor,
         title: Text('Параграфы'),
       ),
       body: SingleChildScrollView(

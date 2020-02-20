@@ -16,6 +16,10 @@ Color shadowColor = Color.fromRGBO(0, 0, 0, 0.4);
 Color shadowColorDark = Color.fromRGBO(0, 0, 0, 0);
 Color shadowColorDefault = Color.fromRGBO(0, 0, 0, 0.4);
 
+Color timeColor = Color.fromRGBO(127, 156, 163, 1);
+Color timeColorDark = Colors.white;
+Color timeColorDefault = Color.fromRGBO(127, 156, 163, 1);
+
 final paragraphTextStyle = TextStyle(
   fontFamily: 'San Francisco',
   fontSize: 16.5,
@@ -39,11 +43,13 @@ void switchTheme() {
     appBarColor = appBarColorDark;
     textColor = textColorWhite;
     shadowColor = shadowColorDark;
+    timeColor = timeColorDark;
   } else {
     bgColor = bgColorDefault;
     appBarColor = appBarColorDefault;
     textColor = textColorDefault;
     shadowColor = shadowColorDefault;
+    timeColor = timeColorDefault;
   }
 }
 
