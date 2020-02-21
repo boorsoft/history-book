@@ -196,8 +196,8 @@ class _QuizState extends State<Quiz> {
         appBar:
             AppBar(backgroundColor: appBarColor, title: Text('Тестирование')),
         body: FutureBuilder(
-            future:
-                DefaultAssetBundle.of(context).loadString('assets/quiz.json'),
+            future: DefaultAssetBundle.of(context)
+                .loadString('assets/json/quiz.json'),
             builder: (context, snapshot) {
               quizdata = json.decode(snapshot.data.toString());
               if (snapshot.hasData) {
