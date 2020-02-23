@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 // Switch theme
 Color bgColorDefault = Colors.white;
-Color bgColorDark = Color.fromRGBO(17, 17, 17, 1);
+Color bgColorDark = Color.fromRGBO(18, 18, 18, 1);
 Color bgColor = Colors.white;
 
 Color appBarColorDefault = Color.fromRGBO(127, 156, 163, 1);
@@ -21,40 +21,90 @@ Color timeColor = Color.fromRGBO(127, 156, 163, 1);
 Color timeColorDark = Colors.white;
 Color timeColorDefault = Color.fromRGBO(127, 156, 163, 1);
 
-final paragraphTextStyle = TextStyle(
+TextStyle paragraphTextStyle = TextStyle(
   fontFamily: 'San Francisco',
   fontSize: 16.5,
-  color: textColor,
+  color: Colors.black87,
   letterSpacing: 0.5,
   height: 1.5,
 );
 
-final paragraphBoldTextStyle = TextStyle(
+TextStyle paragraphBoldTextStyle = TextStyle(
   fontWeight: FontWeight.bold,
   fontFamily: 'San Francisco',
   fontSize: 16.5,
-  color: textColor,
+  color: Colors.black87,
   letterSpacing: 0.5,
   height: 1.5,
 );
 
 void switchTheme() {
-  if (bgColor == bgColorDefault &&
-      appBarColor == appBarColorDefault &&
-      textColor == textColorDefault &&
-      shadowColor == shadowColorDefault &&
-      timeColor == timeColorDefault) {
-    bgColor = bgColorDark;
-    appBarColor = appBarColorDark;
+  if (textColor == textColorDefault) {
     textColor = textColorWhite;
-    shadowColor = shadowColorDark;
-    timeColor = timeColorDark;
+  } else {
+    textColor = textColorDefault;
+  }
+
+  if (bgColor == bgColorDefault) {
+    bgColor = bgColorDark;
   } else {
     bgColor = bgColorDefault;
+  }
+
+  if (appBarColor == appBarColorDefault) {
+    appBarColor = appBarColorDark;
+  } else {
     appBarColor = appBarColorDefault;
-    textColor = textColorDefault;
+  }
+
+  if (shadowColor == shadowColorDefault) {
+    shadowColor = shadowColorDark;
+  } else {
     shadowColor = shadowColorDefault;
+  }
+
+  if (timeColor == timeColorDefault) {
+    timeColor = timeColorDark;
+  } else {
     timeColor = timeColorDefault;
+  }
+
+  if (paragraphTextStyle.color == textColorDefault) {
+    paragraphTextStyle = TextStyle(
+      fontFamily: 'San Francisco',
+      fontSize: 15,
+      color: textColorWhite,
+      letterSpacing: 0.5,
+      height: 1.5,
+    );
+  } else {
+    paragraphTextStyle = TextStyle(
+      fontFamily: 'San Francisco',
+      fontSize: 15,
+      color: textColorDefault,
+      letterSpacing: 0.5,
+      height: 1.5,
+    );
+  }
+
+  if (paragraphBoldTextStyle.color == textColorDefault) {
+    paragraphBoldTextStyle = TextStyle(
+      fontFamily: 'San Francisco',
+      fontWeight: FontWeight.bold,
+      fontSize: 16.5,
+      color: textColorWhite,
+      letterSpacing: 0.5,
+      height: 1.5,
+    );
+  } else {
+    paragraphBoldTextStyle = TextStyle(
+      fontFamily: 'San Francisco',
+      fontWeight: FontWeight.bold,
+      fontSize: 16.5,
+      color: textColorDefault,
+      letterSpacing: 0.5,
+      height: 1.5,
+    );
   }
 }
 
@@ -69,7 +119,7 @@ class FrameStyle extends StatelessWidget {
       child: Container(
         padding: EdgeInsets.all(7.0),
         decoration: BoxDecoration(
-          border: Border.all(width: 1.0, color: Colors.black87),
+          border: Border.all(width: 1.0, color: textColor),
         ),
         child: _frameChild,
       ),

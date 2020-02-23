@@ -32,7 +32,7 @@ class Mahmud extends StatelessWidget {
                     defaultTextStyle: paragraphTextStyle,
                     useRichText: true,
                   ),
-                  Image.asset("assets/images/persons/WorldMap"),
+                  Image.asset("assets/images/persons/WorldMap.jpg"),
                   Text(
                     "Карта мира Махмуда Кашгари",
                     style: paragraphTextStyle,

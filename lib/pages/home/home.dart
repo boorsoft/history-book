@@ -10,6 +10,15 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  void initState() {
+    appBarColor = appBarColorDefault;
+    bgColor = bgColorDefault;
+    textColor = textColorDefault;
+    shadowColor = shadowColorDefault;
+    timeColor = timeColorDefault;
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

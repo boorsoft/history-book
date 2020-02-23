@@ -48,7 +48,12 @@ import 'pages/persons/Isa.dart';
 import 'pages/persons/Alykul.dart';
 import 'pages/persons/Chika.dart';
 
-class App extends StatelessWidget {
+class App extends StatefulWidget {
+  @override
+  _AppState createState() => _AppState();
+}
+
+class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

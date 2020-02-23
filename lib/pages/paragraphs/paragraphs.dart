@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
 import 'paragraph-button.dart';
 import 'package:historybook/style.dart';
+import 'package:historybook/pages/home/home.dart';
 
-class Paragraphs extends StatelessWidget {
+class Paragraphs extends StatefulWidget {
+  @override
+  _ParagraphState createState() => _ParagraphState();
+}
+
+class _ParagraphState extends State<Paragraphs> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

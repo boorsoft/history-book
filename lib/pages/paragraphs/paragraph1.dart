@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:historybook/style.dart';
 import 'package:flutter_html/flutter_html.dart';
+import 'package:html/dom.dart' as dom;
+import 'package:historybook/pages/home/home.dart';
 
 class Paragraph1 extends StatefulWidget {
   @override
