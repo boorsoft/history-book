@@ -11,7 +11,8 @@ class OrmonHan extends StatelessWidget {
           backgroundColor: appBarColor,
           title: Text("Ормон Хан"),
         ),
-        body: SingleChildScrollView(
+        body: Scrollbar(
+            child: SingleChildScrollView(
           child: Container(
             padding: EdgeInsets.all(10.0),
             child: Column(
@@ -30,6 +31,6 @@ class OrmonHan extends StatelessWidget {
               ],
             ),
           ),
-        ));
+        )));
   }
 }

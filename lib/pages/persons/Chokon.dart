@@ -6,18 +6,19 @@ class Chokon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: bgColor,
-      appBar: AppBar(
-        backgroundColor: appBarColor,
-        title: Text("Чокан Чингисович Валиханов"),
-      ),
-      body: SingleChildScrollView(
-        child: Container(
-          padding: EdgeInsets.all(10.0),
-          child: Column(
-            children: <Widget>[
-              Html(
-                data: """
+        backgroundColor: bgColor,
+        appBar: AppBar(
+          backgroundColor: appBarColor,
+          title: Text("Чокан Чингисович Валиханов"),
+        ),
+        body: Scrollbar(
+          child: SingleChildScrollView(
+            child: Container(
+              padding: EdgeInsets.all(10.0),
+              child: Column(
+                children: <Widget>[
+                  Html(
+                    data: """
 <center><b>Чокан Чингисович Валиханов</b></center>
 <p>
 Чокан Чингисович Валиханов (1835-1865) – великий казахский ученый востоковед, историк, этнограф, географ, фольклорист, переводчик, журналист, путешественник родился в 1835 году в крепости Кушмурун недалеко от Кустаная. Детство Чокана прошло в родовом имении бабушки Айганым в Сырымбете.
@@ -45,13 +46,13 @@ class Chokon extends StatelessWidget {
 В 1904 году Российское Географическое общество издало книгу Чокана Валиханова, и в предисловии к ней академик Н.И.Веселовский написал следующее: «Как блестящий метеор, промелькнул над нивой востоковедения потомок казахских ханов и в то же время офицер русской армии Чокан Чингизович Валиханов. Русские ориенталисты единогласно признали в лице его феноменальное явление и ожидали от него великих и важных откровений о судьбе тюркских народов, но преждевременная кончина Чокана лишила нас этих надежд...» За недолгую жизнь Чокан Валиханов сумел написать значительные труды. Его литературное и научное творчество составляет пять объемных томов.
 </p>
             """,
-                defaultTextStyle: paragraphTextStyle,
-                useRichText: true,
+                    defaultTextStyle: paragraphTextStyle,
+                    useRichText: true,
+                  ),
+                ],
               ),
-            ],
+            ),
           ),
-        ),
-      ),
-    );
+        ));
   }
 }

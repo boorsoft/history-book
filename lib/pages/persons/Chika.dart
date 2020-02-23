@@ -11,7 +11,8 @@ class Chika extends StatelessWidget {
           backgroundColor: appBarColor,
           title: Text("Чингиз Айтматов"),
         ),
-        body: SingleChildScrollView(
+        body: Scrollbar(
+            child: SingleChildScrollView(
           child: Container(
             padding: EdgeInsets.all(10.0),
             child: Column(
@@ -45,6 +46,6 @@ class Chika extends StatelessWidget {
               ],
             ),
           ),
-        ));
+        )));
   }
 }

@@ -11,7 +11,8 @@ class TagaiBii extends StatelessWidget {
           backgroundColor: appBarColor,
           title: Text("Муххамед Кыргыз (Тагай Бий)"),
         ),
-        body: SingleChildScrollView(
+        body: Scrollbar(
+            child: SingleChildScrollView(
           child: Container(
             padding: EdgeInsets.all(10.0),
             child: Column(
@@ -35,6 +36,6 @@ class TagaiBii extends StatelessWidget {
               ],
             ),
           ),
-        ));
+        )));
   }
 }

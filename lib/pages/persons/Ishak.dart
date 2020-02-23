@@ -11,7 +11,8 @@ class Ishak extends StatelessWidget {
           backgroundColor: appBarColor,
           title: Text("Раззаков Исхак Раззакович"),
         ),
-        body: SingleChildScrollView(
+        body: Scrollbar(
+            child: SingleChildScrollView(
           child: Container(
             padding: EdgeInsets.all(10.0),
             child: Column(
@@ -41,6 +42,6 @@ class Ishak extends StatelessWidget {
               ],
             ),
           ),
-        ));
+        )));
   }
 }

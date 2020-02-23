@@ -3,20 +3,20 @@ import 'package:flutter_html/flutter_html.dart';
 import 'package:historybook/style.dart';
 
 class Mahmud extends StatelessWidget {
-  @override 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Махмуд Кашгари"),
-      ),
-      body: SingleChildScrollView(
-        child: Container(
-          padding: EdgeInsets.all(10.0),
-          child: Column(
-          children: <Widget>[
-            Html(
-              data:
-              """
+        appBar: AppBar(
+          title: Text("Махмуд Кашгари"),
+        ),
+        body: Scrollbar(
+          child: SingleChildScrollView(
+            child: Container(
+              padding: EdgeInsets.all(10.0),
+              child: Column(
+                children: <Widget>[
+                  Html(
+                    data: """
 <center><b>Махмуд Кашгари</b></center>
 <p>
 Махмуд ибн Хусейн ибн Мухам-мад (Махмуд ал-Кашгари) родился в городе Барсхан на южном берегу озера Иссык-Куль. Он принадлежал к правящей династии Караханидов. Широкую известность ему принес его труд «Диван лугат ат-тюрк» («Сло­варь тюркских наречий»), состав­ленный в Багдаде в 1072-1074 гг. Те немногие и скупые сведения, кото­рые имеются об ученом в настоящее время, содержатся только в самом «Диван лугат ат-тюрк».
@@ -29,16 +29,22 @@ class Mahmud extends StatelessWidget {
 В настоящее время актуально ут­верждение Махмуда о близости на­речий и традиций кыргызов, кипча­ков и карлуков. Его труд о Средней Азии - единственный из дошедших до нас - написан на основе непо­средственного знакомства автора со страной. Поэтому сочинение Махмуда Кашгари специалисты на­зывают подлинной энциклопедией народной жизни тюрок раннего средневековья.
 </p>
             """,
-            defaultTextStyle: paragraphTextStyle,
-            useRichText: true,
+                    defaultTextStyle: paragraphTextStyle,
+                    useRichText: true,
+                  ),
+                  Image.asset("assets/images/persons/WorldMap"),
+                  Text(
+                    "Карта мира Махмуда Кашгари",
+                    style: paragraphTextStyle,
+                    textAlign: TextAlign.center,
+                  ),
+                  SizedBox(
+                    height: 12.0,
+                  ),
+                ],
+              ),
             ),
-            Image.asset("assets/images/persons/WorldMap"),
-            Text("Карта мира Махмуда Кашгари", style: paragraphTextStyle, textAlign: TextAlign.center,),
-            SizedBox(height: 12.0,),
-          ],
-        ),
-      ),
-      ),
-    );
+          ),
+        ));
   }
 }

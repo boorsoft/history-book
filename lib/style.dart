@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// Switch theme
 Color bgColorDefault = Colors.white;
 Color bgColorDark = Color.fromRGBO(16, 16, 16, 1);
 Color bgColor = Colors.white;
@@ -38,7 +39,11 @@ final paragraphBoldTextStyle = TextStyle(
 );
 
 void switchTheme() {
-  if (bgColor == bgColorDefault || appBarColor == appBarColorDefault) {
+  if (bgColor == bgColorDefault &&
+      appBarColor == appBarColorDefault &&
+      textColor == textColorDefault &&
+      shadowColor == shadowColorDefault &&
+      timeColor == timeColorDefault) {
     bgColor = bgColorDark;
     appBarColor = appBarColorDark;
     textColor = textColorWhite;

@@ -11,7 +11,8 @@ class AtakeBaatyr extends StatelessWidget {
           backgroundColor: appBarColor,
           title: Text("Атаке Баатыр"),
         ),
-        body: SingleChildScrollView(
+        body: Scrollbar(
+            child: SingleChildScrollView(
           child: Container(
             padding: EdgeInsets.all(10.0),
             child: Column(
@@ -34,6 +35,6 @@ class AtakeBaatyr extends StatelessWidget {
               ],
             ),
           ),
-        ));
+        )));
   }
 }

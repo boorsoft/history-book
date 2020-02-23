@@ -11,7 +11,8 @@ class Isa extends StatelessWidget {
           backgroundColor: appBarColor,
           title: Text("Иса Ахунбаев"),
         ),
-        body: SingleChildScrollView(
+        body: Scrollbar(
+            child: SingleChildScrollView(
           child: Container(
             padding: EdgeInsets.all(10.0),
             child: Column(
@@ -38,6 +39,6 @@ class Isa extends StatelessWidget {
               ],
             ),
           ),
-        ));
+        )));
   }
 }

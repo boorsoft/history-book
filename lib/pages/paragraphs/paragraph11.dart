@@ -6,20 +6,22 @@ class Paragraph11 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: bgColor,
-      appBar: AppBar(
-        backgroundColor: appBarColor,
-        title: Text('§11.Падение царизма. Установление советской власти'),
-      ),
-      body: SingleChildScrollView(
-        child: Container(
-          padding: EdgeInsets.all(10.0),
-          child: Column(
-            children: [
-              Text('§11.Падение царизма. Установление советской власти',
-                  style: paragraphBoldTextStyle, textAlign: TextAlign.center),
-              Html(
-                data: """
+        backgroundColor: bgColor,
+        appBar: AppBar(
+          backgroundColor: appBarColor,
+          title: Text('§11.Падение царизма. Установление советской власти'),
+        ),
+        body: Scrollbar(
+          child: SingleChildScrollView(
+            child: Container(
+              padding: EdgeInsets.all(10.0),
+              child: Column(
+                children: [
+                  Text('§11.Падение царизма. Установление советской власти',
+                      style: paragraphBoldTextStyle,
+                      textAlign: TextAlign.center),
+                  Html(
+                    data: """
 • Февральская буржуазно-демократическая революция 1917 г. стала важнейшим событием в истории населявших Россию народов. Революция, свергнув царскую власть, дала народам политические свободы. <br> 
 • С победой февральской революции 1917 г. по примеру Петрограда, Москвы и.др.городов под руководством большевиков, стали формироваться  Советы.
 <br>
@@ -65,17 +67,17 @@ class Paragraph11 extends StatelessWidget {
 • В  Нарыне,  Пржевальске  установление  Советской  власти  проходило  в  сложной и напряженной обстановке и затянулось до середины 1918 г. В  Нарыне Советская власть установлена в апреле 1918 г. благодаря поддержке красногвардейского отряда из Токмака, а в июне 1918 г. в Пржевальске –  с помощью красногвардейской дружины из Верного . <br>
             
               """,
-                defaultTextStyle: paragraphTextStyle,
-                useRichText: true,
-              ),
-              Image.asset("assets/images/paragraphs/Lenin.jpg"),
-              Text(
-                "В. И. Ленин",
-                style: paragraphTextStyle,
-                textAlign: TextAlign.center,
-              ),
-              Html(
-                data: """
+                    defaultTextStyle: paragraphTextStyle,
+                    useRichText: true,
+                  ),
+                  Image.asset("assets/images/paragraphs/Lenin.jpg"),
+                  Text(
+                    "В. И. Ленин",
+                    style: paragraphTextStyle,
+                    textAlign: TextAlign.center,
+                  ),
+                  Html(
+                    data: """
 <p>Деятельность Советской власти в Кыргызстане, как и во всей стране;  началась  с  разрушения  старого  и  создания  нового  государственного  аппарата. В марте – июне 1918 г. упразднены уездные и участковые комиссариаты, земельные комитеты, городские думы, ещё раньше – переселенческие управления, служившие  рычагом аграрной колонизации.</p>
 <center><b>Гражданская война. Оборона Советской власти.</b></center>
 <p>Установление Советской власти в центре и на местах встретило вооружённое сопротивление свергнутых эксплуататорских классов. Гражданская война была продолжением борьбы за власть.</p>
@@ -85,21 +87,23 @@ class Paragraph11 extends StatelessWidget {
 • Для разгрома контрреволюционных сил в Туркестане в июле 1918 г. были  образованы Актюбинский, Закаспийский и Семиреченский фронты. Особое внимание было уделено формированию новых частей Красной Армии. <br>
 • На юге Кыргызстана гражданская война была направлена в основном на  борьбу с басмачеством. Басмачество, первоначально возникшее как  разновидность национально- освободительной борьбы местного населения,  со временем стало реакционным движением.
               """,
-                defaultTextStyle: paragraphTextStyle,
-                useRichText: true,
-              ),
-              SizedBox(height: 12.0),
-              Image.asset("assets/images/paragraphs/soviet-power-setup.jpg"),
-              Text(
-                  "Установление Советской власти в Кыргызстане (1917–1918 гг).",
-                  style: paragraphTextStyle,
-                  textAlign: TextAlign.center),
-              SizedBox(height: 12.0),
-              Image.asset("assets/images/paragraphs/Kyrgyzstan-civil-war.jpg"),
-              Text("Гражданская война в Кыргызстане (1918–1920 гг.)",
-                  style: paragraphTextStyle, textAlign: TextAlign.center),
-              Html(
-                data: """
+                    defaultTextStyle: paragraphTextStyle,
+                    useRichText: true,
+                  ),
+                  SizedBox(height: 12.0),
+                  Image.asset(
+                      "assets/images/paragraphs/soviet-power-setup.jpg"),
+                  Text(
+                      "Установление Советской власти в Кыргызстане (1917–1918 гг).",
+                      style: paragraphTextStyle,
+                      textAlign: TextAlign.center),
+                  SizedBox(height: 12.0),
+                  Image.asset(
+                      "assets/images/paragraphs/Kyrgyzstan-civil-war.jpg"),
+                  Text("Гражданская война в Кыргызстане (1918–1920 гг.)",
+                      style: paragraphTextStyle, textAlign: TextAlign.center),
+                  Html(
+                    data: """
 <p>• Главной целью лидеров и организаторов басмачества было отделение Туркестана от РСФСР и создание самостоятельных государств  традиционного типа. </p>
 <p>• Вдохновителями басмачества явились баи, торговцы, бывшие чиновники,  фабриканты, заводчики, интересы которых были сильно ущемлены с национализацией их собственности. </p>
 <p>• Басмаческим движением руководили такие курбаши, как Эргеш, Калкожо, Мадаминбек, Мойдунбек, Шермухаммед (Кёршермат), Аман-Палван,  Джаныбек-казы и др. </p>
@@ -117,19 +121,19 @@ class Paragraph11 extends StatelessWidget {
 <p>• Последний  белогвардейский-кулакский  мятеж  вспыхнул  в  Нарынском уезде.  Он начался 5-ноября 1920 г. в Ат-Баши. Возглавили  его бывший офицер Д. Кирьянов  и торговец К. Бондарев. Опираясь на поддержку местных феодалов, они  совершили в г.Нарын контрреволюционный  переворот и взяли в плен командование дислоцированного там 23-го полка. Советские руководители  были убиты, 47 партийных и советских работников-арестованы. Для разгрома мятежников был направлен Пишпекский полк. Он нанёс поражение  восставшим 16 ноября у Кочкорки, а 18 ноября – на перевале Долон. </p>
 <p>• Таким образом, гражданская война в конце 1920 г. в Кыргызстане была  завершена. Однако, на юге Кыргызстана басмаческое  движение продолжалось до 1924 г. В это время басмачество стало локальным и  полностью  лишилось поддержки народа. </p>
               """,
-                defaultTextStyle: paragraphTextStyle,
-                useRichText: true,
+                    defaultTextStyle: paragraphTextStyle,
+                    useRichText: true,
+                  ),
+                  Image.asset("assets/images/paragraphs/Obelisk.jpg"),
+                  Text(
+                    'Обелиск на братской могиле красногвардейцев в г. Бишкек',
+                    style: paragraphTextStyle,
+                    textAlign: TextAlign.center,
+                  )
+                ],
               ),
-              Image.asset("assets/images/paragraphs/Obelisk.jpg"),
-              Text(
-                'Обелиск на братской могиле красногвардейцев в г. Бишкек',
-                style: paragraphTextStyle,
-                textAlign: TextAlign.center,
-              )
-            ],
+            ),
           ),
-        ),
-      ),
-    );
+        ));
   }
 }

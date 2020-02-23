@@ -6,24 +6,25 @@ class Paragraph8 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: bgColor,
-      appBar: AppBar(
-        backgroundColor: appBarColor,
-        title: Text(
-            '§8.Завершение процесса формирования кыргызской народности и его взаимоотношения с сопредельными народами'),
-      ),
-      body: SingleChildScrollView(
-        child: Container(
-          padding: EdgeInsets.all(10.0),
-          child: Column(
-            children: [
-              Text(
-                '§8.Завершение процесса формирования кыргызской народности и его взаимоотношения с сопредельными народами',
-                style: paragraphBoldTextStyle,
-                textAlign: TextAlign.center,
-              ),
-              Html(
-                data: """
+        backgroundColor: bgColor,
+        appBar: AppBar(
+          backgroundColor: appBarColor,
+          title: Text(
+              '§8.Завершение процесса формирования кыргызской народности и его взаимоотношения с сопредельными народами'),
+        ),
+        body: Scrollbar(
+          child: SingleChildScrollView(
+            child: Container(
+              padding: EdgeInsets.all(10.0),
+              child: Column(
+                children: [
+                  Text(
+                    '§8.Завершение процесса формирования кыргызской народности и его взаимоотношения с сопредельными народами',
+                    style: paragraphBoldTextStyle,
+                    textAlign: TextAlign.center,
+                  ),
+                  Html(
+                    data: """
 <center>Этнические процессы в эпоху древности</center>
 <p>• Истоки  этнической  истории  кыргызов  восходят  к  глубокой  древности.  Кыргызская  народность  сложилась  главным  образом  на  базе  древних   и средневековых  племён  и  племенных  объединений  Тянь-Шаня  и  Притяньшанья. </p>
 <p>• Процессы этнической консолидации и интеграции кочевого населения получили развитие в рамках военно-политических объединений, таких, как  сакский и усунский племенной союз. Это было полиэтничное образование,  включавшее племена саков, усуней и юечжей.  </p>
@@ -62,14 +63,14 @@ class Paragraph8 extends StatelessWidget {
 
 
               """,
-                defaultTextStyle: paragraphTextStyle,
-                useRichText: true,
-              ),
-              Image.asset("assets/images/paragraphs/ancient-kyrgyz.jpg"),
-              SizedBox(height: 12.0),
-              Image.asset("assets/images/paragraphs/kyrgyz-tree.jpg"),
-              Html(
-                data: """
+                    defaultTextStyle: paragraphTextStyle,
+                    useRichText: true,
+                  ),
+                  Image.asset("assets/images/paragraphs/ancient-kyrgyz.jpg"),
+                  SizedBox(height: 12.0),
+                  Image.asset("assets/images/paragraphs/kyrgyz-tree.jpg"),
+                  Html(
+                    data: """
 <center><b>Роль Мухаммед-Кыргыза в консолидации кыргызов</b></center>
 <p>• К началу XVI в. кыргызы Притяньшанья составили весьма внушительную силу, их кочевья доходили до Чалыша и Турфана на востоке. На юге  до Йанги-Гисара и на севере до Балхаша.</p> 
 <p>• В это время среди кыргызов этнополитическая  консолидация набирала силу во главе с Мухаммед-Кыргызом. Он вошёл в кыргызские предания  под именем родоначальника кыргызов «Тагайбия».</p> 
@@ -79,17 +80,17 @@ class Paragraph8 extends StatelessWidget {
 кент,  Туркестан,  Сайрам. За это  своеволие  Султан-Саид  хан  был разгневан  на  Мухаммед-Кыргыза  и  повёл  против него  своё  войско  и  взял   его в плен (1517 г.) </p>
 <p>• Султан Саид-хан из политических соображений был вынужден отпустить  Мухаммед-Кыргыза.  Мухаммед-Кыргыз  вновь  стал  независимо  управлять. Султан-Саид вновь совершил поход против кыргызов (1524 г.) и снова захватил Мухаммед-Кыргыза и отправил в Кашгар, где тот и находился  до  смерти Султан Саид-хана (1533 г.) Кыргызы в союзе с казахами сумели  отстоять свою независимость, и даже угрожали Кашгарии. </p>               
               """,
-                defaultTextStyle: paragraphTextStyle,
-                useRichText: true,
-              ),
-              Image.asset("assets/images/paragraphs/Muhammed-kyrgyz.jpg"),
-              Text(
-                "Мухаммед-Кыргыз.",
-                style: paragraphTextStyle,
-                textAlign: TextAlign.center,
-              ),
-              Html(
-                data: """
+                    defaultTextStyle: paragraphTextStyle,
+                    useRichText: true,
+                  ),
+                  Image.asset("assets/images/paragraphs/Muhammed-kyrgyz.jpg"),
+                  Text(
+                    "Мухаммед-Кыргыз.",
+                    style: paragraphTextStyle,
+                    textAlign: TextAlign.center,
+                  ),
+                  Html(
+                    data: """
 <center><b>Кыргызы и калмыки </b></center>
 <center>Кыргызско-ойратские отношения в XIV–XVII вв. </center>
 <p>Распад Монгольской империи Юань и раздробленность Монголии в конце  XIV в. создали благоприятные условия для консолидации и усиления кыргызских племен. В качестве объединителя кыргызско-ойратских плёмен  выступают кыргызские правители Угэчи-Кашка и Эсэху-хан. Им удалось  установить своё господство над большей частью ойратов и монголов.  </p>
@@ -120,17 +121,17 @@ class Paragraph8 extends StatelessWidget {
 <p>• Непрерывная борьба народов Восточного Тюркестана продолжалась и после утверждения китайской гегемонии. Тюркское население (кыргызы,  уйгуры, казахи, узбеки и др.) в этой борьбе действовало сообща. В восстании 1814 и 1816 гг. в  Кашгаре активно участвовали кыргызы во главе  с Суранчы-бием.  </p>
 <p>• Политика  национального  угнетения  и  грабежа  некитайских народов Синьцзяна привела к тому,  что в 1826 г. здесь вспыхнуло очередное крупное антицинское восстание  под руководством Джангер-кожо, которое охватило ряд районов Восточного Туркестана. Кыргызы активно поддержали восстание народов Синьцзяна пытавшихся свергнуть цинскую власть в Кашгарии. Однако это восстание было подавлено. Джангер-кожо нашёл убежище у Тайлак-баатыра.  В погоню за Джангер-кожо был направлен китайский отряд из 400 солдат  под командованием генерала Баян-Бату,  которой был разгромлен Тайлакбаатыром в ущелье Ойнок-Джар (совр. Ат-Башинский район). </p>
               """,
-                defaultTextStyle: paragraphTextStyle,
-                useRichText: true,
-              ),
-              Image.asset("assets/images/paragraphs/Suranchy-biy.jpg"),
-              Text(
-                "Суранчы-бий.",
-                style: paragraphTextStyle,
-                textAlign: TextAlign.center,
-              ),
-              Html(
-                data: """
+                    defaultTextStyle: paragraphTextStyle,
+                    useRichText: true,
+                  ),
+                  Image.asset("assets/images/paragraphs/Suranchy-biy.jpg"),
+                  Text(
+                    "Суранчы-бий.",
+                    style: paragraphTextStyle,
+                    textAlign: TextAlign.center,
+                  ),
+                  Html(
+                    data: """
 <center><b>Внешнеполитические контакты кыргызов и цинского двора </b></center>
 <p>• Внешнеполитические контакты в соответствии с китайской традицией квалифицировались в Пекине, как отношения «сюзерена» (китайского двора)  с «вассалом». Формальным основанием для этого служила отправка кыргызскими биями ко двору императора, послов с подношениями «данью»  (кони, соколы). Однако за них вручались ответные дары.  </p>
 <p>• Помимо ответных подарков, император «жаловал» кыргызским биям атрибуты чиновных званий. Почин этой практике был положен в 1758 г. когда по 
@@ -145,17 +146,17 @@ class Paragraph8 extends StatelessWidget {
 <p>•  В начале 70-х годов XVIII в. Кокжарлы-Барак совершает на кыргызов набег. Предводительствуемые  Эсенгул баатыром кыргызы на голову разгромили 20-тысячное войско казахов,  сам Барак погиб. После этого кыргызский батыр Эр-Садыр дважды нападал на  стойбища казахов и дошёл до Чолок-Коргона и Сузака (близ. совр. г. Чымкент). </p>
 <p>•   В 70-е годы XVIII века Аблай-хан напал на таласских и чуйских кыргызов. В  сражении отличился народный герой Жайыл-баатыр из рода солто. В памяти  народа сражение между кыргызами и казахами сохранилось под названием «побоище Джаила». В схватках с казахскими захватчиками активно участвовали  Атаке баатыр, Бишкек баатыр, Бурго баатыр, Момокон и др.  </p>
               """,
-                defaultTextStyle: paragraphTextStyle,
-                useRichText: true,
-              ),
-              Image.asset("assets/images/paragraphs/Jayil-baatyr.jpg"),
-              Text(
-                "Жайыл-баатыр.",
-                style: paragraphTextStyle,
-                textAlign: TextAlign.center,
-              ),
-              Html(
-                data: """
+                    defaultTextStyle: paragraphTextStyle,
+                    useRichText: true,
+                  ),
+                  Image.asset("assets/images/paragraphs/Jayil-baatyr.jpg"),
+                  Text(
+                    "Жайыл-баатыр.",
+                    style: paragraphTextStyle,
+                    textAlign: TextAlign.center,
+                  ),
+                  Html(
+                    data: """
 <center><b>Набеги Кенесары Касымова </b></center>
 <p>• Предводители Младшего и Среднего жузов, пытаясь создать единое казахское государство, в 1841 г. возвели на престол своего ставленника Кенесары.</p>
 <p>• В 1846 г. Кенесары направил послов к хану северных кыргызов Ормону с предложением объединиться в борьбе против надвигающейся угрозы экспансии русского царизма. </p>
@@ -165,12 +166,12 @@ class Paragraph8 extends StatelessWidget {
 <p>• Спустя шесть месяцев после окончания войны, 22 августа 1847 г., при посредничестве российского правительства кыргызы и казахи подписали в  городе  Копал (совр. г. Талды-Коргон) мирный договор. Это бессмысленная, братоубийственная война вошла в историю кыргызского и казахского  народов как одна из самых трагических её страниц. </p>
 
               """,
-                defaultTextStyle: paragraphTextStyle,
-                useRichText: true,
-              ),
-              Image.asset("assets/images/paragraphs/kyrgyz-tribes.jpg"),
-              Html(
-                data: """
+                    defaultTextStyle: paragraphTextStyle,
+                    useRichText: true,
+                  ),
+                  Image.asset("assets/images/paragraphs/kyrgyz-tribes.jpg"),
+                  Html(
+                    data: """
 <p><b>1.</b> Адыгине.<br>
 <b>2.</b> Багыш. <br>
 <b>3.</b> Бугу. <br>
@@ -193,13 +194,13 @@ class Paragraph8 extends StatelessWidget {
 <b>20.</b> Тейит. <br>
 <b>21.</b> Черик.</p>       
               """,
-                defaultTextStyle: paragraphTextStyle,
-                useRichText: true,
-              )
-            ],
+                    defaultTextStyle: paragraphTextStyle,
+                    useRichText: true,
+                  )
+                ],
+              ),
+            ),
           ),
-        ),
-      ),
-    );
+        ));
   }
 }

@@ -6,37 +6,39 @@ class Paragraph3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: bgColor,
-      appBar: AppBar(
-        backgroundColor: appBarColor,
-        title: Text('§3.Каменный и бронзовый века в Кыргызстане'),
-      ),
-      body: SingleChildScrollView(
-        child: Container(
-          padding: EdgeInsets.all(10.0),
-          child: Column(
-            children: [
-              Text("§3.Каменный и бронзовый века в Кыргызстане",
-                  style: paragraphBoldTextStyle, textAlign: TextAlign.center),
-              Html(
-                data: """
+        backgroundColor: bgColor,
+        appBar: AppBar(
+          backgroundColor: appBarColor,
+          title: Text('§3.Каменный и бронзовый века в Кыргызстане'),
+        ),
+        body: Scrollbar(
+          child: SingleChildScrollView(
+            child: Container(
+              padding: EdgeInsets.all(10.0),
+              child: Column(
+                children: [
+                  Text("§3.Каменный и бронзовый века в Кыргызстане",
+                      style: paragraphBoldTextStyle,
+                      textAlign: TextAlign.center),
+                  Html(
+                    data: """
 Каменный век – историко-культурная эпоха становления человеческого общества, главной особенностью  которой,  является  изготовление  из  камня  изделий  и  орудий,  предназначенных  для  добывания пищи и защиты от врагов. 
 <br>
 Начало относится ко времени отделения человека  от животного мира (2,5 млн. лет тому назад), а конец совпадает с началом использования металлов  (5 тысяч лет тому назад).
 <br>
 Археологическая периодизация первобытной истории в качестве основного критерия использует последовательную смену орудий труда
                 """,
-                defaultTextStyle: paragraphTextStyle,
-                useRichText: true,
-              ),
-              Image.asset("assets/images/paragraphs/stone-tools.JPG"),
-              Text(
-                "Каменные орудия.",
-                style: paragraphTextStyle,
-                textAlign: TextAlign.center,
-              ),
-              Html(
-                data: """
+                    defaultTextStyle: paragraphTextStyle,
+                    useRichText: true,
+                  ),
+                  Image.asset("assets/images/paragraphs/stone-tools.JPG"),
+                  Text(
+                    "Каменные орудия.",
+                    style: paragraphTextStyle,
+                    textAlign: TextAlign.center,
+                  ),
+                  Html(
+                    data: """
 <center><b>Каменный век:</b></center>
 1. <b>Древний каменный век</b> (2,5 млн. – 12/10  тысячелетия до н. э.)<br>
 • <b>Ранний палеолит</b> (2,5 млн. – 140 тысячелетия до н. э.)<br>
@@ -60,17 +62,17 @@ class Paragraph3 extends StatelessWidget {
 3. Появление  человека  современного  типа  –  кроманьонца<br>
 4. Происхождение  рассогенеза  –  формирование трех человеческих рас. Это произошло  в позднем палеолите в результате приспособления людей к природной среде.<br>
                 """,
-                defaultTextStyle: paragraphTextStyle,
-                useRichText: true,
-              ),
-              Image.asset("assets/images/paragraphs/human-evolution.jpg"),
-              Text(
-                "Эволюция человека.",
-                style: paragraphTextStyle,
-                textAlign: TextAlign.center,
-              ),
-              Html(
-                data: """
+                    defaultTextStyle: paragraphTextStyle,
+                    useRichText: true,
+                  ),
+                  Image.asset("assets/images/paragraphs/human-evolution.jpg"),
+                  Text(
+                    "Эволюция человека.",
+                    style: paragraphTextStyle,
+                    textAlign: TextAlign.center,
+                  ),
+                  Html(
+                    data: """
 <center><b>Ранний палеолит</b><br>(от 2,5 млн. до 140 тыс. лет до н. э. )</center>
 • <b>Основные достижения:</b><br>
 Собирательство, рыболовство, охота, освоение огня. Социальная организация – праобщина древнейших людей  (человеческое стадо из 20–30 взрослых членов. В их поведении преобладал животный инстинкт )<br>
@@ -140,17 +142,17 @@ class Paragraph3 extends StatelessWidget {
   • Высокий уровень развития горного дела, металлургии и керамики. Было развито ткачество, производились изделия из кожи.<br> 
   • Поклонялись солнцу, огню, существовал культ предков – почитание  душ умерших родственников занимало особое место.<br>
               """,
-                defaultTextStyle: paragraphTextStyle,
-                useRichText: true,
-              ),
-              Image.asset("assets/images/paragraphs/Andron-monuments.JPG"),
-              Text(
-                "Памятники Андроновской культуры.",
-                style: paragraphTextStyle,
-                textAlign: TextAlign.center,
-              ),
-              Html(
-                data: """
+                    defaultTextStyle: paragraphTextStyle,
+                    useRichText: true,
+                  ),
+                  Image.asset("assets/images/paragraphs/Andron-monuments.JPG"),
+                  Text(
+                    "Памятники Андроновской культуры.",
+                    style: paragraphTextStyle,
+                    textAlign: TextAlign.center,
+                  ),
+                  Html(
+                    data: """
 <center>Памятники представлены поселениями, могильниками, кладами</center>
 <p>Находятся на Тянь-Шане, на Памиро-Алае, в Кетмень-Тюбе, в Чуйской  долине, Нарынской области, в Иссык-Кульской котловине. Памятники андроновских племен локализированы в Северном Кыргызстане.</p> 
 <center><b>Оседло – земледельческие племена чустской культуры в Ферганской долине</b></center>
@@ -167,19 +169,19 @@ class Paragraph3 extends StatelessWidget {
 <p>История чустских племен охватывает почти четыре столетия, начиная  с конца II тысячелетия до VIII – VI вв. до н. э. На территории Ферганы  существовало не менее 20 оазисов – земледельческих общин. Каждая  из них была самостоятельной и мало связаной с соседними общинами.  Жители поселения объединялись в племенной союз. В районе Узгена обнаружено 13 небольших чустских поселений. Также, поселения были обнаружены в Ноокатском районе. Ошкое поселение – наиболее яркий и ценный памятник древней чустской культуры, что подтверждено и данными радиоуглеродного анализа найденных предметов. </p>
 
               """,
-                defaultTextStyle: paragraphTextStyle,
-                useRichText: true,
+                    defaultTextStyle: paragraphTextStyle,
+                    useRichText: true,
+                  ),
+                  Image.asset("assets/images/paragraphs/Osh-findings.jpg"),
+                  Text(
+                    "Находки из древнего Ошского поселения.",
+                    style: paragraphTextStyle,
+                    textAlign: TextAlign.center,
+                  ),
+                ],
               ),
-              Image.asset("assets/images/paragraphs/Osh-findings.jpg"),
-              Text(
-                "Находки из древнего Ошского поселения.",
-                style: paragraphTextStyle,
-                textAlign: TextAlign.center,
-              ),
-            ],
+            ),
           ),
-        ),
-      ),
-    );
+        ));
   }
 }

@@ -11,7 +11,8 @@ class Kasym extends StatelessWidget {
           backgroundColor: appBarColor,
           title: Text("Касым Тыныстанов"),
         ),
-        body: SingleChildScrollView(
+        body: Scrollbar(
+            child: SingleChildScrollView(
           child: Container(
             padding: EdgeInsets.all(10.0),
             child: Column(
@@ -40,6 +41,6 @@ class Kasym extends StatelessWidget {
               ],
             ),
           ),
-        ));
+        )));
   }
 }

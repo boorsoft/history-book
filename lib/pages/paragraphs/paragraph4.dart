@@ -6,23 +6,24 @@ class Paragraph4 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: bgColor,
-      appBar: AppBar(
-        backgroundColor: appBarColor,
-        title: Text('§4.Племена саков и ранние государства'),
-      ),
-      body: SingleChildScrollView(
-        child: Container(
-          padding: EdgeInsets.all(10.0),
-          child: Column(
-            children: [
-              Text(
-                '§4.Племена саков и ранние государства',
-                style: paragraphBoldTextStyle,
-                textAlign: TextAlign.center,
-              ),
-              Html(
-                data: """
+        backgroundColor: bgColor,
+        appBar: AppBar(
+          backgroundColor: appBarColor,
+          title: Text('§4.Племена саков и ранние государства'),
+        ),
+        body: Scrollbar(
+          child: SingleChildScrollView(
+            child: Container(
+              padding: EdgeInsets.all(10.0),
+              child: Column(
+                children: [
+                  Text(
+                    '§4.Племена саков и ранние государства',
+                    style: paragraphBoldTextStyle,
+                    textAlign: TextAlign.center,
+                  ),
+                  Html(
+                    data: """
 <p>В VIII – III вв. до н. э. обширные территории, занимаемые современными государствами Средней Азии и Казахстаном, населяли многочисленные племена, которых в древнеперсидских клинописных текстах называли саками.</p>
 <p>Античные  авторы  Древней  Греции  и  Рима называли саков  скифами, древнеиндийские источники  турами, китайские –  народ сэ.</p>
 <p>Этноним сак – означал «Свободный  человек, доблестный муж, воин».</p>
@@ -32,14 +33,14 @@ class Paragraph4 extends StatelessWidget {
 • «История» Геродота; • «География» Страбона; <br>
 • «История Персии»  Ктесия.
 """,
-                defaultTextStyle: paragraphTextStyle,
-                useRichText: true,
-              ),
-              Image.asset("assets/images/paragraphs/tigrahauda-sacks.jpg"),
-              Text("Саки тиграхауда.",
-                  style: paragraphTextStyle, textAlign: TextAlign.center),
-              Html(
-                data: """
+                    defaultTextStyle: paragraphTextStyle,
+                    useRichText: true,
+                  ),
+                  Image.asset("assets/images/paragraphs/tigrahauda-sacks.jpg"),
+                  Text("Саки тиграхауда.",
+                      style: paragraphTextStyle, textAlign: TextAlign.center),
+                  Html(
+                    data: """
 <p>В VI–V вв. до н.э. саки Средней Азии были  объединены в два крупных союза:</p>
 1. Саки  тиграхауда,  древнегреческие  саки – ортокарибанты, что в переводе означало «саки в остроконечных  шапках»<br>
 <b>Владения:</b> от Каспийского моря и Узбоя до  Тенир-Тоо и поймы реки Или, север современного Кыргызстана<br> 
@@ -48,45 +49,47 @@ class Paragraph4 extends StatelessWidget {
 <p>Среди  археологических памятников сакских  племён  преобладают  <b>курганы-могильники</b>.  Курган-могильник – это своего рода  инженерное сооружение,  его  возводили  на  месте  упокоения  знатного  человека.    В  археологии  их  называют  «царскими  курганами». Исследование курганов  открыло новую  страницу истории  культуры  сакских  племен.  Многие  курганы когда-то подвергались разграблению,  однако  грабителям  порой не удавалось забрать все. Оставшиеся предметы дают достаточное  представление об обряде захоронения саков. Внешний и внутренний  вид курганов-могильников каждого  региона,  имеет  свои  особенности.  Если на Алтае и в Сибири срубленные  из  дерева  большие  «склепы»  сооружались    в  раскопанные  ямы,  то на территории современного Казахстана и Средней Азии, включая  и  Кыргызстан,  они  представляли  собой  наземные  погребальные  камеры, сложенные из обработанных 
 брёвен. Такие погребальные  сооружения  для  усопших,  строились на земле из брёвен  тянь-шаньской  ели  и  покрывались 6–7-и метровыми брёвнами в семь накатов, а сверху всё  засыпалось землей, и получался курган высотой 20 – 30 м. Также, имели  место и подземные погребения. Для  подземной формы были характерны,  глубокий подземный ход и потайные  комнаты. Насыпи могильников были  однотипными. Первый слой состоял  из камня и крупной щебёнки, второй  слой – из чия и кустарников, а верхний – из земли.</p>
               """,
-                defaultTextStyle: paragraphTextStyle,
-                useRichText: true,
-              ),
-              Image.asset("assets/images/paragraphs/sacks-burial.jpg"),
-              Text("Склеп наземного погребения саков (вид снаружи без насыпи).",
-                  style: paragraphTextStyle, textAlign: TextAlign.center),
-              SizedBox(height: 12.0),
-              Image.asset("assets/images/paragraphs/sacks-union.jpg"),
-              Text("Сакские племенные союзы (VIII–III вв. до н. э.).",
-                  style: paragraphTextStyle, textAlign: TextAlign.center),
-              Html(
-                data: """
+                    defaultTextStyle: paragraphTextStyle,
+                    useRichText: true,
+                  ),
+                  Image.asset("assets/images/paragraphs/sacks-burial.jpg"),
+                  Text(
+                      "Склеп наземного погребения саков (вид снаружи без насыпи).",
+                      style: paragraphTextStyle,
+                      textAlign: TextAlign.center),
+                  SizedBox(height: 12.0),
+                  Image.asset("assets/images/paragraphs/sacks-union.jpg"),
+                  Text("Сакские племенные союзы (VIII–III вв. до н. э.).",
+                      style: paragraphTextStyle, textAlign: TextAlign.center),
+                  Html(
+                    data: """
 <center><b>Царские курганы сакского времени обнаружены:</b></center>
 <p>В Чуйской долине на юге Казахстана, на  правом берегу р. Или.  От сакских племен, обитавших в Чуйской  и  Таласской  долинах,  до  нас  дошли  бронзовые котлы, наконечники стрел. Саки  широко  освоили  горные  районы  ИссыкКульской котловины и Центрального ТяньШаня. Погребальные инвентари представлены в могильнике Туура-Суу в долине р. Тон.  Здесь  найдены: предметы вооружения; элементы конского украшения, золотые бляшки  выполненные в зверинном стиле. На юге Кыргызстана в Узгенском оазисе,  в могиле обнаружен бронзовый котёл с двумя ручками, серебрянный кувшин, железные  кожи, глинянный сосуд, наконечники стрел.</p>
               """,
-                defaultTextStyle: paragraphTextStyle,
-                useRichText: true,
-              ),
-              Image.asset("assets/images/paragraphs/sacks-weapons.jpg"),
-              Text("Кинжалы, наконечники стрел и копий.",
-                  style: paragraphTextStyle, textAlign: TextAlign.center),
-              SizedBox(
-                height: 12.0,
-              ),
-              Html(
-                data: """
+                    defaultTextStyle: paragraphTextStyle,
+                    useRichText: true,
+                  ),
+                  Image.asset("assets/images/paragraphs/sacks-weapons.jpg"),
+                  Text("Кинжалы, наконечники стрел и копий.",
+                      style: paragraphTextStyle, textAlign: TextAlign.center),
+                  SizedBox(
+                    height: 12.0,
+                  ),
+                  Html(
+                    data: """
 Особенно  следует  выделить  могильник  Иссык,  расположенный в долине  Заилийского  Ала-Тоо,  о  богатстве и пышности погребального  инвентаря,  говорят  золотые  изделия  (их всего 4000); меч, кинжал, серебрянные и бронзовые сосуды (всего 31)
               """,
-                defaultTextStyle: paragraphTextStyle,
-                useRichText: true,
-              ),
-              Image.asset("assets/images/paragraphs/goldman.jpg"),
-              Text("«Золотой человек»",
-                  style: paragraphTextStyle, textAlign: TextAlign.center),
-              SizedBox(
-                height: 12.0,
-              ),
-              Html(
-                data: """
+                    defaultTextStyle: paragraphTextStyle,
+                    useRichText: true,
+                  ),
+                  Image.asset("assets/images/paragraphs/goldman.jpg"),
+                  Text("«Золотой человек»",
+                      style: paragraphTextStyle, textAlign: TextAlign.center),
+                  SizedBox(
+                    height: 12.0,
+                  ),
+                  Html(
+                    data: """
 <center><b>Основные направления хозяйственной деятельности</b></center>
 <p>Саки северной части Кыргызстана, занимались главном образом животноводством. А саки Ферганской долины, наряду с разведением скота, занимались и земледелием, выращивали пшеницу, ячмень, просо. </p>
 <p>• Саки занимались кочевым скотоводством, разводили мелкий и крупный рогатый скот, особое  место  занимало  коневодство,  разводили  высокопородистых лошадей, двугорбых верблюдов.</p>
@@ -110,44 +113,44 @@ class Paragraph4 extends StatelessWidget {
 <p>Более  успешным  были  походы  другого  правителя  из  династии  Ахаменидов  –  Дария I.  В  519– 518 гг. до н. э. он сумел победить  саков и обложить их данью. И  всё  же персы не смогли распространить  свою  власть  севернее  реки Сыр-Дарьи. Саки, жившие  в северной части Кыргызстана,  не допустили иранских завоевателей на свою землю.
 </p>
               """,
-                defaultTextStyle: paragraphTextStyle,
-                useRichText: true,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  Image.asset("assets/images/paragraphs/Kir-II.jpg"),
-                  Image.asset("assets/images/paragraphs/Dariy-I.jpg"),
-                  Image.asset("assets/images/paragraphs/Tomiris.jpg"),
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  Text("Кир II.",
-                      style: TextStyle(
-                          fontFamily: 'Georgia',
-                          fontSize: 13.5,
-                          color: Colors.black87),
-                      textAlign: TextAlign.center),
-                  Text("Дарий I.",
-                      style: TextStyle(
-                          fontFamily: 'Georgia',
-                          fontSize: 13.5,
-                          color: Colors.black87),
-                      textAlign: TextAlign.center),
-                  Text("Томирис.",
-                      style: TextStyle(
-                          fontFamily: 'Georgia',
-                          fontSize: 13.5,
-                          color: Colors.black87),
-                      textAlign: TextAlign.center),
-                ],
-              ),
-              Html(
-                data: """
+                    defaultTextStyle: paragraphTextStyle,
+                    useRichText: true,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      Image.asset("assets/images/paragraphs/Kir-II.jpg"),
+                      Image.asset("assets/images/paragraphs/Dariy-I.jpg"),
+                      Image.asset("assets/images/paragraphs/Tomiris.jpg"),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      Text("Кир II.",
+                          style: TextStyle(
+                              fontFamily: 'Georgia',
+                              fontSize: 13.5,
+                              color: Colors.black87),
+                          textAlign: TextAlign.center),
+                      Text("Дарий I.",
+                          style: TextStyle(
+                              fontFamily: 'Georgia',
+                              fontSize: 13.5,
+                              color: Colors.black87),
+                          textAlign: TextAlign.center),
+                      Text("Томирис.",
+                          style: TextStyle(
+                              fontFamily: 'Georgia',
+                              fontSize: 13.5,
+                              color: Colors.black87),
+                          textAlign: TextAlign.center),
+                    ],
+                  ),
+                  Html(
+                    data: """
 <p>Позднее, саки установили мирные и военные связи с персами и сражались на стороне Ахаменидов в решающих битвах греко-персидских  войн (500–449 гг. до н. э.). В марафонском сражении (490 г. до н. э.)  большую отвагу и мужество проявили воины-конники. Хорошо обученные воинскому делу, саки оказали значительную помощь персам  в завоевании Греции и Египта. По данным письменных источников, в  городах Египта и Вавилона существовали лагеря, специально сооруженные для войск саков.  </p>
 <p>Ещё одна страница истории саков связана с завоевательными походами Александра Македонского. Сакские отряды в составе персидских  войск принимали участие  в сражениях с армией Александра Македонского при Иссе (333 г. до н. э.) и Гавгамелах (331 г. до н. э.).</p>
 <p>Разгромив в Месопотамии в 331 г. до н. э. объединенные силы персов  и саков, войска Македонского в 329 г. до н. э. вышли к берегам СырДарьи. Здесь завоеватели встретили упорнейшее сопротивление сакских племен.  Несмотря на превосходство, греко-македонцы не смогли  продвинуться в глубь занимаемых саками территорий.</p>
@@ -159,26 +162,27 @@ class Paragraph4 extends StatelessWidget {
 <p>• Хунну (на кит. сюнну) –  воинственные  кочевые  племена.  Обладали  огромной территорией от  Тихого океана и Северного Китая до Алтая и  Семиречья. </p>
 <p>• Согласно  источникам  хунны  делились на 24 рода,  во  главе  которых  стояли  начальники  поколений  –  старейшины. </p>
               """,
-                defaultTextStyle: paragraphTextStyle,
-                useRichText: true,
-              ),
-              Image.asset("assets/images/paragraphs/Hunns-empire.jpg"),
-              Text("Империя хуннов (II в. до н. э. – IV в. н. э.)",
-                  style: paragraphTextStyle, textAlign: TextAlign.center),
-              Html(
-                data: """
+                    defaultTextStyle: paragraphTextStyle,
+                    useRichText: true,
+                  ),
+                  Image.asset("assets/images/paragraphs/Hunns-empire.jpg"),
+                  Text("Империя хуннов (II в. до н. э. – IV в. н. э.)",
+                      style: paragraphTextStyle, textAlign: TextAlign.center),
+                  Html(
+                    data: """
 <center><b>Империя Хуннов</b></center>
 <p>В конце III в. до н. э. хуннские племена объединились под началом  Модэ (Маодунь) шаньюйя, который за короткий срок создал мощную,  мобильную и дисциплинированную армию.</p>
 <p>Модэ удалось нанести поражение и подчинить ряд крупных племён как дунху,  юэчжи, шаньжунов, динлинов, племена  обитавшие на Саяно-Алтае (203–202 гг.  до н. э.). В 201 г. до н. э. Модэ подчинил себе независимые племена – гяньгуней, синьли, кюйше. Учёными доказано, что гяньгуны были кыргызами. В  200 г. до н. э. хунны нанесли поражение 30 миллионной Китайской империи  и заставили их платить дань.</p>
 <p>Модэ  шаньюй  (Маодунь) – основатель империи хуннов. В своих  завоеваниях  дошёл  до  среднего  течения  Енисея  и  Тувы  на  севере,  на западе до Таримского бассейна, на востоке  до  Маньчжурии.  Модэ  руководил страной хуннов в 209–174 г. до н. э.</p>
 
               """,
-                defaultTextStyle: paragraphTextStyle,
-                useRichText: true,
-              ),
-              Image.asset("assets/images/paragraphs/Hunn-power-structure.jpg"),
-              Html(
-                data: """
+                    defaultTextStyle: paragraphTextStyle,
+                    useRichText: true,
+                  ),
+                  Image.asset(
+                      "assets/images/paragraphs/Hunn-power-structure.jpg"),
+                  Html(
+                    data: """
 <p>Верховный правитель имел собственный отряд в 10 тыс. человек. Чины  пониже имели отряды поменьше – до нескольких тысяч. Таким образом, в системе руководства насчитывалось 24 темника – управляющих  определенной  территорией, а также руководством родов и аксакалы  династий. </p>
 <p>Китайцы,  убедившись  в  том,  что своими силами не одолеть  хуннов, создали антихуннскую  коалицию,  куда  входили  племена динлинов, ухуаней и усуней. В 71 г. до н. э., выступив   совместно  с  войском,  нанесли  хуннам сильное поражение, после чего в 56 г. до н. э. хуннская  держава раскололась на две части: Южную группу хуннов возглавил шаньюй Хуанье (позднее  они  приняли  подданство  Китая), а северную группу возглавил таниркут Чжи-Чжи. Северные хунны, объединившись со  среднеазиатскими  племенами,  откочевали на запад, сохранив  свою независимость. </p>
 <p>У хуннов было три  аристократических звания:<br>
@@ -197,12 +201,13 @@ class Paragraph4 extends StatelessWidget {
 <p>Усуньское государство представляло собой монархическое государство кочевников. Монарх имел титул кюнбаг (кунбег). Власть монарха  была ограничена: прежде чем принять окончательное решение по важному  государственному вопросу, его рассматривал и обсуждал Совет старейшин.  Кроме того, существовала организационная система управления государством. Структура власти состояла из трех частей: центр, левое и правое  крыло. Центр возглавлял кюнбаг, ему подчинялись два крыла.
 </p>
               """,
-                defaultTextStyle: paragraphTextStyle,
-                useRichText: true,
-              ),
-              Image.asset("assets/images/paragraphs/Hunn-power-structure2.jpg"),
-              Html(
-                data: """
+                    defaultTextStyle: paragraphTextStyle,
+                    useRichText: true,
+                  ),
+                  Image.asset(
+                      "assets/images/paragraphs/Hunn-power-structure2.jpg"),
+                  Html(
+                    data: """
 <center><b>Хозяйство и культура усуней</b></center>
 <b>Хозяйство:</b><br>
 <p>• Основным видом деятельности  усуней являлось скотоводство.  Они разводили лошадей, коров,  овец и коз. </p>
@@ -256,13 +261,13 @@ class Paragraph4 extends StatelessWidget {
 
 
               """,
-                defaultTextStyle: paragraphTextStyle,
-                useRichText: true,
+                    defaultTextStyle: paragraphTextStyle,
+                    useRichText: true,
+                  ),
+                ],
               ),
-            ],
+            ),
           ),
-        ),
-      ),
-    );
+        ));
   }
 }

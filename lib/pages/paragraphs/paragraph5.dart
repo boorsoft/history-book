@@ -6,23 +6,24 @@ class Paragraph5 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: bgColor,
-      appBar: AppBar(
-        backgroundColor: appBarColor,
-        title: Text('§5.Древние кыргызы. Тюркские каганаты'),
-      ),
-      body: SingleChildScrollView(
-        child: Container(
-          padding: EdgeInsets.all(10.0),
-          child: Column(
-            children: [
-              Text(
-                '§5.Древние кыргызы. Тюркские каганаты',
-                style: paragraphBoldTextStyle,
-                textAlign: TextAlign.center,
-              ),
-              Html(
-                data: """
+        backgroundColor: bgColor,
+        appBar: AppBar(
+          backgroundColor: appBarColor,
+          title: Text('§5.Древние кыргызы. Тюркские каганаты'),
+        ),
+        body: Scrollbar(
+          child: SingleChildScrollView(
+            child: Container(
+              padding: EdgeInsets.all(10.0),
+              child: Column(
+                children: [
+                  Text(
+                    '§5.Древние кыргызы. Тюркские каганаты',
+                    style: paragraphBoldTextStyle,
+                    textAlign: TextAlign.center,
+                  ),
+                  Html(
+                    data: """
 <p>Китайский историк Сыма Цянь (145–86 гг.  до н. э.) в своем труде «Ши цзы» (Исторические хроники»), 1 в. до н. э. сообщает, что в 201 г. до н. э. правитель хуннов  шаньюй Моде подчинил себе некоторые  независимые  племена  –  гяньгуней  или  цзяньгуней, динлинов, синли, кюйше.</p>
 <p>Учеными  полностью  доказано,  что  гяньгунями  или  цзяньгунами (гэгунь, цигу, кигу,  чигу и другие варианты) китайцы называли  древних кыргызов.</p>
 <p>Цзяньгуны – китайское название древних кыргызов. В переводе означает “железный народ”. В китайской летописи говорится о том, что в недрах  земли кыргызов было в избытке меди, железа, золота. Железо добывалось в  рудниках. К метеоритному (небесному или звездному) железу кыргызы имели особый интерес, так как из него изготавливались очень прочные виды боевого оружия. Согласно китайской летописи кыргызы строго хранили тайны  обработки железа. Небесное железо называлось цзяша (цзяса, зелязо, где «о»  в конце слова говорит о восхищении), поэтому китайцы называли кыргызов  «цзяньгунами» – железным народом. Споры вокруг этнонима «кыргыз» не утихают. Существуют народные и  научные варианты трактовки значения этого этнонима.</p>
@@ -75,22 +76,22 @@ class Paragraph5 extends StatelessWidget {
 
 <center><b>Структура власти и система управления древнетюркского каганата.</b></center>
               """,
-                defaultTextStyle: paragraphTextStyle,
-                useRichText: true,
-              ),
-              Image.asset(
-                  "assets/images/paragraphs/ancient-turkish-kaganate-power-structure.jpg"),
-              SizedBox(height: 12.0),
-              Image.asset(
-                  "assets/images/paragraphs/great-turkish-kaganate.jpg"),
-              Text(
-                "Великий Тюркский каганат (552–603 гг.).",
-                style: paragraphTextStyle,
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(height: 12.0),
-              Html(
-                data: """
+                    defaultTextStyle: paragraphTextStyle,
+                    useRichText: true,
+                  ),
+                  Image.asset(
+                      "assets/images/paragraphs/ancient-turkish-kaganate-power-structure.jpg"),
+                  SizedBox(height: 12.0),
+                  Image.asset(
+                      "assets/images/paragraphs/great-turkish-kaganate.jpg"),
+                  Text(
+                    "Великий Тюркский каганат (552–603 гг.).",
+                    style: paragraphTextStyle,
+                    textAlign: TextAlign.center,
+                  ),
+                  SizedBox(height: 12.0),
+                  Html(
+                    data: """
 •  Титул и должность кагана означали «верховный правитель», «главный хан  тюркского народа» и, как правило, к высшему титулу прибавлялся компонент  имен собственных, иногда еще геройское имя или прозвище. Вопросы войны  и мира были прерогативой кагана, по его воле решается битва или союз в интересах «тюркского эля». Военные и дипломатические прерогативы кагана  были абсолютными, однако ими не исчерпывались его функции. Кроме того,  он осуществлял функции главы гражданского управления в самом каганате,  одновременно являясь старшим и в генеалогической иерархии родов и племен,  выступая в качестве вождя, верховного судьи и верховного жреца.
 <br>
 <p>В верхнем эшелоне власти стояли самые ближайшие помощники кагана  ябгу и шады и назначались, как правило, сыновья кагана и непосредственно управляли левым и правым крылом войск. Ябгу занимал первое место в  системе высшей иерархии тюркского каганата и, как правило, на эту должность назначался один из ближайших родственников кагана, в данном случае брат или сын.</p>
@@ -157,19 +158,20 @@ class Paragraph5 extends StatelessWidget {
 <p>Данное сражение между сильными державами того времени, как Танская  империя и Арабский Халифат, имело историческое значение. Предотвращена дальнейшая экспансия Танской империи. Победа арабо-тюркского войска  обусловила  в  регионе  развитие  мусульманской культуры.  После  битвы  арабы не смогли удержаться в Западном Притяньшанье. Карлуки, сыграв  важную роль в разгроме китайских захватчиков упрочили свое положение  в Семиречье.</p>
 <p>На протяжении целого столетия среди карлуков Тенир-Тоо, Семиречья и  Восточного Туркестана шел процесс объединения вокруг династии Караханидов.</p>
               """,
-                defaultTextStyle: paragraphTextStyle,
-                useRichText: true,
+                    defaultTextStyle: paragraphTextStyle,
+                    useRichText: true,
+                  ),
+                  Image.asset(
+                      "assets/images/paragraphs/era-of-turkish-kagans.jpg"),
+                  Text(
+                    "Эпоха тюркских каганатов (VI–VII вв.)",
+                    style: paragraphTextStyle,
+                    textAlign: TextAlign.center,
+                  ),
+                ],
               ),
-              Image.asset("assets/images/paragraphs/era-of-turkish-kagans.jpg"),
-              Text(
-                "Эпоха тюркских каганатов (VI–VII вв.)",
-                style: paragraphTextStyle,
-                textAlign: TextAlign.center,
-              ),
-            ],
+            ),
           ),
-        ),
-      ),
-    );
+        ));
   }
 }

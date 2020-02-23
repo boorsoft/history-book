@@ -6,18 +6,19 @@ class Sagynbai extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: bgColor,
-      appBar: AppBar(
-        backgroundColor: appBarColor,
-        title: Text("Сагымбай Орозбак уулу"),
-      ),
-      body: SingleChildScrollView(
-        child: Container(
-          padding: EdgeInsets.all(10.0),
-          child: Column(
-            children: <Widget>[
-              Html(
-                data: """
+        backgroundColor: bgColor,
+        appBar: AppBar(
+          backgroundColor: appBarColor,
+          title: Text("Сагымбай Орозбак уулу"),
+        ),
+        body: Scrollbar(
+          child: SingleChildScrollView(
+            child: Container(
+              padding: EdgeInsets.all(10.0),
+              child: Column(
+                children: <Widget>[
+                  Html(
+                    data: """
 <center><b>Сагымбай Орозбак уулу</b></center>
 <p>
 Сагымбай Орозбак уулу (1867—1930) родился в местечке Кабырга, что на северном побережье озера Иссык-Куль, в семье музыканта-сурнайчы. Отец его Орозбак служил у иссык-кульского хана Ормона. В девять лет Сагымбай начал постигать арабскую грамоту под руководством узбекского муллы, а также петь и сочинять.
@@ -37,13 +38,13 @@ class Sagynbai extends StatelessWidget {
 
 </p>
             """,
-                defaultTextStyle: paragraphTextStyle,
-                useRichText: true,
+                    defaultTextStyle: paragraphTextStyle,
+                    useRichText: true,
+                  ),
+                ],
               ),
-            ],
+            ),
           ),
-        ),
-      ),
-    );
+        ));
   }
 }

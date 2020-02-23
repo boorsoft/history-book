@@ -6,27 +6,28 @@ class Paragraph2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: bgColor,
-      appBar: AppBar(
-        backgroundColor: appBarColor,
-        title:
-            Text('§2.Эпос "Манас" - неиссякаемый источник истории Кыргызстана'),
-      ),
-      body: SingleChildScrollView(
-        child: Container(
-          padding: EdgeInsets.all(10.0),
-          child: Column(
-            children: [
-              Text(
-                '§2.Эпос "Манас" - неиссякаемый источник истории Кыргызстана',
-                style: paragraphBoldTextStyle,
-              ),
-              SizedBox(
-                height: 12.0,
-              ),
-              Image.asset("assets/images/paragraphs/Manas.JPG"),
-              Html(
-                data: """            
+        backgroundColor: bgColor,
+        appBar: AppBar(
+          backgroundColor: appBarColor,
+          title: Text(
+              '§2.Эпос "Манас" - неиссякаемый источник истории Кыргызстана'),
+        ),
+        body: Scrollbar(
+          child: SingleChildScrollView(
+            child: Container(
+              padding: EdgeInsets.all(10.0),
+              child: Column(
+                children: [
+                  Text(
+                    '§2.Эпос "Манас" - неиссякаемый источник истории Кыргызстана',
+                    style: paragraphBoldTextStyle,
+                  ),
+                  SizedBox(
+                    height: 12.0,
+                  ),
+                  Image.asset("assets/images/paragraphs/Manas.JPG"),
+                  Html(
+                    data: """            
 <b>Эпос «Манас»</b> – это уникальная сокровищница древней истории кыргызского  народа. «Манас» является национальной  гордостью  кыргызов,  величайшим  наследием предков, которое переходит от   поколения  к  поколению.  Его  создание  стало  огромным  вкладом  кыргызского  народа  в  мировую  культуру  прошлого  тысячелетия.
 Общий объем трех частей, записанных у манасчи Саякбая Карала уулу составляет 500 тысяч стихотворных строк<br>
 • Это в 20 раз больше греческих  «Иллиады» и «Одиссея», вместе взятых. <br>
@@ -35,12 +36,12 @@ class Paragraph2 extends StatelessWidget {
 Еще в XIX в. такие всемирно известные ученые, как Ч. Валиханов,  В. Радлов, высказали мнение, что эпос является бесценным и уникальным источником для изучения и познания истории, философии, этнографии,  языка,  художественного  творчества,  психологии,  географии,  медицины, духовной культуры и разных сторон социальной жизни кыргызского народа – создателя этой драгоценной реликвии.
 Манас Великодушный (Т. Герцен)
 """,
-                defaultTextStyle: paragraphTextStyle,
-                useRichText: true,
-                // renderNewlines: true,
-              ),
-              Html(
-                data: """
+                    defaultTextStyle: paragraphTextStyle,
+                    useRichText: true,
+                    // renderNewlines: true,
+                  ),
+                  Html(
+                    data: """
 
 По своему объему эпос «Манас»  превосходит все устно-поэтические  произведения мира.
 <p>
@@ -148,34 +149,34 @@ class Paragraph2 extends StatelessWidget {
 • Объём тыс. стихотворных строк: 86
 </p>
 """,
-                defaultTextStyle: paragraphTextStyle,
-                useRichText: true,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  Image.asset("assets/images/paragraphs/Sagymbay.JPG"),
-                  Image.asset("assets/images/paragraphs/Sayakbay.JPG"),
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: <Widget>[
-                  Text('Сагымбай Орозбак уулу',
-                      style: TextStyle(
-                          fontFamily: 'Georgia',
-                          fontSize: 14.5,
-                          color: Colors.black87)),
-                  Text('Саякбай Карала уулу',
-                      style: TextStyle(
-                          fontFamily: 'Georgia',
-                          fontSize: 14.5,
-                          color: Colors.black87)),
-                ],
-              ),
-              Html(
-                data: """
+                    defaultTextStyle: paragraphTextStyle,
+                    useRichText: true,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      Image.asset("assets/images/paragraphs/Sagymbay.JPG"),
+                      Image.asset("assets/images/paragraphs/Sayakbay.JPG"),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: <Widget>[
+                      Text('Сагымбай Орозбак уулу',
+                          style: TextStyle(
+                              fontFamily: 'Georgia',
+                              fontSize: 14.5,
+                              color: Colors.black87)),
+                      Text('Саякбай Карала уулу',
+                          style: TextStyle(
+                              fontFamily: 'Georgia',
+                              fontSize: 14.5,
+                              color: Colors.black87)),
+                    ],
+                  ),
+                  Html(
+                    data: """
 <center><b>
 Все основные варианты первой части эпоса содержат следующие эпизоды:</b> </center>
 
@@ -195,16 +196,16 @@ class Paragraph2 extends StatelessWidget {
  <br>Так, раздел «Рождение Манаса и его детство» позволяет узнать, какие  обычаи и традиции сопровождали рождение ребенка, как проходил ритуал  именаречения, каковы были основные принципы воспитания детей и т. д.  Раздел «Избрание Манаса ханом» дает представление о принципах управления народом, организации общественного устройства, а также о некоторых  аспектах социальной жизни народа в прошлом. Богатые и красивые свадебные традиции кыргызов – ритуалы сватовства, бракосочетания, проведения  свадебного торжества воспроизводит раздел «Женитьба Манаса на Каныкей». Многие из них, надо отметить, сохранились до настоящего времени  и стали неотъемлемым компонентом нашей жизни. И, наконец, как логическое завершение круга человеческой жизни можно рассматривать наполненный чувством скорби и печали ритуал проводов умершего в последний путь  в разделе «Смерть Манаса» и церемонию поминальных торжеств в разделе  «Поминки по Кокетею».
 </p>
                 """,
-                defaultTextStyle: paragraphTextStyle,
-                useRichText: true,
+                    defaultTextStyle: paragraphTextStyle,
+                    useRichText: true,
+                  ),
+                  Image.asset("assets/images/paragraphs/Gercen.JPG"),
+                  Text("Иллюстрация к эпосу «Манас» Т. Герцен.",
+                      style: paragraphTextStyle),
+                ],
               ),
-              Image.asset("assets/images/paragraphs/Gercen.JPG"),
-              Text("Иллюстрация к эпосу «Манас» Т. Герцен.",
-                  style: paragraphTextStyle),
-            ],
+            ),
           ),
-        ),
-      ),
-    );
+        ));
   }
 }

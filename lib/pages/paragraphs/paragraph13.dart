@@ -6,24 +6,25 @@ class Paragraph13 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: bgColor,
-      appBar: AppBar(
-        backgroundColor: appBarColor,
-        title: Text(
-            '§13.Становление кыргызской государственности. Усиление тоталитарного режима'),
-      ),
-      body: SingleChildScrollView(
-        child: Container(
-          padding: EdgeInsets.all(10.0),
-          child: Column(
-            children: [
-              Text(
-                '§13.Становление кыргызской государственности. Усиление тоталитарного режима',
-                style: paragraphBoldTextStyle,
-                textAlign: TextAlign.center,
-              ),
-              Html(
-                data: """
+        backgroundColor: bgColor,
+        appBar: AppBar(
+          backgroundColor: appBarColor,
+          title: Text(
+              '§13.Становление кыргызской государственности. Усиление тоталитарного режима'),
+        ),
+        body: Scrollbar(
+          child: SingleChildScrollView(
+            child: Container(
+              padding: EdgeInsets.all(10.0),
+              child: Column(
+                children: [
+                  Text(
+                    '§13.Становление кыргызской государственности. Усиление тоталитарного режима',
+                    style: paragraphBoldTextStyle,
+                    textAlign: TextAlign.center,
+                  ),
+                  Html(
+                    data: """
 <center><b>Первые шаги в решении национального вопроса </b></center>
 <p>• Задолго до прихода к власти партия большевиков провозгласила основной  целью ликвидацию социального и национального угнетения. И одним из  первых декретов Советского правительства стала «Декларация прав народов России» от 2 ноября 1917 г., где были изложены основы национальной  политики Советского строя. </p>
 <p>• В целях укрепления своего влияния в Средней Азии Советское правительство 22 ноября 1917 г. издало обращение «Ко всем трудящимся мусульманам России и Востока», в котором объявило о полной свободе и всестороннем равноправии мусульманских народов России. </p>
@@ -48,41 +49,43 @@ class Paragraph13 extends StatelessWidget {
 <p>• После падения царизма и установления Советской  власти из бежавших в 1916 г. в Китай 332 тыс. кыргызов и казахов около 300 тыс. вернулись на родину. Советское правительство для оказания безвозмездной помощи возвратившимся беженцам-кыргызам выделило 100 млн. рублей. </p> 
 <p>• Вернувшимся на родину кыргызам было выделено 46 тыс. десятин пахотных земель, 80 тыс. десятин угодий. Все беженцы на 5 лет были освобождены от уплаты государственных налогов. </p>
               """,
-                defaultTextStyle: paragraphTextStyle,
-                useRichText: true,
-              ),
-              Image.asset("assets/images/paragraphs/Djanuzakov.jpg"),
-              Text(
-                "Т. Джанузаков",
-                style: paragraphTextStyle,
-                textAlign: TextAlign.center,
-              ),
-              Html(
-                data: """
+                    defaultTextStyle: paragraphTextStyle,
+                    useRichText: true,
+                  ),
+                  Image.asset("assets/images/paragraphs/Djanuzakov.jpg"),
+                  Text(
+                    "Т. Джанузаков",
+                    style: paragraphTextStyle,
+                    textAlign: TextAlign.center,
+                  ),
+                  Html(
+                    data: """
 <center><b>Попытки создания Горной Кыргызской области</b></center>
 • Кыргызы, входившие в состав Туркестанской АССР, были распределены  по Джеты-Суйской, Сыр-Дарьинской, Ферганской, Самарканской областям и не имели своего правительства. В этих областях кыргызы представляли меньшинство населения, и вследствие этого их интересам не всегда  уделялось должное внимание.
               """,
-                defaultTextStyle: paragraphTextStyle,
-                useRichText: true,
-              ),
-              SizedBox(
-                height: 12.0,
-              ),
-              Image.asset("assets/images/paragraphs/Kyrgyzstan-divided.jpg"),
-              Text(
-                "Разделение территории Кыргызстана в Царской России между областями Туркестанского генерал-губернаторства.",
-                style: paragraphTextStyle,
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(height: 12.0),
-              Image.asset("assets/images/paragraphs/Kyrgyzstan-mountains.jpg"),
-              Text(
-                "Предпологаемая территория Горной Кыргызской области.",
-                style: paragraphTextStyle,
-                textAlign: TextAlign.center,
-              ),
-              Html(
-                data: """
+                    defaultTextStyle: paragraphTextStyle,
+                    useRichText: true,
+                  ),
+                  SizedBox(
+                    height: 12.0,
+                  ),
+                  Image.asset(
+                      "assets/images/paragraphs/Kyrgyzstan-divided.jpg"),
+                  Text(
+                    "Разделение территории Кыргызстана в Царской России между областями Туркестанского генерал-губернаторства.",
+                    style: paragraphTextStyle,
+                    textAlign: TextAlign.center,
+                  ),
+                  SizedBox(height: 12.0),
+                  Image.asset(
+                      "assets/images/paragraphs/Kyrgyzstan-mountains.jpg"),
+                  Text(
+                    "Предпологаемая территория Горной Кыргызской области.",
+                    style: paragraphTextStyle,
+                    textAlign: TextAlign.center,
+                  ),
+                  Html(
+                    data: """
 <p>В конце 1921 г. правительство Казахской АССР ходатайствовало  перед  ВЦИК РСФСР о включении Сыр-Даьинской и Семиреченской областей,  в которых жили северные кыргызы в состав образованной в 1920 г. автономии казахов. Таким образом, усложнялась проблема национального  суверенитета кыргызского народа. </p>
 <p>• В связи с этим в 1922 г. лидерами кыргызов как Ю. Абдрахманов, И. Айдарбеков, И. Арабаев, Ж. Саадаев, А. Сыдыков был поднят вопрос о создании в составе Туркестанской АССР, Горной Кыргызской области на  территории современного Северного Кыргызстана. </p>
 <p> • Групповая борьба между сторонниками и противниками выделения области сорвала первый Учредительный съезд, созванный 4 июня 1922 года, и  этим окончательно закончилась попытка кыргызской элиты добиться государственного образования. </p>
@@ -113,48 +116,50 @@ class Paragraph13 extends StatelessWidget {
 • Председателем Президиума облисполкома стал  А. Орозбеков.<br>
 • Председателем Президиума областного ревкома области (считался высшим органом государственной власти Кыргызстана)  стал И. Айдарбеков.
               """,
-                defaultTextStyle: paragraphTextStyle,
-                useRichText: true,
-              ),
-              SizedBox(height: 12.0),
-              Image.asset("assets/images/paragraphs/Abdrahmanov.jpg"),
-              Text(
-                "Ю. Абдрахманов.",
-                style: paragraphTextStyle,
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(height: 12.0),
-              Image.asset("assets/images/paragraphs/Orozbekov.jpg"),
-              Text(
-                "А. Орозбеков",
-                style: paragraphTextStyle,
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(height: 12.0),
-              Image.asset("assets/images/paragraphs/Aidarbekov.jpg"),
-              Text(
-                "И. Айдарбеков",
-                style: paragraphTextStyle,
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(height: 12.0),
-              Image.asset("assets/images/paragraphs/national-demarcation.jpg"),
-              Text(
-                "Национально-государственное размежевание в Средней Азии 1924–1925 гг.",
-                style: paragraphTextStyle,
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(height: 12.0),
-              Image.asset("assets/images/paragraphs/territorial-division.jpg"),
-              Text(
-                "Территориальное деление Кара-Кыргызской автономной области (1924–1925 гг.)",
-                style: paragraphTextStyle,
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(height: 12.0),
-              Image.asset("assets/images/paragraphs/KAO.jpg"),
-              Html(
-                data: """
+                    defaultTextStyle: paragraphTextStyle,
+                    useRichText: true,
+                  ),
+                  SizedBox(height: 12.0),
+                  Image.asset("assets/images/paragraphs/Abdrahmanov.jpg"),
+                  Text(
+                    "Ю. Абдрахманов.",
+                    style: paragraphTextStyle,
+                    textAlign: TextAlign.center,
+                  ),
+                  SizedBox(height: 12.0),
+                  Image.asset("assets/images/paragraphs/Orozbekov.jpg"),
+                  Text(
+                    "А. Орозбеков",
+                    style: paragraphTextStyle,
+                    textAlign: TextAlign.center,
+                  ),
+                  SizedBox(height: 12.0),
+                  Image.asset("assets/images/paragraphs/Aidarbekov.jpg"),
+                  Text(
+                    "И. Айдарбеков",
+                    style: paragraphTextStyle,
+                    textAlign: TextAlign.center,
+                  ),
+                  SizedBox(height: 12.0),
+                  Image.asset(
+                      "assets/images/paragraphs/national-demarcation.jpg"),
+                  Text(
+                    "Национально-государственное размежевание в Средней Азии 1924–1925 гг.",
+                    style: paragraphTextStyle,
+                    textAlign: TextAlign.center,
+                  ),
+                  SizedBox(height: 12.0),
+                  Image.asset(
+                      "assets/images/paragraphs/territorial-division.jpg"),
+                  Text(
+                    "Территориальное деление Кара-Кыргызской автономной области (1924–1925 гг.)",
+                    style: paragraphTextStyle,
+                    textAlign: TextAlign.center,
+                  ),
+                  SizedBox(height: 12.0),
+                  Image.asset("assets/images/paragraphs/KAO.jpg"),
+                  Html(
+                    data: """
 <center><b>Кыргызская АССР</b></center>
 • 1 февраля 1926 г. Всероссийский ЦИК, учитывая:  
 <p>– достаточность территории Кыргызской автономной области;</p>  
@@ -162,35 +167,35 @@ class Paragraph13 extends StatelessWidget {
 <p>– наличие собственной экономики;  </p>
 <p>– развитые  язык  и  культуру  принял  постановление  о  преобразовании  Кыргызской автономной области в Кыргызскую автономную Советскую Социалистическую Республику. Таким образом, Кыргызстан вступил на новый этап развития своей государственности в составе РСФСР. </p>             
               """,
-                defaultTextStyle: paragraphTextStyle,
-                useRichText: true,
-              ),
-              Image.asset("assets/images/paragraphs/KASSR.jpg"),
-              Html(
-                data: """
+                    defaultTextStyle: paragraphTextStyle,
+                    useRichText: true,
+                  ),
+                  Image.asset("assets/images/paragraphs/KASSR.jpg"),
+                  Html(
+                    data: """
 <center><b>Провозглашение Кыргызской ССР</b></center>
 <p>Коренные социальные и экономические изменения, происходящие в  стране за годы Советской власти, необходимо было отразить в Конституциях  СССР, союзных и автономных республик. Первая Конституция СССР, принятая в 1924 г., а также Конституция Кыргызской АССР 1929 г. во многом  устарели и уже не соответствовали новым историческим условиям.</p>
 <p>После необходимых подготовительных мероприятий на чрезвычайном  VIII съезде Советов СССР 5 декабря 1936 г. была принята вторая Конституция СССР. С этого дня Кыргызстан, преобразованный в Кыргызскую ССР,  стал равноправным членом Союза Советских Социалистических Республик.</p>
 <p>В истории государственности кыргызского народа это событие стало новым достижением. Образование Кыргызской ССР как выражение суверенной воли кыргызского народа  было подготовлено всем предыдущим ходом  исторического  развития.  Правительство  неоднократно  обращалось  к  высшим  органам  СССР о предоставлении Кыргызстану союзного статуса. Большой вклад в образование  Кыргызской ССР внесли видный советский  партийный, государственный и военный деятель, наш земляк М. И. Фрунзе, председатель  ЦИК Кыргызской АССР А. Орозбеков, председатели СНК Кыргызской АССР Ю. Абдрахманов, Б. Исакеев и многие другие патриоты  нашей Родины.</p>
 
               """,
-                defaultTextStyle: paragraphTextStyle,
-                useRichText: true,
-              ),
-              Image.asset("assets/images/paragraphs/KSSR-GERB.jpg"),
-              Text(
-                "Государственный герб Киргизской Советской Социалистической Республики. ",
-                style: paragraphTextStyle,
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(height: 12.0),
-              Text(
-                "Принят 23 марта 1937 года по Конституции республики на Чрезвычайном V съезде Советов Киргизской ССР.",
-                style: paragraphTextStyle,
-                textAlign: TextAlign.center,
-              ),
-              Html(
-                data: """
+                    defaultTextStyle: paragraphTextStyle,
+                    useRichText: true,
+                  ),
+                  Image.asset("assets/images/paragraphs/KSSR-GERB.jpg"),
+                  Text(
+                    "Государственный герб Киргизской Советской Социалистической Республики. ",
+                    style: paragraphTextStyle,
+                    textAlign: TextAlign.center,
+                  ),
+                  SizedBox(height: 12.0),
+                  Text(
+                    "Принят 23 марта 1937 года по Конституции республики на Чрезвычайном V съезде Советов Киргизской ССР.",
+                    style: paragraphTextStyle,
+                    textAlign: TextAlign.center,
+                  ),
+                  Html(
+                    data: """
 <p> 20 марта 1937 г. V чрезвычайный съезд Советов Кыргызстана принимает новую  Конституцию Киргизской ССР, которая законодательно закрепила исторические успехи кыргызского народа на пути движения от раздробленности к единой  государственности, достигнутые за кратчайший исторический срок – 12 лет. Конституция провозгласила: Киргизская Советская Социалистическая Республика есть социалистическое государство рабочих и крестьян, в целях взаимопомощи по линии экономической и политической, равно как и по линии обороны, она добровольно объединяется с другими равноправными советскими  социалистическими республиками. Исходя из этого, Киргизская ССР делегирует  СССР в лице его высших органов государственной власти и органов государственного управления права, определенные статьей 14 Конституции СССР. Вне  пределов данной статьи Киргизская ССР осуществляет государственную власть  самостоятельно, сохраняя полностью свои суверенные права.   </p>
 <p>Но о реальном суверенитете не могло быть и речи. Объяснялось это многими  причинами. Первая и самая главная - федеративное государственное устройство. Оно  требует обязательного и добровольного делегирования части суверенных прав государственных образований, входящих в состав федерации, центральной власти.</p>
 
@@ -212,12 +217,12 @@ class Paragraph13 extends StatelessWidget {
 <p>• Направленная на известное ослабление диктата партийного комитета над  Советами первая попытка некоторых руководящих работников Кыргызстана в 1925 г. была квалифицирована как «оппозиция» и подвергнута  осуждению. Участники «тридцатки» (название по количеству подписавших заявление людей) получили различные взыскания. Несмотря на это  государственные деятели Кыргызстана тех лет искали пути расширения  ограниченной автономии.</p>
 
               """,
-                defaultTextStyle: paragraphTextStyle,
-                useRichText: true,
-              ),
-              Image.asset("assets/images/paragraphs/KSSR.jpg"),
-              Html(
-                data: """
+                    defaultTextStyle: paragraphTextStyle,
+                    useRichText: true,
+                  ),
+                  Image.asset("assets/images/paragraphs/KSSR.jpg"),
+                  Html(
+                    data: """
 <center><b>Ужесточение тоталитарного режима </b></center>
 <p>• Формированию  административно-командной  системы  в  СССР  способствовали многочисленные факторы объективного и субъективного характера.  Традиционное  многовековое  самодержавное  правление,  зыбкость  и недоразвитость демократических устоев обусловили формирование в  СССР жёсткой административно-командной системы. </p>
 <p>• Перед коммунистами встала трудная дилемма: или отказаться от планов  построения социализма в одной стране, или посредством установления тоталитарного режима насаждать в отсталом государстве принципы социалистического строя. </p>
@@ -279,13 +284,13 @@ class Paragraph13 extends StatelessWidget {
 
 
               """,
-                defaultTextStyle: paragraphTextStyle,
-                useRichText: true,
-              )
-            ],
+                    defaultTextStyle: paragraphTextStyle,
+                    useRichText: true,
+                  )
+                ],
+              ),
+            ),
           ),
-        ),
-      ),
-    );
+        ));
   }
 }
