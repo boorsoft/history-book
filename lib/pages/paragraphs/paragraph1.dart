@@ -2,7 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:historybook/style.dart';
 import 'package:flutter_html/flutter_html.dart';
 
-class Paragraph1 extends StatelessWidget {
+class Paragraph1 extends StatefulWidget {
+  @override
+  _Paragraph1State createState() => _Paragraph1State();
+}
+
+class _Paragraph1State extends State<Paragraph1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,9 +24,10 @@ class Paragraph1 extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   Center(
-                    child: Text('§1.История как наука',
-                        style: paragraphBoldTextStyle),
-                  ),
+                      child: Text(
+                    '§1.История как наука',
+                    style: paragraphBoldTextStyle,
+                  )),
                   SizedBox(
                     height: 12.0,
                   ),
