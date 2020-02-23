@@ -72,7 +72,7 @@ void switchTheme() {
   if (paragraphTextStyle.color == textColorDefault) {
     paragraphTextStyle = TextStyle(
       fontFamily: 'San Francisco',
-      fontSize: 15,
+      fontSize: 16.5,
       color: textColorWhite,
       letterSpacing: 0.5,
       height: 1.5,
@@ -80,7 +80,7 @@ void switchTheme() {
   } else {
     paragraphTextStyle = TextStyle(
       fontFamily: 'San Francisco',
-      fontSize: 15,
+      fontSize: 16.5,
       color: textColorDefault,
       letterSpacing: 0.5,
       height: 1.5,
