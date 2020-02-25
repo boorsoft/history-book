@@ -4,18 +4,20 @@ import 'package:flutter/material.dart';
 import 'package:historybook/style.dart';
 
 class Quiz extends StatefulWidget {
-  _QuizState quizState = new _QuizState();
+  QuizState quizState = new QuizState();
 
   int getCorrectAnswers() {
     return quizState.correctAnswers;
   }
 
   @override
-  _QuizState createState() => _QuizState();
+  QuizState createState() => QuizState();
 }
 
-class _QuizState extends State<Quiz> {
+class QuizState extends State<Quiz> {
   List quizdata;
+
+  static String getJson;
 
   Color displayColor = appBarColor;
   Color correct = Colors.lightBlue;
@@ -145,6 +147,7 @@ class _QuizState extends State<Quiz> {
         disabledColor: buttonColor[option],
         child: Text(
           quizdata[1][i.toString()][option],
+          textAlign: TextAlign.center,
           style: TextStyle(
             color: Colors.white,
             fontFamily: 'San Francisco',
@@ -196,8 +199,7 @@ class _QuizState extends State<Quiz> {
         appBar:
             AppBar(backgroundColor: appBarColor, title: Text('Тестирование')),
         body: FutureBuilder(
-            future: DefaultAssetBundle.of(context)
-                .loadString('assets/json/quiz.json'),
+            future: DefaultAssetBundle.of(context).loadString(getJson),
             builder: (context, snapshot) {
               quizdata = json.decode(snapshot.data.toString());
               if (snapshot.hasData) {
