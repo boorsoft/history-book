@@ -159,7 +159,7 @@ class QuizState extends State<Quiz> {
         splashColor: Colors.grey[300],
         highlightColor: Color.fromRGBO(124, 134, 145, 1),
         minWidth: 170.0,
-        height: 38.0,
+        height: 45.0,
       ),
     );
   }

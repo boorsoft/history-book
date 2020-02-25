@@ -19,11 +19,22 @@ class QuizButton extends StatelessWidget {
                   QuizState.getJson = jsonFile
                 },
             child: Container(
-                margin: EdgeInsets.fromLTRB(10.0, 0, 10.0, 0),
-                decoration: BoxDecoration(color: appBarColor, boxShadow: [
-                  BoxShadow(
-                      color: shadowColor, blurRadius: 6.0, offset: Offset(2, 4))
-                ]),
+                margin: EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 20.0),
+                decoration: BoxDecoration(
+                  color: Colors.black.withOpacity(0.45),
+                  borderRadius: BorderRadius.circular(10.0),
+                  // boxShadow: [
+                  //   BoxShadow(
+                  //       color: shadowColor,
+                  //       blurRadius: 6.0,
+                  //       offset: Offset(2, 4))
+                  // ],
+                  // border: Border(
+                  //     bottom: BorderSide(
+                  //         color: Colors.grey,
+                  //         width: 2.0,
+                  //         style: BorderStyle.solid)),
+                ),
                 child: Container(
                   height: 100.0,
                   padding: EdgeInsets.all(10.0),

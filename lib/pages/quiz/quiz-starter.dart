@@ -11,14 +11,14 @@ class _QuizStarterState extends State<QuizStarter> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        extendBodyBehindAppBar: true,
         backgroundColor: bgColor,
         appBar: AppBar(
           title: Text('Тестирование'),
           backgroundColor: appBarColor,
         ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          crossAxisAlignment: CrossAxisAlignment.center,
+        body: Container(
+            child: ListView(
           children: <Widget>[
             QuizButton("Тест №1", "assets/json/exam.json"),
             QuizButton("Тест №2", "assets/json/exam2.json"),
@@ -26,6 +26,6 @@ class _QuizStarterState extends State<QuizStarter> {
             QuizButton("Тест №4", "assets/json/exam4.json"),
             QuizButton("Тест №5", "assets/json/exam5.json")
           ],
-        ));
+        )));
   }
 }
