@@ -203,8 +203,9 @@ class QuizState extends State<Quiz> {
             builder: (context, snapshot) {
               quizdata = json.decode(snapshot.data.toString());
               if (snapshot.hasData) {
-                return Container(
-                    child: Column(
+                return SingleChildScrollView(
+                    child: Container(
+                        child: Column(
                   children: <Widget>[
                     SizedBox(height: 10.0),
                     Container(
@@ -272,7 +273,7 @@ class QuizState extends State<Quiz> {
                       ),
                     ),
                   ],
-                ));
+                )));
               } else {
                 return Center(
                     child: Text('Идёт загрузка данных...',

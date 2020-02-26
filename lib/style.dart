@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 // Switch theme
 Color bgColorDefault = Colors.white;
-Color bgColorDark = Color.fromRGBO(18, 18, 18, 1);
+Color bgColorDark = Color.fromRGBO(20, 20, 20, 1);
 Color bgColor = Colors.white;
 
 Color appBarColorDefault = Color.fromRGBO(127, 156, 163, 1);
