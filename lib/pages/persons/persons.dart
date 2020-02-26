@@ -18,6 +18,10 @@ class Persons extends StatelessWidget {
           child: Wrap(
             spacing: 7.0,
             children: <Widget>[
+              PersonsButton("assets/images/persons/kir2.jpg", "Кир 2", "/Persons/kir2"), 
+              PersonsButton("assets/images/persons/Tomiris.jpg", "Томирис", "/Persons/Tomiris"),
+              PersonsButton("assets/images/paragraphs/Gerodot.jpg", "Геродот", "/Persons/Gerodot"),
+              PersonsButton("assets/images/persons/Darii1.jpg", "Дарий I", "/Persons/Darii1"),
               PersonsButton("assets/images/paragraphs/Barsbek.jpg",
                   "Ыначу Алп Бильге (Барсбек)", "/Persons/Barsbek"),
               PersonsButton("assets/images/persons/Djusup.jpg",

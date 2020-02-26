@@ -47,6 +47,10 @@ import 'pages/persons/Torokul.dart';
 import 'pages/persons/Isa.dart';
 import 'pages/persons/Alykul.dart';
 import 'pages/persons/Chika.dart';
+import 'pages/persons/kir2.dart';
+import 'pages/persons/Tomiris.dart';
+import 'pages/persons/Gerodot.dart';
+import 'pages/persons/Darii1.dart';
 
 class App extends StatefulWidget {
   @override
@@ -95,6 +99,10 @@ class _AppState extends State<App> {
       "/Paragraphs/Paragraph14": (BuildContext context) => Paragraph14(),
       "/Paragraphs/Paragraph15": (BuildContext context) => Paragraph15(),
       "/Paragraphs/Paragraph16": (BuildContext context) => Paragraph16(),
+      "/Persons/Chika": (BuildContext contex) => Kir2(),
+      "/Persons/Chika": (BuildContext contex) => Tomiris(),  
+      "/Persons/Chika": (BuildContext contex) => Gerodot(), 
+      "/Persons/Chika": (BuildContext contex) => Darii1(), 
       "/Persons/Barsbek": (BuildContext contex) => Barsbek(),
       "/Persons/DjusupBalasagyn": (BuildContext contex) => Djusup(),
       "/Persons/Mahmud": (BuildContext contex) => Mahmud(),
