@@ -31,6 +31,7 @@ class QuizState extends State<Quiz> {
   var timerColor = timeColor;
 
   bool _enabled = true;
+  bool _nextButtonEnabled = false;
   bool canceltimer = false;
 
   Map<String, Color> buttonColor = {
@@ -46,7 +47,7 @@ class QuizState extends State<Quiz> {
 
   @override
   void initState() {
-    startTimer();
+    // startTimer();
     super.initState();
   }
 
@@ -57,35 +58,36 @@ class QuizState extends State<Quiz> {
     }
   }
 
-  void startTimer() async {
-    const sec = const Duration(seconds: 1);
-    timer = new Timer.periodic(sec, (Timer t) {
-      setState(() {
-        timerColor = timeColor;
-        if (startTime < 1) {
-          t.cancel();
-          nextQuestion();
-        } else if (canceltimer == true) {
-          t.cancel();
-        } else {
-          startTime -= 1;
-        }
+  // void startTimer() async {
+  //   const sec = const Duration(seconds: 1);
+  //   timer = new Timer.periodic(sec, (Timer t) {
+  //     setState(() {
+  //       timerColor = timeColor;
+  //       if (startTime < 1) {
+  //         t.cancel();
+  //         nextQuestion();
+  //       } else if (canceltimer == true) {
+  //         t.cancel();
+  //       } else {
+  //         startTime -= 1;
+  //       }
 
-        if (startTime == 0) {
-          showtimer = "Время вышло!";
-        } else {
-          showtimer = startTime.toString();
-        }
-        if (startTime < 10) {
-          timerColor = Colors.red;
-        }
-      });
-    });
-  }
+  //       if (startTime == 0) {
+  //         showtimer = "Время вышло!";
+  //       } else {
+  //         showtimer = startTime.toString();
+  //       }
+  //       if (startTime < 10) {
+  //         timerColor = Colors.red;
+  //       }
+  //     });
+  //   });
+  // }
 
   void nextQuestion() {
     canceltimer = false;
     startTime = 30;
+    _nextButtonEnabled = false;
     setState(() {
       if (i < quizdata[0].length) {
         i++;
@@ -98,7 +100,7 @@ class QuizState extends State<Quiz> {
       buttonColor["d"] = appBarColor;
       _enabled = true;
     });
-    startTimer();
+    // startTimer();
   }
 
   void checkAnswer(String option) {
@@ -125,7 +127,7 @@ class QuizState extends State<Quiz> {
     setState(() {
       buttonColor[option] = displayColor;
       canceltimer = true;
-      Future.delayed(Duration(milliseconds: 1300), () => nextQuestion());
+      // Future.delayed(Duration(milliseconds: 1300), () => nextQuestion());
     });
   }
 
@@ -135,6 +137,9 @@ class QuizState extends State<Quiz> {
       _onPressed = () {
         checkAnswer(option);
         _enabled = false;
+        if (!_enabled) {
+          _nextButtonEnabled = true;
+        }
       };
     }
     return Padding(
@@ -192,6 +197,19 @@ class QuizState extends State<Quiz> {
         });
   }
 
+  Widget nextButton() {
+    if (_nextButtonEnabled) {
+      return MaterialButton(
+        onPressed: () => nextQuestion(),
+        child: Text('Следующий',
+            style: TextStyle(color: textColor, fontSize: 16.0)),
+        hoverColor: appBarColor,
+      );
+    } else {
+      return SizedBox();
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -203,9 +221,8 @@ class QuizState extends State<Quiz> {
             builder: (context, snapshot) {
               quizdata = json.decode(snapshot.data.toString());
               if (snapshot.hasData) {
-                return SingleChildScrollView(
-                    child: Container(
-                        child: Column(
+                return Container(
+                    child: Column(
                   children: <Widget>[
                     SizedBox(height: 10.0),
                     Container(
@@ -261,19 +278,22 @@ class QuizState extends State<Quiz> {
                     ),
                     Expanded(
                       flex: 1,
-                      child: Container(
-                        child: Text(
-                          showtimer,
-                          style: TextStyle(
-                            color: timerColor,
-                            fontFamily: 'Blogger',
-                            fontSize: 20.0,
-                          ),
-                        ),
-                      ),
+                      child: nextButton(),
+                      // Expanded(
+                      //   flex: 1,
+                      //   child: Container(
+                      //     child: Text(
+                      //       showtimer,
+                      //       style: TextStyle(
+                      //         color: timerColor,
+                      //         fontFamily: 'Blogger',
+                      //         fontSize: 20.0,
+                      //       ),
+                      //     ),
+                      //   ),
                     ),
                   ],
-                )));
+                ));
               } else {
                 return Center(
                     child: Text('Идёт загрузка данных...',

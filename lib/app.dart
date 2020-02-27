@@ -100,9 +100,9 @@ class _AppState extends State<App> {
       "/Paragraphs/Paragraph15": (BuildContext context) => Paragraph15(),
       "/Paragraphs/Paragraph16": (BuildContext context) => Paragraph16(),
       "/Persons/Chika": (BuildContext contex) => Kir2(),
-      "/Persons/Chika": (BuildContext contex) => Tomiris(),  
-      "/Persons/Chika": (BuildContext contex) => Gerodot(), 
-      "/Persons/Chika": (BuildContext contex) => Darii1(), 
+      "/Persons/Chika": (BuildContext contex) => Tomiris(),
+      "/Persons/Chika": (BuildContext contex) => Gerodot(),
+      "/Persons/Chika": (BuildContext contex) => Darii1(),
       "/Persons/Barsbek": (BuildContext contex) => Barsbek(),
       "/Persons/DjusupBalasagyn": (BuildContext contex) => Djusup(),
       "/Persons/Mahmud": (BuildContext contex) => Mahmud(),
@@ -123,6 +123,10 @@ class _AppState extends State<App> {
       "/Persons/Isa": (BuildContext contex) => Isa(),
       "/Persons/Alykul": (BuildContext contex) => Alykul(),
       "/Persons/Chika": (BuildContext contex) => Chika(),
+      "/Persons/Darii1": (BuildContext context) => Darii1(),
+      "/Persons/Gerodot": (BuildContext context) => Gerodot(),
+      "/Persons/kir2": (BuildContext context) => Kir2(),
+      "/Persons/Tomiris": (BuildContext context) => Tomiris()
     };
   }
 }
