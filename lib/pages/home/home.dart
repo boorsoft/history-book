@@ -30,6 +30,7 @@ class _HomeState extends State<Home> {
                 OpenIconicIcons.moon,
                 color: Colors.white,
               ),
+              hoverColor: Colors.white70,
               onPressed: () {
                 setState(() {
                   switchTheme();

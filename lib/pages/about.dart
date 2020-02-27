@@ -53,7 +53,7 @@ class About extends StatelessWidget {
                     ),
                     SizedBox(height: 20.0),
                     Text(
-                      'Версия: 1.0.0',
+                      'Версия: 1.0.1',
                       style: TextStyle(fontSize: 15.0, color: textColor),
                     ),
                     SizedBox(height: 20.0),
@@ -71,22 +71,32 @@ class About extends StatelessWidget {
 <p>Приложение будет обновляться после исправления найденных вами багов или после добавления новых функций. Однако, после обновления приложение придется скачивать заново, так как приложение не будет зарегистрировано в Play Market.</p>
 
 <p><b>Есть предложения или нашли баг?</b></p>
-<p>Если у вас есть предложения или вам пришлось встретиться лицом к лицу с багом, или с багами - обращайтесь к разработчикам, мы постараемся исправить.</p>
+<p>Если у вас есть предложения или вам пришлось встретиться лицом к лицу с багами - обращайтесь к разработчикам, мы постараемся исправить.</p>
                 """,
                       defaultTextStyle: paragraphTextStyle,
                       useRichText: true,
                     ),
+                    SizedBox(height: 20.0),
+                    Center(
+                        child: Text('Разработчики: ',
+                            style: TextStyle(
+                                color: textColor,
+                                fontWeight: FontWeight.bold))),
+                    SizedBox(height: 20.0),
                     ContactBox(
-                      'Байчик',
+                      'Жумабек уулу Байдоолот',
                       '  zhumabek_uulu_b@iuca.kg',
                     ),
-                    ContactBox('Азим', '  akmatov_az@iuca.kg'),
-                    ContactBox('Тима', '  dzholdoshbekov_t@iuca.kg'),
+                    ContactBox('Акматов Азим', '  akmatov_az@iuca.kg'),
+                    // ContactBox(
+                    //     'Джолдошбеков Темирлан', '  dzholdoshbekov_t@iuca.kg'),
+                    ContactBox('Boorsoft', '  boorsoft@gmail.com'),
+                    SizedBox(height: 20.0),
                     Html(
                       data: """
-<center>Приложение разработано по заказу <b>Марат агая</b>.</center>
+<center>Приложение разработано по просьбе <b>Абдыкеримова Марата</b> студентами Гумманитарно-Технического Колледжа в г. Токмок.</center>
 <center>Спасибо за то, что пользуетесь нашим приложением! </center>
-<center>© BAT Inc. 2020</center>          
+<center>© Boorsoft, 2020</center>          
               """,
                       defaultTextStyle: paragraphTextStyle,
                       useRichText: true,

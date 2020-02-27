@@ -12,7 +12,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(seconds: 3), () {
+    Future.delayed(Duration(seconds: 4), () {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
@@ -28,10 +28,13 @@ class _SplashScreenState extends State<SplashScreen> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Image(
-            image: AssetImage("assets/historybook-logo.png"),
-            height: 250.0,
-            width: 250.0,
+          Padding(
+            padding: EdgeInsets.only(top: 120.0),
+            child: Image(
+              image: AssetImage("assets/historybook-logo.png"),
+              height: 250.0,
+              width: 250.0,
+            ),
           ),
           SizedBox(
             height: 10.0,
@@ -57,32 +60,39 @@ class _SplashScreenState extends State<SplashScreen> {
             ),
           ),
           SizedBox(height: 30.0),
-          Text('Версия: 1.0.0'),
-          SizedBox(height: 15.0),
-          Text('Проверено Марат агаем'),
-          SizedBox(height: 20.0),
-          Container(
-              alignment: Alignment.bottomCenter,
-              child: Text(
-                "Разработчики:",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontFamily: 'San Francisco',
-                  fontSize: 13.0,
-                  fontWeight: FontWeight.bold,
-                ),
-              )),
-          Container(
-              padding: EdgeInsets.fromLTRB(0, 0, 0, 5.0),
-              alignment: Alignment.bottomCenter,
-              child: Text(
-                "Акматов Азим\nЖумабек уулу Байдоолот\nДжолдошбеков Темирлан",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontFamily: 'Helvetica',
-                  fontSize: 13.0,
-                ),
-              )),
+          Text('Версия: 1.0.1'),
+          // SizedBox(height: 15.0),
+          // Text('Проверено Марат агаем'),
+          SizedBox(height: 30.0),
+          Text('По книге Осмонова Дж.'),
+          Expanded(
+              child: Align(
+                  alignment: FractionalOffset.bottomCenter,
+                  child: Padding(
+                      padding: EdgeInsets.only(bottom: 15.0),
+                      child: Image.asset("assets/boorsoft-logo-small.png"))))
+          // Container(
+          //     alignment: Alignment.bottomCenter,
+          //     child: Text(
+          //       "Разработчики:",
+          //       textAlign: TextAlign.center,
+          //       style: TextStyle(
+          //         fontFamily: 'San Francisco',
+          //         fontSize: 13.0,
+          //         fontWeight: FontWeight.bold,
+          //       ),
+          //     )),
+          // Container(
+          //     padding: EdgeInsets.fromLTRB(0, 0, 0, 5.0),
+          //     alignment: Alignment.bottomCenter,
+          //     child: Text(
+          //       "Акматов Азим\nЖумабек уулу Байдоолот\nДжолдошбеков Темирлан",
+          //       textAlign: TextAlign.center,
+          //       style: TextStyle(
+          //         fontFamily: 'Helvetica',
+          //         fontSize: 13.0,
+          //       ),
+          //     )),
         ],
       ),
     );

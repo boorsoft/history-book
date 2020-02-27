@@ -20,17 +20,31 @@ class _QuizStarterState extends State<QuizStarter> {
         body: Container(
             child: ListView(
           children: <Widget>[
-            QuizButton("Тест №1", "assets/json/exam.json"),
-            QuizButton("Тест №2", "assets/json/exam2.json"),
-            QuizButton("Тест №3", "assets/json/exam3.json"),
-            QuizButton("Тест №4", "assets/json/exam4.json"),
-            QuizButton("Тест №5", "assets/json/exam5.json"),
-            QuizButton("Тест №6", "assets/json/exam6.json"),
-            QuizButton("Тест №7", "assets/json/exam7.json"),
-            QuizButton("Тест №8", "assets/json/exam8.json"),
-            QuizButton("Тест №9", "assets/json/exam9.json"),
-            QuizButton("Тест №10", "assets/json/exam10.json"),
-            QuizButton("Тест №11", "assets/json/exam11.json"),
+            QuizButton(
+                "Кыргызстан с древнейших времен", "assets/json/exam.json"),
+            QuizButton("Кыргызстан в первой половине XX века",
+                "assets/json/exam2.json"),
+            QuizButton(
+                "Первые племенные объединения", "assets/json/exam3.json"),
+            QuizButton(
+                "Кыргызское великодержавие, караханиды и монгольская эпоха",
+                "assets/json/exam4.json"),
+            QuizButton(
+                "Кокандское ханство и Кыргызстан во второй половине XIX в.",
+                "assets/json/exam5.json"),
+            QuizButton("Кыргызстан XX век", "assets/json/exam6.json"),
+            QuizButton("Кыргызстан в годы Великой Отечественной Войны",
+                "assets/json/exam7.json"),
+            QuizButton("Кыргызстан во второй половине XX века",
+                "assets/json/exam8.json"),
+            QuizButton(
+                "Источники по истории Кыргызстана и Кыргызстан в средневековье",
+                "assets/json/exam9.json"),
+            QuizButton("Кыргызстан под властью Кокандского ханства",
+                "assets/json/exam10.json"),
+            QuizButton(
+                "Установление советской власти и развитие национальной государственности",
+                "assets/json/exam11.json"),
           ],
         )));
   }

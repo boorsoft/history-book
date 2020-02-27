@@ -39,11 +39,14 @@ class QuizButton extends StatelessWidget {
                   height: 100.0,
                   padding: EdgeInsets.all(10.0),
                   child: Center(
-                      child: Text(quizButtonText,
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 17.0,
-                              fontWeight: FontWeight.bold))),
+                      child: Text(
+                    quizButtonText,
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 17.0,
+                        fontWeight: FontWeight.bold),
+                    textAlign: TextAlign.center,
+                  )),
                 )))
       ],
     );
