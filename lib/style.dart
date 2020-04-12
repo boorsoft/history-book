@@ -13,9 +13,9 @@ Color textColor = Colors.black87;
 Color textColorWhite = Colors.white;
 Color textColorDefault = Colors.black87;
 
-Color shadowColor = Color.fromRGBO(0, 0, 0, 0.4);
-Color shadowColorDark = Color.fromRGBO(0, 0, 0, 0);
-Color shadowColorDefault = Color.fromRGBO(0, 0, 0, 0.4);
+Color shadowColor = Color.fromRGBO(0, 0, 0, 0.6);
+Color shadowColorDark = Color.fromRGBO(0, 0, 0, 6);
+Color shadowColorDefault = Color.fromRGBO(0, 0, 0, 0.6);
 
 Color timeColor = Color.fromRGBO(127, 156, 163, 1);
 Color timeColorDark = Colors.white;

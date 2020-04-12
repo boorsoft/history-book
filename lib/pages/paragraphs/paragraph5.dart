@@ -1,27 +1,22 @@
 import 'package:flutter/material.dart';
 import '../../style.dart';
 import 'package:flutter_html/flutter_html.dart';
+import 'paragraph-header.dart';
 
 class Paragraph5 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: bgColor,
-        appBar: AppBar(
-          backgroundColor: appBarColor,
-          title: Text('§5.Древние кыргызы. Тюркские каганаты'),
-        ),
         body: Scrollbar(
-          child: SingleChildScrollView(
-            child: Container(
+            child: SingleChildScrollView(
+          child: Column(children: <Widget>[
+            ParagraphHeader("assets/images/article-pic5.jpg",
+                "§5.Древние кыргызы. Тюркские каганаты"),
+            Container(
               padding: EdgeInsets.all(10.0),
               child: Column(
                 children: [
-                  Text(
-                    '§5.Древние кыргызы. Тюркские каганаты',
-                    style: paragraphBoldTextStyle,
-                    textAlign: TextAlign.center,
-                  ),
                   Html(
                     data: """
 <p>Китайский историк Сыма Цянь (145–86 гг.  до н. э.) в своем труде «Ши цзы» (Исторические хроники»), 1 в. до н. э. сообщает, что в 201 г. до н. э. правитель хуннов  шаньюй Моде подчинил себе некоторые  независимые  племена  –  гяньгуней  или  цзяньгуней, динлинов, синли, кюйше.</p>
@@ -171,7 +166,7 @@ class Paragraph5 extends StatelessWidget {
                 ],
               ),
             ),
-          ),
-        ));
+          ]),
+        )));
   }
 }

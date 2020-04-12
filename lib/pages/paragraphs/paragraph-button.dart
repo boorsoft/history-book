@@ -22,22 +22,23 @@ class ParagraphButton extends StatelessWidget {
                   height: 180.0,
                 ),
                 child: Container(
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(25.0),
-                      boxShadow: [
-                        BoxShadow(
-                            color: shadowColor,
-                            blurRadius: 5.0,
-                            spreadRadius: 1.5,
-                            offset: Offset(0.5, 1.5)),
-                      ]),
-                  child: ClipRRect(
-                      borderRadius: BorderRadius.circular(25.0),
-                      child: Image.asset(
-                        _assetPath,
-                        fit: BoxFit.cover,
-                      )),
-                ),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(25.0),
+                        boxShadow: [
+                          BoxShadow(
+                              color: shadowColor,
+                              blurRadius: 5.0,
+                              spreadRadius: 1.5,
+                              offset: Offset(0.5, 1.5)),
+                        ]),
+                    child: Hero(
+                        tag: _assetPath,
+                        child: ClipRRect(
+                            borderRadius: BorderRadius.circular(25.0),
+                            child: Image.asset(
+                              _assetPath,
+                              fit: BoxFit.cover,
+                            )))),
               ),
               // Gradient on image
               Container(

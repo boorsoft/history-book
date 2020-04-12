@@ -1,28 +1,22 @@
 import 'package:flutter/material.dart';
 import '../../style.dart';
 import 'package:flutter_html/flutter_html.dart';
+import 'paragraph-header.dart';
 
 class Paragraph6 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: bgColor,
-        appBar: AppBar(
-          backgroundColor: appBarColor,
-          title: Text(
-              '§6.Борьба кыргызов за господство в Центральной Азии. Кыргызское великодержавие'),
-        ),
         body: Scrollbar(
-          child: SingleChildScrollView(
-            child: Container(
+            child: SingleChildScrollView(
+          child: Column(children: <Widget>[
+            ParagraphHeader("assets/images/article-pic6.jpg",
+                "§6.Борьба кыргызов за господство в Центральной Азии. Кыргызское великодержавие"),
+            Container(
               padding: EdgeInsets.all(10.0),
               child: Column(
                 children: [
-                  Text(
-                    '§6.Борьба кыргызов за господство в Центральной Азии. Кыргызское великодержавие',
-                    style: paragraphBoldTextStyle,
-                    textAlign: TextAlign.center,
-                  ),
                   Html(
                     data: """
 <center><b>Государство енисейских кыргызов</b></center>
@@ -157,7 +151,7 @@ class Paragraph6 extends StatelessWidget {
                 ],
               ),
             ),
-          ),
-        ));
+          ]),
+        )));
   }
 }

@@ -7,10 +7,6 @@ class Paragraph14 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: bgColor,
-        appBar: AppBar(
-          backgroundColor: appBarColor,
-          title: Text('§14.Кыргызстан в годы Великой Отечественной Войны'),
-        ),
         body: Scrollbar(
           child: SingleChildScrollView(
             child: Container(

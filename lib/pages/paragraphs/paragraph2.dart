@@ -1,27 +1,22 @@
 import 'package:flutter/material.dart';
 import '../../style.dart';
 import 'package:flutter_html/flutter_html.dart';
+import 'paragraph-header.dart';
 
 class Paragraph2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: bgColor,
-        appBar: AppBar(
-          backgroundColor: appBarColor,
-          title: Text(
-              '§2.Эпос "Манас" - неиссякаемый источник истории Кыргызстана'),
-        ),
         body: Scrollbar(
-          child: SingleChildScrollView(
-            child: Container(
+            child: SingleChildScrollView(
+          child: Column(children: <Widget>[
+            ParagraphHeader("assets/images/article-pic2.jpg",
+                "§2. Эпос \"Манас\" - неиссякаемый источник истории Кыргызстана"),
+            Container(
               padding: EdgeInsets.all(10.0),
               child: Column(
                 children: [
-                  Text(
-                    '§2.Эпос "Манас" - неиссякаемый источник истории Кыргызстана',
-                    style: paragraphBoldTextStyle,
-                  ),
                   SizedBox(
                     height: 12.0,
                   ),
@@ -205,7 +200,7 @@ class Paragraph2 extends StatelessWidget {
                 ],
               ),
             ),
-          ),
-        ));
+          ]),
+        )));
   }
 }

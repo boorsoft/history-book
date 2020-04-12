@@ -1,27 +1,22 @@
 import 'package:flutter/material.dart';
 import '../../style.dart';
 import 'package:flutter_html/flutter_html.dart';
+import 'paragraph-header.dart';
 
 class Paragraph4 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: bgColor,
-        appBar: AppBar(
-          backgroundColor: appBarColor,
-          title: Text('§4.Племена саков и ранние государства'),
-        ),
         body: Scrollbar(
-          child: SingleChildScrollView(
-            child: Container(
+            child: SingleChildScrollView(
+          child: Column(children: <Widget>[
+            ParagraphHeader("assets/images/article-pic4.jpg",
+                "§4.Племена саков и ранние государства"),
+            Container(
               padding: EdgeInsets.all(10.0),
               child: Column(
                 children: [
-                  Text(
-                    '§4.Племена саков и ранние государства',
-                    style: paragraphBoldTextStyle,
-                    textAlign: TextAlign.center,
-                  ),
                   Html(
                     data: """
 <p>В VIII – III вв. до н. э. обширные территории, занимаемые современными государствами Средней Азии и Казахстаном, населяли многочисленные племена, которых в древнеперсидских клинописных текстах называли саками.</p>
@@ -267,7 +262,7 @@ class Paragraph4 extends StatelessWidget {
                 ],
               ),
             ),
-          ),
-        ));
+          ]),
+        )));
   }
 }

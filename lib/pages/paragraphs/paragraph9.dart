@@ -1,27 +1,22 @@
 import 'package:flutter/material.dart';
 import '../../style.dart';
 import 'package:flutter_html/flutter_html.dart';
+import 'paragraph-header.dart';
 
 class Paragraph9 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: bgColor,
-        appBar: AppBar(
-          backgroundColor: appBarColor,
-          title: Text('§9.Кыргызы в период господства Кокандского Ханства'),
-        ),
         body: Scrollbar(
-          child: SingleChildScrollView(
-            child: Container(
+            child: SingleChildScrollView(
+          child: Column(children: <Widget>[
+            ParagraphHeader("assets/images/article-pic9.jpg",
+                "§9.Кыргызы в период господства Кокандского Ханства"),
+            Container(
               padding: EdgeInsets.all(10.0),
               child: Column(
                 children: [
-                  Text(
-                    '§9.Кыргызы в период господства Кокандского Ханства',
-                    style: paragraphBoldTextStyle,
-                    textAlign: TextAlign.center,
-                  ),
                   Html(
                     data: """
 <p>•  В начале XVIII в. отпадает от Бухарского Ханства Фергана, в результате объединения нескольких бекств. Основателем новой династии стал Узбекский феодал Шахрух-бий (время правления 1709 – 1721 гг.), который в 1709 г. захватил  власть в Коканде, включая территории Исфаны и Маргелана. Затем к государству были присоединены мелкие феодальные владения Ферганы (Ходжент,  Андижан, Наманган и др.) </p>
@@ -161,7 +156,7 @@ class Paragraph9 extends StatelessWidget {
                 ],
               ),
             ),
-          ),
-        ));
+          ]),
+        )));
   }
 }

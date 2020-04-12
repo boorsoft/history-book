@@ -1,25 +1,22 @@
 import 'package:flutter/material.dart';
 import '../../style.dart';
 import 'package:flutter_html/flutter_html.dart';
+import 'paragraph-header.dart';
 
 class Paragraph3 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: bgColor,
-        appBar: AppBar(
-          backgroundColor: appBarColor,
-          title: Text('§3.Каменный и бронзовый века в Кыргызстане'),
-        ),
         body: Scrollbar(
-          child: SingleChildScrollView(
-            child: Container(
+            child: SingleChildScrollView(
+          child: Column(children: <Widget>[
+            ParagraphHeader("assets/images/article-pic3.jpg",
+                "§3. Каменный и бронзовый века в Кыргызстане"),
+            Container(
               padding: EdgeInsets.all(10.0),
               child: Column(
                 children: [
-                  Text("§3.Каменный и бронзовый века в Кыргызстане",
-                      style: paragraphBoldTextStyle,
-                      textAlign: TextAlign.center),
                   Html(
                     data: """
 Каменный век – историко-культурная эпоха становления человеческого общества, главной особенностью  которой,  является  изготовление  из  камня  изделий  и  орудий,  предназначенных  для  добывания пищи и защиты от врагов. 
@@ -181,7 +178,7 @@ class Paragraph3 extends StatelessWidget {
                 ],
               ),
             ),
-          ),
-        ));
+          ]),
+        )));
   }
 }

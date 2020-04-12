@@ -7,11 +7,6 @@ class Paragraph15 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: bgColor,
-        appBar: AppBar(
-          backgroundColor: appBarColor,
-          title: Text(
-              '§15.Кыргызстан в период "Развитого социализма" и "Перестройки" (1964-1990 гг.)'),
-        ),
         body: Scrollbar(
           child: SingleChildScrollView(
             child: Container(
