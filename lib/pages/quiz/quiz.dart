@@ -222,8 +222,9 @@ class QuizState extends State<Quiz> {
             builder: (context, snapshot) {
               quizdata = json.decode(snapshot.data.toString());
               if (snapshot.hasData) {
-                return Container(
-                    child: Column(
+                return SingleChildScrollView(
+                    child: Container(
+                        child: Column(
                   children: <Widget>[
                     SizedBox(height: 10.0),
                     Container(
@@ -248,53 +249,46 @@ class QuizState extends State<Quiz> {
                           style: TextStyle(
                               fontFamily: 'San Francisco', color: textColor)),
                     ),
-                    Expanded(
-                      flex: 3,
-                      child: Container(
-                        padding: EdgeInsets.all(14.5),
-                        alignment: Alignment.bottomCenter,
-                        child: Text(
-                          quizdata[0][i.toString()],
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                              fontSize: 16.5,
-                              fontFamily: 'San Francisco',
-                              color: textColor),
-                        ),
+                    Container(
+                      margin: EdgeInsets.symmetric(vertical: 30.0),
+                      padding: EdgeInsets.all(10.0),
+                      alignment: Alignment.bottomCenter,
+                      child: Text(
+                        quizdata[0][i.toString()],
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            fontSize: 16.5,
+                            fontFamily: 'San Francisco',
+                            color: textColor),
                       ),
                     ),
-                    Expanded(
-                      flex: 7,
-                      child: Container(
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            optionButton('a'),
-                            optionButton('b'),
-                            optionButton('c'),
-                            optionButton('d'),
-                          ],
-                        ),
+                    Container(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          optionButton('a'),
+                          optionButton('b'),
+                          optionButton('c'),
+                          optionButton('d'),
+                        ],
                       ),
                     ),
-                    Expanded(
-                      flex: 1,
-                      child: nextButton(),
-                      // Expanded(
-                      //   flex: 1,
-                      //   child: Container(
-                      //     child: Text(
-                      //       showtimer,
-                      //       style: TextStyle(
-                      //         color: timerColor,
-                      //         fontFamily: 'Blogger',
-                      //         fontSize: 20.0,
-                      //       ),
-                      //     ),
-                      //   ),
-                    ),
+                    SizedBox(height: 30.0),
+                    nextButton()
+                    // Expanded(
+                    //   flex: 1,
+                    //   child: Container(
+                    //     child: Text(
+                    //       showtimer,
+                    //       style: TextStyle(
+                    //         color: timerColor,
+                    //         fontFamily: 'Blogger',
+                    //         fontSize: 20.0,
+                    //       ),
+                    //     ),
+                    //   ),
                   ],
-                ));
+                )));
               } else {
                 return Center(
                     child: Text('Идёт загрузка данных...',

@@ -33,6 +33,23 @@ class ParagraphHeader extends StatelessWidget {
                         bottomRight: Radius.circular(25.0)),
                     child:
                         Image(image: AssetImage(_image), fit: BoxFit.cover)))),
+        // Gradient on image
+        Container(
+          height: 280.0,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(25.0),
+              gradient: LinearGradient(
+                  begin: FractionalOffset.topCenter,
+                  end: FractionalOffset.bottomCenter,
+                  colors: [
+                    Colors.black.withOpacity(0.0),
+                    Colors.black.withOpacity(0.6)
+                  ],
+                  stops: [
+                    0.4,
+                    1.0
+                  ])),
+        ),
         Container(
             height: 280.0,
             alignment: Alignment.center,
