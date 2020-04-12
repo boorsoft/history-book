@@ -172,6 +172,7 @@ class QuizState extends State<Quiz> {
   void _showDialog() {
     showDialog(
         context: context,
+        barrierDismissible: false,
         builder: (BuildContext context) {
           return AlertDialog(
             title: Text('Завершение', style: TextStyle(color: Colors.white)),

@@ -48,12 +48,12 @@ class _HomeState extends State<Home> {
         children: [
           SizedBox(height: 5.0),
           ImageButton(
-              "assets/images/home-pic1.jpg", "ПАРАГРАФЫ", "/Paragraphs"),
-          ImageButton("assets/images/home-pic2.jpg", "ИСТОРИЧЕСКИЕ ЛИЧНОСТИ",
+              "assets/images/home-pic1.jpg", "Параграфы", "/Paragraphs"),
+          ImageButton("assets/images/home-pic2.jpg", "Исторические Личности",
               "/Persons"),
           ImageButton(
-              "assets/images/home-pic4.jpg", "ТЕСТИРОВАНИЕ", "/QuizStarter"),
-          ImageButton("assets/images/home-pic3.jpg", "О ПРИЛОЖЕНИИ", "/About"),
+              "assets/images/home-pic4.jpg", "Тестирование", "/QuizStarter"),
+          ImageButton("assets/images/home-pic3.jpg", "О приложении", "/About"),
           SizedBox(height: 5.0),
         ],
       )),

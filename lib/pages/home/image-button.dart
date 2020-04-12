@@ -11,18 +11,16 @@ class ImageButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
         GestureDetector(
           onTap: () => Navigator.of(context).pushNamed(_route),
           child: Stack(
-            alignment: Alignment.center,
+            alignment: Alignment.bottomLeft,
             children: [
               Container(
                 padding: EdgeInsets.all(8.0),
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(30.0),
+                  borderRadius: BorderRadius.circular(25.0),
                   // borderRadius: BorderRadius.circular(30.0),
                   // border: Border.all(
                   //   color: Colors.black,
@@ -30,11 +28,11 @@ class ImageButton extends StatelessWidget {
                   // ),
                 ),
                 constraints: BoxConstraints.expand(
-                  height: 160.0,
+                  height: 180.0,
                 ),
                 child: Container(
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(30.0),
+                    borderRadius: BorderRadius.circular(25.0),
                     boxShadow: [
                       BoxShadow(
                         color: shadowColor,
@@ -52,21 +50,43 @@ class ImageButton extends StatelessWidget {
                   //     borderRadius: BorderRadius.circular(35.0),
                   //     ),
                   child: ClipRRect(
-                    borderRadius: BorderRadius.circular(30.0),
+                    borderRadius: BorderRadius.circular(25.0),
                     child: Image.asset(_assetPath, fit: BoxFit.cover),
                   ),
                 ),
               ),
-              Center(
+              // Gradient on image
+              Container(
+                margin: EdgeInsets.all(8.0),
+                height: 165.0,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(25.0),
+                    gradient: LinearGradient(
+                        begin: FractionalOffset.topCenter,
+                        end: FractionalOffset.bottomCenter,
+                        colors: [
+                          Colors.black.withOpacity(0.0),
+                          Colors.black.withOpacity(0.5)
+                        ],
+                        stops: [
+                          0.3,
+                          1.0
+                        ])),
+              ),
+              // Text on image
+              Positioned(
+                width: 170.0,
+                left: 45.0,
+                bottom: 45.0,
                 child: Text(
                   _buttonText,
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 22.0,
+                    fontSize: 19.0,
                     fontWeight: FontWeight.bold,
                     shadows: <Shadow>[
                       Shadow(
-                        color: Color.fromRGBO(0, 0, 0, 0.8),
+                        color: Color.fromRGBO(0, 0, 0, 0.5),
                         blurRadius: 4.0,
                         offset: Offset(2.0, 2.0),
                       ),

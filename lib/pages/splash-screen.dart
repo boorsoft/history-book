@@ -71,28 +71,6 @@ class _SplashScreenState extends State<SplashScreen> {
                   child: Padding(
                       padding: EdgeInsets.only(bottom: 15.0),
                       child: Image.asset("assets/boorsoft-logo-small.png"))))
-          // Container(
-          //     alignment: Alignment.bottomCenter,
-          //     child: Text(
-          //       "Разработчики:",
-          //       textAlign: TextAlign.center,
-          //       style: TextStyle(
-          //         fontFamily: 'San Francisco',
-          //         fontSize: 13.0,
-          //         fontWeight: FontWeight.bold,
-          //       ),
-          //     )),
-          // Container(
-          //     padding: EdgeInsets.fromLTRB(0, 0, 0, 5.0),
-          //     alignment: Alignment.bottomCenter,
-          //     child: Text(
-          //       "Акматов Азим\nЖумабек уулу Байдоолот\nДжолдошбеков Темирлан",
-          //       textAlign: TextAlign.center,
-          //       style: TextStyle(
-          //         fontFamily: 'Helvetica',
-          //         fontSize: 13.0,
-          //       ),
-          //     )),
         ],
       ),
     );
