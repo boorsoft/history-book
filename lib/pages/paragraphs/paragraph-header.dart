@@ -43,7 +43,7 @@ class ParagraphHeader extends StatelessWidget {
                   end: FractionalOffset.bottomCenter,
                   colors: [
                     Colors.black.withOpacity(0.0),
-                    Colors.black.withOpacity(0.6)
+                    Colors.black.withOpacity(0.75)
                   ],
                   stops: [
                     0.4,

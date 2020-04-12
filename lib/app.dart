@@ -62,7 +62,7 @@ class _AppState extends State<App> {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: SplashScreen(),
+        home: Home(),
         theme: ThemeData(
           primaryColor: appBarColor,
           // primaryTextTheme: TextTheme(

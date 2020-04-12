@@ -291,11 +291,14 @@ class QuizState extends State<Quiz> {
                 )));
               } else {
                 return Center(
-                    child: Text('Идёт загрузка данных...',
-                        style: TextStyle(
-                            fontSize: 18.0,
-                            fontWeight: FontWeight.bold,
-                            color: textColor)));
+                    child: Column(children: [
+                  Text('Идёт загрузка данных...',
+                      style: TextStyle(
+                          fontSize: 18.0,
+                          fontWeight: FontWeight.bold,
+                          color: textColor)),
+                  CircularProgressIndicator()
+                ]));
               }
             }));
   }

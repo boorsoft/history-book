@@ -7,6 +7,6 @@
     <!-- <item>
         <bitmap
             android:gravity="center"
-            android:src="@drawable/historybook-spash-screen" />
+            android:src="@drawable/historybook_splashscreen" />
     </item> -->
 </layer-list>

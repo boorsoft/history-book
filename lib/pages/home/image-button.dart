@@ -28,7 +28,7 @@ class ImageButton extends StatelessWidget {
                   // ),
                 ),
                 constraints: BoxConstraints.expand(
-                  height: 180.0,
+                  height: 200.0,
                 ),
                 child: Container(
                   decoration: BoxDecoration(
@@ -58,7 +58,7 @@ class ImageButton extends StatelessWidget {
               // Gradient on image
               Container(
                 margin: EdgeInsets.all(8.0),
-                height: 165.0,
+                height: 185.0,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(25.0),
                     gradient: LinearGradient(

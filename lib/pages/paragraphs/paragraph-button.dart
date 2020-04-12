@@ -60,8 +60,8 @@ class ParagraphButton extends StatelessWidget {
               ),
               Positioned(
                 width: 280.0,
-                left: 30.0,
-                bottom: 30.0,
+                left: 33.0,
+                bottom: 33.0,
                 child: Text(
                   _buttonText,
                   style: TextStyle(
