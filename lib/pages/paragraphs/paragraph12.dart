@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../style.dart';
 import 'package:flutter_html/flutter_html.dart';
+import 'paragraph-header.dart';
 
 class Paragraph12 extends StatelessWidget {
   @override
@@ -8,15 +9,14 @@ class Paragraph12 extends StatelessWidget {
     return Scaffold(
         backgroundColor: bgColor,
         body: Scrollbar(
-          child: SingleChildScrollView(
-            child: Container(
+            child: SingleChildScrollView(
+          child: Column(children: <Widget>[
+            ParagraphHeader("assets/images/article-pic12.jpg",
+                "§12.Социально-экономическое строительство в период становления советской социалистической системы (1917-1940 гг.)"),
+            Container(
               padding: EdgeInsets.all(10.0),
               child: Column(
                 children: [
-                  Text(
-                      '§12.Социально-экономическое строительство в период становления советской социалистической системы (1917-1940 гг.)',
-                      style: paragraphBoldTextStyle,
-                      textAlign: TextAlign.center),
                   Html(
                     data: """
 • С  установлением  диктатуры  пролетариата  коммунисты  во  главе  с  В. И. Лениным приступили к решению одной из самых злободневных  проблем – земельного вопроса. <br>
@@ -148,7 +148,7 @@ class Paragraph12 extends StatelessWidget {
                 ],
               ),
             ),
-          ),
-        ));
+          ]),
+        )));
   }
 }

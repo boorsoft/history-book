@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../style.dart';
 import 'package:flutter_html/flutter_html.dart';
+import 'paragraph-header.dart';
 
 class Paragraph16 extends StatelessWidget {
   @override
@@ -8,14 +9,14 @@ class Paragraph16 extends StatelessWidget {
     return Scaffold(
         backgroundColor: bgColor,
         body: Scrollbar(
-          child: SingleChildScrollView(
-            child: Container(
+            child: SingleChildScrollView(
+          child: Column(children: <Widget>[
+            ParagraphHeader("assets/images/article-pic16.jpg",
+                "§16.Суверенная Кыргызская Республика"),
+            Container(
               padding: EdgeInsets.all(10.0),
               child: Column(
                 children: [
-                  Text('§16.Суверенная Кыргызская Республика',
-                      style: paragraphBoldTextStyle,
-                      textAlign: TextAlign.center),
                   Html(
                     data: """
 <center><b>Распад СССР</b></center>
@@ -185,7 +186,7 @@ class Paragraph16 extends StatelessWidget {
                 ],
               ),
             ),
-          ),
-        ));
+          ]),
+        )));
   }
 }

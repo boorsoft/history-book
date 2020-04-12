@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../style.dart';
 import 'package:flutter_html/flutter_html.dart';
+import 'paragraph-header.dart';
 
 class Paragraph11 extends StatelessWidget {
   @override
@@ -8,14 +9,14 @@ class Paragraph11 extends StatelessWidget {
     return Scaffold(
         backgroundColor: bgColor,
         body: Scrollbar(
-          child: SingleChildScrollView(
-            child: Container(
+            child: SingleChildScrollView(
+          child: Column(children: <Widget>[
+            ParagraphHeader("assets/images/article-pic11.jpg",
+                "§11.Падение царизма. Установление советской власти"),
+            Container(
               padding: EdgeInsets.all(10.0),
               child: Column(
                 children: [
-                  Text('§11.Падение царизма. Установление советской власти',
-                      style: paragraphBoldTextStyle,
-                      textAlign: TextAlign.center),
                   Html(
                     data: """
 • Февральская буржуазно-демократическая революция 1917 г. стала важнейшим событием в истории населявших Россию народов. Революция, свергнув царскую власть, дала народам политические свободы. <br> 
@@ -129,7 +130,7 @@ class Paragraph11 extends StatelessWidget {
                 ],
               ),
             ),
-          ),
-        ));
+          ]),
+        )));
   }
 }

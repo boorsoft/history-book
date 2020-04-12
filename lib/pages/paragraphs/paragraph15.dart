@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../style.dart';
 import 'package:flutter_html/flutter_html.dart';
+import 'paragraph-header.dart';
 
 class Paragraph15 extends StatelessWidget {
   @override
@@ -8,15 +9,14 @@ class Paragraph15 extends StatelessWidget {
     return Scaffold(
         backgroundColor: bgColor,
         body: Scrollbar(
-          child: SingleChildScrollView(
-            child: Container(
+            child: SingleChildScrollView(
+          child: Column(children: <Widget>[
+            ParagraphHeader("assets/images/article-pic15.jpg",
+                "§15.Кыргызстан в период \"Развитого социализма\" и \"Перестройки\" (1964-1990 гг.)"),
+            Container(
               padding: EdgeInsets.all(10.0),
               child: Column(
                 children: [
-                  Text(
-                      '§15.Кыргызстан в период "Развитого социализма" и "Перестройки" (1964-1990 гг.)',
-                      style: paragraphBoldTextStyle,
-                      textAlign: TextAlign.center),
                   Html(
                     data: """
 <center><b>1. Кыргызстан в период «развитого социализма» (1964–1985 гг.)</b></center>
@@ -132,7 +132,7 @@ class Paragraph15 extends StatelessWidget {
                 ],
               ),
             ),
-          ),
-        ));
+          ]),
+        )));
   }
 }

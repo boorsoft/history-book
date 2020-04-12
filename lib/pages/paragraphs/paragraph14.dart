@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../style.dart';
 import 'package:flutter_html/flutter_html.dart';
+import 'paragraph-header.dart';
 
 class Paragraph14 extends StatelessWidget {
   @override
@@ -8,14 +9,14 @@ class Paragraph14 extends StatelessWidget {
     return Scaffold(
         backgroundColor: bgColor,
         body: Scrollbar(
-          child: SingleChildScrollView(
-            child: Container(
+            child: SingleChildScrollView(
+          child: Column(children: <Widget>[
+            ParagraphHeader("assets/images/article-pic14.jpg",
+                "§14.Кыргызстан в годы Великой Отечественной Войны"),
+            Container(
               padding: EdgeInsets.all(10.0),
               child: Column(
                 children: [
-                  Text('§14.Кыргызстан в годы Великой Отечественной Войны',
-                      style: paragraphBoldTextStyle,
-                      textAlign: TextAlign.center),
                   Html(
                     data: """
 <p>• Вероломное  нападение 22 июня 1941 г. немецко-фашистских захватчиков  на СССР нарушило  мирную жизнь советского народа.  </p>
@@ -213,7 +214,7 @@ class Paragraph14 extends StatelessWidget {
                 ],
               ),
             ),
-          ),
-        ));
+          ]),
+        )));
   }
 }
