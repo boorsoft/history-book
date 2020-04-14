@@ -1,4 +1,4 @@
-package com.batinc.historybook
+package com.boorsoft.historybook
 
 import androidx.annotation.NonNull;
 import io.flutter.embedding.android.FlutterActivity
