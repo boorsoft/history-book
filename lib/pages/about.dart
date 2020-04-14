@@ -3,7 +3,7 @@ import 'package:flutter_html/flutter_html.dart';
 import 'package:historybook/style.dart';
 
 class About extends StatelessWidget {
-  Widget ContactBox(String _developer, String _email) {
+  Widget contactBox(String _developer, String _email) {
     return Container(
       width: 250.0,
       height: 70.0,
@@ -83,14 +83,14 @@ class About extends StatelessWidget {
                                 color: textColor,
                                 fontWeight: FontWeight.bold))),
                     SizedBox(height: 20.0),
-                    ContactBox(
+                    contactBox(
                       'Жумабек уулу Байдоолот',
                       '  zhumabek_uulu_b@iuca.kg',
                     ),
-                    ContactBox('Акматов Азим', '  akmatov_az@iuca.kg'),
+                    contactBox('Акматов Азим', '  akmatov_az@iuca.kg'),
                     // ContactBox(
                     //     'Джолдошбеков Темирлан', '  dzholdoshbekov_t@iuca.kg'),
-                    ContactBox('Boorsoft', '  boorsoft@gmail.com'),
+                    contactBox('Boorsoft', '  boorsoft@gmail.com'),
                     SizedBox(height: 20.0),
                     Html(
                       data: """

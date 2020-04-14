@@ -41,7 +41,7 @@ class QuizState extends State<Quiz> {
     "d": appBarColor
   };
 
-  _QuizState() {
+  QuizState() {
     correctAnswers = this.correctAnswers;
   }
 

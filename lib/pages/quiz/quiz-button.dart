@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:historybook/style.dart';
 import 'package:historybook/pages/quiz/quiz.dart';
 
 class QuizButton extends StatelessWidget {

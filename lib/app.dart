@@ -6,7 +6,6 @@ import 'package:historybook/pages/persons/Torokul.dart';
 import 'package:historybook/style.dart';
 import 'pages/persons/DjusupBalasagyn.dart';
 import 'pages/persons/Mahmud.dart';
-import 'pages/splash-screen.dart';
 import 'pages/home/home.dart';
 import 'pages/paragraphs/paragraphs.dart';
 import 'pages/about.dart';
