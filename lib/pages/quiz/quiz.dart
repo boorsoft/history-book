@@ -1,39 +1,70 @@
 import 'dart:async';
 import 'dart:convert';
+import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:historybook/style.dart';
 
-class Quiz extends StatefulWidget {
-  QuizState quizState = new QuizState();
+class GetJson extends StatelessWidget {
+  List quizdata;
 
-  int getCorrectAnswers() {
-    return quizState.correctAnswers;
+  @override
+  Widget build(BuildContext context) {
+    return FutureBuilder(
+        future: DefaultAssetBundle.of(context).loadString(QuizState.getJson),
+        builder: (context, snapshot) {
+          quizdata = json.decode(snapshot.data.toString());
+          print(quizdata);
+          if (snapshot.hasData) {
+            return Quiz();
+          } else {
+            return Center(
+                child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                  Text('Идёт загрузка данных...',
+                      style: TextStyle(
+                          fontSize: 18.0,
+                          fontWeight: FontWeight.bold,
+                          color: textColor)),
+                  CircularProgressIndicator()
+                ]));
+          }
+        });
   }
+}
 
+class Quiz extends StatefulWidget {
   @override
   QuizState createState() => QuizState();
 }
 
 class QuizState extends State<Quiz> {
-  List quizdata;
+  static GetJson json = new GetJson();
+
+  List quizdata = json.quizdata; // Список вопросов
+
+  List urnList = []; // Список уникальных рандомных чисел
 
   static String getJson;
 
-  Color displayColor = appBarColor;
-  Color correct = Colors.lightBlue;
-  Color wrong = Colors.red;
+  Color displayColor = appBarColor; // Какой цвет отображать на кнопке
+  Color correct = Colors.lightBlue; // Цвет для правильного ответа
+  Color wrong = Colors.red; // Цвет для неправлиьного ответа
 
-  int correctAnswers = 0;
-  int i = 1;
+  int correctAnswers = 0; // Кол-во правильных ответов
+  int i = 1; // Итератор для вопросов
+  int questionNum = 1; // Номер вопроса для отображения
   Timer timer;
   int startTime = 30;
-  String showtimer = "30";
+  String showtimer = "30"; // Таймер, что б выводить на экран
   var timerColor = timeColor;
 
-  bool _enabled = true;
-  bool _nextButtonEnabled = false;
-  bool canceltimer = false;
+  bool _enabled = true; // Активна ли кнопка
+  bool _nextButtonEnabled = false; // Активна ли кнопка "Следующий"
+  bool canceltimer = false; // Отмена таймера
 
+  // Цвета кнопок
   Map<String, Color> buttonColor = {
     "a": appBarColor,
     "b": appBarColor,
@@ -41,14 +72,11 @@ class QuizState extends State<Quiz> {
     "d": appBarColor
   };
 
-  QuizState() {
-    correctAnswers = this.correctAnswers;
-  }
-
   @override
   void initState() {
     // startTimer();
     super.initState();
+    // randomArray();
   }
 
   @override
@@ -84,32 +112,51 @@ class QuizState extends State<Quiz> {
   //   });
   // }
 
+  // void randomArray() {
+  //   var riSet = <int>{}; // Сэт рандомных чисел
+  //   var random = new Random();
+
+  //   for (int i = 1; i < quizdata[0].length; i++) {
+  //     var randomNum = random.nextInt(quizdata[0].length);
+  //     riSet.add(randomNum);
+  //     if (riSet.length < quizdata[0].length) {
+  //       i = 1;
+  //     }
+  //   }
+  //   urnList = riSet.toList();
+  //   print(uriList);
+  // }
+
   void nextQuestion() {
     canceltimer = false;
     startTime = 30;
-    _nextButtonEnabled = false;
+    _nextButtonEnabled = false; // Отключаем кнопку "следующий"
     setState(() {
       if (i < quizdata[0].length) {
         i++;
+        questionNum++;
       } else {
         _showDialog();
       }
+      // Сбрасываем цвета
       buttonColor["a"] = appBarColor;
       buttonColor["b"] = appBarColor;
       buttonColor["c"] = appBarColor;
       buttonColor["d"] = appBarColor;
-      _enabled = true;
+      _enabled = true; // Активируем кнопки
     });
     // startTimer();
   }
 
   void checkAnswer(String option) {
     if (quizdata[2][i.toString()] == quizdata[1][i.toString()][option]) {
-      displayColor = correct;
-      correctAnswers += 1;
+      displayColor =
+          correct; // Выводим цвет синий - если правильно, красный - если неправильно
+      correctAnswers += 1; // Увеличиваем кол-во правильных ответов
     } else {
       displayColor = wrong;
       setState(() {
+        // Показываем правильный ответ, если ответили неправильно
         if (quizdata[1][i.toString()]['a'] == quizdata[2][i.toString()]) {
           buttonColor['a'] = correct;
         } else if (quizdata[1][i.toString()]['b'] ==
@@ -169,6 +216,7 @@ class QuizState extends State<Quiz> {
     );
   }
 
+  // Диалоговое окно после завершения теста
   void _showDialog() {
     showDialog(
         context: context,
@@ -217,89 +265,71 @@ class QuizState extends State<Quiz> {
         backgroundColor: bgColor,
         appBar:
             AppBar(backgroundColor: appBarColor, title: Text('Тестирование')),
-        body: FutureBuilder(
-            future: DefaultAssetBundle.of(context).loadString(getJson),
-            builder: (context, snapshot) {
-              quizdata = json.decode(snapshot.data.toString());
-              if (snapshot.hasData) {
-                return SingleChildScrollView(
-                    child: Container(
-                        child: Column(
-                  children: <Widget>[
-                    SizedBox(height: 10.0),
-                    Container(
-                      padding: EdgeInsets.only(left: 10.0),
-                      alignment: Alignment.topLeft,
-                      child: Text(
-                          'Вопрос № ' +
-                              i.toString() +
-                              "\\" +
-                              quizdata[0].length.toString(),
-                          style: TextStyle(
-                            color: textColor,
-                            fontFamily: 'San Francisco',
-                          )),
-                    ),
-                    Container(
-                      padding: EdgeInsets.only(left: 10.0),
-                      alignment: Alignment.topLeft,
-                      child: Text(
-                          'Количество правильных ответов: ' +
-                              correctAnswers.toString(),
-                          style: TextStyle(
-                              fontFamily: 'San Francisco', color: textColor)),
-                    ),
-                    Container(
-                      margin: EdgeInsets.symmetric(vertical: 30.0),
-                      padding: EdgeInsets.all(10.0),
-                      alignment: Alignment.bottomCenter,
-                      child: Text(
-                        quizdata[0][i.toString()],
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            fontSize: 16.5,
-                            fontFamily: 'San Francisco',
-                            color: textColor),
-                      ),
-                    ),
-                    Container(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          optionButton('a'),
-                          optionButton('b'),
-                          optionButton('c'),
-                          optionButton('d'),
-                        ],
-                      ),
-                    ),
-                    SizedBox(height: 30.0),
-                    nextButton()
-                    // Expanded(
-                    //   flex: 1,
-                    //   child: Container(
-                    //     child: Text(
-                    //       showtimer,
-                    //       style: TextStyle(
-                    //         color: timerColor,
-                    //         fontFamily: 'Blogger',
-                    //         fontSize: 20.0,
-                    //       ),
-                    //     ),
-                    //   ),
-                  ],
-                )));
-              } else {
-                return Center(
-                    child: Column(children: [
-                  Text('Идёт загрузка данных...',
-                      style: TextStyle(
-                          fontSize: 18.0,
-                          fontWeight: FontWeight.bold,
-                          color: textColor)),
-                  CircularProgressIndicator()
-                ]));
-              }
-            }));
+        body: SingleChildScrollView(
+            child: Container(
+                child: Column(
+          children: <Widget>[
+            SizedBox(height: 10.0),
+            Container(
+              padding: EdgeInsets.only(left: 10.0),
+              alignment: Alignment.topLeft,
+              child: Text(
+                  'Вопрос № ' +
+                      questionNum.toString() +
+                      "\\" +
+                      quizdata[0].length.toString(),
+                  style: TextStyle(
+                    color: textColor,
+                    fontFamily: 'San Francisco',
+                  )),
+            ),
+            Container(
+              padding: EdgeInsets.only(left: 10.0),
+              alignment: Alignment.topLeft,
+              child: Text(
+                  'Количество правильных ответов: ' + correctAnswers.toString(),
+                  style:
+                      TextStyle(fontFamily: 'San Francisco', color: textColor)),
+            ),
+            Container(
+              margin: EdgeInsets.symmetric(vertical: 30.0),
+              padding: EdgeInsets.all(10.0),
+              alignment: Alignment.bottomCenter,
+              child: Text(
+                quizdata[0][i.toString()],
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    fontSize: 16.5,
+                    fontFamily: 'San Francisco',
+                    color: textColor),
+              ),
+            ),
+            Container(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  optionButton('a'),
+                  optionButton('b'),
+                  optionButton('c'),
+                  optionButton('d'),
+                ],
+              ),
+            ),
+            SizedBox(height: 30.0),
+            nextButton()
+            // Expanded(
+            //   flex: 1,
+            //   child: Container(
+            //     child: Text(
+            //       showtimer,
+            //       style: TextStyle(
+            //         color: timerColor,
+            //         fontFamily: 'Blogger',
+            //         fontSize: 20.0,
+            //       ),
+            //     ),
+            //   ),
+          ],
+        ))));
   }
 }
