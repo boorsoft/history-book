@@ -79,7 +79,7 @@ class _AppState extends State<App> {
       "/Home": (BuildContext context) => Home(),
       "/Paragraphs": (BuildContext context) => Paragraphs(),
       "/About": (BuildContext context) => About(),
-      "/Quiz": (BuildContext context) => Quiz(),
+      "/Quiz": (BuildContext context) => GetJson(),
       "/QuizStarter": (BuildContext context) => QuizStarter(),
       "/Persons": (BuildContext context) => Persons(),
       "/Paragraphs/Paragraph1": (BuildContext context) => Paragraph1(),

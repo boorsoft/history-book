@@ -15,7 +15,7 @@ class QuizButton extends StatelessWidget {
         GestureDetector(
             onTap: () => {
                   Navigator.of(context).pushNamed("/Quiz"),
-                  QuizState.getJson = jsonFile
+                  GetJson.getJson = jsonFile
                 },
             child: Container(
                 margin: EdgeInsets.fromLTRB(10.0, 20.0, 10.0, 20.0),

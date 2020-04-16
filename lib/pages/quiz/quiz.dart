@@ -6,16 +6,18 @@ import 'package:historybook/style.dart';
 
 class GetJson extends StatelessWidget {
   List quizdata;
+  static String getJson;
 
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
-        future: DefaultAssetBundle.of(context).loadString(QuizState.getJson),
+        future: DefaultAssetBundle.of(context).loadString(getJson),
         builder: (context, snapshot) {
           quizdata = json.decode(snapshot.data.toString());
-          print(quizdata);
           if (snapshot.hasData) {
-            return Quiz(quizdata: quizdata);
+            return Quiz(
+              quizdata: quizdata,
+            );
           } else {
             return Center(
                 child: Column(
@@ -36,19 +38,15 @@ class GetJson extends StatelessWidget {
 
 class Quiz extends StatefulWidget {
   final List quizdata;
+
   Quiz({this.quizdata});
 
   @override
-  QuizState createState() => QuizState(quizdata: quizdata);
+  QuizState createState() => QuizState();
 }
 
 class QuizState extends State<Quiz> {
-  List quizdata = widget.quizdata; // Список вопросов
-  QuizState({this.quizdata});
-
   List urnList = []; // Список уникальных рандомных чисел
-
-  static String getJson;
 
   Color displayColor = appBarColor; // Какой цвет отображать на кнопке
   Color correct = Colors.lightBlue; // Цвет для правильного ответа
@@ -77,8 +75,9 @@ class QuizState extends State<Quiz> {
   @override
   void initState() {
     // startTimer();
+    randomArray();
+    i = urnList[0];
     super.initState();
-    // randomArray();
   }
 
   @override
@@ -114,28 +113,28 @@ class QuizState extends State<Quiz> {
   //   });
   // }
 
-  // void randomArray() {
-  //   var riSet = <int>{}; // Сэт рандомных чисел
-  //   var random = new Random();
+  void randomArray() {
+    var riSet = <int>{}; // Сэт рандомных чисел
+    var random = new Random();
 
-  //   for (int i = 1; i < quizdata[0].length; i++) {
-  //     var randomNum = random.nextInt(quizdata[0].length);
-  //     riSet.add(randomNum);
-  //     if (riSet.length < quizdata[0].length) {
-  //       i = 1;
-  //     }
-  //   }
-  //   urnList = riSet.toList();
-  //   print(uriList);
-  // }
+    for (int i = 0; i <= widget.quizdata[0].length; i++) {
+      var randomNum = random.nextInt(widget.quizdata[0].length) + 1;
+      riSet.add(randomNum);
+      if (riSet.length < widget.quizdata[0].length) {
+        i = 0;
+      }
+    }
+    urnList = riSet.toList();
+    print(urnList);
+  }
 
   void nextQuestion() {
     canceltimer = false;
     startTime = 30;
     _nextButtonEnabled = false; // Отключаем кнопку "следующий"
     setState(() {
-      if (i < quizdata[0].length) {
-        i++;
+      if (questionNum < widget.quizdata[0].length) {
+        i = urnList[questionNum];
         questionNum++;
       } else {
         _showDialog();
@@ -151,7 +150,8 @@ class QuizState extends State<Quiz> {
   }
 
   void checkAnswer(String option) {
-    if (quizdata[2][i.toString()] == quizdata[1][i.toString()][option]) {
+    if (widget.quizdata[2][i.toString()] ==
+        widget.quizdata[1][i.toString()][option]) {
       displayColor =
           correct; // Выводим цвет синий - если правильно, красный - если неправильно
       correctAnswers += 1; // Увеличиваем кол-во правильных ответов
@@ -159,16 +159,17 @@ class QuizState extends State<Quiz> {
       displayColor = wrong;
       setState(() {
         // Показываем правильный ответ, если ответили неправильно
-        if (quizdata[1][i.toString()]['a'] == quizdata[2][i.toString()]) {
+        if (widget.quizdata[1][i.toString()]['a'] ==
+            widget.quizdata[2][i.toString()]) {
           buttonColor['a'] = correct;
-        } else if (quizdata[1][i.toString()]['b'] ==
-            quizdata[2][i.toString()]) {
+        } else if (widget.quizdata[1][i.toString()]['b'] ==
+            widget.quizdata[2][i.toString()]) {
           buttonColor['b'] = correct;
-        } else if (quizdata[1][i.toString()]['c'] ==
-            quizdata[2][i.toString()]) {
+        } else if (widget.quizdata[1][i.toString()]['c'] ==
+            widget.quizdata[2][i.toString()]) {
           buttonColor['c'] = correct;
-        } else if (quizdata[1][i.toString()]['d'] ==
-            quizdata[2][i.toString()]) {
+        } else if (widget.quizdata[1][i.toString()]['d'] ==
+            widget.quizdata[2][i.toString()]) {
           buttonColor['d'] = correct;
         }
       });
@@ -200,7 +201,7 @@ class QuizState extends State<Quiz> {
         onPressed: _onPressed,
         disabledColor: buttonColor[option],
         child: Text(
-          quizdata[1][i.toString()][option],
+          widget.quizdata[1][i.toString()][option],
           textAlign: TextAlign.center,
           style: TextStyle(
             color: Colors.white,
@@ -279,7 +280,7 @@ class QuizState extends State<Quiz> {
                   'Вопрос № ' +
                       questionNum.toString() +
                       "\\" +
-                      quizdata[0].length.toString(),
+                      widget.quizdata[0].length.toString(),
                   style: TextStyle(
                     color: textColor,
                     fontFamily: 'San Francisco',
@@ -298,7 +299,7 @@ class QuizState extends State<Quiz> {
               padding: EdgeInsets.all(10.0),
               alignment: Alignment.bottomCenter,
               child: Text(
-                quizdata[0][i.toString()],
+                widget.quizdata[0][i.toString()],
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     fontSize: 16.5,
