@@ -15,7 +15,7 @@ class GetJson extends StatelessWidget {
           quizdata = json.decode(snapshot.data.toString());
           print(quizdata);
           if (snapshot.hasData) {
-            return Quiz();
+            return Quiz(quizdata: quizdata);
           } else {
             return Center(
                 child: Column(
@@ -35,14 +35,16 @@ class GetJson extends StatelessWidget {
 }
 
 class Quiz extends StatefulWidget {
+  final List quizdata;
+  Quiz({this.quizdata});
+
   @override
-  QuizState createState() => QuizState();
+  QuizState createState() => QuizState(quizdata: quizdata);
 }
 
 class QuizState extends State<Quiz> {
-  static GetJson json = new GetJson();
-
-  List quizdata = json.quizdata; // Список вопросов
+  List quizdata = widget.quizdata; // Список вопросов
+  QuizState({this.quizdata});
 
   List urnList = []; // Список уникальных рандомных чисел
 
