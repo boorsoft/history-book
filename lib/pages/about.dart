@@ -53,7 +53,7 @@ class About extends StatelessWidget {
                     ),
                     SizedBox(height: 20.0),
                     Text(
-                      'Версия: 1.0.1',
+                      'Версия: 1.0.2',
                       style: TextStyle(fontSize: 15.0, color: textColor),
                     ),
                     SizedBox(height: 20.0),

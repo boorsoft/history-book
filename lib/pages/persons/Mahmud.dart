@@ -6,6 +6,7 @@ class Mahmud extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: bgColor,
         appBar: AppBar(
           title: Text("Махмуд Кашгари"),
         ),

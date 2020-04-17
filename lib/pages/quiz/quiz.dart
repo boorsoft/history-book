@@ -19,18 +19,20 @@ class GetJson extends StatelessWidget {
               quizdata: quizdata,
             );
           } else {
-            return Center(
-                child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                  Text('Идёт загрузка данных...',
-                      style: TextStyle(
-                          fontSize: 18.0,
-                          fontWeight: FontWeight.bold,
-                          color: textColor)),
-                  CircularProgressIndicator()
-                ]));
+            return Scaffold(
+                backgroundColor: bgColor,
+                body: Center(
+                    child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                      Text('Идёт загрузка данных...',
+                          style: TextStyle(
+                              fontSize: 18.0,
+                              fontWeight: FontWeight.bold,
+                              color: textColor)),
+                      CircularProgressIndicator()
+                    ])));
           }
         });
   }
@@ -58,6 +60,7 @@ class QuizState extends State<Quiz> {
   Timer timer;
   int startTime = 30;
   String showtimer = "30"; // Таймер, что б выводить на экран
+
   var timerColor = timeColor;
 
   bool _enabled = true; // Активна ли кнопка
@@ -183,6 +186,7 @@ class QuizState extends State<Quiz> {
 
   Widget optionButton(String option) {
     var _onPressed;
+
     if (_enabled) {
       _onPressed = () {
         checkAnswer(option);
@@ -297,7 +301,7 @@ class QuizState extends State<Quiz> {
             Container(
               margin: EdgeInsets.symmetric(vertical: 30.0),
               padding: EdgeInsets.all(10.0),
-              alignment: Alignment.bottomCenter,
+              alignment: Alignment.center,
               child: Text(
                 widget.quizdata[0][i.toString()],
                 textAlign: TextAlign.center,
@@ -314,12 +318,13 @@ class QuizState extends State<Quiz> {
                   optionButton('a'),
                   optionButton('b'),
                   optionButton('c'),
-                  optionButton('d'),
+                  optionButton('d')
                 ],
               ),
             ),
             SizedBox(height: 30.0),
-            nextButton()
+            nextButton(),
+
             // Expanded(
             //   flex: 1,
             //   child: Container(
