@@ -272,9 +272,8 @@ class QuizState extends State<Quiz> {
         backgroundColor: bgColor,
         appBar:
             AppBar(backgroundColor: appBarColor, title: Text('Тестирование')),
-        body: SingleChildScrollView(
-            child: Container(
-                child: Column(
+        body: Container(
+            child: ListView(
           children: <Widget>[
             SizedBox(height: 10.0),
             Container(
@@ -301,6 +300,9 @@ class QuizState extends State<Quiz> {
             Container(
               margin: EdgeInsets.symmetric(vertical: 30.0),
               padding: EdgeInsets.all(10.0),
+              constraints: BoxConstraints(
+                minHeight: 130.0,
+              ),
               alignment: Alignment.center,
               child: Text(
                 widget.quizdata[0][i.toString()],
@@ -322,7 +324,7 @@ class QuizState extends State<Quiz> {
                 ],
               ),
             ),
-            SizedBox(height: 30.0),
+            SizedBox(height: 20.0),
             nextButton(),
 
             // Expanded(
@@ -338,6 +340,6 @@ class QuizState extends State<Quiz> {
             //     ),
             //   ),
           ],
-        ))));
+        )));
   }
 }
