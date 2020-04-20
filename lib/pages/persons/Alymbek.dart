@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:historybook/style.dart';
+import 'person-header.dart';
 
 class Alymbek extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: bgColor,
-        appBar: AppBar(
-          backgroundColor: appBarColor,
-          title: Text("Алымбек Датка"),
-        ),
         body: Scrollbar(
-          child: SingleChildScrollView(
-            child: Container(
+            child: SingleChildScrollView(
+          child: Column(children: <Widget>[
+            PersonHeader("assets/images/persons/Alymbek.jpg", "Алымбек Датка"),
+            Container(
               padding: EdgeInsets.all(10.0),
               child: Column(
                 children: <Widget>[
@@ -32,7 +31,7 @@ class Alymbek extends StatelessWidget {
                 ],
               ),
             ),
-          ),
-        ));
+          ]),
+        )));
   }
 }

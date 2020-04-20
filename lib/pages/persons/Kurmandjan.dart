@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:historybook/style.dart';
+import 'person-header.dart';
 
 class Kurmanjan extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: bgColor,
-        appBar: AppBar(
-          backgroundColor: appBarColor,
-          title: Text("Курманжан Датка"),
-        ),
         body: Scrollbar(
-          child: SingleChildScrollView(
-            child: Container(
+            child: SingleChildScrollView(
+          child: Column(children: <Widget>[
+            PersonHeader(
+                "assets/images/persons/Kurmandjan.jpg", "Курманжан Датка"),
+            Container(
               padding: EdgeInsets.all(10.0),
               child: Column(
                 children: <Widget>[
@@ -46,7 +46,7 @@ class Kurmanjan extends StatelessWidget {
                 ],
               ),
             ),
-          ),
-        ));
+          ]),
+        )));
   }
 }

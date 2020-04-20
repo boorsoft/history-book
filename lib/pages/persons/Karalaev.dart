@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:historybook/style.dart';
+import 'person-header.dart';
 
 class Karalaev extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: bgColor,
-        appBar: AppBar(
-          backgroundColor: appBarColor,
-          title: Text("Саякбай Каралаев"),
-        ),
         body: Scrollbar(
             child: SingleChildScrollView(
-          child: Container(
+                child: Column(children: <Widget>[
+          PersonHeader(
+              "assets/images/persons/Karalaev.jpg", "Саякбай Каралаев"),
+          Container(
             padding: EdgeInsets.all(10.0),
             child: Column(
               children: <Widget>[
@@ -62,6 +62,6 @@ class Karalaev extends StatelessWidget {
               ],
             ),
           ),
-        )));
+        ]))));
   }
 }

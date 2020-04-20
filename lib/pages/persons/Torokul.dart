@@ -1,19 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:historybook/style.dart';
+import 'person-header.dart';
 
 class Torokul extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: bgColor,
-        appBar: AppBar(
-          backgroundColor: appBarColor,
-          title: Text("Торекул Айтматов"),
-        ),
         body: Scrollbar(
             child: SingleChildScrollView(
-          child: Container(
+                child: Column(children: <Widget>[
+          PersonHeader("assets/images/persons/Torokul.jpg", "Торекул Айтматов"),
+          Container(
             padding: EdgeInsets.all(10.0),
             child: Column(
               children: <Widget>[
@@ -33,6 +32,6 @@ class Torokul extends StatelessWidget {
               ],
             ),
           ),
-        )));
+        ]))));
   }
 }

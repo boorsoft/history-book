@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_html/flutter_html.dart';
 import 'package:historybook/style.dart';
+import 'person-header.dart';
 
 class TagaiBii extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: bgColor,
-        appBar: AppBar(
-          backgroundColor: appBarColor,
-          title: Text("Муххамед Кыргыз (Тагай Бий)"),
-        ),
         body: Scrollbar(
             child: SingleChildScrollView(
-          child: Container(
+                child: Column(children: <Widget>[
+          PersonHeader("assets/images/persons/TagaiBii.jpg",
+              "Муххамед Кыргыз (Тагай Бий)"),
+          Container(
             padding: EdgeInsets.all(10.0),
             child: Column(
               children: <Widget>[
@@ -36,6 +36,6 @@ class TagaiBii extends StatelessWidget {
               ],
             ),
           ),
-        )));
+        ]))));
   }
 }
