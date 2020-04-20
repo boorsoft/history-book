@@ -76,7 +76,7 @@ class ParagraphHeader extends StatelessWidget {
             child: IconButton(
                 icon: Icon(Icons.arrow_back),
                 iconSize: 30.0,
-                color: Colors.white,
+                color: Colors.black54,
                 onPressed: () => Navigator.pop(context))),
       ],
     );

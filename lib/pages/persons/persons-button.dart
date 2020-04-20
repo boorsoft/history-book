@@ -36,12 +36,14 @@ class PersonsButton extends StatelessWidget {
                   width: 170.0,
                   height: 220.0,
                   child: ClipRRect(
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(30.0),
-                      topRight: Radius.circular(30.0),
-                    ),
-                    child: Image.asset(_imagePath, fit: BoxFit.cover),
-                  )),
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(30.0),
+                        topRight: Radius.circular(30.0),
+                      ),
+                      child: Hero(
+                        tag: _imagePath,
+                        child: Image.asset(_imagePath, fit: BoxFit.cover),
+                      ))),
             ),
           ),
           Container(
