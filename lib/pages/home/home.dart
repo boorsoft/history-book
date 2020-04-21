@@ -9,12 +9,14 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  @override
   void initState() {
     appBarColor = appBarColorDefault;
     bgColor = bgColorDefault;
     textColor = textColorDefault;
     shadowColor = shadowColorDefault;
     timeColor = timeColorDefault;
+
     super.initState();
   }
 

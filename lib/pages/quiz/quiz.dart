@@ -49,6 +49,8 @@ class Quiz extends StatefulWidget {
 
 class QuizState extends State<Quiz> {
   List urnList = []; // Список уникальных рандомных чисел
+  List urnButtonList =
+      []; // Список уникальных рандомных чисел для вариантов ответа
 
   Color displayColor = appBarColor; // Какой цвет отображать на кнопке
   Color correct = Colors.lightBlue; // Цвет для правильного ответа
@@ -67,6 +69,8 @@ class QuizState extends State<Quiz> {
   bool _nextButtonEnabled = false; // Активна ли кнопка "Следующий"
   bool canceltimer = false; // Отмена таймера
 
+  Map<int, String> optionBtn = {1: "a", 2: "b", 3: "c", 4: "d"};
+
   // Цвета кнопок
   Map<String, Color> buttonColor = {
     "a": appBarColor,
@@ -79,6 +83,7 @@ class QuizState extends State<Quiz> {
   void initState() {
     // startTimer();
     randomArray();
+    randomButton();
     i = urnList[0];
     super.initState();
   }
@@ -129,6 +134,21 @@ class QuizState extends State<Quiz> {
     }
     urnList = riSet.toList();
     print(urnList);
+  }
+
+  void randomButton() {
+    var rnSet = <int>{}; // Сэт рандомных чисел
+    var random = new Random();
+
+    for (int i = 1; i <= 4; i++) {
+      var randomNum = random.nextInt(4) + 1;
+      rnSet.add(randomNum);
+      if (rnSet.length < 4) {
+        i = 1;
+      }
+    }
+    urnButtonList = rnSet.toList();
+    print(urnButtonList);
   }
 
   void nextQuestion() {
@@ -317,10 +337,10 @@ class QuizState extends State<Quiz> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  optionButton('a'),
-                  optionButton('b'),
-                  optionButton('c'),
-                  optionButton('d')
+                  optionButton(optionBtn[urnButtonList[0]]),
+                  optionButton(optionBtn[urnButtonList[1]]),
+                  optionButton(optionBtn[urnButtonList[2]]),
+                  optionButton(optionBtn[urnButtonList[3]])
                 ],
               ),
             ),

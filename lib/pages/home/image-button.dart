@@ -45,9 +45,8 @@ class ImageButton extends StatelessWidget {
                     child: Hero(
                       tag: _assetPath,
                       child: ClipRRect(
-                        borderRadius: BorderRadius.circular(25.0),
-                        child: Image.asset(_assetPath, fit: BoxFit.cover),
-                      ),
+                          borderRadius: BorderRadius.circular(25.0),
+                          child: Image.asset(_assetPath, fit: BoxFit.cover)),
                     ),
                   )),
               // Gradient on image
