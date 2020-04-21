@@ -60,6 +60,7 @@ class App extends StatefulWidget {
 class AppState extends State<App> {
   @override
   void initState() {
+    print(appBarColor);
     super.initState();
   }
 
@@ -69,7 +70,6 @@ class AppState extends State<App> {
         saveThemesOnChange: true,
         loadThemeOnInit: true,
         themes: <AppTheme>[defaultTheme(), darkTheme()],
-        defaultThemeId: "default_theme",
         child: MaterialApp(
             debugShowCheckedModeBanner: false,
             home: ThemeConsumer(child: Home()),
@@ -81,10 +81,9 @@ class AppState extends State<App> {
         id: "default_theme",
         description: "Default theme of the app",
         data: ThemeData(
-            brightness: Brightness.light,
-            primaryColor: appBarColorDefault,
-            scaffoldBackgroundColor: bgColorDefault,
-            buttonColor: appBarColorDefault,
+            primaryColor: appBarColor = appBarColorDefault,
+            scaffoldBackgroundColor: bgColor = bgColorDefault,
+            buttonColor: appBarColor,
             fontFamily: 'San Francisco'));
   }
 
@@ -93,10 +92,9 @@ class AppState extends State<App> {
         id: "dark_theme",
         description: "Dark theme of the app",
         data: ThemeData(
-            brightness: Brightness.dark,
-            primaryColor: appBarColorDark,
-            scaffoldBackgroundColor: bgColorDark,
-            buttonColor: appBarColorDark,
+            primaryColor: appBarColor = appBarColorDark,
+            scaffoldBackgroundColor: bgColor = bgColorDark,
+            buttonColor: appBarColor,
             fontFamily: 'San Francisco'));
   }
 

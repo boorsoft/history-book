@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'image-button.dart';
 import 'package:open_iconic_flutter/open_iconic_flutter.dart';
 import 'package:theme_provider/theme_provider.dart';
+import 'package:historybook/style.dart';
 
 class Home extends StatefulWidget {
   @override
