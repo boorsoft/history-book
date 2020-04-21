@@ -53,10 +53,29 @@ import 'pages/persons/Darii1.dart';
 
 class App extends StatefulWidget {
   @override
-  _AppState createState() => _AppState();
+  AppState createState() => AppState();
 }
 
-class _AppState extends State<App> {
+class AppState extends State<App> {
+  @override
+  void initState() {
+    if (darkTheme) {
+      appBarColor = appBarColorDark;
+      bgColor = bgColorDark;
+      textColor = textColorWhite;
+      shadowColor = shadowColorDark;
+      timeColor = timeColorDark;
+    } else {
+      appBarColor = appBarColorDefault;
+      bgColor = bgColorDefault;
+      textColor = textColorDefault;
+      shadowColor = shadowColorDefault;
+      timeColor = timeColorDefault;
+    }
+
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

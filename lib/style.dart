@@ -21,6 +21,8 @@ Color timeColor = Color.fromRGBO(127, 156, 163, 1);
 Color timeColorDark = Colors.white;
 Color timeColorDefault = Color.fromRGBO(127, 156, 163, 1);
 
+bool darkTheme = false;
+
 TextStyle paragraphTextStyle = TextStyle(
   fontFamily: 'San Francisco',
   fontSize: 16.5,
