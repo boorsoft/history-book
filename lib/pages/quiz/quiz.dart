@@ -289,9 +289,7 @@ class QuizState extends State<Quiz> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: bgColor,
-        appBar:
-            AppBar(backgroundColor: appBarColor, title: Text('Тестирование')),
+        appBar: AppBar(title: Text('Тестирование')),
         body: Container(
             child: ListView(
           children: <Widget>[

@@ -12,40 +12,37 @@ class _QuizStarterState extends State<QuizStarter> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: bgColor,
         body: Column(children: <Widget>[
-          ParagraphHeader("assets/images/home-pic4.jpg", "Тестирование"),
-          Expanded(
-              child: Container(
-                  child: ListView(
-            children: <Widget>[
-              QuizButton(
-                  "Кыргызстан с древнейших времен", "assets/json/exam.json"),
-              QuizButton("Кыргызстан в первой половине XX века",
-                  "assets/json/exam2.json"),
-              QuizButton(
-                  "Первые племенные объединения", "assets/json/exam3.json"),
-              QuizButton(
-                  "Кыргызское великодержавие, караханиды и монгольская эпоха",
-                  "assets/json/exam4.json"),
-              QuizButton(
-                  "Кокандское ханство и Кыргызстан во второй половине XIX в.",
-                  "assets/json/exam5.json"),
-              QuizButton("Кыргызстан XX век", "assets/json/exam6.json"),
-              QuizButton("Кыргызстан в годы Великой Отечественной Войны",
-                  "assets/json/exam7.json"),
-              QuizButton("Кыргызстан во второй половине XX века",
-                  "assets/json/exam8.json"),
-              QuizButton(
-                  "Источники по истории Кыргызстана и Кыргызстан в средневековье",
-                  "assets/json/exam9.json"),
-              QuizButton("Кыргызстан под властью Кокандского ханства",
-                  "assets/json/exam10.json"),
-              QuizButton(
-                  "Установление советской власти и развитие национальной государственности",
-                  "assets/json/exam11.json"),
-            ],
-          )))
-        ]));
+      ParagraphHeader("assets/images/home-pic4.jpg", "Тестирование"),
+      Expanded(
+          child: Container(
+              child: ListView(
+        children: <Widget>[
+          QuizButton("Кыргызстан с древнейших времен", "assets/json/exam.json"),
+          QuizButton(
+              "Кыргызстан в первой половине XX века", "assets/json/exam2.json"),
+          QuizButton("Первые племенные объединения", "assets/json/exam3.json"),
+          QuizButton(
+              "Кыргызское великодержавие, караханиды и монгольская эпоха",
+              "assets/json/exam4.json"),
+          QuizButton(
+              "Кокандское ханство и Кыргызстан во второй половине XIX в.",
+              "assets/json/exam5.json"),
+          QuizButton("Кыргызстан XX век", "assets/json/exam6.json"),
+          QuizButton("Кыргызстан в годы Великой Отечественной Войны",
+              "assets/json/exam7.json"),
+          QuizButton("Кыргызстан во второй половине XX века",
+              "assets/json/exam8.json"),
+          QuizButton(
+              "Источники по истории Кыргызстана и Кыргызстан в средневековье",
+              "assets/json/exam9.json"),
+          QuizButton("Кыргызстан под властью Кокандского ханства",
+              "assets/json/exam10.json"),
+          QuizButton(
+              "Установление советской власти и развитие национальной государственности",
+              "assets/json/exam11.json"),
+        ],
+      )))
+    ]));
   }
 }

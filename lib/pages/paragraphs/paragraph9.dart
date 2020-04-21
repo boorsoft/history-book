@@ -7,18 +7,17 @@ class Paragraph9 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: bgColor,
         body: Scrollbar(
             child: SingleChildScrollView(
-          child: Column(children: <Widget>[
-            ParagraphHeader("assets/images/article-pic9.jpg",
-                "§9.Кыргызы в период господства Кокандского Ханства"),
-            Container(
-              padding: EdgeInsets.all(10.0),
-              child: Column(
-                children: [
-                  Html(
-                    data: """
+      child: Column(children: <Widget>[
+        ParagraphHeader("assets/images/article-pic9.jpg",
+            "§9.Кыргызы в период господства Кокандского Ханства"),
+        Container(
+          padding: EdgeInsets.all(10.0),
+          child: Column(
+            children: [
+              Html(
+                data: """
 <p>•  В начале XVIII в. отпадает от Бухарского Ханства Фергана, в результате объединения нескольких бекств. Основателем новой династии стал Узбекский феодал Шахрух-бий (время правления 1709 – 1721 гг.), который в 1709 г. захватил  власть в Коканде, включая территории Исфаны и Маргелана. Затем к государству были присоединены мелкие феодальные владения Ферганы (Ходжент,  Андижан, Наманган и др.) </p>
 <p>•  Значительную помощь Шахрух-бию на пути к власти оказывали и правители кыргызского происхождения такие, как Акбото-бий, Кубат-бий, Ажы-бий,  Кулчигач-бий и др.  Почти двухсотлетнюю (1709 – 1876 гг.) историю развития Кокандского ханства можно разделить на три неравных по времени этапа. </p>
 <p>1. Основание Кокандского государства – 1709 – 1800 гг. В этот период была  сформирована административно-политическая система, укрепились социальноэкономические основы государства. Произошло окончательное слияние и объединение отдельных самостоятельных владений Ферганской долины с Кокандским государством.</p>
@@ -33,27 +32,26 @@ class Paragraph9 extends StatelessWidget {
 <p>•  Весной 1831 г. одно войско под предводительством Лашкера Кушбеги прошло к Иссык-Кулю через Чымкент, Олуя-Ата и Чуйскую долину и далее на  Иссык-Куль. Другое, возглавляемое минбаши Хаккулой, выйдя из Ферганы,  прошло через перевал Когарт (Тогуз-Торо) и дошло до Ак-Талаа, Ат-Баши, Нарына, Джумгала и Кочкора и далее до Иссык-Куля, грабя и разоряя народ на  своем пути. </p>
 <p>•  Для закрепления своих завоеваний кокандцы создавали на торговых путях крепостные укрепления с военными гарнизонами – Бишкек, Токмак, Ак-Суу, Чалдовар, Кара-Балта, Кастек, Мерке, Куртка, Ат-Баши, Тоң, Жыргалаң, Тамга,  Барскоон, Каракол, Суусамыр и др. </p>
               """,
-                    defaultTextStyle: paragraphTextStyle,
-                    useRichText: true,
-                  ),
-                  Image.asset("assets/images/paragraphs/kokan-han-admin.jpg"),
-                  SizedBox(height: 12.0),
-                  Text(
-                    "Династия Кокандских ханов",
-                    style: paragraphBoldTextStyle,
-                    textAlign: TextAlign.center,
-                  ),
-                  Image.asset(
-                      "assets/images/paragraphs/Kokan-hans-dynasty.jpg"),
-                  SizedBox(height: 12.0),
-                  Image.asset("assets/images/paragraphs/Kokan-han.jpg"),
-                  Text(
-                    "Кокандское ханство в середине XIX в.",
-                    style: paragraphTextStyle,
-                    textAlign: TextAlign.center,
-                  ),
-                  Html(
-                    data: """
+                defaultTextStyle: paragraphTextStyle,
+                useRichText: true,
+              ),
+              Image.asset("assets/images/paragraphs/kokan-han-admin.jpg"),
+              SizedBox(height: 12.0),
+              Text(
+                "Династия Кокандских ханов",
+                style: paragraphBoldTextStyle,
+                textAlign: TextAlign.center,
+              ),
+              Image.asset("assets/images/paragraphs/Kokan-hans-dynasty.jpg"),
+              SizedBox(height: 12.0),
+              Image.asset("assets/images/paragraphs/Kokan-han.jpg"),
+              Text(
+                "Кокандское ханство в середине XIX в.",
+                style: paragraphTextStyle,
+                textAlign: TextAlign.center,
+              ),
+              Html(
+                data: """
 <center><b>Борьба кыргызов против кокандских завоевателей</b></center>
 <p>•  Деспотизм, налоговый гнёт возмущали свободолюбивых кыргызов. Так, более  20 лет, т. е. с конца XVIII в. по 1821 г. оказывали упорное сопротивление кокандскому войску кетменьтюбинские кыргызы. </p>
 <p>•  В 30-х годах нарынские кыргызы племени саяк и черик под руководством братьев <b>Атантая</b> и <b>Тайлака</b> организовали вооруженный отпор кокандцам. </p>
@@ -91,30 +89,29 @@ class Paragraph9 extends StatelessWidget {
 
 <center><b>Социально-экономическая структура кыргызского общества во второй половине XVIII – середине XIX веков</b></center>
               """,
-                    defaultTextStyle: paragraphTextStyle,
-                    useRichText: true,
-                  ),
-                  Image.asset(
-                      "assets/images/paragraphs/socio-economic-structure.jpg"),
-                  Html(
-                    data: """
+                defaultTextStyle: paragraphTextStyle,
+                useRichText: true,
+              ),
+              Image.asset(
+                  "assets/images/paragraphs/socio-economic-structure.jpg"),
+              Html(
+                data: """
 <center><b>Формы эксплуатации</b></center>
 <p>Отработочная  рента  («саан»,  «куч»  –  за  пользование  домашним  скотом  богатого  сородича;  «ашар» –  взаимопомощь, как правило, оказывают  помощь богатому сородичу по  хозяйству).</p>
 <p>Подати (<b>«союш», «чыгым»</b>– скот для убоя;  <b>«салык»</b> – налог в виде домашнего скота  и зерна; <b>«журтчулук»</b> (тяжба) – помощь  при нанесении материального ущерба богатому сородичу; <b>«кошумча»</b> – (помощь  по случаю поминок и торжеств; <b>«тартуу»</b>  (подношение) – подарки другие формы</p>
 
               """,
-                    defaultTextStyle: paragraphTextStyle,
-                    useRichText: true,
-                  ),
-                  Image.asset(
-                      "assets/images/paragraphs/kyrgyzstan-captured.jpg"),
-                  Text(
-                    "Завоевание Кыргызстана Кокандским ханством.",
-                    style: paragraphTextStyle,
-                    textAlign: TextAlign.center,
-                  ),
-                  Html(
-                    data: """
+                defaultTextStyle: paragraphTextStyle,
+                useRichText: true,
+              ),
+              Image.asset("assets/images/paragraphs/kyrgyzstan-captured.jpg"),
+              Text(
+                "Завоевание Кыргызстана Кокандским ханством.",
+                style: paragraphTextStyle,
+                textAlign: TextAlign.center,
+              ),
+              Html(
+                data: """
 <p>• Самую низшую ступеньку патриархально-родовой общины занимали непосредственные производители – БУКАРА. Основным видом эксплуатации букары как в скотоводческих, так и оседло-земледельческих районах,  являлось взымание налога.</p>
 <p><b>Букара</b> (араб. букв.  «беднота») – подданный, простолюдин. В  социальной лестнице  общества букара  занимала низшую  ступень.</p>
 <p>Наиболее  обременительным  сбором  кочевников  явился <b>зякет</b> – налог за право пасти скот на государственной территории. По нормам обычного права он  был определён в размере 1/40 части скота. Причем  размеры налога со скота не были постоянными, они  часто менялись. В некоторые годы в виде налогов  взималась 1/20 часть стада владельца</p>              
@@ -150,13 +147,13 @@ class Paragraph9 extends StatelessWidget {
 <p>• Мастера по  металлу  делали из  железа  орудия  труда, инструменты,  оружие, а медь, серебро,  золото  шли  на  изготовление  украшений  и  ювелирных изделий.</p>
 
               """,
-                    defaultTextStyle: paragraphTextStyle,
-                    useRichText: true,
-                  )
-                ],
-              ),
-            ),
-          ]),
-        )));
+                defaultTextStyle: paragraphTextStyle,
+                useRichText: true,
+              )
+            ],
+          ),
+        ),
+      ]),
+    )));
   }
 }

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'paragraph-button.dart';
-import 'package:historybook/style.dart';
 
 class Paragraphs extends StatefulWidget {
   @override
@@ -11,9 +10,7 @@ class _ParagraphState extends State<Paragraphs> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: bgColor,
       appBar: AppBar(
-        backgroundColor: appBarColor,
         title: Text('Параграфы'),
       ),
       body: SingleChildScrollView(

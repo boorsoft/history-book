@@ -7,42 +7,41 @@ class Paragraph7 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: bgColor,
         body: Scrollbar(
             child: SingleChildScrollView(
-          child: Column(children: <Widget>[
-            ParagraphHeader("assets/images/article-pic7.jpg",
-                "§7.Кыргызстан на пути к государственности"),
-            Container(
-              padding: EdgeInsets.all(10.0),
-              child: Column(
-                children: [
-                  Html(
-                    data: """
+      child: Column(children: <Widget>[
+        ParagraphHeader("assets/images/article-pic7.jpg",
+            "§7.Кыргызстан на пути к государственности"),
+        Container(
+          padding: EdgeInsets.all(10.0),
+          child: Column(
+            children: [
+              Html(
+                data: """
 <center><b>Государство Караханидов </b></center>
 <p>Термин «караханиды», для обозначения династии и государства был  введен в научный оборот в ХIХ в. русскими исследователями Востока по титулу «кара-хан». Кыргызы средневековья вкладывали в слово «кара» понятие «великий, большой» и т. п. Таким образом, название «карахан» означало  «великий хан». Вопрос о происхождении караханидской династии остается  спорным. Большинство ученых относили их к трем народностям: карлуки,  чигилы и ягма.</p>
 <p><b>Абд-ал-Керим Сатук Буура Кара-хан</b> (год рожд. неизв.) – основатель государства Караханидов в 942 г. Происхождением он из племени чигиль. Воспитывался у брата отца Огулчак  Кадыр-хана. Принял ислам со своими приближенными в количестве 50 человек. Имел двух  сыновей по имени Байташ Арслан-хан (Муса)  и Тонга элик (Сулейман). После смерти Сатука  власть перешла к Мусе. Он объявил ислам в качестве государственной религии.</p>              
                           
                             """,
-                    defaultTextStyle: paragraphTextStyle,
-                    useRichText: true,
-                  ),
-                  Image.asset("assets/images/paragraphs/Satuk-Buura.jpg"),
-                  Text("Сатук Буура Кара-хан.",
-                      style: paragraphTextStyle, textAlign: TextAlign.center),
-                  Html(
-                    data: """
+                defaultTextStyle: paragraphTextStyle,
+                useRichText: true,
+              ),
+              Image.asset("assets/images/paragraphs/Satuk-Buura.jpg"),
+              Text("Сатук Буура Кара-хан.",
+                  style: paragraphTextStyle, textAlign: TextAlign.center),
+              Html(
+                data: """
 <p>В каганате особое  место занимал  институт соправительства, так  называемая дуальная система. Это  оказывало сильное  влияние на политическую жизнь  в государстве.  Разделение власти  у караханидов сложилось в результате длительной  борьбы между  двумя ветвями династии «Алидами»  и «Хасанидами»</p>
 <p>Столицей каганата был город Баласагун (развалины городища Бурана в окрестностях современного г. Токмака). Второй столицей считался г. Узген.</p>              
               """,
-                    defaultTextStyle: paragraphTextStyle,
-                    useRichText: true,
-                  ),
-                  Image.asset("assets/images/paragraphs/Karahanidy.jpg"),
-                  Text("Караханидское государство (X–XII вв.)",
-                      style: paragraphTextStyle, textAlign: TextAlign.center),
-                  Html(
-                    data: """
+                defaultTextStyle: paragraphTextStyle,
+                useRichText: true,
+              ),
+              Image.asset("assets/images/paragraphs/Karahanidy.jpg"),
+              Text("Караханидское государство (X–XII вв.)",
+                  style: paragraphTextStyle, textAlign: TextAlign.center),
+              Html(
+                data: """
 <p>В результате противостояния двух ветвей династии в 1041–1042 г. Каганат раскололся на два отдельных караханидских государств
 1. <b>Восточное</b> со столицей в Баласагуне  (позднее в Кашгаре)<br>
 Владение: Восточный  Туркестан  и  Семиречье<br>
@@ -85,15 +84,14 @@ class Paragraph7 extends StatelessWidget {
 <center><b>Эпоха Монгольской империи</b></center>
 <p>Предводитель племени монголов Темучин  проявил  незаурядные  способности  в  борьбе  за  власть.  В  конце  концов он подчинил себе всех татар,  найманов,  онгутов  и  ряд  тюркских  племён. В 1206 г. на курултае монгольских феодалов государство было провозглашено империей, а Темучин принял имя «Чингис-хан». Он за короткий  срок покорил все соседние народы.</p>
               """,
-                    defaultTextStyle: paragraphTextStyle,
-                    useRichText: true,
-                  ),
-                  Image.asset(
-                      "assets/images/paragraphs/Chingizhan-monument.jpg"),
-                  Text("Статуя Чингис-хана в Монголии. Высота памятника 40 м.",
-                      style: paragraphTextStyle, textAlign: TextAlign.center),
-                  Html(
-                    data: """
+                defaultTextStyle: paragraphTextStyle,
+                useRichText: true,
+              ),
+              Image.asset("assets/images/paragraphs/Chingizhan-monument.jpg"),
+              Text("Статуя Чингис-хана в Монголии. Высота памятника 40 м.",
+                  style: paragraphTextStyle, textAlign: TextAlign.center),
+              Html(
+                data: """
 <p>Перед  наступлением  на  Среднюю  Азию  Чингис-хан  разделил свою 150 тыс. армию на четыре корпуса:<br>
 1.Первый, во  главе с сыновьями Чагатаем и Угэдэем  выделил для  осады Отрара.<br>
 2.Второй, во главе со старшим  сыном Джучи  послал на север  для завоевания  городов по нижнему течению  Сыр-Дарьи.<br>
@@ -104,14 +102,14 @@ class Paragraph7 extends StatelessWidget {
 <p>Еще при жизни Чингис-хана Монгольская империя была разделена между  его сыновьями. Владения второго сына Чингис-хана Чагатая (годы его жизни 1187-1241), включили Восточный Туркестан, Семиречье и Мавереннахр,  а также земли левобережья Аму-Дарьи – Балх, Бадахшан, Газни, Кабул и  районы, включительно до р. Синд. Орда (ставка) Чагатая находилась в Кульджинском крае, на южной стороне р. Или.</p>
             
               """,
-                    defaultTextStyle: paragraphTextStyle,
-                    useRichText: true,
-                  ),
-                  Image.asset("assets/images/paragraphs/Chingizhan-power.jpg"),
-                  Text("Держава Чингис-хана (1206–1227 гг.)",
-                      style: paragraphTextStyle, textAlign: TextAlign.center),
-                  Html(
-                    data: """
+                defaultTextStyle: paragraphTextStyle,
+                useRichText: true,
+              ),
+              Image.asset("assets/images/paragraphs/Chingizhan-power.jpg"),
+              Text("Держава Чингис-хана (1206–1227 гг.)",
+                  style: paragraphTextStyle, textAlign: TextAlign.center),
+              Html(
+                data: """
 <center>Внутренняя политика Чагатаидов</center>
 <p>После покорения Средней Азии, среди монгольских завоевателей наметились две тенденции по отношению к оседлому населению.</p>
 <p>Выразителем первой тенденции,  были  сторонники  так  называемых «традиционалистов», которые были противниками оседлой жизни.</p>
@@ -136,16 +134,16 @@ class Paragraph7 extends StatelessWidget {
 <p>• В  XII – ХV вв.  существовали  три  системы письменности: сирийская,  арабская и старотюркская. </p>
 <p>• В религиозном отношении большая  часть  кочевого  населения  оставалась шаманистами, наряду  с ними  существовали  исламские  общины.  Буддизму  и  христианству  покровительствовали  некоторые  ханы  (Гуюк,  Мунке),  о  чем  свидетельствуют  несторианские  надписи  и  кладбища,  армянская  церковь  пр.  Ионна на Иссык-Куле. </p>
               """,
-                    defaultTextStyle: paragraphTextStyle,
-                    useRichText: true,
-                  ),
-                  Image.asset("assets/images/paragraphs/Christian-cross.jpg"),
-                  Text(
-                      "Христианские кресты на кайраках IX – XIV вв. из Семиречья. ",
-                      style: paragraphTextStyle,
-                      textAlign: TextAlign.center),
-                  Html(
-                    data: """
+                defaultTextStyle: paragraphTextStyle,
+                useRichText: true,
+              ),
+              Image.asset("assets/images/paragraphs/Christian-cross.jpg"),
+              Text(
+                  "Христианские кресты на кайраках IX – XIV вв. из Семиречья. ",
+                  style: paragraphTextStyle,
+                  textAlign: TextAlign.center),
+              Html(
+                data: """
 <center><b>Моголистан и походы Амир Темира </b></center>
 <p>В 1345 г. был убит заговорщиками хан Казан – последний чингизид, правивший Чагатайским улусом. Наступил конец монгольского периода истории этого края. Таким образом, в середине XIV в. на востоке Средней Азии  возникло новое государство – Моголистан, т. е. “страна моголов” (тюркские  народы называли монголов “могол”) Основное население Моголистана было  тюркоязычным. Ведущую роль в политической жизни государства играли  крупные феодалы племени дуглат. Лидером племени был Пуладчи.</p>
 <p>Не являясь потомком Чингис-хана, Пуладчи не мог претендовать на ханский  престол. Поэтому по его инициативе в 1348 г. 18 летний чингизид ТоглукТемир стал первым ханом Моголистана. Новый хан для укрепления своей  власти в 1354 г. принял ислам и насаждал его на тянь-шаньских монголов.  Источники сообщают что, в один день приняли ислам 160 тыс. человек, но  многие остались язычниками.</p>
@@ -163,16 +161,16 @@ class Paragraph7 extends StatelessWidget {
 
               
               """,
-                    defaultTextStyle: paragraphTextStyle,
-                    useRichText: true,
-                  ),
-                  Image.asset("assets/images/paragraphs/Amir-Temir-power.jpg"),
-                  Text("Держава Амир-Темира (1370 – 1405 гг.)",
-                      style: paragraphTextStyle, textAlign: TextAlign.center),
-                ],
+                defaultTextStyle: paragraphTextStyle,
+                useRichText: true,
               ),
-            ),
-          ]),
-        )));
+              Image.asset("assets/images/paragraphs/Amir-Temir-power.jpg"),
+              Text("Держава Амир-Темира (1370 – 1405 гг.)",
+                  style: paragraphTextStyle, textAlign: TextAlign.center),
+            ],
+          ),
+        ),
+      ]),
+    )));
   }
 }

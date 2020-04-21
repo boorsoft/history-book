@@ -7,18 +7,17 @@ class Paragraph12 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: bgColor,
         body: Scrollbar(
             child: SingleChildScrollView(
-          child: Column(children: <Widget>[
-            ParagraphHeader("assets/images/article-pic12.jpg",
-                "§12.Социально-экономическое строительство в период становления советской социалистической системы (1917-1940 гг.)"),
-            Container(
-              padding: EdgeInsets.all(10.0),
-              child: Column(
-                children: [
-                  Html(
-                    data: """
+      child: Column(children: <Widget>[
+        ParagraphHeader("assets/images/article-pic12.jpg",
+            "§12.Социально-экономическое строительство в период становления советской социалистической системы (1917-1940 гг.)"),
+        Container(
+          padding: EdgeInsets.all(10.0),
+          child: Column(
+            children: [
+              Html(
+                data: """
 • С  установлением  диктатуры  пролетариата  коммунисты  во  главе  с  В. И. Лениным приступили к решению одной из самых злободневных  проблем – земельного вопроса. <br>
 • Согласно принятому Советской властью декрету «О земле», все земли  объявились государственной собственностью. 
 <center>Декрет определил следующие основные направления аграрной политики Советской власти:</center>
@@ -35,25 +34,24 @@ class Paragraph12 extends StatelessWidget {
 <p>Проводимые в начале 20-х гг. земельно-водные реформы  ставили своей целью исправить существующие с царских  времён  неравенство  между  кыргызскими  дехканами  и  русскими крестьянами по отношению к земле и воде.</p>
               
               """,
-                    defaultTextStyle: paragraphTextStyle,
-                    useRichText: true,
-                  ),
-                  Image.asset("assets/images/paragraphs/land-water-reform.jpg"),
-                  Text(
-                    "Земельно-водные реформы Кыргызстана (1921–1922, 1923–1926 гг.)",
-                    style: paragraphTextStyle,
-                    textAlign: TextAlign.center,
-                  ),
-                  SizedBox(height: 12.0),
-                  Image.asset(
-                      "assets/images/paragraphs/land-water-reform2.jpg"),
-                  Text(
-                    "Земельно-водные реформы Кыргызстана (1927–1928 гг.)",
-                    style: paragraphTextStyle,
-                    textAlign: TextAlign.center,
-                  ),
-                  Html(
-                    data: """
+                defaultTextStyle: paragraphTextStyle,
+                useRichText: true,
+              ),
+              Image.asset("assets/images/paragraphs/land-water-reform.jpg"),
+              Text(
+                "Земельно-водные реформы Кыргызстана (1921–1922, 1923–1926 гг.)",
+                style: paragraphTextStyle,
+                textAlign: TextAlign.center,
+              ),
+              SizedBox(height: 12.0),
+              Image.asset("assets/images/paragraphs/land-water-reform2.jpg"),
+              Text(
+                "Земельно-водные реформы Кыргызстана (1927–1928 гг.)",
+                style: paragraphTextStyle,
+                textAlign: TextAlign.center,
+              ),
+              Html(
+                data: """
 <p>Основные мероприятия земельно-водной реформы были осуществлены в  1921–1922 гг. Реформы проводились в регионах, наиболее подвергнутых  царско-помещичьей колонизации:<br>
 • Верненском, Пишпекском, Каракольском уездах ДжетиСуйской области. <br>
 • Аулие-Атинском (Таласская долина), Чимкентском, Ташкентском уездах  Сыр-Дарьинской области. <br>
@@ -88,38 +86,38 @@ class Paragraph12 extends StatelessWidget {
 • В ходе коллективизации в сёлах и аилах Кыргызстана имели место многочисленные злоупотребления и перегибы. При вовлечении крестьян в  коллективные хозяйства полностью нарушались принципы добровольности, повсеместно нарушался принцип постепенности – от простых форм  (ТОЗы, товарищества) к окончательной коллективизации, крестьян насильно сгоняли в колхозы.
                             
               """,
-                    defaultTextStyle: paragraphTextStyle,
-                    useRichText: true,
-                  ),
-                  Image.asset("assets/images/paragraphs/Stalin.jpg"),
-                  Text(
-                    "И. Сталин",
-                    style: paragraphTextStyle,
-                    textAlign: TextAlign.center,
-                  ),
-                  SizedBox(height: 12.0),
-                  Text(
-                    "Коллективизация сельского хозяйства в Кыргызстане",
-                    style: paragraphTextStyle,
-                    textAlign: TextAlign.center,
-                  ),
-                  SizedBox(height: 12.0),
-                  Image.asset("assets/images/paragraphs/collectivization.jpg"),
-                  Text(
-                    "Коллективизация по числу крестьянских дворов.",
-                    style: paragraphTextStyle,
-                    textAlign: TextAlign.center,
-                  ),
-                  SizedBox(height: 12.0),
-                  Image.asset("assets/images/paragraphs/collectivization2.jpg"),
-                  Text(
-                    "Коллективизация по посевной площади.",
-                    style: paragraphTextStyle,
-                    textAlign: TextAlign.center,
-                  ),
-                  SizedBox(height: 12.0),
-                  Html(
-                    data: """
+                defaultTextStyle: paragraphTextStyle,
+                useRichText: true,
+              ),
+              Image.asset("assets/images/paragraphs/Stalin.jpg"),
+              Text(
+                "И. Сталин",
+                style: paragraphTextStyle,
+                textAlign: TextAlign.center,
+              ),
+              SizedBox(height: 12.0),
+              Text(
+                "Коллективизация сельского хозяйства в Кыргызстане",
+                style: paragraphTextStyle,
+                textAlign: TextAlign.center,
+              ),
+              SizedBox(height: 12.0),
+              Image.asset("assets/images/paragraphs/collectivization.jpg"),
+              Text(
+                "Коллективизация по числу крестьянских дворов.",
+                style: paragraphTextStyle,
+                textAlign: TextAlign.center,
+              ),
+              SizedBox(height: 12.0),
+              Image.asset("assets/images/paragraphs/collectivization2.jpg"),
+              Text(
+                "Коллективизация по посевной площади.",
+                style: paragraphTextStyle,
+                textAlign: TextAlign.center,
+              ),
+              SizedBox(height: 12.0),
+              Html(
+                data: """
 • Безумная  гонка  коллективизации  сопровождалась  не  только  массовым  раскулачиванием, но и зачастую не обоснованными репрессиями которым подвергали крестьян-середняков, которые отказывались добровольно  вступать в колхозы. <br>
 • В 1934 г. 68,5% крестьянских хозяйств Кыргызстана объединились в коллективные хозяйства. В 1937 г. 89%, а в 1940 г. 99% крестьянских хозяйств   входили в колхозы и совхозы.  <br>
 • После укрепления колхозов на каждый из них в среднем приходилось по  106 хозяйств, 97% пахотных земель относилось к колхозам и совхозам. Их  обслуживали 53 машино-тракторные  станции, техпарк в которых насчитывалось более 5 тыс. тракторов и 7 тыс комбайнов. Они обрабатывали  85,5% посевной площади. <br>
@@ -142,13 +140,13 @@ class Paragraph12 extends StatelessWidget {
 <p>• Изменилось соотношение валовой продукции промышленности и сельского хозяйства республики. Удельный вес промышленности с 38% в 1937 г.  повысился до 50,24% в 1940 г. В итоге возрос вклад Кыргызстана в  общесоюзный экономический потенциал, укрепились, стали разностороннее  его хозяйственные связи. • Протяженность благоустроенных автомагистралей к началу 1941 г. достигла 11,5 тыс.км. Кыргызстан к этому времени распологал всеми видами современного транспорта: железнодорожным, воздушным, автомобильным  и речным (Иссык-Куль). </p>
 <p>• С развитием промышленности соответственно увеличились ряды рабочего  класса. Однако большинство рабочих-кыргызов были заняты кустарным  производством в сельской местности. Большая часть рабочих Кыргызстана трудилась на угледобывающих предприятиях. Во всех отраслях промышленности ощущался острый недостаток профессиональных рабочих  и инженерно-технических кадров. • В целом промышленность Кыргызстана за годы первой, второй и третьей  пятилеток поднялась на новую ступень и приобрела качественно новое содержание. </p>           
               """,
-                    defaultTextStyle: paragraphTextStyle,
-                    useRichText: true,
-                  )
-                ],
-              ),
-            ),
-          ]),
-        )));
+                defaultTextStyle: paragraphTextStyle,
+                useRichText: true,
+              )
+            ],
+          ),
+        ),
+      ]),
+    )));
   }
 }

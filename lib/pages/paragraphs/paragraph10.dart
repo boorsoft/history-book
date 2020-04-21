@@ -7,18 +7,17 @@ class Paragraph10 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: bgColor,
         body: Scrollbar(
             child: SingleChildScrollView(
-          child: Column(children: <Widget>[
-            ParagraphHeader("assets/images/article-pic10.jpg",
-                "§10.Присоединение Кыргызстана к России. Национально-освободительная борьба в Кыргызстане"),
-            Container(
-              padding: EdgeInsets.all(10.0),
-              child: Column(
-                children: [
-                  Html(
-                    data: """
+      child: Column(children: <Widget>[
+        ParagraphHeader("assets/images/article-pic10.jpg",
+            "§10.Присоединение Кыргызстана к России. Национально-освободительная борьба в Кыргызстане"),
+        Container(
+          padding: EdgeInsets.all(10.0),
+          child: Column(
+            children: [
+              Html(
+                data: """
 <center><b>Предпосылки присоединения к России:</b></center>
 • Наличие посольской связи установленной в 1785 г., в 1788 г. по инициативе Атаке-бия. <br>
 • Развитие капитализма в России. Поэтому для дальнейшего роста промышленности в стране требовались новые рынки сбыта товаров, источники  сырья. <br>
@@ -84,13 +83,13 @@ class Paragraph10 extends StatelessWidget {
 <p>В 1867 г. Туркестанская область была преобразована в Туркестанское генералгубернаторство, разделенное на две области – Сыр-Дарьинскую (административный центр – Ташкент) и Семиреченскую (административный центр – Верный) В 1886 г. Туркестанское генерал-губернаторство было переименовано в Туркестанский край, в который вошли Самаркандская, Сыр-Дарьинская и Ферганская  области. Семиреченскую область в 1882 г. включили в Степное генерал-губернаторство, затем в 1899 г. она была вновь подключена к Туркестанскому краю.</p>
 
               """,
-                    defaultTextStyle: paragraphTextStyle,
-                    useRichText: true,
-                  ),
-                  Image.asset(
-                      "assets/images/paragraphs/administrative-judical-arrangement.jpg"),
-                  Html(
-                    data: """
+                defaultTextStyle: paragraphTextStyle,
+                useRichText: true,
+              ),
+              Image.asset(
+                  "assets/images/paragraphs/administrative-judical-arrangement.jpg"),
+              Html(
+                data: """
 <center><b>Земельная политика царского правительства </b></center>
 • Колонизаторская политика царского правительства в Кыргызстане особенно ярко проявилась при решении земельного вопроса. Едва Кыргызстан  был присоединен к России, как началось непрерывное переселение российских крестьян на его территорию. <br> 
 • При наделении землей переселенцев интересы кыргызов совершенно не  учитывались. Царские власти определяли переселившихся русских и украинцев на самые удобные для земледелия угодья, отнимая их у местного  населения. Переселенцы располагались в основном в Чуйской долине и  вокруг озера Иссык-Куль. <br>
@@ -98,12 +97,12 @@ class Paragraph10 extends StatelessWidget {
 • Чтобы узаконить аннексию земель у местного населения, царское правительство в 1891 г. утвердило специальное, так называемое «Степное уложение», согласно которому все земли, на которых жили и кочевали кыргызы, надлежало считать государственными.
 
               """,
-                    defaultTextStyle: paragraphTextStyle,
-                    useRichText: true,
-                  ),
-                  Image.asset("assets/images/paragraphs/territory-policy.jpg"),
-                  Html(
-                    data: """
+                defaultTextStyle: paragraphTextStyle,
+                useRichText: true,
+              ),
+              Image.asset("assets/images/paragraphs/territory-policy.jpg"),
+              Html(
+                data: """
 <center><b>Налоговая политика царизма </b></center>
 • Туркестан, в том числе и Кыргызстан, был источником финансового дохода. Трудовые массы были обложены:  <br>
 * кибиточной  податью; <br>
@@ -117,12 +116,12 @@ class Paragraph10 extends StatelessWidget {
 
               
               """,
-                    defaultTextStyle: paragraphTextStyle,
-                    useRichText: true,
-                  ),
-                  Image.asset("assets/images/paragraphs/tax-policy.jpg"),
-                  Html(
-                    data: """
+                defaultTextStyle: paragraphTextStyle,
+                useRichText: true,
+              ),
+              Image.asset("assets/images/paragraphs/tax-policy.jpg"),
+              Html(
+                data: """
 <center><b>Национально-освободительная борьба в Кыргызстане. </b></center>
 <p><b>Андижанское восстание</b> вошло в историю как крупное народное движение конца XIX века в Средней Азии. Основными причинами восстания  послужили:<br>
  – колониальная политика царизма;   <br>
@@ -175,13 +174,13 @@ class Paragraph10 extends StatelessWidget {
 <p>•  Это борьба кыргызского народа за родную землю, справедливость и независимость стала одной из самых трагических страниц истории Кыргызстана. </p>
 
               """,
-                    defaultTextStyle: paragraphTextStyle,
-                    useRichText: true,
-                  )
-                ],
-              ),
-            ),
-          ]),
-        )));
+                defaultTextStyle: paragraphTextStyle,
+                useRichText: true,
+              )
+            ],
+          ),
+        ),
+      ]),
+    )));
   }
 }

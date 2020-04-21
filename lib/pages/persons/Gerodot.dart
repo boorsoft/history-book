@@ -7,17 +7,16 @@ class Gerodot extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: bgColor,
         body: Scrollbar(
             child: SingleChildScrollView(
                 child: Column(children: <Widget>[
-          PersonHeader('assets/images/paragraphs/Gerodot.jpg', "Геродот"),
-          Container(
-            padding: EdgeInsets.all(10.0),
-            child: Column(
-              children: <Widget>[
-                Html(
-                  data: """
+      PersonHeader('assets/images/paragraphs/Gerodot.jpg', "Геродот"),
+      Container(
+        padding: EdgeInsets.all(10.0),
+        child: Column(
+          children: <Widget>[
+            Html(
+              data: """
 <center><b>Геродот</b></center>
 <p>
 Геродот – житель Древней Греции, «отец истории». Грек стал автором первого дожившего до наших дней трактата «История», в котором подробно описал обычаи народов, существовавших в пятом веке до нашей эры, а также ход греко-персидских войн. Труды Геродота сыграли важную роль в развитии античной культуры.
@@ -52,12 +51,12 @@ class Gerodot extends StatelessWidget {
 Биография Геродота дошла до наших дней лишь в виде обрывочной информации, в которой невозможно найти данные о собственной семье ученого, о том, была ли у него жена и дети. Известно лишь, что историк был любознательным и общительным человеком, легко сходился с людьми и умел проявлять поразительную настойчивость в поиске исторически достоверных фактов. Геродот предположительно скончался в 425 году до нашей эры. Место его захоронения неизвестно.
 </p>
               """,
-                  defaultTextStyle: paragraphTextStyle,
-                  useRichText: true,
-                ),
-              ],
+              defaultTextStyle: paragraphTextStyle,
+              useRichText: true,
             ),
-          ),
-        ]))));
+          ],
+        ),
+      ),
+    ]))));
   }
 }

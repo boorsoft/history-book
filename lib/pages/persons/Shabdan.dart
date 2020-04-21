@@ -7,17 +7,16 @@ class Shabdan extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: bgColor,
         body: Scrollbar(
             child: SingleChildScrollView(
-          child: Column(children: <Widget>[
-            PersonHeader("assets/images/persons/Shabdan.jpg", 'Шабдан Баатыр'),
-            Container(
-              padding: EdgeInsets.all(10.0),
-              child: Column(
-                children: <Widget>[
-                  Html(
-                    data: """
+      child: Column(children: <Widget>[
+        PersonHeader("assets/images/persons/Shabdan.jpg", 'Шабдан Баатыр'),
+        Container(
+          padding: EdgeInsets.all(10.0),
+          child: Column(
+            children: <Widget>[
+              Html(
+                data: """
 <center><b>Шабдан Баатыр</b></center>
 <p>
 В истории Кыргызстана интересной личностью был и остается Шабдан баатыр. В своем историческом развитии Кыргызстан прошел большой и сложный путь. В конце XIX века произошло присоединение северного Кыргызстана к России. Это было сделано при непосредственном участии Шабдана баатыра.
@@ -29,13 +28,13 @@ class Shabdan extends StatelessWidget {
 Много сил и старания Шабдан баатыр отдал тому, чтобы кыргызы жили в дружбе и согласии со своими соседями: Россией, Казахстаном, Узбекистаном и рядом других стран. Человек военный, он обладал способностями хорошего политика и дипломата, стремился уладить все конфликты мирным путем. Шабдан баатыр был мужественным полководцем, защитником своей Родины, оставившим добрый след в истории кыргызского народа. Память о себе он увековечил своей открытостью, добротой, справедливостью и щедростью.
 </p>
             """,
-                    defaultTextStyle: paragraphTextStyle,
-                    useRichText: true,
-                  ),
-                ],
+                defaultTextStyle: paragraphTextStyle,
+                useRichText: true,
               ),
-            ),
-          ]),
-        )));
+            ],
+          ),
+        ),
+      ]),
+    )));
   }
 }

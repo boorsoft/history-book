@@ -7,17 +7,16 @@ class Tomiris extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: bgColor,
         body: Scrollbar(
             child: SingleChildScrollView(
                 child: Column(children: <Widget>[
-          PersonHeader("assets/images/persons/Tomiris.jpg", "Томирис"),
-          Container(
-            padding: EdgeInsets.all(10.0),
-            child: Column(
-              children: <Widget>[
-                Html(
-                  data: """
+      PersonHeader("assets/images/persons/Tomiris.jpg", "Томирис"),
+      Container(
+        padding: EdgeInsets.all(10.0),
+        child: Column(
+          children: <Widget>[
+            Html(
+              data: """
 <center><b>Томирис</b></center>
 <p>
 Имя Томирис и её сына Спаргаписа, который был полководцем её армии, имеют иранское происхождение. Поскольку историки, которые впервые писали о нём, были греками, наиболее часто используется эллинистическая форма её имени. По мнению исследователей, имя сына царицы Томирис напоминает имя скифского царя Спаргаписа (Некоторые считают его отцом Томирис). Сходство имён можно объяснить родством между ираноязычными племенами (европейских) скифов и массагетов.
@@ -32,12 +31,12 @@ class Tomiris extends StatelessWidget {
 Томирис же, когда Кир её не послушался, собрав всё своё войско, вступила с Киром в бой. Большая часть персидского войска была уничтожена тут же на месте, а сам Кир погиб. По одним свидетельствам, обезглавленный труп Кира был распят (Геродот об этом не сообщает), а его голову Томирис сунула в винный мех, наполненный человеческой кровью, и добавила следующее: «Ты меня, живую и одержавшую над тобой победу в битвe, погубил, захватив хитростью моего сына. Я же тебя, как угрожала, напою кровью» (по другой версии «Ты жаждал крови, царь персов, так пей её теперь досыта!»). Геродот называет эту битву самой жестокой из тех, которые были у варваров.
 </p>
               """,
-                  defaultTextStyle: paragraphTextStyle,
-                  useRichText: true,
-                ),
-              ],
+              defaultTextStyle: paragraphTextStyle,
+              useRichText: true,
             ),
-          ),
-        ]))));
+          ],
+        ),
+      ),
+    ]))));
   }
 }

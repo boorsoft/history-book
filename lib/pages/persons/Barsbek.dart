@@ -7,17 +7,16 @@ class Barsbek extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: bgColor,
         body: Scrollbar(
             child: SingleChildScrollView(
                 child: Column(children: <Widget>[
-          PersonHeader('assets/images/paragraphs/Barsbek.jpg', "Барсбек"),
-          Container(
-            padding: EdgeInsets.all(10.0),
-            child: Column(
-              children: <Widget>[
-                Html(
-                  data: """
+      PersonHeader('assets/images/paragraphs/Barsbek.jpg', "Барсбек"),
+      Container(
+        padding: EdgeInsets.all(10.0),
+        child: Column(
+          children: <Widget>[
+            Html(
+              data: """
 <center><b>Ыначу Алп Бильге (Барсбек)</b></center>
 <p><b>Барсбек</b> - Центральная Азия в конце VII века стала ареной крупных политических изменений. В результате антикитайских выступлений был образован Второй тюркский каганат, который стал представлять сильную угрозу сопредельным государствам. Слабые народы, не испытывая судьбу, покорились ему, более сильные — стали искать пути к объединению, чтобы вместе противостоять грозному врагу. Возглавило антитюркский союз государство Кыргыз. Правителем государства Кыргыз был ажо (верховный правитель). 
 </p>
@@ -26,12 +25,12 @@ class Barsbek extends StatelessWidget {
 </p>
 
               """,
-                  defaultTextStyle: paragraphTextStyle,
-                  useRichText: true,
-                ),
-              ],
+              defaultTextStyle: paragraphTextStyle,
+              useRichText: true,
             ),
-          ),
-        ]))));
+          ],
+        ),
+      ),
+    ]))));
   }
 }

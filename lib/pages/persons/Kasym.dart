@@ -7,17 +7,16 @@ class Kasym extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: bgColor,
         body: Scrollbar(
             child: SingleChildScrollView(
                 child: Column(children: <Widget>[
-          PersonHeader("assets/images/persons/Kasym.jpg", "Касым Тыныстанов"),
-          Container(
-            padding: EdgeInsets.all(10.0),
-            child: Column(
-              children: <Widget>[
-                Html(
-                  data: """
+      PersonHeader("assets/images/persons/Kasym.jpg", "Касым Тыныстанов"),
+      Container(
+        padding: EdgeInsets.all(10.0),
+        child: Column(
+          children: <Widget>[
+            Html(
+              data: """
 <center><b>Касым Тыныстанов</b></center>
 <p>
 Созвездие ярких личностей, заложивших после революции основу нашей государственности, было бы неполным без фигуры Касыма Тыныстанова. Родившись в 1901 году, он прожил всего лишь 37 лет. В таком же возрасте ушел из жизни А. С. Пушкин.
@@ -34,12 +33,12 @@ class Kasym extends StatelessWidget {
 Как говорится, «дорога в дальний путь начинается с первого шага»: провести кыр­гызский язык по целинной поч­ве национальной культуры бы­ло делом, требующим подлин­ного научного мужества. Касым Тыныстанов создал для школы «Книгу для чтения» («Эне тил»). В предисловии он писал: «По­словица гласит: не говори обо всем, скажи об одном! Так и мы писали эту книгу не от переиз­бытка знаний, но в силу необ­ходимости».
 </p>
               """,
-                  defaultTextStyle: paragraphTextStyle,
-                  useRichText: true,
-                ),
-              ],
+              defaultTextStyle: paragraphTextStyle,
+              useRichText: true,
             ),
-          ),
-        ]))));
+          ],
+        ),
+      ),
+    ]))));
   }
 }

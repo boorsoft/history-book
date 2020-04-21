@@ -7,18 +7,17 @@ class Ishak extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: bgColor,
         body: Scrollbar(
             child: SingleChildScrollView(
                 child: Column(children: <Widget>[
-          PersonHeader(
-              "assets/images/persons/Ishak.jpg", "Раззаков Исхак Раззакович"),
-          Container(
-            padding: EdgeInsets.all(10.0),
-            child: Column(
-              children: <Widget>[
-                Html(
-                  data: """
+      PersonHeader(
+          "assets/images/persons/Ishak.jpg", "Раззаков Исхак Раззакович"),
+      Container(
+        padding: EdgeInsets.all(10.0),
+        child: Column(
+          children: <Widget>[
+            Html(
+              data: """
 <center><b>Раззаков Исхак Раззакович</b></center>
 <p>
 Раззаков Исхак Раззакович родился в 1910 году в селе Коросон Лейлекского района (ныне Баткенской области). Названный при рождении Исаком, позже в документах ошибочно записан Исхаком. Он рано лишился родителей: в 3 года потерял мать, а в 10 — отца-шахтера. Воспитывался сначала в детском доме города Ходжент, затем в Ташкентском интернате.В 1931 году закончил Ташкентский педагогический техникум, в 1938 году — Московский институт народного хозяйства. Свободно владел кыргызским, русским, узбекским, таджикским языками.Вернувшись по окончании учебы в Ташкент, стал работать в органах планирования: в 1939–1941 годах – сначала заместителем (в 29 лет), а потом председателем Госплана Узбекской ССР.
@@ -36,12 +35,12 @@ class Ishak extends StatelessWidget {
 За годы его руководства были введены в действие 20 крупных промышленных объектов народного хозяйства. Среди них Лебединовская, Аламединская, Пржевальская ГЭС, заводы «Киргизавтомаш», Ошский электромеханический завод, обувная фабрика. Были построены крупный завод сельскохозяйственного машиностроения им. Фрунзе, высокогорная дорога Фрунзе — Ош.
 </p>
               """,
-                  defaultTextStyle: paragraphTextStyle,
-                  useRichText: true,
-                ),
-              ],
+              defaultTextStyle: paragraphTextStyle,
+              useRichText: true,
             ),
-          ),
-        ]))));
+          ],
+        ),
+      ),
+    ]))));
   }
 }

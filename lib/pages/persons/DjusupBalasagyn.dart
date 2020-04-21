@@ -7,17 +7,16 @@ class Djusup extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: bgColor,
         body: Scrollbar(
             child: SingleChildScrollView(
-          child: Column(children: <Widget>[
-            PersonHeader("assets/images/persons/Djusup.jpg", "Жусуп Баласагын"),
-            Container(
-              padding: EdgeInsets.all(10.0),
-              child: Column(
-                children: <Widget>[
-                  Html(
-                    data: """
+      child: Column(children: <Widget>[
+        PersonHeader("assets/images/persons/Djusup.jpg", "Жусуп Баласагын"),
+        Container(
+          padding: EdgeInsets.all(10.0),
+          child: Column(
+            children: <Widget>[
+              Html(
+                data: """
 <center><b>Жусуп Баласагын</b></center>
 <p>
 О Жусупе Баласагыне, авторе величайшего творения — поэмы «Благодатное знание», или «Наука об управлении государством», известно немного. Он родился примерно в 1010-1016 (1018) годах в столице средневекового Караханидского государства — городе Баласагын. Он был высокообразованным человеком своей эпохи — имел основательные познания по астрономии, математике, медицине, знал историю, философию, эстетику, этику, литературу, арабскую и ирано-таджикскую поэзию, фольклор тюрков и язык фарси. Ему были присущи широта и глубина мышления.
@@ -29,13 +28,13 @@ class Djusup extends StatelessWidget {
 «Благодатное знание» Жусупа Баласагына — произведение, написанное в традиционном для восточной культуры этико-дидактическом стиле, имеет характерную назидательно-воспитательную направленность. Жанр зародился в древней литературе Египта, Индии, Ирана, затем хорошо «освоился» в восточной письменной и устной литературе. В Европе он сформировался как жанр «зерцала» намного позднее — в эпоху Ренессанса, спустя пять веков после появления сочинения Жусупа Баласагына.
 </p>
             """,
-                    defaultTextStyle: paragraphTextStyle,
-                    useRichText: true,
-                  ),
-                ],
+                defaultTextStyle: paragraphTextStyle,
+                useRichText: true,
               ),
-            ),
-          ]),
-        )));
+            ],
+          ),
+        ),
+      ]),
+    )));
   }
 }

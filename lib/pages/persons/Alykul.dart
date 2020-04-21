@@ -7,17 +7,16 @@ class Alykul extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: bgColor,
         body: Scrollbar(
             child: SingleChildScrollView(
                 child: Column(children: <Widget>[
-          PersonHeader("assets/images/persons/Alykul.jpg", "Алыкул Осмонов"),
-          Container(
-            padding: EdgeInsets.all(10.0),
-            child: Column(
-              children: <Widget>[
-                Html(
-                  data: """
+      PersonHeader("assets/images/persons/Alykul.jpg", "Алыкул Осмонов"),
+      Container(
+        padding: EdgeInsets.all(10.0),
+        child: Column(
+          children: <Widget>[
+            Html(
+              data: """
 <center><b>Алыкул Осмонов</b></center>
 <p>
 Алыкул Осмонов (кирг. Алыкул Осмонов; 21 марта 1915, село Каптал-Арык, Панфиловский район,Чуйская область, Киргизия — 12 декабря 1950, Фрунзе, Киргизская ССР) — киргизский поэт, драматург,переводчик.
@@ -50,12 +49,12 @@ class Alykul extends StatelessWidget {
 Средняя школа имени А. Осмонова в селе Каптал-Арык.
 </p>
               """,
-                  defaultTextStyle: paragraphTextStyle,
-                  useRichText: true,
-                ),
-              ],
+              defaultTextStyle: paragraphTextStyle,
+              useRichText: true,
             ),
-          ),
-        ]))));
+          ],
+        ),
+      ),
+    ]))));
   }
 }

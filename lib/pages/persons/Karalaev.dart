@@ -7,18 +7,16 @@ class Karalaev extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: bgColor,
         body: Scrollbar(
             child: SingleChildScrollView(
                 child: Column(children: <Widget>[
-          PersonHeader(
-              "assets/images/persons/Karalaev.jpg", "Саякбай Каралаев"),
-          Container(
-            padding: EdgeInsets.all(10.0),
-            child: Column(
-              children: <Widget>[
-                Html(
-                  data: """
+      PersonHeader("assets/images/persons/Karalaev.jpg", "Саякбай Каралаев"),
+      Container(
+        padding: EdgeInsets.all(10.0),
+        child: Column(
+          children: <Widget>[
+            Html(
+              data: """
 <center><b>Саякбай Каралаев</b></center>
 <p>
 Сказительское искусство Саякбая Каралаева (1894—1972), по единодушному признанию современников, явилось вершиной эволюции национальной эпической культуры. Этот знаменитый манасчы нашего века обладал поистине титанической способностью импровизации и могучим исполнительским темпераментом. И современники по достоинству называли его «великим рапсодом» (М. Ауэзов), «Гомером XX века» (Ч. Айтматов).
@@ -56,12 +54,12 @@ class Karalaev extends StatelessWidget {
 В 1994 г. в республике широко отмечалось 100-летие со дня рождения великого сказителя, в связи с чем на его родине были проведены международная конференция и национальные спортивные игры.
 </p>
               """,
-                  defaultTextStyle: paragraphTextStyle,
-                  useRichText: true,
-                ),
-              ],
+              defaultTextStyle: paragraphTextStyle,
+              useRichText: true,
             ),
-          ),
-        ]))));
+          ],
+        ),
+      ),
+    ]))));
   }
 }

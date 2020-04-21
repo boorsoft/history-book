@@ -7,17 +7,16 @@ class Chika extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: bgColor,
         body: Scrollbar(
             child: SingleChildScrollView(
                 child: Column(children: <Widget>[
-          PersonHeader("assets/images/persons/Chika.jpg", "Чынгыз Айтматов"),
-          Container(
-            padding: EdgeInsets.all(10.0),
-            child: Column(
-              children: <Widget>[
-                Html(
-                  data: """
+      PersonHeader("assets/images/persons/Chika.jpg", "Чынгыз Айтматов"),
+      Container(
+        padding: EdgeInsets.all(10.0),
+        child: Column(
+          children: <Widget>[
+            Html(
+              data: """
 <center><b>Чингиз Айтматов</b></center>
 <p>
 Чингиз Торекулович Айтматов родился 12 декабря 1928 года в семье коммунистов Торекула Айтматова и Нагимы Хамзиевны Айтматовой (в девичестве Абдувалиевой) в селе Шекер Кара-Бууринского (Киpовского) района Таласского кантона Киргизской АССР. После рождения Чингиза семья переехала в город, поскольку отец пошел на повышение: с 1929 года карьера Торекула Айтматова стремительно идет вверх.
@@ -39,12 +38,12 @@ class Chika extends StatelessWidget {
 Умер 10 июня 2008 года в больнице немецкого города Нюрнберг в клинике, где находился на лечении. Похоронен 14 июня в историко-мемориальном комплексе «Ата-Бейит» в пригороде Бишкека.
 </p>
               """,
-                  defaultTextStyle: paragraphTextStyle,
-                  useRichText: true,
-                ),
-              ],
+              defaultTextStyle: paragraphTextStyle,
+              useRichText: true,
             ),
-          ),
-        ]))));
+          ],
+        ),
+      ),
+    ]))));
   }
 }

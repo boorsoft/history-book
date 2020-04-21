@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:theme_provider/theme_provider.dart';
 import 'package:historybook/pages/persons/Barsbek.dart';
 import 'package:historybook/pages/persons/Ishak.dart';
 import 'package:historybook/pages/persons/Sagynbai.dart';
@@ -59,92 +60,137 @@ class App extends StatefulWidget {
 class AppState extends State<App> {
   @override
   void initState() {
-    if (darkTheme) {
-      appBarColor = appBarColorDark;
-      bgColor = bgColorDark;
-      textColor = textColorWhite;
-      shadowColor = shadowColorDark;
-      timeColor = timeColorDark;
-    } else {
-      appBarColor = appBarColorDefault;
-      bgColor = bgColorDefault;
-      textColor = textColorDefault;
-      shadowColor = shadowColorDefault;
-      timeColor = timeColorDefault;
-    }
-
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: Home(),
-        theme: ThemeData(
-          primaryColor: appBarColor,
-          // primaryTextTheme: TextTheme(
-          //   title: TextStyle(
-          //     color: Colors.grey,
-          //   ),
-          // ),
-          fontFamily: 'San Francisco',
-        ),
-        routes: routes());
+    return ThemeProvider(
+        saveThemesOnChange: true,
+        loadThemeOnInit: true,
+        themes: <AppTheme>[defaultTheme(), darkTheme()],
+        defaultThemeId: "default_theme",
+        child: MaterialApp(
+            debugShowCheckedModeBanner: false,
+            home: ThemeConsumer(child: Home()),
+            routes: routes()));
+  }
+
+  AppTheme defaultTheme() {
+    return AppTheme(
+        id: "default_theme",
+        description: "Default theme of the app",
+        data: ThemeData(
+            brightness: Brightness.light,
+            primaryColor: appBarColorDefault,
+            scaffoldBackgroundColor: bgColorDefault,
+            buttonColor: appBarColorDefault,
+            fontFamily: 'San Francisco'));
+  }
+
+  AppTheme darkTheme() {
+    return AppTheme(
+        id: "dark_theme",
+        description: "Dark theme of the app",
+        data: ThemeData(
+            brightness: Brightness.dark,
+            primaryColor: appBarColorDark,
+            scaffoldBackgroundColor: bgColorDark,
+            buttonColor: appBarColorDark,
+            fontFamily: 'San Francisco'));
   }
 
   Map<String, WidgetBuilder> routes() {
     return <String, WidgetBuilder>{
-      "/Home": (BuildContext context) => Home(),
-      "/Paragraphs": (BuildContext context) => Paragraphs(),
-      "/About": (BuildContext context) => About(),
-      "/Quiz": (BuildContext context) => GetJson(),
-      "/QuizStarter": (BuildContext context) => QuizStarter(),
-      "/Persons": (BuildContext context) => Persons(),
-      "/Paragraphs/Paragraph1": (BuildContext context) => Paragraph1(),
-      "/Paragraphs/Paragraph2": (BuildContext context) => Paragraph2(),
-      "/Paragraphs/Paragraph3": (BuildContext context) => Paragraph3(),
-      "/Paragraphs/Paragraph4": (BuildContext context) => Paragraph4(),
-      "/Paragraphs/Paragraph5": (BuildContext context) => Paragraph5(),
-      "/Paragraphs/Paragraph6": (BuildContext context) => Paragraph6(),
-      "/Paragraphs/Paragraph7": (BuildContext context) => Paragraph7(),
-      "/Paragraphs/Paragraph8": (BuildContext context) => Paragraph8(),
-      "/Paragraphs/Paragraph9": (BuildContext context) => Paragraph9(),
-      "/Paragraphs/Paragraph10": (BuildContext context) => Paragraph10(),
-      "/Paragraphs/Paragraph11": (BuildContext context) => Paragraph11(),
-      "/Paragraphs/Paragraph12": (BuildContext context) => Paragraph12(),
-      "/Paragraphs/Paragraph13": (BuildContext context) => Paragraph13(),
-      "/Paragraphs/Paragraph14": (BuildContext context) => Paragraph14(),
-      "/Paragraphs/Paragraph15": (BuildContext context) => Paragraph15(),
-      "/Paragraphs/Paragraph16": (BuildContext context) => Paragraph16(),
-      "/Persons/Chika": (BuildContext contex) => Kir2(),
-      "/Persons/Chika": (BuildContext contex) => Tomiris(),
-      "/Persons/Chika": (BuildContext contex) => Gerodot(),
-      "/Persons/Chika": (BuildContext contex) => Darii1(),
-      "/Persons/Barsbek": (BuildContext contex) => Barsbek(),
-      "/Persons/DjusupBalasagyn": (BuildContext contex) => Djusup(),
-      "/Persons/Mahmud": (BuildContext contex) => Mahmud(),
-      "/Persons/TagaiBii": (BuildContext contex) => TagaiBii(),
-      "/Persons/AtakeBaatyr": (BuildContext contex) => AtakeBaatyr(),
-      "/Persons/OrmonHan": (BuildContext contex) => OrmonHan(),
-      "/Persons/BorombaiBii": (BuildContext contex) => BorombaiBii(),
-      "/Persons/BaitykBaatyr": (BuildContext contex) => BaitykBaatyr(),
-      "/Persons/Shabdan": (BuildContext contex) => Shabdan(),
-      "/Persons/Alymbek": (BuildContext contex) => Alymbek(),
-      "/Persons/Kurmanjan": (BuildContext contex) => Kurmanjan(),
-      "/Persons/Chokon": (BuildContext contex) => Chokon(),
-      "/Persons/Sagynbai": (BuildContext contex) => Sagynbai(),
-      "/Persons/Karalaev": (BuildContext contex) => Karalaev(),
-      "/Persons/Kasym": (BuildContext contex) => Kasym(),
-      "/Persons/Torokul": (BuildContext contex) => Torokul(),
-      "/Persons/Ishak": (BuildContext contex) => Ishak(),
-      "/Persons/Isa": (BuildContext contex) => Isa(),
-      "/Persons/Alykul": (BuildContext contex) => Alykul(),
-      "/Persons/Chika": (BuildContext contex) => Chika(),
-      "/Persons/Darii1": (BuildContext context) => Darii1(),
-      "/Persons/Gerodot": (BuildContext context) => Gerodot(),
-      "/Persons/kir2": (BuildContext context) => Kir2(),
-      "/Persons/Tomiris": (BuildContext context) => Tomiris()
+      "/Home": (BuildContext context) => ThemeConsumer(child: Home()),
+      "/Paragraphs": (BuildContext context) =>
+          ThemeConsumer(child: Paragraphs()),
+      "/About": (BuildContext context) => ThemeConsumer(child: About()),
+      "/Quiz": (BuildContext context) => ThemeConsumer(child: GetJson()),
+      "/QuizStarter": (BuildContext context) =>
+          ThemeConsumer(child: QuizStarter()),
+      "/Persons": (BuildContext context) => ThemeConsumer(child: Persons()),
+      "/Paragraphs/Paragraph1": (BuildContext context) =>
+          ThemeConsumer(child: Paragraph1()),
+      "/Paragraphs/Paragraph2": (BuildContext context) =>
+          ThemeConsumer(child: Paragraph2()),
+      "/Paragraphs/Paragraph3": (BuildContext context) =>
+          ThemeConsumer(child: Paragraph3()),
+      "/Paragraphs/Paragraph4": (BuildContext context) =>
+          ThemeConsumer(child: Paragraph4()),
+      "/Paragraphs/Paragraph5": (BuildContext context) =>
+          ThemeConsumer(child: Paragraph5()),
+      "/Paragraphs/Paragraph6": (BuildContext context) =>
+          ThemeConsumer(child: Paragraph6()),
+      "/Paragraphs/Paragraph7": (BuildContext context) =>
+          ThemeConsumer(child: Paragraph7()),
+      "/Paragraphs/Paragraph8": (BuildContext context) =>
+          ThemeConsumer(child: Paragraph8()),
+      "/Paragraphs/Paragraph9": (BuildContext context) =>
+          ThemeConsumer(child: Paragraph9()),
+      "/Paragraphs/Paragraph10": (BuildContext context) =>
+          ThemeConsumer(child: Paragraph10()),
+      "/Paragraphs/Paragraph11": (BuildContext context) =>
+          ThemeConsumer(child: Paragraph11()),
+      "/Paragraphs/Paragraph12": (BuildContext context) =>
+          ThemeConsumer(child: Paragraph12()),
+      "/Paragraphs/Paragraph13": (BuildContext context) =>
+          ThemeConsumer(child: Paragraph13()),
+      "/Paragraphs/Paragraph14": (BuildContext context) =>
+          ThemeConsumer(child: Paragraph14()),
+      "/Paragraphs/Paragraph15": (BuildContext context) =>
+          ThemeConsumer(child: Paragraph15()),
+      "/Paragraphs/Paragraph16": (BuildContext context) =>
+          ThemeConsumer(child: Paragraph16()),
+      "/Persons/Chika": (BuildContext contex) => ThemeConsumer(child: Kir2()),
+      "/Persons/Chika": (BuildContext contex) =>
+          ThemeConsumer(child: Tomiris()),
+      "/Persons/Chika": (BuildContext contex) =>
+          ThemeConsumer(child: Gerodot()),
+      "/Persons/Chika": (BuildContext contex) => ThemeConsumer(child: Darii1()),
+      "/Persons/Barsbek": (BuildContext contex) =>
+          ThemeConsumer(child: Barsbek()),
+      "/Persons/DjusupBalasagyn": (BuildContext contex) =>
+          ThemeConsumer(child: Djusup()),
+      "/Persons/Mahmud": (BuildContext contex) =>
+          ThemeConsumer(child: Mahmud()),
+      "/Persons/TagaiBii": (BuildContext contex) =>
+          ThemeConsumer(child: TagaiBii()),
+      "/Persons/AtakeBaatyr": (BuildContext contex) =>
+          ThemeConsumer(child: AtakeBaatyr()),
+      "/Persons/OrmonHan": (BuildContext contex) =>
+          ThemeConsumer(child: OrmonHan()),
+      "/Persons/BorombaiBii": (BuildContext contex) =>
+          ThemeConsumer(child: BorombaiBii()),
+      "/Persons/BaitykBaatyr": (BuildContext contex) =>
+          ThemeConsumer(child: BaitykBaatyr()),
+      "/Persons/Shabdan": (BuildContext contex) =>
+          ThemeConsumer(child: Shabdan()),
+      "/Persons/Alymbek": (BuildContext contex) =>
+          ThemeConsumer(child: Alymbek()),
+      "/Persons/Kurmanjan": (BuildContext contex) =>
+          ThemeConsumer(child: Kurmanjan()),
+      "/Persons/Chokon": (BuildContext contex) =>
+          ThemeConsumer(child: Chokon()),
+      "/Persons/Sagynbai": (BuildContext contex) =>
+          ThemeConsumer(child: Sagynbai()),
+      "/Persons/Karalaev": (BuildContext contex) =>
+          ThemeConsumer(child: Karalaev()),
+      "/Persons/Kasym": (BuildContext contex) => ThemeConsumer(child: Kasym()),
+      "/Persons/Torokul": (BuildContext contex) =>
+          ThemeConsumer(child: Torokul()),
+      "/Persons/Ishak": (BuildContext contex) => ThemeConsumer(child: Ishak()),
+      "/Persons/Isa": (BuildContext contex) => ThemeConsumer(child: Isa()),
+      "/Persons/Alykul": (BuildContext contex) =>
+          ThemeConsumer(child: Alykul()),
+      "/Persons/Chika": (BuildContext contex) => ThemeConsumer(child: Chika()),
+      "/Persons/Darii1": (BuildContext context) =>
+          ThemeConsumer(child: Darii1()),
+      "/Persons/Gerodot": (BuildContext context) =>
+          ThemeConsumer(child: Gerodot()),
+      "/Persons/kir2": (BuildContext context) => ThemeConsumer(child: Kir2()),
+      "/Persons/Tomiris": (BuildContext context) =>
+          ThemeConsumer(child: Tomiris())
     };
   }
 }

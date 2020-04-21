@@ -34,10 +34,8 @@ class About extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: bgColor,
         appBar: AppBar(
           title: Text('О Приложении'),
-          backgroundColor: appBarColor,
         ),
         body: SingleChildScrollView(
             child: Container(

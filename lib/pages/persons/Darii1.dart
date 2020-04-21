@@ -7,17 +7,16 @@ class Darii1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: bgColor,
         body: Scrollbar(
             child: SingleChildScrollView(
                 child: Column(children: <Widget>[
-          PersonHeader("assets/images/persons/Darii1.jpg", "Дарий I"),
-          Container(
-            padding: EdgeInsets.all(10.0),
-            child: Column(
-              children: <Widget>[
-                Html(
-                  data: """
+      PersonHeader("assets/images/persons/Darii1.jpg", "Дарий I"),
+      Container(
+        padding: EdgeInsets.all(10.0),
+        child: Column(
+          children: <Widget>[
+            Html(
+              data: """
 <center><b>Дарий I</b></center>
 <p>
 Дата рождения Дария I, согласно краткой биографии, точно не известна. Считается, что родился он в 550 году до н.э. Хотя по другим источникам, Дарий стал править в 28 лет. Точно определена лишь его дата восшествия на престол в результате убийства заговорщиками предыдущего правителя. Это произошло в 522 году до н.э.  Он относился к младшей линии династии персидских правителей Ахеменидов. Чтобы окончательно закрепить свою власть, Дарий I женился на Атоссе, дочери великого Кира II, которая до этого была женой двух прежних персидских правителей.
@@ -34,12 +33,12 @@ class Darii1 extends StatelessWidget {
 В 486 году до н. э. правитель персидской державы Дарий I умер в возрасте 64 лет.
 </p>
               """,
-                  defaultTextStyle: paragraphTextStyle,
-                  useRichText: true,
-                ),
-              ],
+              defaultTextStyle: paragraphTextStyle,
+              useRichText: true,
             ),
-          ),
-        ]))));
+          ],
+        ),
+      ),
+    ]))));
   }
 }

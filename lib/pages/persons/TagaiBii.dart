@@ -7,18 +7,17 @@ class TagaiBii extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: bgColor,
         body: Scrollbar(
             child: SingleChildScrollView(
                 child: Column(children: <Widget>[
-          PersonHeader("assets/images/persons/TagaiBii.jpg",
-              "Муххамед Кыргыз (Тагай Бий)"),
-          Container(
-            padding: EdgeInsets.all(10.0),
-            child: Column(
-              children: <Widget>[
-                Html(
-                  data: """
+      PersonHeader(
+          "assets/images/persons/TagaiBii.jpg", "Муххамед Кыргыз (Тагай Бий)"),
+      Container(
+        padding: EdgeInsets.all(10.0),
+        child: Column(
+          children: <Widget>[
+            Html(
+              data: """
 <center><b>Муххамед Кыргыз (Тагай Бий)</b></center>
 <p><b>Муххамед Кыргыз (Тагай Бий)</b> - по предположению историков именно Мухаммед-кыргыз известен в преданиях под именем родона­чальника и первого верховного правителя кыргызов Тагай-бия, од­ного из влиятельнейших родоправителей правого «крыла» кыргызов (Северный Кыргызстан, ставка Бар-скоон). Деятельность Мухаммед-кыргыза была направлена на упро­чение союза «правого» и «левого» крыла кыргызских племен. В 1508 г. он по традиции был поднят на бе­лой кошме и объявлен кыргызским правителем, что фактически знаме­новало обретение кыргызскими племенами независимости.
 </p>
@@ -30,12 +29,12 @@ class TagaiBii extends StatelessWidget {
 В 1524 г. правитель Казахского ханства Тахир-хан вступил с Мухам-мед-кыргызом в переговоры о союзе против моголов. Султан-Сайд, уз­нав об этом, вновь арестовал Мухам-мед-кыргыза и отправил его в Каш­гар, где он оставался до смерти Сул­тан-Сайда в 1533 г. Вскоре умер и сам Мухаммед-кыргыз.
 Попытки правителей Могольско-го государства закрепиться в Север­ном Кыргызстане не удались. Дально­видная политика Мухаммед-кыргыза позволила кыргызам в союзе с каза­хами отстоять свою независимость.</p>
               """,
-                  defaultTextStyle: paragraphTextStyle,
-                  useRichText: true,
-                ),
-              ],
+              defaultTextStyle: paragraphTextStyle,
+              useRichText: true,
             ),
-          ),
-        ]))));
+          ],
+        ),
+      ),
+    ]))));
   }
 }
