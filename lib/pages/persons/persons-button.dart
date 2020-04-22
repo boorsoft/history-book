@@ -53,11 +53,11 @@ class PersonsButton extends StatelessWidget {
             width: 155.0,
             height: 38.0,
             decoration: BoxDecoration(
+              color: Theme.of(context).primaryColor,
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(30.0),
                 bottomRight: Radius.circular(30.0),
               ),
-              color: appBarColor,
               boxShadow: [
                 BoxShadow(
                     color: shadowColor,

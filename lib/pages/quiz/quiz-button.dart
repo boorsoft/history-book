@@ -15,7 +15,7 @@ class QuizButton extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
         ListTile(
-          leading: Icon(OpenIconicIcons.book, color: textColor),
+          leading: Icon(OpenIconicIcons.book),
           title: Text(quizButtonText, style: paragraphBoldTextStyle),
           contentPadding: EdgeInsets.all(20.0),
           onTap: () => {

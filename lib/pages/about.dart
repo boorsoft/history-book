@@ -3,20 +3,20 @@ import 'package:flutter_html/flutter_html.dart';
 import 'package:historybook/style.dart';
 
 class About extends StatelessWidget {
-  Widget contactBox(String _developer, String _email) {
+  Widget contactBox(String _developer, String _email, BuildContext context) {
     return Container(
       width: 250.0,
       height: 70.0,
       margin: EdgeInsets.all(5.0),
-      decoration: BoxDecoration(color: appBarColor, boxShadow: [
+      decoration:
+          BoxDecoration(color: Theme.of(context).primaryColor, boxShadow: [
         BoxShadow(
             color: Colors.black.withOpacity(0.5),
             blurRadius: 3.5,
             offset: Offset(1.5, 1.5))
       ]),
       child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-        Text(_developer,
-            style: TextStyle(fontWeight: FontWeight.bold, color: textColor)),
+        Text(_developer, style: TextStyle(fontWeight: FontWeight.bold)),
         SizedBox(height: 4.0),
         Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
           Icon(
@@ -24,7 +24,7 @@ class About extends StatelessWidget {
             color: Color.fromRGBO(80, 88, 97, 1),
             size: 17.0,
           ),
-          Text(_email, style: TextStyle(color: textColor))
+          Text(_email)
         ]),
         SizedBox(height: 4.0),
       ]),
@@ -52,7 +52,7 @@ class About extends StatelessWidget {
                     SizedBox(height: 20.0),
                     Text(
                       'Версия: 1.0.2',
-                      style: TextStyle(fontSize: 15.0, color: textColor),
+                      style: TextStyle(fontSize: 15.0),
                     ),
                     SizedBox(height: 20.0),
                     Html(
@@ -81,14 +81,12 @@ class About extends StatelessWidget {
                                 color: textColor,
                                 fontWeight: FontWeight.bold))),
                     SizedBox(height: 20.0),
-                    contactBox(
-                      'Жумабек уулу Байдоолот',
-                      '  zhumabek_uulu_b@iuca.kg',
-                    ),
-                    contactBox('Акматов Азим', '  akmatov_az@iuca.kg'),
+                    contactBox('Жумабек уулу Байдоолот',
+                        '  zhumabek_uulu_b@iuca.kg', context),
+                    contactBox('Акматов Азим', '  akmatov_az@iuca.kg', context),
                     // ContactBox(
                     //     'Джолдошбеков Темирлан', '  dzholdoshbekov_t@iuca.kg'),
-                    contactBox('Boorsoft', '  boorsoft@gmail.com'),
+                    contactBox('Boorsoft', '  boorsoft@gmail.com', context),
                     SizedBox(height: 20.0),
                     Html(
                       data: """
