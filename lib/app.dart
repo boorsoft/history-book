@@ -69,6 +69,7 @@ class AppState extends State<App> {
         saveThemesOnChange: true,
         loadThemeOnInit: true,
         themes: [defaultTheme(), darkTheme()],
+        defaultThemeId: 'default_theme',
         child: MaterialApp(
             debugShowCheckedModeBanner: false,
             home: ThemeConsumer(child: Home()),
@@ -80,9 +81,9 @@ class AppState extends State<App> {
         id: "default_theme",
         description: "Default theme",
         options: ThemeOption(
-            textColor: textColorWhite,
-            appBarColor: appBarColorDark,
-            shadowColor: shadowColorDark),
+            textColor: textColor = textColorDefault,
+            appBarColor: appBarColor = appBarColorDefault,
+            shadowColor: shadowColor = shadowColorDefault),
         data: ThemeData(
             brightness: Brightness.light,
             primaryColor: appBarColorDefault,
@@ -94,9 +95,9 @@ class AppState extends State<App> {
         id: "dark_theme",
         description: "Dark theme",
         options: ThemeOption(
-            textColor: textColorWhite,
-            appBarColor: appBarColorDark,
-            shadowColor: shadowColorDark),
+            textColor: textColor = textColorWhite,
+            appBarColor: appBarColor = appBarColorDark,
+            shadowColor: shadowColor = shadowColorDark),
         data: ThemeData(
             brightness: Brightness.dark,
             primaryColor: appBarColorDark,

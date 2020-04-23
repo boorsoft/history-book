@@ -12,7 +12,7 @@ Color appBarColorDefault = Color.fromRGBO(127, 156, 163, 1);
 Color appBarColorDark = Color.fromRGBO(13, 13, 13, 1);
 Color appBarColor = themeOption.appBarColor;
 
-Color textColor = themeOption.textColor;
+Color textColor = Colors.black87;
 Color textColorWhite = Colors.white;
 Color textColorDefault = Colors.black87;
 
@@ -27,7 +27,6 @@ Color timeColorDefault = Color.fromRGBO(127, 156, 163, 1);
 TextStyle paragraphTextStyle = TextStyle(
   fontFamily: 'San Francisco',
   fontSize: 16.5,
-  color: textColor,
   letterSpacing: 0.5,
   height: 1.5,
 );
@@ -36,7 +35,6 @@ TextStyle paragraphBoldTextStyle = TextStyle(
   fontWeight: FontWeight.bold,
   fontFamily: 'San Francisco',
   fontSize: 16.5,
-  color: textColor,
   letterSpacing: 0.5,
   height: 1.5,
 );
