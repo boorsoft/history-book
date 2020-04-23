@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:theme_provider/theme_provider.dart';
 import 'package:historybook/pages/persons/Barsbek.dart';
@@ -69,7 +68,7 @@ class AppState extends State<App> {
     return ThemeProvider(
         saveThemesOnChange: true,
         loadThemeOnInit: true,
-        themes: <AppTheme>[defaultTheme(), darkTheme()],
+        themes: [defaultTheme(), darkTheme()],
         child: MaterialApp(
             debugShowCheckedModeBanner: false,
             home: ThemeConsumer(child: Home()),
@@ -79,37 +78,29 @@ class AppState extends State<App> {
   AppTheme defaultTheme() {
     return AppTheme(
         id: "default_theme",
-        description: "Default theme of the app",
+        description: "Default theme",
+        options: ThemeOption(
+            textColor: textColorWhite,
+            appBarColor: appBarColorDark,
+            shadowColor: shadowColorDark),
         data: ThemeData(
             brightness: Brightness.light,
-            primaryColor: appBarColor = appBarColorDefault,
-            scaffoldBackgroundColor: bgColor = bgColorDefault,
-            backgroundColor: appBarColorDefault,
-            iconTheme: IconThemeData(color: textColorDefault),
-            textTheme: Theme.of(context).textTheme.apply(
-                  bodyColor: textColorDefault,
-                  displayColor: textColorDefault,
-                  decorationColor: textColorDefault,
-                ),
-            buttonColor: appBarColor,
-            fontFamily: 'San Francisco'));
+            primaryColor: appBarColorDefault,
+            scaffoldBackgroundColor: bgColorDefault));
   }
 
   AppTheme darkTheme() {
     return AppTheme(
         id: "dark_theme",
-        description: "Dark theme of the app",
+        description: "Dark theme",
+        options: ThemeOption(
+            textColor: textColorWhite,
+            appBarColor: appBarColorDark,
+            shadowColor: shadowColorDark),
         data: ThemeData(
             brightness: Brightness.dark,
-            primaryColor: appBarColor = appBarColorDark,
-            scaffoldBackgroundColor: bgColor = bgColorDark,
-            backgroundColor: appBarColorDark,
-            textTheme: Theme.of(context).textTheme.apply(
-                bodyColor: textColorWhite,
-                displayColor: textColorWhite,
-                decorationColor: textColorWhite),
-            buttonColor: appBarColor,
-            fontFamily: 'San Francisco'));
+            primaryColor: appBarColorDark,
+            scaffoldBackgroundColor: bgColorDark));
   }
 
   Map<String, WidgetBuilder> routes() {

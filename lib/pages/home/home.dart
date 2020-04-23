@@ -16,13 +16,6 @@ class _HomeState extends State<Home> {
   }
 
   @override
-  void setState(fn) {
-    if (mounted) {
-      super.setState(fn);
-    }
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -35,9 +28,6 @@ class _HomeState extends State<Home> {
                 hoverColor: Colors.white70,
                 onPressed: () {
                   ThemeProvider.controllerOf(context).nextTheme();
-                  setState(() {
-                    checkTheme();
-                  });
                 })
           ],
           title: Text('История Кыргызстана',

@@ -77,9 +77,7 @@ class About extends StatelessWidget {
                     SizedBox(height: 20.0),
                     Center(
                         child: Text('Разработчики: ',
-                            style: TextStyle(
-                                color: textColor,
-                                fontWeight: FontWeight.bold))),
+                            style: TextStyle(fontWeight: FontWeight.bold))),
                     SizedBox(height: 20.0),
                     contactBox('Жумабек уулу Байдоолот',
                         '  zhumabek_uulu_b@iuca.kg', context),

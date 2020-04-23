@@ -277,8 +277,7 @@ class QuizState extends State<Quiz> {
     if (_nextButtonEnabled) {
       return MaterialButton(
         onPressed: () => nextQuestion(),
-        child: Text('Следующий',
-            style: TextStyle(color: textColor, fontSize: 16.0)),
+        child: Text('Следующий', style: TextStyle(fontSize: 17.0)),
         hoverColor: appBarColor,
       );
     } else {
@@ -303,7 +302,6 @@ class QuizState extends State<Quiz> {
                       "\\" +
                       widget.quizdata[0].length.toString(),
                   style: TextStyle(
-                    color: textColor,
                     fontFamily: 'San Francisco',
                   )),
             ),
@@ -312,8 +310,7 @@ class QuizState extends State<Quiz> {
               alignment: Alignment.topLeft,
               child: Text(
                   'Количество правильных ответов: ' + correctAnswers.toString(),
-                  style:
-                      TextStyle(fontFamily: 'San Francisco', color: textColor)),
+                  style: TextStyle(fontFamily: 'San Francisco')),
             ),
             Container(
               margin: EdgeInsets.symmetric(vertical: 30.0),
@@ -326,9 +323,9 @@ class QuizState extends State<Quiz> {
                 widget.quizdata[0][i.toString()],
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                    fontSize: 16.5,
-                    fontFamily: 'San Francisco',
-                    color: textColor),
+                  fontSize: 16.5,
+                  fontFamily: 'San Francisco',
+                ),
               ),
             ),
             Container(
