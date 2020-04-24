@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:theme_provider/theme_provider.dart';
 import 'package:historybook/style.dart';
 
 class ImageButton extends StatelessWidget {
@@ -35,7 +36,8 @@ class ImageButton extends StatelessWidget {
                       borderRadius: BorderRadius.circular(25.0),
                       boxShadow: [
                         BoxShadow(
-                          color: shadowColor,
+                          color: ThemeProvider.optionsOf<ThemeOption>(context)
+                              .shadowColorOption,
                           blurRadius: 9.0,
                           spreadRadius: 2,
                           offset: Offset(1.0, 3.5),

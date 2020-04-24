@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:theme_provider/theme_provider.dart';
 import 'package:historybook/style.dart';
 
 class ParagraphButton extends StatelessWidget {
@@ -26,7 +27,9 @@ class ParagraphButton extends StatelessWidget {
                         borderRadius: BorderRadius.circular(25.0),
                         boxShadow: [
                           BoxShadow(
-                              color: shadowColor,
+                              color:
+                                  ThemeProvider.optionsOf<ThemeOption>(context)
+                                      .shadowColorOption,
                               blurRadius: 5.0,
                               spreadRadius: 1.5,
                               offset: Offset(0.5, 1.5)),

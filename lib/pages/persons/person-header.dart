@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:theme_provider/theme_provider.dart';
 import 'package:historybook/style.dart';
 
 class PersonHeader extends StatelessWidget {
@@ -21,7 +22,8 @@ class PersonHeader extends StatelessWidget {
               boxShadow: [
                 BoxShadow(
                     blurRadius: 10.0,
-                    color: shadowColor,
+                    color: ThemeProvider.optionsOf<ThemeOption>(context)
+                        .shadowColorOption,
                     offset: Offset(0.5, 1.0))
               ]),
           child: Hero(

@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:theme_provider/theme_provider.dart';
 import 'package:historybook/style.dart';
 
 class GetJson extends StatelessWidget {
@@ -20,19 +21,19 @@ class GetJson extends StatelessWidget {
             );
           } else {
             return Scaffold(
-                backgroundColor: bgColor,
                 body: Center(
                     child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                      Text('Идёт загрузка данных...',
-                          style: TextStyle(
-                              fontSize: 18.0,
-                              fontWeight: FontWeight.bold,
-                              color: textColor)),
-                      CircularProgressIndicator()
-                    ])));
+                  Text('Идёт загрузка данных...',
+                      style: TextStyle(
+                          fontSize: 18.0,
+                          fontWeight: FontWeight.bold,
+                          color: textColor)),
+                  SizedBox(height: 20.0),
+                  CircularProgressIndicator()
+                ])));
           }
         });
   }
@@ -81,11 +82,12 @@ class QuizState extends State<Quiz> {
 
   @override
   void initState() {
+    super.initState();
     // startTimer();
+
     randomArray();
     randomButton();
-    i = urnList[0];
-    super.initState();
+    i = urnList[0]; // Что б первый вопрос тоже был рандомным
   }
 
   @override

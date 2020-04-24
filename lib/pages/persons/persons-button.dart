@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:theme_provider/theme_provider.dart';
 import 'package:historybook/style.dart';
 
 class PersonsButton extends StatelessWidget {
@@ -27,7 +28,8 @@ class PersonsButton extends StatelessWidget {
                 ),
                 boxShadow: [
                   BoxShadow(
-                      color: shadowColor,
+                      color: ThemeProvider.optionsOf<ThemeOption>(context)
+                          .shadowColorOption,
                       blurRadius: 4.0,
                       offset: Offset(2.0, 2.0)),
                 ],
@@ -60,7 +62,8 @@ class PersonsButton extends StatelessWidget {
               ),
               boxShadow: [
                 BoxShadow(
-                    color: shadowColor,
+                    color: ThemeProvider.optionsOf<ThemeOption>(context)
+                        .shadowColorOption,
                     blurRadius: 4.0,
                     offset: Offset(2.0, 2.0)),
               ],

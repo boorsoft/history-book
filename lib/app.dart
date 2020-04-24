@@ -78,30 +78,32 @@ class AppState extends State<App> {
 
   AppTheme defaultTheme() {
     return AppTheme(
-        id: "default_theme",
-        description: "Default theme",
-        options: ThemeOption(
-            textColor: textColor = textColorDefault,
-            appBarColor: appBarColor = appBarColorDefault,
-            shadowColor: shadowColor = shadowColorDefault),
-        data: ThemeData(
-            brightness: Brightness.light,
-            primaryColor: appBarColorDefault,
-            scaffoldBackgroundColor: bgColorDefault));
+      id: "default_theme",
+      description: "Default theme",
+      data: ThemeData(
+          brightness: Brightness.light,
+          primaryColor: appBarColorDefault,
+          scaffoldBackgroundColor: bgColorDefault),
+      options: ThemeOption(
+          textColorOption: textColorDefault,
+          appBarColorOption: appBarColorDefault,
+          shadowColorOption: shadowColorDefault),
+    );
   }
 
   AppTheme darkTheme() {
     return AppTheme(
-        id: "dark_theme",
-        description: "Dark theme",
-        options: ThemeOption(
-            textColor: textColor = textColorWhite,
-            appBarColor: appBarColor = appBarColorDark,
-            shadowColor: shadowColor = shadowColorDark),
-        data: ThemeData(
-            brightness: Brightness.dark,
-            primaryColor: appBarColorDark,
-            scaffoldBackgroundColor: bgColorDark));
+      id: "dark_theme",
+      description: "Dark theme",
+      data: ThemeData(
+          brightness: Brightness.dark,
+          primaryColor: appBarColorDark,
+          scaffoldBackgroundColor: bgColorDark),
+      options: ThemeOption(
+          textColorOption: textColorWhite,
+          appBarColorOption: appBarColorDark,
+          shadowColorOption: shadowColorDark),
+    );
   }
 
   Map<String, WidgetBuilder> routes() {

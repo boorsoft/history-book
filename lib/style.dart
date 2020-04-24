@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:theme_provider/theme_provider.dart';
 
-ThemeOption themeOption = new ThemeOption();
-
 // Switch theme
 Color bgColorDefault = Colors.white;
 Color bgColorDark = Color.fromRGBO(20, 20, 20, 1);
@@ -10,13 +8,13 @@ Color bgColor = Colors.white;
 
 Color appBarColorDefault = Color.fromRGBO(127, 156, 163, 1);
 Color appBarColorDark = Color.fromRGBO(13, 13, 13, 1);
-Color appBarColor = themeOption.appBarColor;
+Color appBarColor;
 
-Color textColor = Colors.black87;
+Color textColor;
 Color textColorWhite = Colors.white;
-Color textColorDefault = Colors.black87;
+Color textColorDefault = Colors.black;
 
-Color shadowColor = Color.fromRGBO(0, 0, 0, 0.6);
+Color shadowColor;
 Color shadowColorDark = Color.fromRGBO(0, 0, 0, 0);
 Color shadowColorDefault = Color.fromRGBO(0, 0, 0, 0.6);
 
@@ -40,9 +38,10 @@ TextStyle paragraphBoldTextStyle = TextStyle(
 );
 
 class ThemeOption extends AppThemeOptions {
-  final shadowColor, appBarColor, textColor;
+  final shadowColorOption, appBarColorOption, textColorOption;
 
-  ThemeOption({this.shadowColor, this.appBarColor, this.textColor});
+  ThemeOption(
+      {this.shadowColorOption, this.appBarColorOption, this.textColorOption});
 }
 
 class FrameStyle extends StatelessWidget {

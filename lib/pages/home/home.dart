@@ -6,13 +6,21 @@ import 'package:historybook/style.dart';
 
 class Home extends StatefulWidget {
   @override
-  _HomeState createState() => _HomeState();
+  HomeState createState() => HomeState();
 }
 
-class _HomeState extends State<Home> {
+class HomeState extends State<Home> {
   @override
   void initState() {
     super.initState();
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    appBarColor = ThemeProvider.themeOf(context)
+        .data
+        .primaryColor; // Цвет AppBar в соответсвии с темой, используется для цвета кнопок
   }
 
   @override

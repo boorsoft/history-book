@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:theme_provider/theme_provider.dart';
-import 'package:historybook/style.dart';
 import 'package:historybook/pages/quiz/quiz-button.dart';
 import '../paragraphs/paragraph-header.dart';
 
