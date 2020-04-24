@@ -21,6 +21,7 @@ class HomeState extends State<Home> {
     appBarColor = ThemeProvider.themeOf(context)
         .data
         .primaryColor; // Цвет AppBar в соответсвии с темой, используется для цвета кнопок
+    textColor = ThemeProvider.optionsOf<ThemeOption>(context).textColorOption;
   }
 
   @override

@@ -3,7 +3,7 @@ import 'package:theme_provider/theme_provider.dart';
 
 // Switch theme
 Color bgColorDefault = Colors.white;
-Color bgColorDark = Color.fromRGBO(20, 20, 20, 1);
+Color bgColorDark = Color.fromRGBO(23, 23, 23, 1);
 Color bgColor = Colors.white;
 
 Color appBarColorDefault = Color.fromRGBO(127, 156, 163, 1);
@@ -55,7 +55,7 @@ class FrameStyle extends StatelessWidget {
       child: Container(
         padding: EdgeInsets.all(7.0),
         decoration: BoxDecoration(
-          border: Border.all(width: 1.0),
+          border: Border.all(width: 1.0, color: textColor),
         ),
         child: _frameChild,
       ),

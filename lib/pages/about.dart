@@ -16,15 +16,17 @@ class About extends StatelessWidget {
             offset: Offset(1.5, 1.5))
       ]),
       child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-        Text(_developer, style: TextStyle(fontWeight: FontWeight.bold)),
+        Text(_developer,
+            style:
+                TextStyle(fontWeight: FontWeight.bold, color: textColorWhite)),
         SizedBox(height: 4.0),
         Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
           Icon(
             Icons.email,
-            color: Color.fromRGBO(80, 88, 97, 1),
+            color: textColorWhite,
             size: 17.0,
           ),
-          Text(_email)
+          Text(_email, style: TextStyle(color: textColorWhite))
         ]),
         SizedBox(height: 4.0),
       ]),

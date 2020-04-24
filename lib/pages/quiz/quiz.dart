@@ -266,7 +266,7 @@ class QuizState extends State<Quiz> {
             ),
             actions: <Widget>[
               FlatButton(
-                  child: Text('ОК', style: TextStyle(color: textColor)),
+                  child: Text('ОК', style: TextStyle(color: textColorWhite)),
                   onPressed: () {
                     Navigator.of(context).popUntil((route) => route.isFirst);
                   })

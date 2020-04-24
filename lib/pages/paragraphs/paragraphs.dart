@@ -13,10 +13,7 @@ class _ParagraphState extends State<Paragraphs> {
       appBar: AppBar(
         title: Text('Параграфы'),
       ),
-      body: SingleChildScrollView(
-          child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
+      body: ListView(
         children: <Widget>[
           SizedBox(height: 5.0),
           ParagraphButton("assets/images/article-pic1.jpg",
@@ -83,7 +80,7 @@ class _ParagraphState extends State<Paragraphs> {
               "/Paragraphs/Paragraph16"),
           SizedBox(height: 5.0),
         ],
-      )),
+      ),
     );
   }
 }

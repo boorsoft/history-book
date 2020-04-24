@@ -111,8 +111,8 @@ class AppState extends State<App> {
       "/Home": (BuildContext context) => ThemeConsumer(child: Home()),
       "/Paragraphs": (BuildContext context) =>
           ThemeConsumer(child: Paragraphs()),
-      "/About": (BuildContext context) => ThemeConsumer(child: About()),
       "/Quiz": (BuildContext context) => ThemeConsumer(child: GetJson()),
+      "/About": (BuildContext context) => ThemeConsumer(child: About()),
       "/QuizStarter": (BuildContext context) =>
           ThemeConsumer(child: QuizStarter()),
       "/Persons": (BuildContext context) => ThemeConsumer(child: Persons()),

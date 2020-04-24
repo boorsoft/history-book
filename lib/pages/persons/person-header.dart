@@ -13,7 +13,7 @@ class PersonHeader extends StatelessWidget {
     return Stack(
       children: <Widget>[
         Container(
-          height: 380.0,
+          height: 400.0,
           width: double.infinity,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.only(
@@ -32,10 +32,14 @@ class PersonHeader extends StatelessWidget {
                   borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(25.0),
                       bottomRight: Radius.circular(25.0)),
-                  child: Image(image: AssetImage(_image), fit: BoxFit.cover))),
+                  child: Image(
+                    image: AssetImage(_image),
+                    fit: BoxFit.cover,
+                    alignment: Alignment.topCenter,
+                  ))),
         ),
         Container(
-            height: 380.0,
+            height: 400.0,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(25.0),
                 gradient: LinearGradient(
@@ -50,7 +54,7 @@ class PersonHeader extends StatelessWidget {
                       1.0
                     ]))),
         Container(
-            height: 380.0,
+            height: 400.0,
             alignment: Alignment.center,
             padding: EdgeInsets.symmetric(horizontal: 10.0),
             child: Center(
