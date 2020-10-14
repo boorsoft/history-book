@@ -148,48 +148,42 @@ class AppState extends State<App> {
           ThemeConsumer(child: Paragraph15()),
       "/Paragraphs/Paragraph16": (BuildContext context) =>
           ThemeConsumer(child: Paragraph16()),
-      "/Persons/Chika": (BuildContext contex) => ThemeConsumer(child: Kir2()),
-      "/Persons/Chika": (BuildContext contex) =>
-          ThemeConsumer(child: Tomiris()),
-      "/Persons/Chika": (BuildContext contex) =>
-          ThemeConsumer(child: Gerodot()),
-      "/Persons/Chika": (BuildContext contex) => ThemeConsumer(child: Darii1()),
-      "/Persons/Barsbek": (BuildContext contex) =>
+      "/Persons/Barsbek": (BuildContext context) =>
           ThemeConsumer(child: Barsbek()),
-      "/Persons/DjusupBalasagyn": (BuildContext contex) =>
+      "/Persons/DjusupBalasagyn": (BuildContext context) =>
           ThemeConsumer(child: Djusup()),
-      "/Persons/Mahmud": (BuildContext contex) =>
+      "/Persons/Mahmud": (BuildContext context) =>
           ThemeConsumer(child: Mahmud()),
-      "/Persons/TagaiBii": (BuildContext contex) =>
+      "/Persons/TagaiBii": (BuildContext context) =>
           ThemeConsumer(child: TagaiBii()),
-      "/Persons/AtakeBaatyr": (BuildContext contex) =>
+      "/Persons/AtakeBaatyr": (BuildContext context) =>
           ThemeConsumer(child: AtakeBaatyr()),
-      "/Persons/OrmonHan": (BuildContext contex) =>
+      "/Persons/OrmonHan": (BuildContext context) =>
           ThemeConsumer(child: OrmonHan()),
-      "/Persons/BorombaiBii": (BuildContext contex) =>
+      "/Persons/BorombaiBii": (BuildContext context) =>
           ThemeConsumer(child: BorombaiBii()),
-      "/Persons/BaitykBaatyr": (BuildContext contex) =>
+      "/Persons/BaitykBaatyr": (BuildContext context) =>
           ThemeConsumer(child: BaitykBaatyr()),
-      "/Persons/Shabdan": (BuildContext contex) =>
+      "/Persons/Shabdan": (BuildContext context) =>
           ThemeConsumer(child: Shabdan()),
-      "/Persons/Alymbek": (BuildContext contex) =>
+      "/Persons/Alymbek": (BuildContext context) =>
           ThemeConsumer(child: Alymbek()),
-      "/Persons/Kurmanjan": (BuildContext contex) =>
+      "/Persons/Kurmanjan": (BuildContext context) =>
           ThemeConsumer(child: Kurmanjan()),
-      "/Persons/Chokon": (BuildContext contex) =>
+      "/Persons/Chokon": (BuildContext context) =>
           ThemeConsumer(child: Chokon()),
-      "/Persons/Sagynbai": (BuildContext contex) =>
+      "/Persons/Sagynbai": (BuildContext context) =>
           ThemeConsumer(child: Sagynbai()),
-      "/Persons/Karalaev": (BuildContext contex) =>
+      "/Persons/Karalaev": (BuildContext context) =>
           ThemeConsumer(child: Karalaev()),
-      "/Persons/Kasym": (BuildContext contex) => ThemeConsumer(child: Kasym()),
-      "/Persons/Torokul": (BuildContext contex) =>
+      "/Persons/Kasym": (BuildContext context) => ThemeConsumer(child: Kasym()),
+      "/Persons/Torokul": (BuildContext context) =>
           ThemeConsumer(child: Torokul()),
-      "/Persons/Ishak": (BuildContext contex) => ThemeConsumer(child: Ishak()),
-      "/Persons/Isa": (BuildContext contex) => ThemeConsumer(child: Isa()),
-      "/Persons/Alykul": (BuildContext contex) =>
+      "/Persons/Ishak": (BuildContext context) => ThemeConsumer(child: Ishak()),
+      "/Persons/Isa": (BuildContext context) => ThemeConsumer(child: Isa()),
+      "/Persons/Alykul": (BuildContext context) =>
           ThemeConsumer(child: Alykul()),
-      "/Persons/Chika": (BuildContext contex) => ThemeConsumer(child: Chika()),
+      "/Persons/Chika": (BuildContext context) => ThemeConsumer(child: Chika()),
       "/Persons/Darii1": (BuildContext context) =>
           ThemeConsumer(child: Darii1()),
       "/Persons/Gerodot": (BuildContext context) =>

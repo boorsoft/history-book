@@ -21,9 +21,9 @@ class QuizButton extends StatelessWidget {
                   .textColorOption),
           title: Text(quizButtonText, style: paragraphBoldTextStyle),
           contentPadding: EdgeInsets.all(20.0),
-          onTap: () => {
-            Navigator.of(context).pushNamed("/Quiz"),
-            GetJson.getJson = jsonFile
+          onTap: () {
+            Navigator.of(context).pushNamed("/Quiz");
+            GetJson.getJson = jsonFile;
           },
         )
       ],
