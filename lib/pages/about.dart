@@ -5,8 +5,7 @@ import 'package:historybook/style.dart';
 class About extends StatelessWidget {
   Widget contactBox(String _developer, String _email, BuildContext context) {
     return Container(
-      width: 250.0,
-      height: 70.0,
+      height: 80.0,
       margin: EdgeInsets.all(5.0),
       decoration:
           BoxDecoration(color: Theme.of(context).primaryColor, boxShadow: [

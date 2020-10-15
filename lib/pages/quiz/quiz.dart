@@ -1,7 +1,7 @@
-import 'dart:async';
 import 'dart:convert';
 import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:historybook/style.dart';
 
 class GetJson extends StatelessWidget {
@@ -59,15 +59,9 @@ class QuizState extends State<Quiz> {
   int correctAnswers = 0; // Кол-во правильных ответов
   int i = 1; // Итератор для вопросов
   int questionNum = 1; // Номер вопроса для отображения
-  Timer timer;
-  int startTime = 30;
-  String showtimer = "30"; // Таймер, что б выводить на экран
-
-  var timerColor = timeColor;
 
   bool _enabled = true; // Активна ли кнопка
   bool _nextButtonEnabled = false; // Активна ли кнопка "Следующий"
-  bool canceltimer = false; // Отмена таймера
 
   Map<int, String> optionBtn = {1: "a", 2: "b", 3: "c", 4: "d"};
 
@@ -95,32 +89,6 @@ class QuizState extends State<Quiz> {
       super.setState(fn);
     }
   }
-
-  // void startTimer() async {
-  //   const sec = const Duration(seconds: 1);
-  //   timer = new Timer.periodic(sec, (Timer t) {
-  //     setState(() {
-  //       timerColor = timeColor;
-  //       if (startTime < 1) {
-  //         t.cancel();
-  //         nextQuestion();
-  //       } else if (canceltimer == true) {
-  //         t.cancel();
-  //       } else {
-  //         startTime -= 1;
-  //       }
-
-  //       if (startTime == 0) {
-  //         showtimer = "Время вышло!";
-  //       } else {
-  //         showtimer = startTime.toString();
-  //       }
-  //       if (startTime < 10) {
-  //         timerColor = Colors.red;
-  //       }
-  //     });
-  //   });
-  // }
 
   void randomArray() {
     var riSet = <int>{}; // Сэт рандомных чисел
@@ -153,8 +121,6 @@ class QuizState extends State<Quiz> {
   }
 
   void nextQuestion() {
-    canceltimer = false;
-    startTime = 30;
     _nextButtonEnabled = false; // Отключаем кнопку "следующий"
     setState(() {
       if (questionNum < widget.quizdata[0].length) {
@@ -173,7 +139,7 @@ class QuizState extends State<Quiz> {
     // startTimer();
   }
 
-  void checkAnswer(String option) {
+  void checkAnswer(String option, BuildContext context) {
     if (widget.quizdata[2][i.toString()] ==
         widget.quizdata[1][i.toString()][option]) {
       displayColor =
@@ -200,31 +166,32 @@ class QuizState extends State<Quiz> {
     }
     setState(() {
       buttonColor[option] = displayColor;
-      canceltimer = true;
-      // Future.delayed(Duration(milliseconds: 1300), () => nextQuestion());
     });
   }
 
-  Widget optionButton(String option) {
+  Widget optionButton(String option, BuildContext context) {
     var _onPressed;
 
     if (_enabled) {
       _onPressed = () {
-        checkAnswer(option);
+        checkAnswer(option, context);
         _enabled = false;
         if (!_enabled) {
           _nextButtonEnabled = true;
         }
       };
     }
+
     return Padding(
       padding: EdgeInsets.symmetric(
-        vertical: 15.0,
-        horizontal: 20.0,
+        vertical: 8.0,
+        horizontal: 8.0,
       ),
       child: MaterialButton(
         onPressed: _onPressed,
         disabledColor: buttonColor[option],
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(12.0))),
         child: Text(
           widget.quizdata[1][i.toString()][option],
           textAlign: TextAlign.center,
@@ -232,14 +199,12 @@ class QuizState extends State<Quiz> {
             color: Colors.white,
             fontFamily: 'San Francisco',
             fontWeight: FontWeight.bold,
-            fontSize: 16.0,
+            fontSize: 14.0,
           ),
         ),
         color: buttonColor[option],
         splashColor: Colors.grey[300],
         highlightColor: Color.fromRGBO(124, 134, 145, 1),
-        minWidth: 170.0,
-        height: 45.0,
       ),
     );
   }
@@ -251,7 +216,7 @@ class QuizState extends State<Quiz> {
         barrierDismissible: false,
         builder: (BuildContext context) {
           return AlertDialog(
-            title: Text('Завершение', style: TextStyle(color: Colors.white)),
+            title: Text('Завершение', style: TextStyle(color: textColorWhite)),
             backgroundColor: Color.fromRGBO(127, 156, 163, 1),
             content: SingleChildScrollView(
               child: ListBody(
@@ -259,7 +224,7 @@ class QuizState extends State<Quiz> {
                   Text(
                       'Поздравляем! Количество правильных ответов: ' +
                           correctAnswers.toString(),
-                      style: TextStyle(color: Colors.white))
+                      style: TextStyle(color: textColorWhite))
                 ],
               ),
             ),
@@ -276,10 +241,18 @@ class QuizState extends State<Quiz> {
 
   Widget nextButton() {
     if (_nextButtonEnabled) {
-      return MaterialButton(
-        onPressed: () => nextQuestion(),
-        child: Text('Следующий', style: TextStyle(fontSize: 17.0)),
-        hoverColor: appBarColor,
+      return Container(
+        height: 70.0,
+        width: 70.0,
+        child: FittedBox(
+          child: FloatingActionButton(
+            onPressed: () => nextQuestion(),
+            child: Icon(FontAwesomeIcons.arrowRight,
+                size: 25.0, color: textColorWhite),
+            backgroundColor: buttonsColor,
+            hoverColor: appBarColor,
+          ),
+        ),
       );
     } else {
       return SizedBox();
@@ -290,8 +263,10 @@ class QuizState extends State<Quiz> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(title: Text('Тестирование')),
+        floatingActionButton: nextButton(),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
         body: Container(
-            child: ListView(
+            child: Column(
           children: <Widget>[
             SizedBox(height: 10.0),
             Container(
@@ -302,9 +277,7 @@ class QuizState extends State<Quiz> {
                       questionNum.toString() +
                       "\\" +
                       widget.quizdata[0].length.toString(),
-                  style: TextStyle(
-                    fontFamily: 'San Francisco',
-                  )),
+                  style: TextStyle(fontFamily: 'San Francisco')),
             ),
             Container(
               padding: EdgeInsets.only(left: 10.0),
@@ -324,37 +297,22 @@ class QuizState extends State<Quiz> {
                 widget.quizdata[0][i.toString()],
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 16.5,
+                  fontSize: 14.5,
                   fontFamily: 'San Francisco',
                 ),
               ),
             ),
-            Container(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  optionButton(optionBtn[urnButtonList[0]]),
-                  optionButton(optionBtn[urnButtonList[1]]),
-                  optionButton(optionBtn[urnButtonList[2]]),
-                  optionButton(optionBtn[urnButtonList[3]])
+            Expanded(
+              child: GridView.count(
+                crossAxisCount: 2,
+                children: [
+                  optionButton(optionBtn[urnButtonList[0]], context),
+                  optionButton(optionBtn[urnButtonList[1]], context),
+                  optionButton(optionBtn[urnButtonList[2]], context),
+                  optionButton(optionBtn[urnButtonList[3]], context),
                 ],
               ),
-            ),
-            SizedBox(height: 20.0),
-            nextButton(),
-
-            // Expanded(
-            //   flex: 1,
-            //   child: Container(
-            //     child: Text(
-            //       showtimer,
-            //       style: TextStyle(
-            //         color: timerColor,
-            //         fontFamily: 'Blogger',
-            //         fontSize: 20.0,
-            //       ),
-            //     ),
-            //   ),
+            )
           ],
         )));
   }

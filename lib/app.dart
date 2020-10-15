@@ -83,11 +83,16 @@ class AppState extends State<App> {
       data: ThemeData(
           brightness: Brightness.light,
           primaryColor: appBarColorDefault,
-          scaffoldBackgroundColor: bgColorDefault),
+          scaffoldBackgroundColor: bgColorDefault,
+          fontFamily: 'San Francisco',
+          buttonColor: buttonsColorDefault,
+          textTheme: Theme.of(context).textTheme.apply(
+              bodyColor: textColorDefault, displayColor: textColorDefault)),
       options: ThemeOption(
           textColorOption: textColorDefault,
           appBarColorOption: appBarColorDefault,
-          shadowColorOption: shadowColorDefault),
+          shadowColorOption: shadowColorDefault,
+          buttonsColorOption: buttonsColorDefault),
     );
   }
 
@@ -98,11 +103,16 @@ class AppState extends State<App> {
       data: ThemeData(
           brightness: Brightness.dark,
           primaryColor: appBarColorDark,
-          scaffoldBackgroundColor: bgColorDark),
+          scaffoldBackgroundColor: bgColorDark,
+          buttonColor: buttonsColorDark,
+          textTheme: Theme.of(context)
+              .textTheme
+              .apply(bodyColor: textColorWhite, displayColor: textColorWhite)),
       options: ThemeOption(
           textColorOption: textColorWhite,
           appBarColorOption: appBarColorDark,
-          shadowColorOption: shadowColorDark),
+          shadowColorOption: shadowColorDark,
+          buttonsColorOption: buttonsColorDark),
     );
   }
 
