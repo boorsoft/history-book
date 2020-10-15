@@ -139,7 +139,7 @@ class QuizState extends State<Quiz> {
     // startTimer();
   }
 
-  void checkAnswer(String option, BuildContext context) {
+  void checkAnswer(String option) {
     if (widget.quizdata[2][i.toString()] ==
         widget.quizdata[1][i.toString()][option]) {
       displayColor =
@@ -169,12 +169,12 @@ class QuizState extends State<Quiz> {
     });
   }
 
-  Widget optionButton(String option, BuildContext context) {
+  Widget optionButton(String option) {
     var _onPressed;
 
     if (_enabled) {
       _onPressed = () {
-        checkAnswer(option, context);
+        checkAnswer(option);
         _enabled = false;
         if (!_enabled) {
           _nextButtonEnabled = true;
@@ -249,7 +249,7 @@ class QuizState extends State<Quiz> {
             onPressed: () => nextQuestion(),
             child: Icon(FontAwesomeIcons.arrowRight,
                 size: 25.0, color: textColorWhite),
-            backgroundColor: buttonsColor,
+            backgroundColor: appBarColor,
             hoverColor: appBarColor,
           ),
         ),
@@ -305,12 +305,9 @@ class QuizState extends State<Quiz> {
             Expanded(
               child: GridView.count(
                 crossAxisCount: 2,
-                children: [
-                  optionButton(optionBtn[urnButtonList[0]], context),
-                  optionButton(optionBtn[urnButtonList[1]], context),
-                  optionButton(optionBtn[urnButtonList[2]], context),
-                  optionButton(optionBtn[urnButtonList[3]], context),
-                ],
+                children: List.generate(4, (i) {
+                  return optionButton(optionBtn[urnButtonList[i]]);
+                }),
               ),
             )
           ],
