@@ -5,7 +5,7 @@
 An app about the history of Kyrgyzstan. It's an app version of the book written by O.J. Osmonov with some extra features added.
 The app is a college project to finish history course without any problems for developers. 
 
-### Developed for students by students
+* Developed for students by students
 
 ## Download
 
