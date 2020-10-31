@@ -9,7 +9,7 @@ The app is a college project to finish history course without any problems for d
 
 ## Download
 
-Download the app here: **[История Кыргызстана](t.me/historybookappkg)**.
+Download the app here: **[История Кыргызстана](https://t.me/historybookappkg)**.
 
 ## Flutter
 
