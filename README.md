@@ -1,4 +1,4 @@
-![Boorsoft logo](assets/images/boorsoft-logo-small.png)
+![Boorsoft logo](assets/boorsoft-logo-small.png)
 # historybook
 -------
 
