@@ -3,20 +3,22 @@ import 'package:theme_provider/theme_provider.dart';
 
 // Switch theme
 Color bgColorDefault = Colors.white;
-Color bgColorDark = Color(0xFF272D33);
+Color bgColorDark = Color(0xFF1e1e1f);
 Color bgColor = Colors.white;
 
 Color appBarColorDefault = Color.fromRGBO(127, 156, 163, 1);
-Color appBarColorDark = Color(0xFF1e2124);
+Color appBarColorDark = Color(0xFF25282b);
 Color appBarColor;
 
-Color secondaryColor = Color(0xFF383C40);
 Color buttonsColor;
 Color buttonsColorDefault = appBarColorDefault;
-Color buttonsColorDark = secondaryColor;
+Color buttonsColorDark = appBarColorDark;
+
+Color questionTextColor = Color(0xFF944c22);
+Color questionContainerColor = Color(0xFFfaca70);
 
 Color textColor;
-Color textColorWhite = Color(0xFFebe7e4);
+Color textColorLight = Color(0xFFedeff0);
 Color textColorDefault = Color(0xFF1e2124);
 
 Color shadowColor;

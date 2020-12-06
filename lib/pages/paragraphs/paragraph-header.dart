@@ -5,15 +5,16 @@ import 'package:historybook/style.dart';
 class ParagraphHeader extends StatelessWidget {
   final String _image;
   final String _title;
+  final double height;
 
-  ParagraphHeader(this._image, this._title);
+  ParagraphHeader(this._image, this._title, {this.height = 280.0});
 
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: <Widget>[
         Container(
-            height: 280.0,
+            height: height,
             width: double.infinity,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.only(
@@ -37,7 +38,7 @@ class ParagraphHeader extends StatelessWidget {
                         Image(image: AssetImage(_image), fit: BoxFit.cover)))),
         // Gradient on image
         Container(
-          height: 280.0,
+          height: height,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(25.0),
               gradient: LinearGradient(
@@ -53,7 +54,7 @@ class ParagraphHeader extends StatelessWidget {
                   ])),
         ),
         Container(
-            height: 280.0,
+            height: height,
             alignment: Alignment.center,
             padding: EdgeInsets.symmetric(horizontal: 10.0),
             child: Center(

@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'dart:math';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:historybook/style.dart';
@@ -53,8 +54,8 @@ class QuizState extends State<Quiz> {
       []; // Список уникальных рандомных чисел для вариантов ответа
 
   Color displayColor = appBarColor; // Какой цвет отображать на кнопке
-  Color correct = Colors.lightBlue; // Цвет для правильного ответа
-  Color wrong = Colors.red; // Цвет для неправлиьного ответа
+  Color correct = Colors.green[300]; // Цвет для правильного ответа
+  Color wrong = Colors.red[400]; // Цвет для неправлиьного
 
   int correctAnswers = 0; // Кол-во правильных ответов
   int i = 1; // Итератор для вопросов
@@ -129,11 +130,15 @@ class QuizState extends State<Quiz> {
       } else {
         _showDialog();
       }
+
+      displayColor = appBarColor;
+
       // Сбрасываем цвета
-      buttonColor["a"] = appBarColor;
-      buttonColor["b"] = appBarColor;
-      buttonColor["c"] = appBarColor;
-      buttonColor["d"] = appBarColor;
+      buttonColor["a"] = displayColor;
+      buttonColor["b"] = displayColor;
+      buttonColor["c"] = displayColor;
+      buttonColor["d"] = displayColor;
+
       _enabled = true; // Активируем кнопки
     });
     // startTimer();
@@ -184,24 +189,26 @@ class QuizState extends State<Quiz> {
 
     return Padding(
       padding: EdgeInsets.symmetric(
-        vertical: 8.0,
-        horizontal: 8.0,
+        vertical: 7.0,
+        horizontal: 25.0,
       ),
       child: MaterialButton(
         onPressed: _onPressed,
-        disabledColor: buttonColor[option],
+        height: 85.0,
         shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.all(Radius.circular(12.0))),
+          borderRadius: BorderRadius.all(Radius.circular(12.0)),
+        ),
         child: Text(
           widget.quizdata[1][i.toString()][option],
           textAlign: TextAlign.center,
           style: TextStyle(
-            color: Colors.white,
+            color: textColorLight,
             fontFamily: 'San Francisco',
             fontWeight: FontWeight.bold,
             fontSize: 14.0,
           ),
         ),
+        disabledColor: buttonColor[option],
         color: buttonColor[option],
         splashColor: Colors.grey[300],
         highlightColor: Color.fromRGBO(124, 134, 145, 1),
@@ -216,21 +223,21 @@ class QuizState extends State<Quiz> {
         barrierDismissible: false,
         builder: (BuildContext context) {
           return AlertDialog(
-            title: Text('Завершение', style: TextStyle(color: textColorWhite)),
-            backgroundColor: Color.fromRGBO(127, 156, 163, 1),
+            title: Text('Завершение', style: TextStyle(color: textColorLight)),
+            backgroundColor: appBarColor,
             content: SingleChildScrollView(
               child: ListBody(
                 children: <Widget>[
                   Text(
                       'Поздравляем! Количество правильных ответов: ' +
                           correctAnswers.toString(),
-                      style: TextStyle(color: textColorWhite))
+                      style: TextStyle(color: textColorLight))
                 ],
               ),
             ),
             actions: <Widget>[
               FlatButton(
-                  child: Text('ОК', style: TextStyle(color: textColorWhite)),
+                  child: Text('ОК', style: TextStyle(color: textColorLight)),
                   onPressed: () {
                     Navigator.of(context).popUntil((route) => route.isFirst);
                   })
@@ -242,18 +249,17 @@ class QuizState extends State<Quiz> {
   Widget nextButton() {
     if (_nextButtonEnabled) {
       return Container(
-        height: 70.0,
-        width: 70.0,
-        child: FittedBox(
-          child: FloatingActionButton(
+          height: 60.0,
+          width: 180.0,
+          padding: const EdgeInsets.symmetric(),
+          child: FlatButton(
+            color: questionContainerColor,
+            hoverColor: displayColor,
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12.0)),
             onPressed: () => nextQuestion(),
-            child: Icon(FontAwesomeIcons.arrowRight,
-                size: 25.0, color: textColorWhite),
-            backgroundColor: appBarColor,
-            hoverColor: appBarColor,
-          ),
-        ),
-      );
+            child: Text('Дальше', style: TextStyle(color: questionTextColor)),
+          ));
     } else {
       return SizedBox();
     }
@@ -263,52 +269,78 @@ class QuizState extends State<Quiz> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(title: Text('Тестирование')),
-        floatingActionButton: nextButton(),
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
         body: Container(
             child: Column(
           children: <Widget>[
             SizedBox(height: 10.0),
-            Container(
-              padding: EdgeInsets.only(left: 10.0),
-              alignment: Alignment.topLeft,
-              child: Text(
-                  'Вопрос № ' +
-                      questionNum.toString() +
-                      "\\" +
-                      widget.quizdata[0].length.toString(),
-                  style: TextStyle(fontFamily: 'San Francisco')),
-            ),
-            Container(
-              padding: EdgeInsets.only(left: 10.0),
-              alignment: Alignment.topLeft,
-              child: Text(
-                  'Количество правильных ответов: ' + correctAnswers.toString(),
-                  style: TextStyle(fontFamily: 'San Francisco')),
-            ),
-            Container(
-              margin: EdgeInsets.symmetric(vertical: 30.0),
-              padding: EdgeInsets.all(10.0),
-              constraints: BoxConstraints(
-                minHeight: 130.0,
-              ),
-              alignment: Alignment.center,
-              child: Text(
-                widget.quizdata[0][i.toString()],
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 14.5,
-                  fontFamily: 'San Francisco',
-                ),
+            Padding(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 25.0, vertical: 20.0),
+              child: Stack(
+                children: [
+                  // Question container
+                  Container(
+                    padding: EdgeInsets.all(25.0),
+                    decoration: BoxDecoration(
+                        color: questionContainerColor,
+                        borderRadius: BorderRadius.circular(12.0)),
+                    constraints: BoxConstraints(
+                      minHeight: 140.0,
+                    ),
+                    alignment: Alignment.center,
+                    child: Text(
+                      widget.quizdata[0][i.toString()],
+                      textAlign: TextAlign.justify,
+                      style: TextStyle(
+                        color: questionTextColor,
+                        fontSize: 14.5,
+                        fontFamily: 'San Francisco',
+                      ),
+                    ),
+                  ),
+                  // Question number container
+                  Align(
+                    alignment: Alignment.topCenter,
+                    child: Container(
+                      padding: EdgeInsets.symmetric(
+                          horizontal: 10.0, vertical: 10.0),
+                      width: 75.0,
+                      height: 40.0,
+                      transform: Matrix4.translationValues(0, -20.0, 0),
+                      decoration: BoxDecoration(
+                          boxShadow: [
+                            BoxShadow(
+                                color: Colors.black54.withOpacity(0.1),
+                                offset: Offset(0, 1.5),
+                                blurRadius: 1.5)
+                          ],
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(8.0)),
+                      child: Text(
+                        questionNum.toString() +
+                            "/" +
+                            widget.quizdata[0].length.toString(),
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            color: appBarColor, fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
             Expanded(
-              child: GridView.count(
-                crossAxisCount: 2,
-                children: List.generate(4, (i) {
-                  return optionButton(optionBtn[urnButtonList[i]]);
-                }),
-              ),
+                child: ListView(
+              children: [
+                optionButton(optionBtn[urnButtonList[0]]),
+                optionButton(optionBtn[urnButtonList[1]]),
+                optionButton(optionBtn[urnButtonList[2]]),
+                optionButton(optionBtn[urnButtonList[3]]),
+              ],
+            )),
+            nextButton(),
+            SizedBox(
+              height: 60.0,
             )
           ],
         )));

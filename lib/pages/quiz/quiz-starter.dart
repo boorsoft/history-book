@@ -12,7 +12,8 @@ class _QuizStarterState extends State<QuizStarter> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Column(children: <Widget>[
-      ParagraphHeader("assets/images/home-pic4.jpg", "Тестирование"),
+      ParagraphHeader("assets/images/home-pic4.jpg", "Тестирование",
+          height: 180.0),
       Expanded(
           child: Container(
               child: ListView(

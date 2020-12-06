@@ -17,15 +17,15 @@ class About extends StatelessWidget {
       child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
         Text(_developer,
             style:
-                TextStyle(fontWeight: FontWeight.bold, color: textColorWhite)),
+                TextStyle(fontWeight: FontWeight.bold, color: textColorLight)),
         SizedBox(height: 4.0),
         Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
           Icon(
             Icons.email,
-            color: textColorWhite,
+            color: textColorLight,
             size: 17.0,
           ),
-          Text(_email, style: TextStyle(color: textColorWhite))
+          Text(_email, style: TextStyle(color: textColorLight))
         ]),
         SizedBox(height: 4.0),
       ]),

@@ -107,9 +107,9 @@ class AppState extends State<App> {
           buttonColor: buttonsColorDark,
           textTheme: Theme.of(context)
               .textTheme
-              .apply(bodyColor: textColorWhite, displayColor: textColorWhite)),
+              .apply(bodyColor: textColorLight, displayColor: textColorLight)),
       options: ThemeOption(
-          textColorOption: textColorWhite,
+          textColorOption: textColorLight,
           appBarColorOption: appBarColorDark,
           shadowColorOption: shadowColorDark,
           buttonsColorOption: buttonsColorDark),
