@@ -2,7 +2,6 @@ import 'dart:convert';
 import 'dart:math';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:historybook/style.dart';
 
 class GetJson extends StatelessWidget {
@@ -52,6 +51,8 @@ class QuizState extends State<Quiz> {
   List urnList = []; // Список уникальных рандомных чисел
   List urnButtonList =
       []; // Список уникальных рандомных чисел для вариантов ответа
+  List multipleOptions =
+      []; // Список для вопросов с несколькими варинтами ответов
 
   Color displayColor = appBarColor; // Какой цвет отображать на кнопке
   Color correct = Colors.green[300]; // Цвет для правильного ответа
@@ -77,11 +78,12 @@ class QuizState extends State<Quiz> {
   @override
   void initState() {
     super.initState();
-    // startTimer();
 
     randomArray();
     randomButton();
-    i = urnList[0]; // Что б первый вопрос тоже был рандомным
+    i = urnList[0]; // Что б первый вопрос тоже был
+
+    checkIfHasMultipleAnswers();
   }
 
   @override
@@ -92,6 +94,7 @@ class QuizState extends State<Quiz> {
   }
 
   void randomArray() {
+    // ignore: sdk_version_set_literal
     var riSet = <int>{}; // Сэт рандомных чисел
     var random = new Random();
 
@@ -107,6 +110,7 @@ class QuizState extends State<Quiz> {
   }
 
   void randomButton() {
+    // ignore: sdk_version_set_literal
     var rnSet = <int>{}; // Сэт рандомных чисел
     var random = new Random();
 
@@ -127,6 +131,8 @@ class QuizState extends State<Quiz> {
       if (questionNum < widget.quizdata[0].length) {
         i = urnList[questionNum];
         questionNum++;
+        checkIfHasMultipleAnswers();
+        multipleOptions = [];
       } else {
         _showDialog();
       }
@@ -141,37 +147,57 @@ class QuizState extends State<Quiz> {
 
       _enabled = true; // Активируем кнопки
     });
-    // startTimer();
+  }
+
+  bool checkIfHasMultipleAnswers() {
+    // Если существует несколько вариантов ответа
+    if (widget.quizdata[2][i.toString()] is List) {
+      print('Has multiple answers');
+      return true;
+    } else {
+      return false;
+    }
   }
 
   void checkAnswer(String option) {
-    if (widget.quizdata[2][i.toString()] ==
-        widget.quizdata[1][i.toString()][option]) {
-      displayColor =
-          correct; // Выводим цвет синий - если правильно, красный - если неправильно
-      correctAnswers += 1; // Увеличиваем кол-во правильных ответов
+    if (checkIfHasMultipleAnswers()) {
+      // Добавляем ответ в список
+      multipleOptions.add(widget.quizdata[1][i.toString()][option]);
+      print(multipleOptions);
     } else {
-      displayColor = wrong;
+      if (widget.quizdata[2][i.toString()] ==
+          widget.quizdata[1][i.toString()][option]) {
+        displayColor =
+            correct; // Выводим цвет зеленый - если правильно, красный - если неправильно
+        correctAnswers += 1; // Увеличиваем кол-во правильных ответов
+      } else {
+        displayColor = wrong;
+        setState(() {
+          // Показываем правильный ответ, если ответили неправильно
+          if (widget.quizdata[1][i.toString()]['a'] ==
+              widget.quizdata[2][i.toString()]) {
+            buttonColor['a'] = correct;
+          } else if (widget.quizdata[1][i.toString()]['b'] ==
+              widget.quizdata[2][i.toString()]) {
+            buttonColor['b'] = correct;
+          } else if (widget.quizdata[1][i.toString()]['c'] ==
+              widget.quizdata[2][i.toString()]) {
+            buttonColor['c'] = correct;
+          } else if (widget.quizdata[1][i.toString()]['d'] ==
+              widget.quizdata[2][i.toString()]) {
+            buttonColor['d'] = correct;
+          }
+        });
+      }
+
       setState(() {
-        // Показываем правильный ответ, если ответили неправильно
-        if (widget.quizdata[1][i.toString()]['a'] ==
-            widget.quizdata[2][i.toString()]) {
-          buttonColor['a'] = correct;
-        } else if (widget.quizdata[1][i.toString()]['b'] ==
-            widget.quizdata[2][i.toString()]) {
-          buttonColor['b'] = correct;
-        } else if (widget.quizdata[1][i.toString()]['c'] ==
-            widget.quizdata[2][i.toString()]) {
-          buttonColor['c'] = correct;
-        } else if (widget.quizdata[1][i.toString()]['d'] ==
-            widget.quizdata[2][i.toString()]) {
-          buttonColor['d'] = correct;
-        }
+        buttonColor[option] = displayColor;
       });
     }
-    setState(() {
-      buttonColor[option] = displayColor;
-    });
+  }
+
+  void checkMultipleAnswers() {
+    print('checking multiple answers');
   }
 
   Widget optionButton(String option) {
