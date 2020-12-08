@@ -64,7 +64,8 @@ class QuizState extends State<Quiz> {
   int questionNum = 1; // Номер вопроса для отображения
 
   bool _enabled = true; // Активна ли кнопка
-  bool _nextButtonEnabled = false; // Активна ли кнопка "Следующий"
+  bool _nextButtonEnabled = false; // Активна ли кнопка "Дальше"
+  bool _confirmButtonEnabled = false; // АКтивна ли кнопка "Подтвердить"
 
   Map<int, String> optionBtn = {1: "a", 2: "b", 3: "c", 4: "d"};
 
@@ -127,7 +128,7 @@ class QuizState extends State<Quiz> {
   }
 
   void nextQuestion() {
-    _nextButtonEnabled = false; // Отключаем кнопку "следующий"
+    _nextButtonEnabled = false; // Отключаем кнопку "Дальше"
     setState(() {
       if (questionNum < widget.quizdata[0].length) {
         i = urnList[questionNum];
@@ -168,6 +169,11 @@ class QuizState extends State<Quiz> {
           ? multipleOptions.remove(widget.quizdata[1][i.toString()][option])
           : multipleOptions.add(widget.quizdata[1][i.toString()][option]);
 
+      // Активировать кнопку подтверждения если выбран хотя бы один ответ
+      multipleOptions.length == 0
+          ? _confirmButtonEnabled = false
+          : _confirmButtonEnabled = true;
+
       setState(() {
         buttonColor[option] == displayColor
             ? buttonColor[option] = selected
@@ -183,22 +189,7 @@ class QuizState extends State<Quiz> {
         correctAnswers += 1; // Увеличиваем кол-во правильных ответов
       } else {
         displayColor = wrong;
-        setState(() {
-          // Показываем правильный ответ, если ответили неправильно
-          if (widget.quizdata[1][i.toString()]['a'] ==
-              widget.quizdata[2][i.toString()]) {
-            buttonColor['a'] = correct;
-          } else if (widget.quizdata[1][i.toString()]['b'] ==
-              widget.quizdata[2][i.toString()]) {
-            buttonColor['b'] = correct;
-          } else if (widget.quizdata[1][i.toString()]['c'] ==
-              widget.quizdata[2][i.toString()]) {
-            buttonColor['c'] = correct;
-          } else if (widget.quizdata[1][i.toString()]['d'] ==
-              widget.quizdata[2][i.toString()]) {
-            buttonColor['d'] = correct;
-          }
-        });
+        showCorrectAnswers(widget.quizdata[2][i.toString()]);
       }
 
       setState(() {
@@ -207,8 +198,34 @@ class QuizState extends State<Quiz> {
     }
   }
 
+  void showCorrectAnswers(String comparingElement) {
+    setState(() {
+      // Показываем правильный ответ(ы), если ответили неправильно
+      if (widget.quizdata[1][i.toString()]['a'] == comparingElement) {
+        buttonColor['a'] = correct;
+      } else if (widget.quizdata[1][i.toString()]['b'] == comparingElement) {
+        buttonColor['b'] = correct;
+      } else if (widget.quizdata[1][i.toString()]['c'] == comparingElement) {
+        buttonColor['c'] = correct;
+      } else if (widget.quizdata[1][i.toString()]['d'] == comparingElement) {
+        buttonColor['d'] = correct;
+      }
+    });
+  }
+
   void checkMultipleAnswers() {
     print('checking multiple answers');
+    print(multipleOptions);
+    multipleOptions.forEach((el) {
+      if (widget.quizdata[2][i.toString()].contains(el)) {
+        showCorrectAnswers(el);
+      } else {}
+    });
+
+    setState(() {
+      _enabled = false;
+      _confirmButtonEnabled = false;
+    });
   }
 
   Widget optionButton(String option) {
@@ -218,9 +235,7 @@ class QuizState extends State<Quiz> {
       _onPressed = () {
         checkAnswer(option);
         checkIfHasMultipleAnswers() ? _enabled = true : _enabled = false;
-        if (!_enabled) {
-          _nextButtonEnabled = true;
-        }
+        _nextButtonEnabled = true;
       };
     }
 
@@ -283,23 +298,28 @@ class QuizState extends State<Quiz> {
         });
   }
 
+  Container nextOrConfirmButton(String text, Function onPressed) {
+    return Container(
+        height: 60.0,
+        width: 180.0,
+        padding: const EdgeInsets.symmetric(),
+        child: FlatButton(
+          color: questionContainerColor,
+          hoverColor: displayColor,
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(12.0)),
+          onPressed: onPressed,
+          child: Text(text, style: TextStyle(color: questionTextColor)),
+        ));
+  }
+
   Widget nextButton() {
-    if (_nextButtonEnabled) {
-      return Container(
-          height: 60.0,
-          width: 180.0,
-          padding: const EdgeInsets.symmetric(),
-          child: FlatButton(
-            color: questionContainerColor,
-            hoverColor: displayColor,
-            shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(12.0)),
-            onPressed: () => nextQuestion(),
-            child: Text('Дальше', style: TextStyle(color: questionTextColor)),
-          ));
-    } else {
+    if (_confirmButtonEnabled)
+      return nextOrConfirmButton('Подтвердить', () => checkMultipleAnswers());
+    else if (_nextButtonEnabled)
+      return nextOrConfirmButton('Дальше', () => nextQuestion());
+    else
       return SizedBox();
-    }
   }
 
   @override
@@ -377,7 +397,7 @@ class QuizState extends State<Quiz> {
             )),
             nextButton(),
             SizedBox(
-              height: 60.0,
+              height: 40.0,
             )
           ],
         )));
