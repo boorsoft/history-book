@@ -57,6 +57,7 @@ class QuizState extends State<Quiz> {
   Color displayColor = appBarColor; // Какой цвет отображать на кнопке
   Color correct = Colors.green[300]; // Цвет для правильного ответа
   Color wrong = Colors.red[400]; // Цвет для неправлиьного
+  Color selected = questionContainerColor;
 
   int correctAnswers = 0; // Кол-во правильных ответов
   int i = 1; // Итератор для вопросов
@@ -160,9 +161,19 @@ class QuizState extends State<Quiz> {
   }
 
   void checkAnswer(String option) {
+    // Если существует несколько вариантов ответа
     if (checkIfHasMultipleAnswers()) {
-      // Добавляем ответ в список
-      multipleOptions.add(widget.quizdata[1][i.toString()][option]);
+      // Добавляем ответ в список, удаляем если уже существует
+      multipleOptions.contains(widget.quizdata[1][i.toString()][option])
+          ? multipleOptions.remove(widget.quizdata[1][i.toString()][option])
+          : multipleOptions.add(widget.quizdata[1][i.toString()][option]);
+
+      setState(() {
+        buttonColor[option] == displayColor
+            ? buttonColor[option] = selected
+            : buttonColor[option] = displayColor;
+      });
+
       print(multipleOptions);
     } else {
       if (widget.quizdata[2][i.toString()] ==
@@ -206,7 +217,7 @@ class QuizState extends State<Quiz> {
     if (_enabled) {
       _onPressed = () {
         checkAnswer(option);
-        _enabled = false;
+        checkIfHasMultipleAnswers() ? _enabled = true : _enabled = false;
         if (!_enabled) {
           _nextButtonEnabled = true;
         }
