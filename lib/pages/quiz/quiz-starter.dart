@@ -41,8 +41,10 @@ class _QuizStarterState extends State<QuizStarter> {
           QuizButton(
               "Установление советской власти и развитие национальной государственности",
               "assets/json/exam11.json"),
-          QuizButton(
-              "Эпоха тюрков, Монгольские государства", "assets/json/test1.json")
+          QuizButton("Эпоха тюрков, Монгольские государства",
+              "assets/json/test1.json"),
+          QuizButton("Тюргеши и Карлуки, Дококандский период",
+              "assets/json/test2.json")
         ],
       )))
     ]));
