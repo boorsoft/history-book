@@ -58,6 +58,7 @@ class QuizState extends State<Quiz> {
   Color correct = Colors.green[300]; // Цвет для правильного ответа
   Color wrong = Colors.red[400]; // Цвет для неправлиьного
   Color selected = questionContainerColor;
+  Color notSelected = Colors.blueGrey[300];
 
   int correctAnswers = 0; // Кол-во правильных ответов
   int i = 1; // Итератор для вопросов
@@ -149,6 +150,8 @@ class QuizState extends State<Quiz> {
 
       _enabled = true; // Активируем кнопки
     });
+
+    print('correctAnswers: ' + correctAnswers.toString());
   }
 
   bool checkIfHasMultipleAnswers() {
@@ -189,7 +192,7 @@ class QuizState extends State<Quiz> {
         correctAnswers += 1; // Увеличиваем кол-во правильных ответов
       } else {
         displayColor = wrong;
-        showCorrectAnswers(widget.quizdata[2][i.toString()]);
+        showCorrectAnswers(widget.quizdata[2][i.toString()], correct);
       }
 
       setState(() {
@@ -198,17 +201,17 @@ class QuizState extends State<Quiz> {
     }
   }
 
-  void showCorrectAnswers(String comparingElement) {
+  void showCorrectAnswers(String comparingElement, Color color) {
     setState(() {
       // Показываем правильный ответ(ы), если ответили неправильно
       if (widget.quizdata[1][i.toString()]['a'] == comparingElement) {
-        buttonColor['a'] = correct;
+        buttonColor['a'] = color;
       } else if (widget.quizdata[1][i.toString()]['b'] == comparingElement) {
-        buttonColor['b'] = correct;
+        buttonColor['b'] = color;
       } else if (widget.quizdata[1][i.toString()]['c'] == comparingElement) {
-        buttonColor['c'] = correct;
+        buttonColor['c'] = color;
       } else if (widget.quizdata[1][i.toString()]['d'] == comparingElement) {
-        buttonColor['d'] = correct;
+        buttonColor['d'] = color;
       }
     });
   }
@@ -216,11 +219,26 @@ class QuizState extends State<Quiz> {
   void checkMultipleAnswers() {
     print('checking multiple answers');
     print(multipleOptions);
+
+    List trues = [];
+
     multipleOptions.forEach((el) {
       if (widget.quizdata[2][i.toString()].contains(el)) {
-        showCorrectAnswers(el);
-      } else {}
+        showCorrectAnswers(el, correct);
+        trues.add(true);
+      } else {
+        showCorrectAnswers(el, wrong);
+      }
     });
+
+    widget.quizdata[2][i.toString()].forEach((el) {
+      if (!multipleOptions.contains(el)) {
+        showCorrectAnswers(el, notSelected);
+      }
+    });
+
+    if (trues.length == widget.quizdata[2][i.toString()].length)
+      correctAnswers++;
 
     setState(() {
       _enabled = false;
