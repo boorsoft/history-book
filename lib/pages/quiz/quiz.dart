@@ -84,7 +84,7 @@ class QuizState extends State<Quiz> {
 
     randomArray();
     randomButton();
-    i = urnList[0]; // Что б первый вопрос тоже был
+    i = urnList[0]; // Что б первый вопрос тоже был рандомным
 
     checkIfHasMultipleAnswers();
   }
@@ -151,6 +151,7 @@ class QuizState extends State<Quiz> {
       _enabled = true; // Активируем кнопки
     });
 
+    randomButton();
     print('correctAnswers: ' + correctAnswers.toString());
   }
 
@@ -389,7 +390,9 @@ class QuizState extends State<Quiz> {
                                 offset: Offset(0, 1.5),
                                 blurRadius: 1.5)
                           ],
-                          color: Colors.white,
+                          color: appBarColor == appBarColorDark
+                              ? bgColorDark
+                              : Colors.white,
                           borderRadius: BorderRadius.circular(8.0)),
                       child: Text(
                         questionNum.toString() +
@@ -397,7 +400,10 @@ class QuizState extends State<Quiz> {
                             widget.quizdata[0].length.toString(),
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                            color: appBarColor, fontWeight: FontWeight.bold),
+                            color: appBarColor == appBarColorDark
+                                ? textColorLight
+                                : appBarColor,
+                            fontWeight: FontWeight.bold),
                       ),
                     ),
                   ),

@@ -52,10 +52,11 @@ class About extends StatelessWidget {
                     ),
                     SizedBox(height: 20.0),
                     Text(
-                      'Версия: 1.0.2',
+                      'Версия: 1.1.0',
                       style: TextStyle(fontSize: 15.0),
                     ),
                     SizedBox(height: 20.0),
+
                     Html(
                       data: """
 Добро пожаловать в приложение по истории Кыргызстана!
@@ -76,10 +77,12 @@ class About extends StatelessWidget {
                       useRichText: true,
                     ),
                     SizedBox(height: 20.0),
+
                     Center(
                         child: Text('Разработчики: ',
                             style: TextStyle(fontWeight: FontWeight.bold))),
                     SizedBox(height: 20.0),
+
                     contactBox('Жумабек уулу Байдоолот',
                         '  zhumabek_uulu_b@iuca.kg', context),
                     contactBox('Акматов Азим', '  akmatov_az@iuca.kg', context),
@@ -91,12 +94,20 @@ class About extends StatelessWidget {
                       data: """
 <center>Приложение разработано студентами Гумманитарно-Технического Колледжа в г. Токмок.</center>
 <center>Выражаем благодарность нашему преподавателю <b>Абдыкеримову Марату</b> за такую возможность!</center>
-<center>Спасибо, что пользуетесь нашим приложением.</center>
-<center>© Boorsoft, 2020</center>          
+         
               """,
                       defaultTextStyle: paragraphTextStyle,
                       useRichText: true,
-                    )
+                    ),
+
+                    Html(
+                        data: """
+<center>Спасибо, что пользуетесь нашим приложением.</center>
+<center>© Boorsoft, 2020</center> 
+                    """,
+                        defaultTextStyle: paragraphTextStyle,
+                        useRichText: true),
+                    Image.asset('assets/boorsoft-logo-small.png'),
                   ],
                 ))));
   }
