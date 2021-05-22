@@ -344,7 +344,7 @@ class QuizState extends State<Quiz> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: Text('Тестирование')),
+        appBar: AppBar(title: Text('Тестирование'), centerTitle: true),
         body: Container(
             child: Column(
           children: <Widget>[

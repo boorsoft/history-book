@@ -19,21 +19,22 @@ class ImageButton extends StatelessWidget {
             alignment: Alignment.bottomLeft,
             children: [
               Container(
-                  padding: EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 15.0, vertical: 7.0),
                   decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(25.0),
-                    // borderRadius: BorderRadius.circular(30.0),
-                    // border: Border.all(
-                    //   color: Colors.black,
-                    //   width: 1.2,
-                    // ),
-                  ),
+                      // borderRadius: BorderRadius.circular(25.0),
+                      // borderRadius: BorderRadius.circular(30.0),
+                      // border: Border.all(
+                      //   color: Colors.black,
+                      //   width: 1.2,
+                      // ),
+                      ),
                   constraints: BoxConstraints.expand(
                     height: 200.0,
                   ),
                   child: Container(
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(25.0),
+                      // borderRadius: BorderRadius.circular(25.0),
                       boxShadow: [
                         BoxShadow(
                           color: ThemeProvider.optionsOf<ThemeOption>(context)
@@ -47,27 +48,28 @@ class ImageButton extends StatelessWidget {
                     child: Hero(
                       tag: _assetPath,
                       child: ClipRRect(
-                          borderRadius: BorderRadius.circular(25.0),
+                          // borderRadius: BorderRadius.circular(25.0),
                           child: Image.asset(_assetPath, fit: BoxFit.cover)),
                     ),
                   )),
               // Gradient on image
               Container(
-                margin: EdgeInsets.all(8.0),
+                margin:
+                    const EdgeInsets.symmetric(horizontal: 15.0, vertical: 7.0),
                 height: 185.0,
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(25.0),
+                    // borderRadius: BorderRadius.circular(25.0),
                     gradient: LinearGradient(
                         begin: FractionalOffset.topCenter,
                         end: FractionalOffset.bottomCenter,
                         colors: [
-                          Colors.black.withOpacity(0.0),
-                          Colors.black.withOpacity(0.5)
-                        ],
+                      Colors.black.withOpacity(0.0),
+                      Colors.black.withOpacity(0.5)
+                    ],
                         stops: [
-                          0.3,
-                          1.0
-                        ])),
+                      0.3,
+                      1.0
+                    ])),
               ),
               // Text on image
               Positioned(

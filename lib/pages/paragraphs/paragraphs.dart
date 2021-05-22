@@ -10,9 +10,7 @@ class _ParagraphState extends State<Paragraphs> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Параграфы'),
-      ),
+      appBar: AppBar(title: Text('Параграфы'), centerTitle: true),
       body: ListView(
         children: <Widget>[
           SizedBox(height: 5.0),
