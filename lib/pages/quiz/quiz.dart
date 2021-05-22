@@ -58,7 +58,7 @@ class QuizState extends State<Quiz> {
   Color correct = Colors.green[300]; // Цвет для правильного ответа
   Color wrong = Colors.red[400]; // Цвет для неправлиьного
   Color selected = questionContainerColor;
-  Color notSelected = Colors.blueGrey[300];
+  Color notSelected = Colors.blueGrey[200];
 
   int correctAnswers = 0; // Кол-во правильных ответов
   int i = 1; // Итератор для вопросов

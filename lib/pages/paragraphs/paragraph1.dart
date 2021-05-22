@@ -14,12 +14,12 @@ class _Paragraph1State extends State<Paragraph1> {
     return Scaffold(
         body: Scrollbar(
             child: SingleChildScrollView(
-      child: Column(children: <Widget>[
-        ParagraphHeader(
-            "assets/images/article-pic1.jpg", "§1. История как наука"),
-        Container(
-            padding: EdgeInsets.all(10.0),
-            child: Column(
+                child: Column(children: [
+      ParagraphHeader(
+          "assets/images/article-pic1.jpg", "§1. История как наука"),
+      Container(
+          padding: const EdgeInsets.all(10.0),
+          child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
@@ -204,9 +204,7 @@ class _Paragraph1State extends State<Paragraph1> {
 • усвоение  прогрессивного  опыта  при  сохранении  особенности  каждого  общества, культуры и менталитета народа; 
 • усиление однородности социальных, экономических и политических форм  и сочетание их с культурным многообразием.
 """, style: paragraphTextStyle),
-              ],
-            )),
-      ]),
-    )));
+              ])),
+    ]))));
   }
 }

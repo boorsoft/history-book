@@ -23,7 +23,7 @@ Color textColorDefault = Color(0xFF1e2124);
 
 Color shadowColor;
 Color shadowColorDark = Color.fromRGBO(0, 0, 0, 0);
-Color shadowColorDefault = Color.fromRGBO(0, 0, 0, 0.6);
+Color shadowColorDefault = Color.fromRGBO(0, 0, 0, 0.4);
 
 TextStyle paragraphTextStyle = TextStyle(
   fontSize: 16.0,

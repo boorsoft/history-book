@@ -74,7 +74,7 @@ flutter:
   fonts:
     - family: Georgia
       fonts:
-        - asset: assets/fonts/Georgia.ttf    
+        - asset: assets/fonts/georgia.ttf    
     - family: San-Francisco   
       fonts:
         - asset: assets/fonts/SFNSDisplay-Bold.ttf     

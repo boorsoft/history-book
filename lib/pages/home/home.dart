@@ -29,18 +29,23 @@ class HomeState extends State<Home> {
     return Scaffold(
       appBar: AppBar(
           actions: <Widget>[
-            IconButton(
-                icon: Icon(
-                  OpenIconicIcons.moon,
-                  color: Colors.white,
-                ),
-                hoverColor: Colors.white70,
-                onPressed: () {
-                  ThemeProvider.controllerOf(context).nextTheme();
-                })
+            Padding(
+              padding: const EdgeInsets.fromLTRB(0, 0, 0, 7.0),
+              child: IconButton(
+                  icon: Icon(
+                    OpenIconicIcons.moon,
+                    color: Colors.white,
+                  ),
+                  iconSize: 21.0,
+                  hoverColor: Colors.white70,
+                  onPressed: () {
+                    ThemeProvider.controllerOf(context).nextTheme();
+                  }),
+            )
           ],
+          centerTitle: true,
           title: Text('История Кыргызстана',
-              style: TextStyle(fontWeight: FontWeight.bold))),
+              style: TextStyle(fontWeight: FontWeight.normal))),
       body: SingleChildScrollView(
           child: Column(
         mainAxisAlignment: MainAxisAlignment.start,

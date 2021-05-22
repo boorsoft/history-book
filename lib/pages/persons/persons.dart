@@ -7,6 +7,7 @@ class Persons extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: Text('Исторические личности'),
       ),
       body: Container(

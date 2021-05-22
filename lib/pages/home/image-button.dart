@@ -38,9 +38,9 @@ class ImageButton extends StatelessWidget {
                         BoxShadow(
                           color: ThemeProvider.optionsOf<ThemeOption>(context)
                               .shadowColorOption,
-                          blurRadius: 9.0,
-                          spreadRadius: 2,
-                          offset: Offset(1.0, 3.5),
+                          blurRadius: 12.0,
+                          spreadRadius: 1.5,
+                          offset: Offset(1.0, 3.0),
                         ),
                       ],
                     ),
