@@ -42,13 +42,15 @@ class ThemeOption extends AppThemeOptions {
   final shadowColorOption,
       appBarColorOption,
       textColorOption,
-      buttonsColorOption;
+      buttonsColorOption,
+      bgColorOption;
 
   ThemeOption(
       {this.shadowColorOption,
       this.appBarColorOption,
       this.textColorOption,
-      this.buttonsColorOption});
+      this.buttonsColorOption,
+      this.bgColorOption});
 }
 
 class FrameStyle extends StatelessWidget {

@@ -89,8 +89,9 @@ class AppState extends State<App> {
           textTheme: Theme.of(context).textTheme.apply(
               bodyColor: textColorDefault, displayColor: textColorDefault)),
       options: ThemeOption(
+          bgColorOption: bgColorDefault,
           textColorOption: textColorDefault,
-          appBarColorOption: appBarColorDefault,
+          appBarColorOption: bgColorDefault,
           shadowColorOption: shadowColorDefault,
           buttonsColorOption: buttonsColorDefault),
     );
@@ -109,6 +110,7 @@ class AppState extends State<App> {
               .textTheme
               .apply(bodyColor: textColorLight, displayColor: textColorLight)),
       options: ThemeOption(
+          bgColorOption: bgColorDark,
           textColorOption: textColorLight,
           appBarColorOption: appBarColorDark,
           shadowColorOption: shadowColorDark,

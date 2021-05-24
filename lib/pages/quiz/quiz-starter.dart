@@ -11,6 +11,7 @@ class _QuizStarterState extends State<QuizStarter> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        // backgroundColor: bgColor,
         body: Column(children: <Widget>[
       Expanded(
           child: Container(

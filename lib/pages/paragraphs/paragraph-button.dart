@@ -25,7 +25,7 @@ class ParagraphButton extends StatelessWidget {
                 ),
                 child: Container(
                     decoration: BoxDecoration(
-                        // borderRadius: BorderRadius.circular(25.0),
+                        borderRadius: BorderRadius.circular(25.0),
                         boxShadow: [
                           BoxShadow(
                               color:
@@ -38,30 +38,30 @@ class ParagraphButton extends StatelessWidget {
                     child: Hero(
                         tag: _assetPath,
                         child: ClipRRect(
-                            // borderRadius: BorderRadius.circular(25.0),
+                            borderRadius: BorderRadius.circular(25.0),
                             child: Image.asset(
-                          _assetPath,
-                          fit: BoxFit.cover,
-                        )))),
+                              _assetPath,
+                              fit: BoxFit.cover,
+                            )))),
               ),
               // Gradient on image
               Container(
                 margin:
                     const EdgeInsets.symmetric(horizontal: 15.0, vertical: 7.0),
-                height: 170.0,
+                height: 167.0,
                 decoration: BoxDecoration(
-                    // borderRadius: BorderRadius.circular(25.0),
+                    borderRadius: BorderRadius.circular(25.0),
                     gradient: LinearGradient(
                         begin: FractionalOffset.topCenter,
                         end: FractionalOffset.bottomCenter,
                         colors: [
-                      Colors.black.withOpacity(0.0),
-                      Colors.black.withOpacity(0.8)
-                    ],
+                          Colors.black.withOpacity(0.0),
+                          Colors.black.withOpacity(0.8)
+                        ],
                         stops: [
-                      0.3,
-                      1.0
-                    ])),
+                          0.3,
+                          1.0
+                        ])),
               ),
               Positioned(
                 width: 280.0,
