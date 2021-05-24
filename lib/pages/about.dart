@@ -39,27 +39,35 @@ class About extends StatelessWidget {
           title: Text('О Приложении'),
           elevation: 0,
         ),
-        body: SingleChildScrollView(
-            child: Container(
-                padding: EdgeInsets.all(10.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: <Widget>[
-                    Image(
-                      image: AssetImage("assets/historybook-logo.png"),
-                      height: 250.0,
-                      width: 250.0,
-                      alignment: Alignment.center,
-                    ),
-                    SizedBox(height: 20.0),
-                    Text(
-                      'Версия: 1.1.0',
-                      style: TextStyle(fontSize: 15.0),
-                    ),
-                    SizedBox(height: 20.0),
+        body: Container(
+          color: appBarColor,
+          child: Container(
+            decoration: BoxDecoration(
+                color: Theme.of(context).scaffoldBackgroundColor,
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(25.0),
+                    topRight: Radius.circular(25.0))),
+            child: SingleChildScrollView(
+                child: Container(
+                    padding: EdgeInsets.all(10.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: <Widget>[
+                        Image(
+                          image: AssetImage("assets/historybook-logo.png"),
+                          height: 250.0,
+                          width: 250.0,
+                          alignment: Alignment.center,
+                        ),
+                        SizedBox(height: 20.0),
+                        Text(
+                          'Версия: 1.1.0',
+                          style: TextStyle(fontSize: 15.0),
+                        ),
+                        SizedBox(height: 20.0),
 
-                    Html(
-                      data: """
+                        Html(
+                          data: """
 Добро пожаловать в приложение по истории Кыргызстана!
 <p>Данное приложение является электронным вариантом книги О.Дж.Осмонова, все параграфы из книги были перенесены в это приложение, надеемся, в удобном для вас формате. </p>  
 <p><b>Чем такой формат удобнее чем нормальная книга или PDF-файл?</b></p>
@@ -73,43 +81,46 @@ class About extends StatelessWidget {
 
 <p><b>Есть предложения или нашли баг?</b></p>
 <p>Если у вас есть предложения или вам пришлось встретиться лицом к лицу с багами - обращайтесь по адресам ниже, мы постараемся исправить.</p>
-                """,
-                      defaultTextStyle: paragraphTextStyle,
-                      useRichText: true,
-                    ),
-                    SizedBox(height: 20.0),
+                    """,
+                          defaultTextStyle: paragraphTextStyle,
+                          useRichText: true,
+                        ),
+                        SizedBox(height: 20.0),
 
-                    Center(
-                        child: Text('Разработчики: ',
-                            style: TextStyle(fontWeight: FontWeight.bold))),
-                    SizedBox(height: 20.0),
+                        Center(
+                            child: Text('Разработчики: ',
+                                style: TextStyle(fontWeight: FontWeight.bold))),
+                        SizedBox(height: 20.0),
 
-                    contactBox('Жумабек уулу Байдоолот',
-                        '  zhumabek_uulu_b@iuca.kg', context),
-                    contactBox('Акматов Азим', '  akmatov_az@iuca.kg', context),
-                    // ContactBox(
-                    //     'Джолдошбеков Темирлан', '  dzholdoshbekov_t@iuca.kg'),
-                    contactBox('Boorsoft', '  boorsoft@gmail.com', context),
-                    SizedBox(height: 20.0),
-                    Html(
-                      data: """
+                        contactBox('Жумабек уулу Байдоолот',
+                            '  zhumabek_uulu_b@iuca.kg', context),
+                        contactBox(
+                            'Акматов Азим', '  akmatov_az@iuca.kg', context),
+                        // ContactBox(
+                        //     'Джолдошбеков Темирлан', '  dzholdoshbekov_t@iuca.kg'),
+                        contactBox('Boorsoft', '  boorsoft@gmail.com', context),
+                        SizedBox(height: 20.0),
+                        Html(
+                          data: """
 <center>Приложение разработано студентами Гумманитарно-Технического Колледжа в г. Токмок.</center>
 <center>Выражаем благодарность нашему преподавателю <b>Абдыкеримову Марату</b> за такую возможность!</center>
-         
-              """,
-                      defaultTextStyle: paragraphTextStyle,
-                      useRichText: true,
-                    ),
+             
+                  """,
+                          defaultTextStyle: paragraphTextStyle,
+                          useRichText: true,
+                        ),
 
-                    Html(
-                        data: """
+                        Html(
+                            data: """
 <center>Спасибо, что пользуетесь нашим приложением.</center>
 <center>© Boorsoft, 2020</center> 
-                    """,
-                        defaultTextStyle: paragraphTextStyle,
-                        useRichText: true),
-                    Image.asset('assets/boorsoft-logo-small.png'),
-                  ],
-                ))));
+                        """,
+                            defaultTextStyle: paragraphTextStyle,
+                            useRichText: true),
+                        Image.asset('assets/boorsoft-logo-small.png'),
+                      ],
+                    ))),
+          ),
+        ));
   }
 }

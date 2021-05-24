@@ -347,84 +347,92 @@ class QuizState extends State<Quiz> {
         appBar: AppBar(
             title: Text('Тестирование'), centerTitle: true, elevation: 0),
         body: Container(
-            child: Column(
-          children: <Widget>[
-            SizedBox(height: 10.0),
-            Padding(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 25.0, vertical: 20.0),
-              child: Stack(
-                children: [
-                  // Question container
-                  Container(
-                    padding: EdgeInsets.all(25.0),
-                    decoration: BoxDecoration(
-                        color: questionContainerColor,
-                        borderRadius: BorderRadius.circular(12.0)),
-                    constraints: BoxConstraints(
-                      minHeight: 140.0,
-                    ),
-                    alignment: Alignment.center,
-                    child: Text(
-                      widget.quizdata[0][i.toString()],
-                      textAlign: TextAlign.justify,
-                      style: TextStyle(
-                        color: questionTextColor,
-                        fontSize: 14.5,
-                        fontFamily: 'San Francisco',
-                      ),
+          color: appBarColor,
+          child: Container(
+              decoration: BoxDecoration(
+                  color: Theme.of(context).scaffoldBackgroundColor,
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(25.0),
+                      topRight: Radius.circular(25.0))),
+              child: Column(
+                children: <Widget>[
+                  SizedBox(height: 10.0),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 25.0, vertical: 20.0),
+                    child: Stack(
+                      children: [
+                        // Question container
+                        Container(
+                          padding: EdgeInsets.all(25.0),
+                          decoration: BoxDecoration(
+                              color: questionContainerColor,
+                              borderRadius: BorderRadius.circular(12.0)),
+                          constraints: BoxConstraints(
+                            minHeight: 140.0,
+                          ),
+                          alignment: Alignment.center,
+                          child: Text(
+                            widget.quizdata[0][i.toString()],
+                            textAlign: TextAlign.justify,
+                            style: TextStyle(
+                              color: questionTextColor,
+                              fontSize: 14.5,
+                              fontFamily: 'San Francisco',
+                            ),
+                          ),
+                        ),
+                        // Question number container
+                        Align(
+                          alignment: Alignment.topCenter,
+                          child: Container(
+                            padding: EdgeInsets.symmetric(
+                                horizontal: 10.0, vertical: 10.0),
+                            width: 75.0,
+                            height: 40.0,
+                            transform: Matrix4.translationValues(0, -20.0, 0),
+                            decoration: BoxDecoration(
+                                boxShadow: [
+                                  BoxShadow(
+                                      color: Colors.black54.withOpacity(0.1),
+                                      offset: Offset(0, 1.5),
+                                      blurRadius: 1.5)
+                                ],
+                                color: appBarColor == appBarColorDark
+                                    ? bgColorDark
+                                    : Colors.white,
+                                borderRadius: BorderRadius.circular(8.0)),
+                            child: Text(
+                              questionNum.toString() +
+                                  "/" +
+                                  widget.quizdata[0].length.toString(),
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                  color: appBarColor == appBarColorDark
+                                      ? textColorLight
+                                      : appBarColor,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
-                  // Question number container
-                  Align(
-                    alignment: Alignment.topCenter,
-                    child: Container(
-                      padding: EdgeInsets.symmetric(
-                          horizontal: 10.0, vertical: 10.0),
-                      width: 75.0,
-                      height: 40.0,
-                      transform: Matrix4.translationValues(0, -20.0, 0),
-                      decoration: BoxDecoration(
-                          boxShadow: [
-                            BoxShadow(
-                                color: Colors.black54.withOpacity(0.1),
-                                offset: Offset(0, 1.5),
-                                blurRadius: 1.5)
-                          ],
-                          color: appBarColor == appBarColorDark
-                              ? bgColorDark
-                              : Colors.white,
-                          borderRadius: BorderRadius.circular(8.0)),
-                      child: Text(
-                        questionNum.toString() +
-                            "/" +
-                            widget.quizdata[0].length.toString(),
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            color: appBarColor == appBarColorDark
-                                ? textColorLight
-                                : appBarColor,
-                            fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                  ),
+                  Expanded(
+                      child: ListView(
+                    children: [
+                      optionButton(optionBtn[urnButtonList[0]]),
+                      optionButton(optionBtn[urnButtonList[1]]),
+                      optionButton(optionBtn[urnButtonList[2]]),
+                      optionButton(optionBtn[urnButtonList[3]]),
+                    ],
+                  )),
+                  nextButton(),
+                  SizedBox(
+                    height: 40.0,
+                  )
                 ],
-              ),
-            ),
-            Expanded(
-                child: ListView(
-              children: [
-                optionButton(optionBtn[urnButtonList[0]]),
-                optionButton(optionBtn[urnButtonList[1]]),
-                optionButton(optionBtn[urnButtonList[2]]),
-                optionButton(optionBtn[urnButtonList[3]]),
-              ],
-            )),
-            nextButton(),
-            SizedBox(
-              height: 40.0,
-            )
-          ],
-        )));
+              )),
+        ));
   }
 }
