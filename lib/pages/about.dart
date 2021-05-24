@@ -37,6 +37,7 @@ class About extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: Text('О Приложении'),
+          elevation: 0,
         ),
         body: SingleChildScrollView(
             child: Container(

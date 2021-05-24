@@ -12,12 +12,12 @@ class _QuizStarterState extends State<QuizStarter> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Column(children: <Widget>[
-      ParagraphHeader("assets/images/home-pic4.jpg", "Тестирование",
-          height: 180.0),
       Expanded(
           child: Container(
               child: ListView(
         children: <Widget>[
+          ParagraphHeader("assets/images/home-pic4.jpg", "Тестирование",
+              height: 180.0),
           QuizButton("Кыргызстан с древнейших времен", "assets/json/exam.json"),
           QuizButton(
               "Кыргызстан в первой половине XX века", "assets/json/exam2.json"),

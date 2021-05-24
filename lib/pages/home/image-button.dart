@@ -34,7 +34,7 @@ class ImageButton extends StatelessWidget {
                   ),
                   child: Container(
                     decoration: BoxDecoration(
-                      // borderRadius: BorderRadius.circular(25.0),
+                      borderRadius: BorderRadius.circular(25.0),
                       boxShadow: [
                         BoxShadow(
                           color: ThemeProvider.optionsOf<ThemeOption>(context)
@@ -48,7 +48,7 @@ class ImageButton extends StatelessWidget {
                     child: Hero(
                       tag: _assetPath,
                       child: ClipRRect(
-                          // borderRadius: BorderRadius.circular(25.0),
+                          borderRadius: BorderRadius.circular(25.0),
                           child: Image.asset(_assetPath, fit: BoxFit.cover)),
                     ),
                   )),
@@ -58,18 +58,18 @@ class ImageButton extends StatelessWidget {
                     const EdgeInsets.symmetric(horizontal: 15.0, vertical: 7.0),
                 height: 185.0,
                 decoration: BoxDecoration(
-                    // borderRadius: BorderRadius.circular(25.0),
+                    borderRadius: BorderRadius.circular(25.0),
                     gradient: LinearGradient(
                         begin: FractionalOffset.topCenter,
                         end: FractionalOffset.bottomCenter,
                         colors: [
-                      Colors.black.withOpacity(0.0),
-                      Colors.black.withOpacity(0.5)
-                    ],
+                          Colors.black.withOpacity(0.0),
+                          Colors.black.withOpacity(0.5)
+                        ],
                         stops: [
-                      0.3,
-                      1.0
-                    ])),
+                          0.3,
+                          1.0
+                        ])),
               ),
               // Text on image
               Positioned(

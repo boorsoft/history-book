@@ -27,7 +27,9 @@ class HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: appBarColor,
       appBar: AppBar(
+          elevation: 0,
           actions: <Widget>[
             Padding(
               padding: const EdgeInsets.fromLTRB(0, 0, 0, 7.0),
@@ -46,22 +48,29 @@ class HomeState extends State<Home> {
           centerTitle: true,
           title: Text('История Кыргызстана',
               style: TextStyle(fontWeight: FontWeight.normal))),
-      body: SingleChildScrollView(
-          child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          SizedBox(height: 5.0),
-          ImageButton(
-              "assets/images/home-pic1.jpg", "Параграфы", "/Paragraphs"),
-          ImageButton("assets/images/home-pic2.jpg", "Исторические Личности",
-              "/Persons"),
-          ImageButton(
-              "assets/images/home-pic4.jpg", "Тестирование", "/QuizStarter"),
-          ImageButton("assets/images/home-pic3.jpg", "О приложении", "/About"),
-          SizedBox(height: 5.0),
-        ],
-      )),
+      body: Container(
+          decoration: BoxDecoration(
+              color: bgColor,
+              borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(25.0),
+                  topRight: Radius.circular(25.0))),
+          child: SingleChildScrollView(
+            child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  SizedBox(height: 10.0),
+                  ImageButton("assets/images/home-pic1.jpg", "Параграфы",
+                      "/Paragraphs"),
+                  ImageButton("assets/images/home-pic2.jpg",
+                      "Исторические Личности", "/Persons"),
+                  ImageButton("assets/images/home-pic4.jpg", "Тестирование",
+                      "/QuizStarter"),
+                  ImageButton(
+                      "assets/images/home-pic3.jpg", "О приложении", "/About"),
+                  SizedBox(height: 5.0),
+                ]),
+          )),
     );
   }
 }
