@@ -18,8 +18,8 @@ class ParagraphButton extends StatelessWidget {
           child: Stack(
             children: [
               Container(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 15.0, vertical: 7.0),
+                padding: const EdgeInsets.symmetric(
+                    horizontal: 20.0, vertical: 10.0),
                 constraints: BoxConstraints.expand(
                   height: 180.0,
                 ),
@@ -46,9 +46,9 @@ class ParagraphButton extends StatelessWidget {
               ),
               // Gradient on image
               Container(
-                margin:
-                    const EdgeInsets.symmetric(horizontal: 15.0, vertical: 7.0),
-                height: 167.0,
+                margin: const EdgeInsets.symmetric(
+                    horizontal: 20.0, vertical: 10.0),
+                height: 160.0,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(25.0),
                     gradient: LinearGradient(

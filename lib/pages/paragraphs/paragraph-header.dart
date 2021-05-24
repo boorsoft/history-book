@@ -7,7 +7,7 @@ class ParagraphHeader extends StatelessWidget {
   final String _title;
   final double height;
 
-  ParagraphHeader(this._image, this._title, {this.height = 280.0});
+  ParagraphHeader(this._image, this._title, {this.height = 240.0});
 
   @override
   Widget build(BuildContext context) {

@@ -20,7 +20,7 @@ class ImageButton extends StatelessWidget {
             children: [
               Container(
                   padding: const EdgeInsets.symmetric(
-                      horizontal: 15.0, vertical: 7.0),
+                      horizontal: 20.0, vertical: 10.0),
                   decoration: BoxDecoration(
                       // borderRadius: BorderRadius.circular(25.0),
                       // borderRadius: BorderRadius.circular(30.0),
@@ -54,8 +54,8 @@ class ImageButton extends StatelessWidget {
                   )),
               // Gradient on image
               Container(
-                margin:
-                    const EdgeInsets.symmetric(horizontal: 15.0, vertical: 7.0),
+                margin: const EdgeInsets.symmetric(
+                    horizontal: 20.0, vertical: 10.0),
                 height: 185.0,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(25.0),

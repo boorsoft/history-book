@@ -31,7 +31,7 @@ class HomeState extends State<Home> {
           elevation: 0,
           actions: <Widget>[
             Padding(
-              padding: const EdgeInsets.fromLTRB(0, 0, 0, 7.0),
+              padding: const EdgeInsets.fromLTRB(0, 0, 20.0, 7.0),
               child: IconButton(
                   icon: Icon(
                     OpenIconicIcons.moon,
@@ -51,7 +51,7 @@ class HomeState extends State<Home> {
         color: appBarColor,
         child: Container(
             decoration: BoxDecoration(
-                color: bgColor,
+                color: Theme.of(context).scaffoldBackgroundColor,
                 borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(25.0),
                     topRight: Radius.circular(25.0))),

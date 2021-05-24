@@ -16,7 +16,7 @@ class _ParagraphState extends State<Paragraphs> {
         color: appBarColor,
         child: Container(
           decoration: BoxDecoration(
-              color: bgColor,
+              color: Theme.of(context).scaffoldBackgroundColor,
               borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(25.0),
                   topRight: Radius.circular(25.0))),
